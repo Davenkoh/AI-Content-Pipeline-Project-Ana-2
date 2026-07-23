@@ -1,0 +1,207 @@
+{
+  "option": "A",
+  "hook": {
+    "title": "🇯🇵 Mistakes I made for my 1st Japan trip",
+    "subtitle": "can save your trip..."
+  },
+  "hashtags": [
+    "#japantravel",
+    "#japantips",
+    "#traveljapan",
+    "#japantrip",
+    "#japan"
+  ],
+  "caption": {
+    "title_line": "🇯🇵 Mistakes I made for my 1st Japan trip",
+    "body_draft": "Japan was everything I hoped for, but I made a lot of small mistakes on my first trip that cost me time and money. None of them are obvious until you are already standing there. Here is what I wish someone had told me before I booked anything.\n\nThe first one was at Fushimi Inari in Kyoto. I took my photos at the bottom where the famous red torii gates start, then turned around like most people do. That spot is exactly where everyone piles up. If you keep walking up past the Yotsutsuji intersection, about thirty minutes in, the path opens up and you get long stretches of gates almost to yourself. It is free and open all day, so there is no reason to rush it.\n\nThe next mistake was assuming I could tap my card everywhere. A lot of smaller restaurants, shrines, and markets are still cash only in Japan. I got caught out more than once. Carry yen, and when you run low, use a 7-Eleven ATM. The Seven Bank machines inside the konbini accept foreign cards around the clock, which a lot of Japanese bank ATMs will not.\n\nAround this point I also gave up on planning our group trip in a messy shared spreadsheet. I started forwarding my saved tiktok links, notes, and travel documents into holicay.com instead, and it pulled out the locations and organized the whole plan in one place.\n\nOnsen were another surprise. I did not realize that many public bathhouses still turn away anyone with a tattoo, even a small one. If you have ink, book a private kashikiri bath or find a tattoo friendly onsen ahead of time so you are not turned away at the door.\n\nEscalators have an unspoken rule too. In Tokyo you stand on the left and leave the right side open for people walking up. I blocked the walking lane on my first day without meaning to. The confusing part is that Osaka does the opposite, so people stand on the right there.\n\nI also left my passport at the hotel on a big shopping day, which was a waste. Lots of stores offer tax free shopping for tourists, so if you spend about five thousand yen or more and show your passport, you can skip the ten percent consumption tax. You have to have the physical passport on you.\n\nDo not lose track of the last train. Most lines in Tokyo stop running around midnight, and I got stranded once and had to pay for a long taxi ride across the city. Check the last train time for your line before you settle in for the night.\n\nThe last one caught me off guard on the bullet train. If you bring an oversized suitcase onto the Tokaido, Sanyo, or Kyushu Shinkansen, you are meant to reserve a seat with the oversized baggage space behind it. It is free if you reserve in advance, but you can be charged 1,000 yen if you just show up with the bag.\n\nNone of these ruined my trip, but knowing them would have saved me a lot of stress. Save this for whenever you book yours."
+  },
+  "slides": [
+    {
+      "type": "cover",
+      "flag": "🇯🇵",
+      "title_lines": [
+        "Mistakes I made for",
+        "my 1st Japan trip"
+      ],
+      "subtitle_lines": [
+        "can save your trip..."
+      ],
+      "char_photo": "chloe_cover",
+      "scenic_photo": "fuji_lake",
+      "subtitle_style": "outline"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't stop at the",
+        "first torii gates"
+      ],
+      "x_why_lines": [
+        "everyone crowds the bottom",
+        "for photos and turns back"
+      ],
+      "check_title_lines": [
+        "✅ Hike past Yotsutsuji"
+      ],
+      "check_why_lines": [
+        "about 30 min up and the",
+        "gates are almost empty"
+      ],
+      "top_photo": "inari_crowd_gates",
+      "bottom_photo": "inari_quiet_gates"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't assume cards",
+        "work everywhere"
+      ],
+      "x_why_lines": [
+        "so many places in Japan",
+        "are still cash only"
+      ],
+      "check_title_lines": [
+        "✅ Carry yen"
+      ],
+      "check_why_lines": [
+        "pull it from a 7-Eleven ATM,",
+        "they take foreign cards"
+      ],
+      "top_photo": "cash_only_register",
+      "bottom_photo": "seven_bank_atm"
+    },
+    {
+      "type": "plug",
+      "paragraphs": [
+        [
+          "i regret using google sheets",
+          "to plan our friend group trip"
+        ],
+        [
+          "❌ it's so messy",
+          "and i'm the only one updating it"
+        ],
+        [
+          "✅ HOLICAY.COM is my",
+          "game changer"
+        ],
+        [
+          "when i forward in my notes,",
+          "travel documents, and tiktok",
+          "links, it saves the locations",
+          "and organizes our whole",
+          "plan in one place"
+        ]
+      ],
+      "bg_photo": "plug_scenic"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't onsen with",
+        "tattoos on show"
+      ],
+      "x_why_lines": [
+        "lots of bathhouses still",
+        "turn tattoos away"
+      ],
+      "check_title_lines": [
+        "✅ Book a private bath"
+      ],
+      "check_why_lines": [
+        "kashikiri, or find a",
+        "tattoo-friendly onsen"
+      ],
+      "top_photo": "onsen_no_tattoo",
+      "bottom_photo": "private_onsen_bath"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't block the",
+        "escalator on the right"
+      ],
+      "x_why_lines": [
+        "in Tokyo the right side",
+        "is for people walking up"
+      ],
+      "check_title_lines": [
+        "✅ Stand on the left"
+      ],
+      "check_why_lines": [
+        "and flip it in Osaka,",
+        "they stand on the right"
+      ],
+      "top_photo": "escalator_tokyo",
+      "bottom_photo": "escalator_osaka"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't leave your",
+        "passport at the hotel"
+      ],
+      "x_why_lines": [
+        "you need it in hand for",
+        "tax-free shopping"
+      ],
+      "check_title_lines": [
+        "✅ Bring it when you shop"
+      ],
+      "check_why_lines": [
+        "spend ¥5,000+ and skip",
+        "the 10% tax"
+      ],
+      "top_photo": "shopping_bags_tokyo",
+      "bottom_photo": "tax_free_counter"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't miss the",
+        "last train"
+      ],
+      "x_why_lines": [
+        "most lines shut down",
+        "around midnight"
+      ],
+      "check_title_lines": [
+        "✅ Check the last train"
+      ],
+      "check_why_lines": [
+        "a late taxi across Tokyo",
+        "can cost a fortune"
+      ],
+      "top_photo": "night_platform_empty",
+      "bottom_photo": "tokyo_taxi_night"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't wheel a big bag",
+        "onto the Shinkansen"
+      ],
+      "x_why_lines": [
+        "oversized luggage needs",
+        "a reserved luggage seat"
+      ],
+      "check_title_lines": [
+        "✅ Reserve the spot",
+        "in advance"
+      ],
+      "check_why_lines": [
+        "it's free ahead of time,",
+        "¥1,000 if you don't"
+      ],
+      "top_photo": "shinkansen_big_suitcase",
+      "bottom_photo": "shinkansen_luggage_area"
+    },
+    {
+      "type": "save",
+      "title": "SAVE THIS",
+      "subtitle": "just incase you need it ❤️",
+      "char_photo": "chloe_ending",
+      "scenic_photo": "tokyo_skyline"
+    }
+  ]
+}

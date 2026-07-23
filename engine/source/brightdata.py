@@ -33,7 +33,7 @@ Downloads land in  media/library/<subject-slug>/<id>.jpg  and every saved byte
 appends an entry to  media/manifest.json  (id = first 8 hex of sha256). Images
 smaller than 700px on the short side are skipped; duplicates (by sha256) are skipped.
 """
-import os, sys, io, re, json, ssl, time, hashlib, argparse, datetime, urllib.parse
+import os, sys, io, re, json, ssl, time, hashlib, argparse, datetime, shutil, urllib.parse
 import requests
 from requests.adapters import HTTPAdapter
 try:
@@ -1188,6 +1188,76 @@ def cmd_fetch(a):
     return {"status": status, "detail": detail}
 
 
+def cmd_install(a):
+    """Promote a library pick to a render slug (the missing step between sourcing and rendering):
+    copy the media/library file to media/graded/<slug>.<ext>, write/update the SLUG-KEYED manifest
+    row (attribution carried from the raw library row), optionally record the post in used_in, and
+    (media hygiene) delete the library file + its raw row. With no --from, just appends --used-in
+    to an existing graded slug row (reuse tracking for e.g. Gate-9-exempt scenics)."""
+    manifest = load_manifest()
+    slug = a.slug
+
+    def _rel(p):
+        return os.path.relpath(os.path.abspath(p), REPO)
+
+    if not a.src:  # reuse-tracking mode
+        row = next((e for e in manifest if e.get("id") == slug
+                    and str(e.get("local_path", "")).startswith("media/graded")), None)
+        if not row:
+            print("no graded manifest row for slug %r — pass --from to install a library pick" % slug)
+            return 1
+        if a.used_in and a.used_in not in row.setdefault("used_in", []):
+            row["used_in"].append(a.used_in)
+        save_manifest(manifest)
+        print("ok  reuse recorded: %s used_in=%s" % (slug, row.get("used_in")))
+        return 0
+
+    src = os.path.abspath(a.src)
+    if not os.path.exists(src):
+        print("source file not found: %s" % src)
+        return 1
+    ext = os.path.splitext(src)[1].lower().lstrip(".") or "jpg"
+    if ext == "jpeg":
+        ext = "jpg"
+    dest = os.path.join(MEDIA, "graded", "%s.%s" % (slug, ext))
+    os.makedirs(os.path.dirname(dest), exist_ok=True)
+    shutil.copyfile(src, dest)
+
+    src_rel = _rel(src)
+    raw = next((e for e in manifest if e.get("local_path") == src_rel), None)
+    if raw is None:  # fall back to content match
+        sha = hashlib.sha256(open(src, "rb").read()).hexdigest()
+        raw = next((e for e in manifest if e.get("sha256") == sha), None)
+
+    row = next((e for e in manifest if e.get("id") == slug
+                and str(e.get("local_path", "")).startswith("media/graded")), None)
+    if row is None:
+        row = {"id": slug}
+        manifest.append(row)
+    for k in ("subject", "category", "query", "platform", "source_url", "author",
+              "license", "w", "h", "scraped_at"):
+        if raw and raw.get(k) is not None:
+            row[k] = raw[k]
+        row.setdefault(k, None)
+    row["sha256"] = hashlib.sha256(open(dest, "rb").read()).hexdigest()
+    row["local_path"] = _rel(dest)
+    row.setdefault("used_in", [])
+    if a.used_in and a.used_in not in row["used_in"]:
+        row["used_in"].append(a.used_in)
+
+    if raw is not None and raw is not row and not a.keep_raw:
+        manifest.remove(raw)          # the raw row is superseded by the slug row
+        if os.path.exists(src) and src_rel.startswith("media/library"):
+            os.remove(src)            # media hygiene: library is scratch, not an archive
+    save_manifest(manifest)
+    print("ok  installed %s -> %s%s" % (src_rel, row["local_path"],
+          "  (library file + raw row pruned)" if raw is not None and not a.keep_raw else ""))
+    if raw is None:
+        print("warn: no library manifest row matched — attribution fields are empty; "
+              "fill author/source_url/license by hand in media/manifest.json")
+    return 0
+
+
 # ================================================================== argparse
 def build_parser():
     p = argparse.ArgumentParser(prog="brightdata.py", description="sandboxed BD/SerpAPI photo sourcer")
@@ -1268,6 +1338,13 @@ def build_parser():
     sf.add_argument("--platform", default="google_images")
     sf.add_argument("--license", default="ugc-unlicensed")
     sf.set_defaults(fn=cmd_fetch)
+
+    sin = sub.add_parser("install", help="promote a library pick to media/graded/<slug> + slug-keyed manifest row (prunes the library file); with no --from, records --used-in reuse on an existing graded slug")
+    sin.add_argument("--from", dest="src", default=None, help="library file to install (media/library/<subject>/<id>.jpg)")
+    sin.add_argument("--slug", required=True, help="render slug (copy.json photo field -> media/graded/<slug>)")
+    sin.add_argument("--used-in", dest="used_in", default=None, help="post id to record in the row's used_in (e.g. ttc-11)")
+    sin.add_argument("--keep-raw", action="store_true", help="keep the library file + raw manifest row (skip hygiene prune)")
+    sin.set_defaults(fn=cmd_install)
     return p
 
 

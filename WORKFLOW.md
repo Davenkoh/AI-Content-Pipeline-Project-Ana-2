@@ -135,11 +135,24 @@ map onto §1–§11 here one-for-one.
   HDR-postcard grades, anything staged. Prefer a UGC frame over a Google-Images one when both pass.
   **Postcard exemption:** the scenic **cover / ending** photos and the **A / B / C2 plug `bg_photo`
   scenic** are decorative brand backdrops — exempt from Gate 9.
-- **Install + clean up:** copy each chosen pick to **`media/graded/<slug>.jpg`**, then **prune
-  `media/library/`** (delete every candidate that is not an installed pick — the library is scratch, not
-  an archive), and write the per-post **`outputs/<key>/<ID - Title>/sources.md`** in the
+- **Install each pick with the `install` verb** (copies the file to `media/graded/<slug>`, writes the
+  slug-keyed manifest row with attribution carried over, records `used_in`, and deletes the library
+  file + its raw row — the hygiene prune is built in):
+  ```bash
+  python3 engine/source/brightdata.py install --from "media/library/<subject>/<id>.jpg" --slug <slug> --used-in <post-id>
+  ```
+  Reusing an already-graded asset (e.g. a Gate-9-exempt scenic)? Record it:
+  ```bash
+  python3 engine/source/brightdata.py install --slug <slug> --used-in <post-id>
+  ```
+  After all picks are installed, delete any leftover unpicked files under `media/library/` **and their
+  raw manifest rows** (the library is scratch, not an archive; a raw row whose file is gone must not
+  linger). Then write the per-post **`outputs/<key>/<ID - Title>/sources.md`** in the
   `media/PHOTO_SOURCES.md` row format (`NN slug — KEPT|REPLACED — platform — author — source_url — note`).
-  Confirm each installed slug has its `manifest.json` row.
+  Gotchas: `--subject japan/tokyo` creates the folder `media/library/japan-tokyo/` (the `/` flattens to
+  `-`); downloads enforce a **≥700px short-side floor** — expect a chunk of gimg candidates to be
+  rejected (`too_small`/`undecodable`/fetch-failed); if a subject yields 0 usable frames, retry with an
+  alternate query or fall back to `places` / `ig`.
 - **Output:** `media/graded/<slug>.jpg` for every slug + `sources.md` + confirmed manifest rows.
 - **Tuning:** `knowledge/tuning/03_sourcing.md`, `knowledge/frameworks/photo_sourcing.md`,
   `engine/source/SOURCING_STATUS.md` (live backend status), `CONTRACT.md` Gate 9.
@@ -282,8 +295,10 @@ to the human. The **human-vs-nohuman verdict** lives here. Full method: `analyze
 - **Always `bash engine/lib/quit_chrome.sh`** after any CDP work (cover gen / scraping). A Stop hook runs
   it every turn as a safety net; non-Claude agents run it by hand.
 - **Abandoned `(building)` reserve rows → `post-delete`** so the number + rotation slot free up.
-- **Media hygiene:** prune `media/library/` after picks. **Drive is canonical for media; git for
-  code + docs.** The durable footprint is `media/graded/` + `chars/` + `media/brand/` + `manifest.json`.
+- **Media hygiene:** prune `media/library/` after picks — the `install` verb does file + manifest row
+  together; if you ever prune by hand, delete the orphaned raw manifest rows too. **Drive is canonical
+  for media; git for code + docs.** The durable footprint is `media/graded/` + `chars/` +
+  `media/brand/` + `manifest.json` (one slug-keyed row per kept asset).
 - **Never nest this repo inside another git repo** — credential discovery walks up to the `.gitignore`
   sentinel, so a parent repo would break `keys.env` / Playwright resolution.
 - **Don't edit `engine/`** (finished + verified) or the locked `CONTRACT.md` / `content_frameworks.md`

@@ -61,6 +61,9 @@ outputs/<char-key>/<ID - Title>/   a built deck — rendered slides land under _
 - **1080×1920 (9:16)** exactly — viewport AND screenshot clip; the 2.0 engine renders 9:16 natively.
 - Slide files: `NN_<role>.png` (`01_cover_human.png`, `01_cover_nohuman.png`, `02_body.png`, …,
   `10_save_human.png`, `10_save_nohuman.png`). NN = position in the deck, zero-padded.
+- `role` from `slide.type`: **`split` → `body`**; every other type keeps its own name
+  (`cover`/`plug`/`save`/`divider`/`notes`/`step`/`favorites`). Cover + save carry the
+  `_human`/`_nohuman` suffix at render; `final/` holds the chosen variant suffix-stripped.
 - Every option dir also gets `_contact.png` — a labeled grid montage of the whole deck for review.
 
 ## Type system (from the doc — binding)
@@ -87,6 +90,10 @@ outputs/<char-key>/<ID - Title>/   a built deck — rendered slides land under _
 - **Plug paragraph grammar (v3):** para 1 = the "i regret using…" hook line · ❌ mess statement =
   own para · "✅ HOLICAY.COM …game changer" = own short para · the how-it-works detail = own
   para · any CTA/aside ("(you should try it with this tiktok 😉)") = own para.
+  **Verbatim-vs-type-rules precedence:** ON SLIDES the type rules transform the doc's verbatim plug —
+  drop sentence-final periods, write the brand **HOLICAY.COM** — while every word, the lowercase, and
+  the deliberate misspellings ("alot", "revisted") stay untouched. In the CAPTION the plug text stays
+  fully verbatim (periods, "holicay.com" and all).
 - **C2 tip slot:** only genuine "Tip:" insider notes ride the lower tip position; every other
   line is a body block in the mid cluster.
 - **Outline text (the dial, v2):** `subtitle_style` / `title_style` = `"outline"` renders that text

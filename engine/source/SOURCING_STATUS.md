@@ -2,8 +2,12 @@
 
 *Plain-language status for the 2.0 photo-sourcing backends. Last checked: 2026-07-22 (in the 1.0
 sandbox; the backends are unchanged).*
-*All commands run from the repo root. Photos land in `media/library/<place>/` and every
-download is logged (author + source link) in `media/manifest.json` automatically.*
+*All commands run from the repo root. Photos land in `media/library/<place>/` (note: a `/` in
+`--subject` flattens to `-` in the folder name) and every download is logged (author + source link)
+in `media/manifest.json` automatically. Downloads enforce a **≥700px short-side floor** — on Google
+Images expect a decent share of candidates to bounce (`too_small` / `undecodable` / hotlink-blocked);
+a subject that yields 0 usable frames usually needs an alternate query or the `places`/`ig` backend.
+Promote a pick to a render slug with `install` (see WORKFLOW §5).*
 
 ---
 

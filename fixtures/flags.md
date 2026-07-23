@@ -208,8 +208,11 @@ CONTRACT.md's `copy JSON schema` section is abstract; `sandbox/frameworks-test/f
 whenever the two diverged in specificity (the fixtures' actual *wording*, however, was never trusted — see
 "alot"/"revisted" above; only their *structure* was reused):
 
-- Cover/save `title_lines` / `subtitle_lines` never carry the leading ❌ or flag symbol — only
-  `caption.title_line` and the cover's separate `"flag"` field do. Confirmed against fixture A/B/C1/C2.
+- The FLAG emoji never sits in `title_lines` — it is always the cover's separate `"flag"` field (bare
+  peeking render). A leading **❌** is different: when the hook title itself starts with ❌ (A's option-1
+  title), the ❌ IS part of `title_lines` (see `fixtures/A.json` slide 1) and `caption.title_line` carries
+  it too. (Corrected 2026-07-23 — an earlier version of this bullet wrongly claimed ❌ never appears in
+  `title_lines`.)
 - `save.title` / `save.subtitle` and `divider.label` are plain strings, not line arrays (per CONTRACT's own
   schema line and the fixtures).
 - `notes` item objects are `{text, gloss?}` plain strings, **not** pre-broken `lines[]` — the FORMAT RULES
