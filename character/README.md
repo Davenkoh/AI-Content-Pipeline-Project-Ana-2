@@ -47,4 +47,4 @@ python3 engine/drive/drive_sync.py --pull   "<Name>" --to "character/<Name>"    
 
 > **Building a post AS a character** — pass `--character <key>` to the Sheet/Drive commands and
 > `--persona <Name>` to `prep_cover_refs.py`, and export `MASQ_PERSONA=<Name>` so the cover scripts read
-> her Base References + name `<persona>_cover_*`. See [`../WORKFLOW.md`](../WORKFLOW.md) §8.
+> her Base References + name `<persona>_cover_*`. See [`../WORKFLOW.md`](../WORKFLOW.md) (character scene-photo stage).

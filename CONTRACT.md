@@ -1,14 +1,18 @@
-# Frameworks design sandbox — build contract
+# Frameworks build contract — the durable output spec
 
-> **SANDBOX.** This directory is an isolated test bed for the self-governing content frameworks
-> (`knowledge/frameworks/content_frameworks.md` — THE authority for every design decision here).
-> Nothing in here touches the current system: **no edits to `engine/`**, no writes into `outputs/`,
-> no Sheet logging, no Drive delivery, no `sync_media.py`. Reading/reusing existing repo assets
-> (engine patterns, graded photos, Chloe images, shipped copy JSONs) is allowed and encouraged.
-> If the test graduates, code moves out deliberately (photo sourcing → `engine/source/` per
-> `knowledge/frameworks/photo_sourcing.md`).
+> **GRADUATED.** These frameworks were calibrated as a Chloe / Japan human-in-post test in 1.0's
+> `sandbox/frameworks-test/` (2026-07-2x); that isolation is history. This file is now **the durable
+> output spec for every framework post in this repo** — the A/B/C1/C2 renderer contract that
+> `engine/render/build.js` and the build pipeline reproduce, with only the copy content (and its
+> sourced photos) changing per post. The design authority is unchanged:
+> `knowledge/frameworks/content_frameworks.md` — **THE authority for every design decision here.**
 
-## Test definition (from the human)
+## Calibration definition + the standing two-variant rule
+
+> Originally the human's test definition; the two-variant render below is now a **standing rule**.
+> Every framework post renders its **cover and ending slide in both `human` and `nohuman`** variants;
+> the variant that actually ships is picked per post by the rotation, not decided here. The Chloe /
+> Japan specifics below are the original calibration.
 
 - Character for the human-in-post test: **Chloe** (Japan). Content country: **Japan**.
 - For **each option (A, B, C1, C2)**: render the **cover and the ending slide in TWO variants** —
@@ -26,31 +30,35 @@
     (tight grouping, small gaps — not floating far in empty space). The app screenshot is a
     first-party brand asset (`media/brand/`); a flat coral gradient is only the fallback when no
     `bg_photo` is given.
+    - **C1 plug position:** it lands right after the first place's listicle — **slide 4, or slide 5
+      when that first list spills** onto a second notes slide (consistent with the frameworks doc's
+      "keep the plug front/middle (~slide 4) even if the first list spilled"). <!-- HUMAN CONFIRM: C1 plug position wording -->
   - **A / B / C2 plug (`bg_photo`) = the ❌ problem framing:** a **full-bleed picturesque country
     scenic** (decorative brand backdrop, EXEMPT from the UGC-framing gate — postcard shots are fine
     here) + a dark scrim, with the plug's `❌ i regret using… / ✅ HOLICAY.COM …game changer` sticker
     cluster centered over it. Pick a scenic distinct from that deck's cover/save photos.
   - Flat `#f2f2f2` is now only a fallback; nothing uses it.
 
-## Directory map
+## Directory map (2.0 repo layout)
 
 ```
-sandbox/frameworks-test/
-  CONTRACT.md          this file
-  build.js             standalone renderer (playwright HTML→PNG), ALL templates
-  copy/                A.json B.json C1.json C2.json places.json flags.md
-  media/library/       sourced UGC, keyed by place:  <subject-slug>/<id>.jpg
-  media/manifest.json  attribution index (shape below)
-  media/graded/        render-ready picks (slug.jpg) referenced by copy JSONs
-  chars/               chosen Chloe photos for covers/endings (copied from repo, clean/no text)
-  tools/               brightdata.py (sourcing CLI), app_icons.py
-  fixtures/            tiny per-template fixture JSONs used while building
-  out/<OPT>/           rendered slides + _contact.png per option
+CONTRACT.md                        this file (repo root)
+knowledge/frameworks/              content_frameworks.md (design authority) + photo_sourcing.md
+engine/render/build.js             the renderer (playwright HTML→PNG), ALL templates
+engine/render/assets/fonts/        bundled TikTok Sans — tiktok-sans.css + the two woff2 subsets
+engine/source/                     brightdata.py (sourcing CLI) · app_icons.py · route_map_shot.js · SOURCING_STATUS.md
+fixtures/                          A.json B.json C1.json C2.json + captions/ + reference/ contact sheets — the copy exemplars
+media/library/<subject>/           sourced UGC candidates, keyed by place: <subject-slug>/<id>.jpg (scratch — pruned after picks)
+media/graded/<slug>.jpg            render-ready picks referenced by the copy JSONs
+media/manifest.json                attribution index (shape below)
+media/brand/                       first-party Holicay assets (the app screenshot for the C1 plug mockup)
+chars/                             chosen character scene photos for covers/endings (clean/no text)
+outputs/<char-key>/<ID - Title>/   a built deck — rendered slides land under _work/render/
 ```
 
 ## Canvas + naming
 
-- **1080×1920 (9:16)** exactly — viewport AND screenshot clip. This overrides the engine's 1080×1440.
+- **1080×1920 (9:16)** exactly — viewport AND screenshot clip; the 2.0 engine renders 9:16 natively.
 - Slide files: `NN_<role>.png` (`01_cover_human.png`, `01_cover_nohuman.png`, `02_body.png`, …,
   `10_save_human.png`, `10_save_nohuman.png`). NN = position in the deck, zero-padded.
 - Every option dir also gets `_contact.png` — a labeled grid montage of the whole deck for review.
@@ -107,7 +115,7 @@ split      {type, x_title_lines[], x_why_lines[], check_title_lines[], check_why
 plug       {type, paragraphs[[lines],...], mockup?:<app-slug>, bg_photo?:<scenic-slug>}   # mockup=C1 app frame · bg_photo=A/B/C2 scenic · neither=flat fallback
 save       {type, title:"SAVE THIS", subtitle:"just incase you need it ❤️", char_photo, scenic_photo}   # both variants
 divider    {type, label, cells:[4 slugs]}                                           # C1: 2×2, lowercase white name on the seam
-notes      {type, place, contd:bool, sections:[{emoji, header, items:[{text, gloss?}]}]}   # C1 listicle, Montserrat, Notes-look
+notes      {type, place, contd:bool, sections:[{emoji, header, items:[{text, gloss?}]}]}   # C1 listicle, TikTok Sans, Notes-look
 step       {type, pill, layout:"photo"|"grid4"|"map"|"icons", photo|cells, blocks:[{lines[], size:"headline"|"body"|"tip"}], cell_labels?[{title_lines[], note_lines[]}]]}   # C2
 favorites  {type, title_lines[], photo, cities:[{pill, lines[]}]}                   # C2 slide 5
 ```
@@ -135,7 +143,9 @@ hoard unused downloads.
 4. C1 divider name legible on the seam (soft drop shadow; curation picks calm-center cells).
 5. C2 pills top-center, body boxes mid-frame; rounded font everywhere on C2.
 6. Split slides: ❌ pair reads over the TOP photo, ✅ pair over the BOTTOM, cluster on the seam.
-7. Plug slides stay bare (placeholder rule above).
+7. Plug slides render their specced treatment — C1 = the framed Holicay-app `mockup`, A / B / C2 =
+   the full-bleed `bg_photo` scenic + scrim (plug-design section above); the flat coral / `#f2f2f2`
+   fallback only when neither `mockup` nor `bg_photo` is given.
 8. Emoji actually rendered (not tofu). Fonts actually loaded (not fallback serif).
 9. **UGC-framing gate (human steer 2026-07-22):** every body photo must read as taken by a real
    visitor on a phone — eye-level or handheld, imperfect timing/composition welcome. REJECT:

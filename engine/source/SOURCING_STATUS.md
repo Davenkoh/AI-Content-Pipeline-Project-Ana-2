@@ -1,7 +1,8 @@
 # Photo sourcing — what works now, and the exact clicks Bright Data still needs
 
-*Plain-language status for the frameworks-test sandbox. Last checked: 2026-07-22.*
-*All commands run from `sandbox/frameworks-test/`. Photos land in `media/library/<place>/` and every
+*Plain-language status for the 2.0 photo-sourcing backends. Last checked: 2026-07-22 (in the 1.0
+sandbox; the backends are unchanged).*
+*All commands run from the repo root. Photos land in `media/library/<place>/` and every
 download is logged (author + source link) in `media/manifest.json` automatically.*
 
 ---
@@ -31,7 +32,7 @@ graphics and collages, so IG results **must** be curated against QC gate 9 (see 
 Real photos that visitors uploaded to a place's Google listing. No Bright Data needed.
 
 ```
-python3 tools/brightdata.py places --query "Shibuya Sky" --subject japan/tokyo --category visit --download 4 --gl jp
+python3 engine/source/brightdata.py places --query "Shibuya Sky" --subject japan/tokyo --category visit --download 4 --gl jp
 ```
 
 - `--query` = the venue name, `--subject` = the library folder (country/city), `--download` = how many to save.
@@ -48,7 +49,7 @@ python3 tools/brightdata.py places --query "Shibuya Sky" --subject japan/tokyo -
 Best when you need a very specific or "messy" shot that isn't tied to one venue.
 
 ```
-python3 tools/brightdata.py gimg --query "omoide yokocho yakitori alley night" --subject japan/tokyo --download 3
+python3 engine/source/brightdata.py gimg --query "omoide yokocho yakitori alley night" --subject japan/tokyo --download 3
 ```
 
 ### C. Instagram posts (via Apify)  ← net-new "real people's posts" UGC
@@ -56,7 +57,7 @@ Real Instagram posts for a place or a vibe. Uses **Apify** public actors (not Br
 why). Works today on our Apify token; no verification step.
 
 ```
-python3 tools/brightdata.py ig --query "shibuyasky" --subject japan/tokyo --category visit --download 5
+python3 engine/source/brightdata.py ig --query "shibuyasky" --subject japan/tokyo --category visit --download 5
 ```
 
 - `--query` is a **#hashtag / single word** (e.g. `shibuyasky`, `ichiran`) or a **venue name** (e.g.
@@ -122,7 +123,7 @@ path only if you specifically want Bright Data's Instagram dataset instead. The 
    of business days) — it is not instant.
 5. When it's approved, test it:
    ```
-   python3 tools/brightdata.py ig-bd --url "https://www.instagram.com/p/XXXXXXX/" --subject japan/tokyo --download 3
+   python3 engine/source/brightdata.py ig-bd --url "https://www.instagram.com/p/XXXXXXX/" --subject japan/tokyo --download 3
    ```
    - If it prints image-download lines → **unlocked**.
    - If it still says `Customer is not active` → verification isn't approved yet; wait and retry.
@@ -142,14 +143,14 @@ path only if you specifically want Bright Data's Instagram dataset instead. The 
   gets past it. If it stays flaky, **Google Places user photos (section 1A) already covers the same need.**
 - Command (resolves the venue automatically, then collects):
   ```
-  python3 tools/brightdata.py greviews --place "Shibuya Sky" --subject japan/tokyo --download 3
+  python3 engine/source/brightdata.py greviews --place "Shibuya Sky" --subject japan/tokyo --download 3
   ```
 
 ### ➤ (Optional) SERP + Web Unlocker zones
 
 Only if you ever want Bright Data's own Google Images or proxy byte-fetch (we don't, today):
 brightdata.com → left sidebar **Proxies & Scraping Infrastructure** → **Add zone** → pick **SERP API**
-and/or **Web Unlocker** → save. Then re-run `python3 tools/brightdata.py probe`.
+and/or **Web Unlocker** → save. Then re-run `python3 engine/source/brightdata.py probe`.
 
 ---
 

@@ -158,3 +158,18 @@ Sheet's Feedback cell is cleared and the row's Metadata stamped. Format per entr
 - Theme: realism (persona / cover / derived gen) — process/consistency: keep a reusable library of proven full prompts, not only the abstracted recipe.
 - Propagated to: NEW file knowledge/realism/winning_prompts.md (append-only library — the practice + reuse instructions + entry template + entry 01 = the Chloe sakura pfp prompt verbatim); knowledge/realism/persona_gen_prompt_reference.md (intro callout: rules here, verbatim winners there, bank every fresh win); knowledge/realism/realism_book.md §2 (pointer to the library beside the recipe); memory bank-winning-gen-prompts.md.
 - Change: two-file split locked in — persona_gen_prompt_reference.md keeps the distilled **rules** (routed via propagate-feedback), winning_prompts.md keeps the **raw verbatim prompts that won** (append-only, newest on top, never rewrite a past prompt). New standing practice: whenever the human calls a gen output very good / super-realistic, copy the FULL prompt that produced it into winning_prompts.md; start future gens of the same deliverable/character from the closest banked winner and swap only refs/wardrobe/background/location, keeping the SKIN/EXPOSURE/COMPOSITION blocks intact. Seeded with the sakura pfp win. Applies going forward.
+
+---
+
+## ⎯⎯ ERA 2.0 — frameworks graduated (2026-07-23) ⎯⎯
+
+The A/B/C1/C2 content frameworks graduated from the 1.0 `sandbox/frameworks-test/` into **the
+production system** of this repo (Project Ana 2.0). This is an era divider, not a feedback item.
+
+- **Everything ABOVE is 1.0-era historical context** — it records where past feedback propagated in
+  the old system. Some of those target docs were **not ported to 2.0** (e.g. `04_design.md`,
+  `funnels/funnel_skill.md`, and `WORKFLOW.md` stage numbers); the references stand as historical
+  record. History is preserved, not rewritten.
+- **New 2.0 feedback entries continue BELOW**, in the same entry format, newest at the bottom. The
+  governing docs a 2.0 lesson can propagate to now live under `knowledge/` (frameworks/, realism/,
+  voice/, brand/, platform/, tuning/) + `CONTRACT.md`.

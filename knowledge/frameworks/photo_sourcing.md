@@ -1,31 +1,34 @@
 # Photo sourcing + reusable media library (Bright Data)
 
-> **Status: SPEC — not built yet.** Needs a Bright Data account + a `BRIGHTDATA` token in `keys.env`
-> (the account/token is the human's to create). This is the **"how"** behind the frameworks'
-> real-UGC body-slide photos ([content_frameworks.md](content_frameworks.md) §Design). It **extends**
-> the existing sourcer, it does not replace it.
+> **Status: IMPLEMENTED.** The operative truth is the standalone CLI `engine/source/brightdata.py`,
+> with [`engine/source/SOURCING_STATUS.md`](../../engine/source/SOURCING_STATUS.md) tracking live
+> backend status (which sources work today, which need a human unlock). This doc is the **design
+> rationale** behind the frameworks' real-UGC body-slide photos
+> ([content_frameworks.md](content_frameworks.md) §Design): the library keying, the manifest schema,
+> and the rights posture. A `BRIGHTDATA` token in `keys.env` unlocks the Bright Data backends (the
+> account/token is the human's to create); Google Places / Google Images / Instagram work today
+> without it (see SOURCING_STATUS.md).
 
 ## Why
 
-The frameworks want body-slide photos that look like **a real person took them**, not stock. The
-current sourcer ([`engine/source/source.py`](../../engine/source/source.py)) already does
-Pexels / Unsplash / Bing / Google-Places / SerpAPI, but it has **no Instagram**, **can't do Google
-Images** (returns 502 without a JS render, so it falls back to Bing), and **re-sources every post
-from scratch** (nothing is reused). Bright Data fills the source gaps; a **reusable library** makes
-it cheap and consistent.
+The frameworks want body-slide photos that look like **a real person took them**, not stock. Licensed
+stock alone (Pexels / Unsplash) and generic Bing results don't carry that "real visitor" look, and
+re-sourcing every post from scratch is wasteful. `engine/source/brightdata.py` adds the **UGC sources**
+(Instagram, Google Images, Google Maps reviews, and Google Places user photos), and a **reusable,
+place-keyed library** makes it cheap and consistent — you pay once per place, then reuse.
 
-## 1. Bright Data = new backends (not a rewrite)
+## 1. The sourcing backends (standalone `brightdata.py`)
 
-`source.py` already dispatches per-slug backends from an `order` list, each a
-`from_X(query, n) -> [{thumb, full, w, h, source}]`. Add a `brightdata.py` (sibling of
-[`scrape_do.py`](../../engine/source/scrape_do.py)) and wire in new backend keys:
+`engine/source/brightdata.py` is a **standalone sourcing CLI** — a per-source dispatcher
+(`brightdata.py <backend> --query … --subject … --download N`), not a set of backends bolted onto an
+older sourcer. Each backend returns `[{thumb, full, w, h, source, source_url, author, license}]`:
 
 | Backend key | Bright Data product | Fills |
 |---|---|---|
 | `ig` | Instagram Scraper (by hashtag / location / profile) | **real UGC — the net-new source** |
 | `gimg` | SERP API (Google Images) | Google Images the engine can't reach today |
 | `greviews` | Google Maps reviews scraper | real diner / visitor photos per venue (vs `places`' official shots) |
-| (bytes) | Web Unlocker / residential proxy | robust image-byte fetch past 403 / hotlink (better than scrape.do's `fetch`) |
+| (bytes) | Web Unlocker / residential proxy | robust image-byte fetch past 403 / hotlink |
 
 - **Token:** `BRIGHTDATA` in `keys.env`, read via `_keys("BRIGHTDATA")` (same pattern as `PEXELS` / `SERP`).
 - **Return shape:** add **`source_url`, `author`, `license`** on top of the existing fields — the library + attribution need them.
@@ -59,7 +62,7 @@ resolves the bytes from Drive).
 }
 ```
 
-**Cache-first flow (inside `source.py`):**
+**Cache-first flow (in `brightdata.py`):**
 
 1. normalize `subject` + `category` → look up the manifest
 2. **hit** → return those candidates (free, instant, zero Bright Data spend); prefer frames **not** in `used_in` (rotation, so two posts about the same place don't clone each other)
@@ -79,9 +82,13 @@ options, but UGC is **not** down-ranked for rights reasons.
 
 ## 4. Build checklist
 
-- [ ] `BRIGHTDATA` token in `keys.env` (+ Drive `_setup` so the team gets it)
+The standalone CLI (`engine/source/brightdata.py`) is built; **`engine/source/SOURCING_STATUS.md`
+holds the live status** of each backend (which run today, which need a human unlock). The design's
+full intent:
+
+- [ ] `BRIGHTDATA` token in `keys.env` (+ Drive `_setup` so the team gets it) — for the Bright Data backends only
 - [ ] `engine/source/brightdata.py` — `ig()`, `gimg()`, `greviews()`, `unlock_fetch()`
-- [ ] wire `ig` / `gimg` / `greviews` into `source.py` dispatch + default `order`; add `source_url` / `author` / `license` to **every** backend's return
+- [ ] expose `ig` / `gimg` / `greviews` / `places` as `brightdata.py` subcommands; every backend returns `source_url` / `author` / `license`
 - [ ] `engine/source/library.py` — manifest read/write, `sha256` + `phash` dedupe, cache-first lookup, `used_in` rotation
 - [ ] Drive `Project Ana/Media Library/` + local mirror wired into the existing `sync_media.py` → `mirror-all`
 - [ ] manifest JSON git-tracked; image bytes git-ignored (Drive-only)

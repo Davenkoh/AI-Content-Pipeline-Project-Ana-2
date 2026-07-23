@@ -53,13 +53,11 @@ voice, hooks, story beats, or claims lands here.
   number, a named issue, a famous detail) so it reads as an informed local take, not
   edgy-for-its-own-sake. Pre-empt the obvious "well actually" (scope Ha Long to the cruise,
   Sa Pa to the town). See hook H002 / cta C003 (tt-04) + the F5 extension C004 (tt-17).
-- [2026-06-23] **The Holicay/app slide goes FRONT or MIDDLE (around slide 3), never the
-  back.** User steer: viewers usually don't scroll to the end, so an app reveal/demo on a
-  late slide is wasted reach. Place the planning-app beat early (tt-18 moved it to slide 02,
-  right after the "you can't do it all" setup) and still carry a one-line app mention in the
-  caption for non-swipers. This sharpens "never bury the key beat on a last slide" and
-  applies to every funnel that shows the app: F4 soft demo and F5 decoy both keep a
-  pure-value cover, but the demo/reveal lands front-middle, not at the back.
+- [2026-06-23] **The Holicay plug slide goes FRONT or MIDDLE, never the back.** User steer:
+  viewers usually don't scroll to the end, so an app reveal/demo on a late slide is wasted
+  reach. Per the frameworks the plug is **slide 4** (C1: slide 4, or slide 5 when the first
+  place's list spills) — front/middle, never the last slide — and a one-line app mention still
+  rides the caption for non-swipers. This sharpens "never bury the key beat on a last slide."
 - [2026-07-10] **Reddit = primary source of truth, cross-checked (made explicit).** User steer
   while building the I011 shopping guides (Ana / Hannah / Mia): research list content from
   **Reddit first** for authentic / controversial real-user opinion + genuine gems, then

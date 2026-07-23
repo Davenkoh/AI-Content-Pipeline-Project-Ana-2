@@ -7,8 +7,11 @@ wrong subjects, or watermarks lands here.
 - **Target = composed-candid:** the subject is the attractively-framed hero AND the
   background is genuine, uncontrolled real life. Reject all three failure shapes:
   studio-clean, random-ugly, and fake-prop staged.
-- **Hierarchy:** Pexels/Unsplash → Google Places (real venues) → SerpAPI (native-language
-  + context modifiers) → scrape.do/Bing when SerpAPI 429s. (`engine/source/`.)
+- **Hierarchy (framework body photos, per CONTRACT Gate 9):** Google Places user photos
+  (prioritized) → Instagram via Apify → SerpAPI Google Images (native-language + context
+  modifiers); Pexels/Unsplash only when the shot genuinely reads candid. Tool:
+  `engine/source/brightdata.py`. (Persona BACKGROUNDS invert — Pexels/Unsplash first; see
+  `../realism/realism_book.md` §5.9.)
 - **Build contact sheets, then pick the most *contextual* frame, not the prettiest.**
   High quality is not always good — a clean stock photo is worse than a real phone snap.
 - **Verify the subject is literally correct** — right dish/drink/place, no competitor

@@ -1,9 +1,10 @@
 # Holicay content frameworks — spec-driven TikTok carousels
 
-> **Status: copywriting + content structure done; design done for A, B, C1, and C2.** The shared
-> visual system + the A/B body slides are in §Design; **C1 and C2 each carry their own design block**
-> under their variant. Only **the Holicay plug slide design is still TBD** (its copy is specced;
-> leave the visual blank for now).
+> **Status: copywriting + content structure done; design done for A, B, C1, and C2 — including the
+> Holicay plug slide.** The shared visual system + the A/B body slides are in §Design; **C1 and C2
+> each carry their own design block** under their variant. The **plug slide design is now specced in
+> `CONTRACT.md`** (the plug-design treatments): C1 = a framed Holicay-app mockup on a dark-tinted
+> scenic; A / B / C2 = a full-bleed scenic + scrim behind the ❌ / ✅ sticker cluster.
 
 **What this is.** Three ready-to-run carousel blueprints: **A — fear of making mistakes**,
 **B — controversial takes**, **C — itinerary**. These are **prescriptive** — the hook titles, the
@@ -11,10 +12,10 @@ slide-by-slide map, the Holicay plug copy, the hashtags, the caption formula, an
 specified here, so a post can be built straight from this doc. Pick **ONE option per post** and dress
 it in the target country.
 
-**This framework is self-governing.** It's a candidate for a *better* system, not an extension of the
-older post formats. Where it conflicts with an earlier default (canvas size, caption length, slide
-structure, funnel shape), **this doc wins** — don't reconcile it back to the old way, and don't weave
-its posts into the existing format or funnel-tagging conventions.
+**This framework is the production system.** It's a self-governing spec, not an extension of 1.0's
+inspo-derived post formats. Where it differs from an older default (canvas size, caption length, slide
+structure), **this doc wins** — don't reconcile a framework post back to the old way, and don't weave
+it into the inspo-derived format conventions.
 
 All quoted copy below (plug blocks, "SAVE THIS", subtitles) is **verbatim, paste-ready** — the
 lowercase, the emoji, and the casual spelling are the voice; don't clean it up.
@@ -53,6 +54,11 @@ lowercase, the emoji, and the casual spelling are the voice; don't clean it up.
   explanatory prose (register per the caption essay example at the bottom of this doc; still no em/en
   dashes anywhere). For framework posts this essay caption **overrides** the "short casual caption"
   default in `../platform/tiktok_style.md`.
+
+**Why the plugs work (absorbed from 1.0's funnel doctrine).** A / B / C2's ❌ → ✅ plug is a
+first-person before/after testimonial (her mess, then what she does now); C1's comment-keyword plug is
+a comment → DM magnet. Both are value-first with the bias hidden inside a genuinely useful post, and
+the essay caption runs as a parallel funnel for non-swipers.
 
 ---
 
@@ -206,16 +212,16 @@ itinerary` — because the comment is this variant's conversion beat and only ~1
 C1 alternates **two slide types** down the deck: a **place-collage divider** that announces each
 city, then one or more **iPhone-Notes-style listicle** slides beneath it.
 
-- **Font = bold Montserrat (the TikTok-native text look), same as A and B** — used everywhere,
+- **Font = bold TikTok Sans (the real TikTok typeface), same as A and B** — used everywhere,
   *including inside the Notes-styled slides*: the body only *looks* like Notes, it is not a literal
-  iOS / SF-Pro screenshot.
+  iOS / SF-Pro screenshot. (Type authority = `CONTRACT.md` §Type system.)
 - **9:16, text held in the vertical middle** — the shared canvas rule.
 - **Place divider** (slides 2, 5, 7, …) — a **2×2 collage of 4 real photos** of that place: its
   landmark, a street / culture shot, and a signature food or drink (a people-in-scene shot is fine
   for the fourth). Lay the **place name across the middle seam where the four cells meet**, in large
-  **lowercase white bold Montserrat with a soft drop shadow** (no diacritics). Build the collage with
-  `build_collage.js`, and choose four photos that are calm / dark where they meet in the center so the
-  white name stays legible.
+  **lowercase white bold TikTok Sans with a soft drop shadow** (no diacritics). Build the collage with
+  the **`divider` template in `engine/render/build.js`**, and choose four photos that are calm / dark
+  where they meet in the center so the white name stays legible.
 - **Listicle** (slides 3, 6, … + any spill slides) — built to read as a note in the **iPhone Notes
   app**: a plain off-white page, a bold **category heading led by an emoji** that separates the
   sections (📍 places to visit · 🍜 where to eat · 🛍️ where to shop / 🍵 where to matcha / 🏞️
@@ -247,11 +253,11 @@ you can see what each slot holds.
 | 1 | **Cover** — scenic hero of the country's most iconic landscape; hook title in white boxes upper-middle + tiny white-box subtitle. No person. | the iconic hero shot (e.g. Mt Fuji at golden hour over a lake) |
 | 2 | **`1.` {when to go}** — 2×2 photo grid of the destination's distinct travel seasons; black-pill title top; one white-box line under it (e.g. "each season is SO different you need to plan accordingly"); each cell = a real season photo + white-box `{Season} ({months})` label + a 2–3 line white-box note | the seasons + bullets (e.g. Spring / cherry blossoms / peak / avoid Golden Week · Summer / festivals / humid · Autumn / nice weather / fewer crowds / leaves · Winter / ski / seafood). **Flex the cell count** to the country's real seasons (a tropical country → dry vs wet, etc.) |
 | 3 | **`2.` Route & days** — a real **digital-map screenshot** with pinned markers as the backdrop; black-pill title; white boxes = **the day split, named** ("tokyo 4 days · hakone 1 night · kyoto 3 · osaka 2") + the **route order that never backtracks** (+ which stops are day trips, not overnights). **No setup slide, no "do some research"** — the numbers ARE the value | the cities, their day counts, and the geographically sensible order for {country} |
-| 4 | **HOLICAY PLUG** (our mandatory insert) — lands right after "pin your bucket list onto a digital map," which it answers directly. Copy = the Option B plug (below). **Design TBD — leave blank for now.** | keyword / country in the plug if used |
+| 4 | **HOLICAY PLUG** (our mandatory insert) — lands right after "pin your bucket list onto a digital map," which it answers directly. Copy = the Option B plug (below). **Design = the A / B / C2 plug treatment** (full-bleed scenic `bg_photo` + scrim + the ❌ / ✅ sticker cluster, per `CONTRACT.md`). | keyword / country in the plug if used |
 | 5 | **Favorite spots** — scenic iconic photo; white-box title "A few of my favorite spots in {country} for a first time visit"; then 4–6 **black-pill city headers**, each with a white-box list of 3–5 spots. Lead with the famous, resonant ones. | cities + spots (e.g. Tokyo / Teamlab, Sensoji, Shibuya sky, Omoide Yokocho, Meiji Jingu · Osaka / Dotonbori, Universal, Amerikamura · Kyoto / Arashiyama, Fushimi Inari, Botanical Gardens · Nara / deer park, Todaiji, Wakakusayama · Nagoya / Ghibli Park, castle, Toyota Museum · Hakone / shrine, Owakudani, glass museum) |
 | 6 | **`3.` {accommodation}** — real train-platform / POV photo; black-pill title; a white-box emphasis headline + a white-box why | the location rule that matters in {country} (e.g. "BOOK YOUR HOTEL CLOSE TO A MAIN TRAIN STATION" — stations are huge, don't waste time commuting; another country → near the metro / old town / the strip) |
 | 7 | **`4.` Book your activities early** — real attraction photo; black-pill title; white-box paragraph (must-dos sell out, book months ahead) + a white-box "Tip:" insider note | the sell-out attractions + a real insider tip (e.g. Ghibli Park; tip: miss the Shibuya Sky sunset slot, the night slots are still great) |
-| 8 | **`5.` Language** — frosted phone-panel with **real translation-app icons**; black-pill title; white-box paragraphs (locals may not speak English, learn a few key words, keep a scan-and-translate app) | the local language + apps (e.g. DeepL + Google Translate) — real icons via `fetch_app_icons.py` |
+| 8 | **`5.` Language** — frosted phone-panel with **real translation-app icons**; black-pill title; white-box paragraphs (locals may not speak English, learn a few key words, keep a scan-and-translate app) | the local language + apps (e.g. DeepL + Google Translate) — real icons via `engine/source/app_icons.py` |
 | 9 | **`6.` Internal transport** — real train photo; black-pill title; white boxes (get the local tap-to-ride transit card, how to load it, why it's easiest) | the country's transit card + setup (e.g. Suica via Apple Wallet → add transit card → top up ¥1000) |
 | 10 | **`7.` Mobile data** — real neon-street / night photo; black-pill title; white boxes (get internet on the go; eSIM = convenient + affordable; pocket wifi = best for groups) | mostly universal; scope examples to {country} |
 
@@ -276,36 +282,38 @@ notes for me all in one place
   (`1.` `2.` `3.` …), and the **white per-line highlight boxes** (black bold text) from the A/B spec
   for everything else (labels, lists, paragraphs). Step pills sit top-center; body boxes cluster
   mid-frame.
-- **Font = a rounded bold sans** (Poppins / Nunito look) — softer and rounder than the Montserrat A
-  and B use. C2 is the one variant that does NOT use the TikTok-native Montserrat face.
+- **Font = a rounded bold sans** (Poppins / Nunito look) — softer and rounder than the TikTok Sans A
+  and B use. C2 is the one variant that does NOT use the TikTok Sans face the others use.
+  (Type authority = `CONTRACT.md` §Type system.)
 - **9:16, text kept in the vertical middle** — the shared canvas rule.
 - **Faceless — NO person on any slide** (A and B put the character on the first + last; C2 does not).
   The cover is a pure scenic landscape of the country. If you'd rather feature the active character,
   swap that scenic hero for a character-in-scene cover instead.
 - **Photo choices = real UGC, per step:** scenic hero (cover), 2×2 season collage, a real
   digital-map screenshot, scenic + text (favorites), POV train / street / attraction shots, a
-  frosted app-icon panel. Build grids with `build_collage.js` and pull real app icons with
-  `fetch_app_icons.py`. Same "real people's photos, not stock" sourcing as A/B (§Design). Patch out
-  any watermark on a sourced photo.
+  frosted app-icon panel. Build grids with the **`step`/`grid4` templates in `engine/render/build.js`**
+  and pull real app icons with **`engine/source/app_icons.py`**. Same "real people's photos, not stock"
+  sourcing as A/B (§Design). Patch out any watermark on a sourced photo.
 
 ---
 
 ## Design
 
 > This section specs the **shared visual system** and the **A / B body slides**. **C1 and C2 each
-> carry their own design block** under their variant, because their layouts are specific to them. Only
-> the **Holicay plug slide design is still TBD** — leave the plug's visual blank for now.
+> carry their own design block** under their variant, because their layouts are specific to them. The
+> **Holicay plug slide design is specced in `CONTRACT.md`** (C1 = a framed app mockup on a dark-tinted
+> scenic; A / B / C2 = a full-bleed scenic + scrim behind the ❌ / ✅ sticker cluster).
 
 ### Global — every framework slide
 
-- **Canvas 9:16 (1080×1920)** — this framework overrides the repo default 3:4. It's a taller frame,
-  so **keep all text in the vertical middle** (centered): that holds it in the safe zone, clear of
-  TikTok's top and bottom UI chrome.
-- **Text = the TikTok-native white-box style:** black **bold Montserrat** (our standing stand-in for
-  TikTok's font — see `../platform/tiktok_style.md` §3), each line on its **own white rounded
-  highlight box hugging that line's width**, boxes stacked and center-aligned. NOT one big rectangle —
-  per-line boxes, TikTok's "background" text setting. The headline line(s) bigger/bolder; the "why"
-  line smaller.
+- **Canvas 9:16 (1080×1920)** — the 2.0 repo is 9:16-native, so this is simply the repo canvas. It's
+  a tall frame, so **keep all text in the vertical middle** (centered): that holds it in the safe
+  zone, clear of TikTok's top and bottom UI chrome.
+- **Text = the TikTok-native white-box style:** black **bold TikTok Sans** — the real TikTok typeface
+  (SIL OFL), bundled at `engine/render/assets/fonts/`; Montserrat is only the network fallback (type
+  authority = `CONTRACT.md` §Type system). Each line sits on its **own white rounded highlight box
+  hugging that line's width**, boxes stacked and center-aligned. NOT one big rectangle — per-line
+  boxes, TikTok's "background" text setting. The headline line(s) bigger/bolder; the "why" line smaller.
 - **Line breaks must fall on natural phrase boundaries.** Because each line is its own hugging box,
   an awkward wrap (a lonely "at sunset." box) looks broken. Break where a person would pause, so
   every boxed line reads as a clean phrase.
@@ -320,6 +328,8 @@ notes for me all in one place
   authenticity, so a slightly imperfect real photo beats a clean stock frame every time. (Still
   degrade/grade per `../realism/realism_book.md`.) **How it's sourced** — Bright Data backends + a
   reusable, place-keyed library; UGC posted as-is with stored attribution: [photo_sourcing.md](photo_sourcing.md).
+  The working implementation is `engine/source/brightdata.py` (Google Places user photos prioritized
+  per `CONTRACT.md` Gate 9; `engine/source/SOURCING_STATUS.md` for live backend status).
 
 ### Options A + B body slides — the split ❌ / ✅
 
@@ -363,8 +373,11 @@ only 25 min from central Tokyo
 
 ### Holicay plug slide (Options A + B + C)
 
-**TBD — leave the plug's design blank for now.** The plug copy is specced above; its visual layout
-lands here later.
+**Specced in `CONTRACT.md`** (the plug-design treatments). The plug copy is specced above; the visual
+is two treatments: **C1** renders a framed **Holicay-app `mockup`** (rounded phone screenshot, white
+border + soft shadow) centered on a dark-tinted scenic; **A / B / C2** render a **full-bleed scenic
+`bg_photo` + dark scrim** behind the ❌ / ✅ sticker cluster. The flat coral fallback is used only when
+neither asset is given.
 
 ---
 

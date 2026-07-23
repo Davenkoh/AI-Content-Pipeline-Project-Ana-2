@@ -16,16 +16,18 @@ The analysis itself is written to the Sheet's **TikTok Inspo Analysis** tab.
   the font, casing, weight, alignment, placement, and how text sits over the photo. Always
   link the actual slide images (the `inspo/NN/` folder) in the Design column so the build
   stage can look at them.
-- **CTA / funnel** — the one action and how it's asked. Map it to F1–F6 and extract to the
-  **TikTok CTA** tab.
+- **CTA** — the one action and how it's asked. Extract it to the **TikTok CTA** tab.
 - **Why it worked + verdict** — the specific mechanism (save-worthy list? confessional
   hook? clean before/after?), cross-checked against metrics (esp. saves/shares), then
-  queue / new-funnel-candidate / discard.
+  queue / new-framework-candidate / discard.
 
 ## Lessons (append-only; newest at bottom)
 - Never map a post by keyword. Read the slides.
-- Model metric-winners, not whatever a seed posted. No metrics → don't trust it.
+- Model metric-winners only, not whatever a seed posted — the floor is **≥10k views and
+  ≥1k likes/saves**. No metrics → don't trust it.
 - Study general travel winners (any destination), then transplant the winning
   format/hook to the active character's default country (Ana = Vietnam, Chloe = Japan) —
   keep the format, swap the subject.
-- A strong post that fits no funnel is a *new-funnel signal*, not a discard. Flag it.
+- Compare every new-format candidate against **A / B / C1 / C2**. A strong post that fits
+  none of them is a candidate **fifth framework** to propose to the human, not a forced fit
+  (and not a discard).
