@@ -1,29 +1,43 @@
-// Standalone framework slide renderer (SANDBOX — sandbox/frameworks-test only).
+// Framework slide renderer (engine/render) — the graduated sandbox renderer, re-anchored to the
+// repo root. Templates, sticker mechanism, type scale and CSS are LOCKED per CONTRACT.md; only
+// path resolution changed when this moved out of sandbox/frameworks-test into engine/render.
 //
 // Renders the content-framework carousels (Options A / B / C1 / C2) from a per-option
 // copy JSON into 1080x1920 PNGs. Playwright HTML->PNG, mirroring engine/design/build.js's
 // proven pattern (file:// HTML, Google-Fonts @import + networkidle + small wait, esc(),
-// screenshot clip) but self-contained — it imports nothing from engine/ and writes nothing
-// outside this sandbox.
+// screenshot clip).
 //
-// Design authority: knowledge/frameworks/content_frameworks.md.  Interface: ./CONTRACT.md.
+// Design authority: knowledge/frameworks/content_frameworks.md.  Interface: ../../CONTRACT.md.
 //
 // CLI:
-//   node build.js --copy <copy/X.json> --out <dir> [--only NN] [--contact]
+//   node build.js --copy <copy/X.json> --out <dir> [--only NN] [--contact] [--media <dir>] [--chars <dir>]
 //     * reads the copy JSON (schema in CONTRACT.md), renders every slide -> <dir>/NN_<role>.png
 //     * cover/save slides render TWICE: _human (char_photo) and _nohuman (scenic_photo)
 //     * --only NN   renders just the slide at deck position NN (e.g. --only 02)
 //     * --contact   also writes <dir>/_contact.png — a labelled grid montage of the deck
-//
-// Playwright is not installed at repo root; require it from the engine by absolute path.
-const PLAYWRIGHT = '/Users/daven/Documents/Holicay Workflows/Project Ana/engine/node_modules/playwright';
-const { chromium } = require(PLAYWRIGHT);
+//     * --media <dir> / --chars <dir>  override the graded-photo / character-photo dirs
 const fs = require('fs');
 const path = require('path');
 
-const ROOT   = __dirname;                       // sandbox/frameworks-test
-const GRADED = path.join(ROOT, 'media', 'graded');
-const CHARS  = path.join(ROOT, 'chars');
+// Playwright lives in engine/node_modules, not at the repo top level. Find the repo root by
+// walking UP from here until a directory carries the .gitignore sentinel (same walk-up trick as
+// engine/lib/keys.py's keys.env discovery), then require playwright from the engine.
+function findRepoRoot(start) {
+  let d = start;
+  for (;;) {
+    if (fs.existsSync(path.join(d, '.gitignore'))) return d;
+    const parent = path.dirname(d);
+    if (parent === d) return start;   // hit filesystem root without a sentinel — fall back
+    d = parent;
+  }
+}
+const ROOT = findRepoRoot(__dirname);            // repo root (holds media/, chars/, engine/)
+const PLAYWRIGHT = path.join(ROOT, 'engine', 'node_modules', 'playwright');
+const { chromium } = require(PLAYWRIGHT);
+
+let GRADED = path.join(ROOT, 'media', 'graded');  // render-ready slug.jpg picks
+let BRAND  = path.join(ROOT, 'media', 'brand');   // first-party brand assets (app mockups) — mockup slugs check here too
+let CHARS  = path.join(ROOT, 'chars');            // character-in-scene photos for covers/endings
 const W = 1080, H = 1920;
 
 // ---- shared helpers (esc lifted from engine/design/build.js) ----
@@ -31,21 +45,35 @@ function fileUrl(p) { return 'file://' + encodeURI(p); }
 function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
 function toLines(x) { return Array.isArray(x) ? x : (x == null ? [] : [x]); }
 
-// slug -> media/graded/<slug>.(jpg|png|jpeg) ; char name -> chars/<name>(.png|.jpg)
-function resolveIn(dir, name, exts) {
-  if (/\.(jpg|jpeg|png)$/i.test(name)) return path.join(dir, name);
-  for (const e of exts) { const p = path.join(dir, name + '.' + e); if (fs.existsSync(p)) return p; }
-  return path.join(dir, name + '.' + exts[0]);
+// slug -> <dir>/<slug>.(jpg|png|jpeg), trying each dir in order (graded first, then brand so a
+// mockup/app slug installed under media/brand still resolves); char name -> chars/<name>(.png|.jpg).
+function resolveIn(dirs, name, exts) {
+  const list = Array.isArray(dirs) ? dirs : [dirs];
+  if (/\.(jpg|jpeg|png)$/i.test(name)) {
+    for (const d of list) { const p = path.join(d, name); if (fs.existsSync(p)) return p; }
+    return path.join(list[0], name);
+  }
+  for (const d of list) for (const e of exts) { const p = path.join(d, name + '.' + e); if (fs.existsSync(p)) return p; }
+  return path.join(list[0], name + '.' + exts[0]);
 }
-function photo(slug) { return fileUrl(resolveIn(GRADED, slug, ['jpg', 'png', 'jpeg'])); }
-function charPhoto(name) { return fileUrl(resolveIn(CHARS, name, ['png', 'jpg', 'jpeg'])); }
+function photo(slug) { return fileUrl(resolveIn([GRADED, BRAND], slug, ['jpg', 'png', 'jpeg'])); }
+function charPhoto(name) { return fileUrl(resolveIn([CHARS], name, ['png', 'jpg', 'jpeg'])); }
 
 // ---- type system ----
 const MONT_IMPORT   = 'https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&display=swap';
 const NUNITO_IMPORT = 'https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Poppins:wght@700;800;900&display=swap';
 // TikTok Sans (TikTok's real typeface, SIL OFL, via Google Fonts) is bundled locally in
 // assets/fonts/ so renders don't depend on the network; Montserrat stays as the online fallback.
-const TTS_FACES = fs.readFileSync(path.join(__dirname, 'assets', 'fonts', 'tiktok-sans.css'), 'utf8');
+const FONTS_DIR = path.join(__dirname, 'assets', 'fonts');
+// build.js INLINES this css into every doc, so its @font-face src url()s must be absolute file://
+// URLs at render time. Rewrite each url(...) to the matching woff2 in FONTS_DIR, URL-encoding
+// spaces (the repo path contains "Project Ana 2.0"). The css carries bare filenames (portable);
+// this is where they become absolute — so TikTok Sans actually loads instead of falling back.
+const TTS_FACES = fs.readFileSync(path.join(FONTS_DIR, 'tiktok-sans.css'), 'utf8')
+  .replace(/url\(\s*([^)]+?)\s*\)/g, (_m, inner) => {
+    const base = inner.trim().replace(/^['"]|['"]$/g, '').split('/').pop();
+    return `url(${fileUrl(path.join(FONTS_DIR, base))})`;
+  });
 const TIKTOK = "'TikTok Sans','Montserrat','Apple Color Emoji',-apple-system,Arial,sans-serif";
 const NUNITO = "'Nunito','Poppins','Apple Color Emoji',-apple-system,Arial,sans-serif";
 // A / B / C1 = bold TikTok Sans (the actual TikTok face; Montserrat was its stand-in) ;
@@ -586,13 +614,15 @@ function jobsForSlide(slide, idx) {
 }
 
 function parseArgs(argv) {
-  const a = { copy: null, out: null, only: null, contact: false };
+  const a = { copy: null, out: null, only: null, contact: false, media: null, chars: null };
   for (let i = 2; i < argv.length; i++) {
     const x = argv[i];
     if (x === '--copy' || x === '-c') a.copy = argv[++i];
     else if (x === '--out' || x === '-o') a.out = argv[++i];
     else if (x === '--only') a.only = argv[++i];
     else if (x === '--contact') a.contact = true;
+    else if (x === '--media') a.media = argv[++i];
+    else if (x === '--chars') a.chars = argv[++i];
   }
   return a;
 }
@@ -627,7 +657,10 @@ body{background:#1c1c1e;font-family:-apple-system,'SF Mono',Menlo,monospace;padd
 
 if (require.main === module) (async () => {
   const a = parseArgs(process.argv);
-  if (!a.copy) { console.error('usage: node build.js --copy <copy/X.json> --out <dir> [--only NN] [--contact]'); process.exit(1); }
+  if (!a.copy) { console.error('usage: node build.js --copy <copy/X.json> --out <dir> [--only NN] [--contact] [--media <dir>] [--chars <dir>]'); process.exit(1); }
+  // optional dir overrides (graded photos / character photos); brand is a sibling of the graded dir
+  if (a.media) { GRADED = path.resolve(a.media); BRAND = path.join(GRADED, '..', 'brand'); }
+  if (a.chars) { CHARS = path.resolve(a.chars); }
   const copy = JSON.parse(fs.readFileSync(a.copy, 'utf8'));
   const option = copy.option || 'A';
   const outDir = path.resolve(a.out || path.join(ROOT, 'out', option));

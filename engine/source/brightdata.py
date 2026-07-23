@@ -45,8 +45,23 @@ from PIL import Image
 
 # ------------------------------------------------------------------ paths
 HERE = os.path.dirname(os.path.abspath(__file__))
-SANDBOX = os.path.dirname(HERE)                    # sandbox/frameworks-test
-MEDIA = os.path.join(SANDBOX, "media")
+
+
+def _find_repo_root(start):
+    """Walk UP from `start` until a dir carries the .gitignore sentinel (same trick as
+    engine/lib/keys.py's keys.env discovery); that dir is the repo root."""
+    d = start
+    while True:
+        if os.path.exists(os.path.join(d, ".gitignore")):
+            return d
+        parent = os.path.dirname(d)
+        if parent == d:            # reached filesystem root without a sentinel
+            return start
+        d = parent
+
+
+REPO = _find_repo_root(HERE)                       # repo root (holds media/, keys.env, engine/)
+MEDIA = os.path.join(REPO, "media")
 LIBRARY = os.path.join(MEDIA, "library")
 GRADED = os.path.join(MEDIA, "graded")
 MANIFEST = os.path.join(MEDIA, "manifest.json")
@@ -714,7 +729,7 @@ def save_bytes(data, subject, category, query, source_url=None, author=None,
         "license": license,
         "sha256": sha,
         "w": w, "h": h,
-        "local_path": os.path.relpath(dest, SANDBOX),
+        "local_path": os.path.relpath(dest, REPO),
         "scraped_at": datetime.date.today().isoformat(),
         "used_in": [],
     }

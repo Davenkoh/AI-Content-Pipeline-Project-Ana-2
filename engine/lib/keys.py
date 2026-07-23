@@ -16,7 +16,7 @@ or simply:
 """
 import os
 
-_CANON = ("PEXELS", "UNSPLASH", "SERP", "PLACES", "SCRAPE_TOKEN")
+_CANON = ("PEXELS", "UNSPLASH", "SERP", "PLACES", "SCRAPE_TOKEN", "BRIGHTDATA", "APIFY")
 _cache = None
 
 

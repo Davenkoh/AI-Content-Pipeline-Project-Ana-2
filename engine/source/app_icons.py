@@ -8,16 +8,31 @@ These are fixed brand assets (App Store artwork), not place-keyed UGC, so they d
 media/manifest.json entry — the manifest is the sourced-UGC library index.
 
 Usage:
-  python3 tools/app_icons.py "DeepL" "Google Translate"
-  python3 tools/app_icons.py --country us "Notion"
+  python3 engine/source/app_icons.py "DeepL" "Google Translate"
+  python3 engine/source/app_icons.py --country us "Notion"
 """
 import os, io, sys, argparse, difflib, urllib.parse
 import requests
 from PIL import Image
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-SANDBOX = os.path.dirname(HERE)
-GRADED = os.path.join(SANDBOX, "media", "graded")
+
+
+def _find_repo_root(start):
+    """Walk UP from `start` to the dir carrying the .gitignore sentinel (repo root),
+    same trick as engine/lib/keys.py's keys.env discovery."""
+    d = start
+    while True:
+        if os.path.exists(os.path.join(d, ".gitignore")):
+            return d
+        parent = os.path.dirname(d)
+        if parent == d:
+            return start
+        d = parent
+
+
+REPO = _find_repo_root(HERE)
+GRADED = os.path.join(REPO, "media", "graded")
 BROWSER_UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
               "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36")
 
@@ -78,7 +93,7 @@ def fetch_icon(term, country="us"):
     im.convert("RGBA").save(dest, "PNG")
     return {"term": term, "status": "ok", "matched": res.get("trackName"),
             "bundle": res.get("bundleId"), "w": im.size[0], "h": im.size[1],
-            "path": os.path.relpath(dest, SANDBOX), "art": url}
+            "path": os.path.relpath(dest, REPO), "art": url}
 
 
 def main():
