@@ -1,73 +1,71 @@
 #!/usr/bin/env python3
 """
-sheets.py — Project Ana's Google Sheet, the human-facing FRONT-END.
+sheets.py — Project Ana 2.0's Google Sheet, the human-facing FRONT-END.
 
 One spreadsheet, spec-driven. SPEC (below) is the SINGLE SOURCE OF TRUTH for every
 tab and column: it generates the banded headers, the colours, the cell-notes, the
-dropdowns, the hyperlinked back-links, AND the self-documenting Dictionary tab. Change
-a column in SPEC and everything else follows.
+dropdowns, AND the self-documenting Dictionary tab. Change a column in SPEC and
+everything else follows.
+
+2.0 is a FRAMEWORK-POST machine (A / B / C1 / C2 per CONTRACT.md). The 1.0 technique-
+library tabs are gone — every post is one of four frameworks in a fixed rotation, each
+rendered in a `human` or `nohuman` variant. The rotation is DERIVED from the character's
+own fact tab (never a local counter) via `next-slot`; the whole Sheet is the source of truth.
 
 Reading conventions baked into the sheet
   • Each tab is split into visually-banded SECTIONS so the "meat" is obvious vs the
-    stats / metadata: meat=coral, stats/metadata=navy, AI-metadata=grey, and
-    HUMAN INPUT = GREEN. Anything GREEN (a column or the whole Holicay Brand tab) is
-    yours to fill; the AI only reads + clears it when you ask.
-  • Star schema: each character (Ana, Chloe, …) has its OWN fact table (one row per post;
-    carries Hook ID / CTA ID / Funnel ID / Inspo ID foreign keys + the post's own stats).
-    Hooks / CTA / Funnels + Inspo are SHARED across characters (niche-agnostic technique
-    atoms). They link to each other with clickable HYPERLINK back-links
-    (run `relink`). There is no auto "status": reuse is judged from each technique's
-    Posts Used (and the metrics on those posts).
+    stats / metadata: POST CREATION=coral, STATS=navy, AI METADATA=grey, and
+    HUMAN INPUT=GREEN. Anything GREEN (the Human Feedback column, the Connectors
+    Notes column, or the whole Holicay Brand tab) is yours to fill; the AI only
+    reads + clears it when you ask.
+  • Each character (Ana, Chloe, Hannah, …) has its OWN fact tab (one row per post)
+    carrying the framework/variant it ran + that post's own stats. Rotation, the
+    Dashboard and the analyze summary all read across these fact tabs — there are
+    no cross-tab link columns.
 
 Tabs
-  Ana, Chloe, …          one row per post, per character (the per-character fact tables).
-  TikTok Inspo Analysis  one row per scraped inspiration (+ that post's own stats).
-  TikTok Hooks           agnostic hook library (the open).
-  TikTok CTA             agnostic CTA library (the ask) — funnel-tagged + placement.
-  TikTok Funnels         the strategy spine (F1-F6, seeded).
-  Holicay Brand          GREEN — you own this; the AI reads it.
-  Dictionary             auto-generated reference for every tab + column.
+  Ana, Chloe, Hannah, …   one row per post, per character (the per-character fact tables).
+  Holicay Brand           GREEN — you own this; the AI reads it.
+  Connectors              the integrations/credentials register (Notes = GREEN, yours).
+  Dashboard               live formulas: pipeline state + performance analytics (dashboard-init).
+  Dictionary              auto-generated reference for every tab + column.
 
 Common commands
-  python3 sheets.py init                       # build/format every tab + seed funnels + dictionary
-  python3 sheets.py migrate-schema             # realign existing rows to the new spec (run BEFORE init)
-  python3 sheets.py relink                      # (re)build the clickable back-links
-  python3 sheets.py post-upsert --character ana --id tt-16 --title "..." --hook "..." --hook-id H003 \
-        --cta "..." --cta-id C002 --funnel F3 --inspo I001 --script "..." --folder "<link>"
-  python3 sheets.py post-stats --character ana --id tt-16   # scrape the live post's metrics (needs Post Link)
+  python3 sheets.py init                        # build/format every tab + Connectors + Dashboard + Dictionary
+  python3 sheets.py migrate-schema              # realign existing rows to the current spec (run BEFORE init)
+  python3 sheets.py next-slot --character ana [--country Vietnam] [--reserve]   # the next framework/variant slot
+  python3 sheets.py next-number --character ana [--reserve]                     # just the next post number
+  python3 sheets.py post-upsert --character ana --id tt-28 --title "..." --framework A --variant human \
+        --country Vietnam --iteration 1 --folder "<link>" --caption "..." --notes "..."
+  python3 sheets.py post-set --character ana --id tt-28 --post-link "<url>"
+  python3 sheets.py post-stats --character ana --id tt-28    # scrape the live post's metrics (needs Post Link)
   python3 sheets.py post-stats --character ana --all
-  python3 sheets.py hook-add --pattern "..." --type "..." --example "..." --creator AI --origin I001
-  python3 sheets.py cta-add  --pattern "..." --funnel F3 --placement close --mechanism "..." --origin I001
-  python3 sheets.py funnel-list / funnel-add / funnel-append-lesson
-  python3 sheets.py inspo-add --url "<url>" --hook "..." --funnel F3 ...
-  python3 sheets.py inspo-stats --id I001      # scrape the inspiration's own metrics
-  python3 sheets.py read --tab "TikTok Hooks"  # -> JSON rows
-  python3 sheets.py brand-list / brand-add
-  python3 sheets.py feedback-poll              # every GREEN Human Feedback cell with content
-  python3 sheets.py feedback-clear --tab hook --id H003 --note "applied: using less"
+  python3 sheets.py deliver-missing             # push built-but-undelivered posts -> Drive, record the link
+  python3 sheets.py dashboard-init              # (re)build the live Dashboard tab
+  python3 sheets.py connectors-init             # seed/refresh the Connectors register
+  python3 sheets.py stats-summary [--json]      # performance rollups for the analyze skill
+  python3 sheets.py read --tab Ana              # -> JSON rows
+  python3 sheets.py feedback-poll               # every GREEN cell with content
+  python3 sheets.py feedback-clear --tab ana --id tt-28 --note "applied"
 """
 import argparse, glob, json, os, subprocess, sys, datetime
 
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
-# ── tab names (shared, character-agnostic) ────────────────────────────────────
-INSPO_TAB  = "TikTok Inspo Analysis"
-HOOKS_TAB  = "TikTok Hooks"
-CTA_TAB    = "TikTok CTA"
-FUNNEL_TAB = "TikTok Funnels"
-BRAND_TAB  = "Holicay Brand"
-DICT_TAB   = "Dictionary"
+# ── shared tab names ──────────────────────────────────────────────────────────
+BRAND_TAB = "Holicay Brand"
+CONN_TAB  = "Connectors"
+DASH_TAB  = "Dashboard"
+DICT_TAB  = "Dictionary"
 
-# Repo doc the Dictionary tab points newcomers to (the full system blueprint, on GitHub).
-BLUEPRINT_URL = "https://github.com/Davenkoh/Project-Ana/blob/main/BLUEPRINT.md"
+# Repo doc the Dictionary tab points newcomers to (the full 2.0 blueprint, on GitHub).
+BLUEPRINT_URL = "https://github.com/Davenkoh/Project-Ana-2"
 
 
 # ── character registry ────────────────────────────────────────────────────────
 # state.json is the single source of truth for the roster. Each character has its OWN
-# fact-table tab (named after it) + post-id prefix; the technique libraries + inspo are
-# SHARED. Convention: tab name == character name, EXCEPT a faceless character's tab is
-# suffixed " (Faceless)" so she's identifiable at a glance on the Sheet; only id_prefix /
-# country / faceless need storing.
+# fact-table tab named after it. A 2.0 character = a registry entry (name, id_prefix,
+# default content country, TikTok @handle) — no per-character text files.
 def _root():
     p = os.path.dirname(os.path.abspath(__file__))
     while p != os.path.dirname(p):
@@ -86,16 +84,14 @@ def _state():
 
 
 def _characters():
-    """key -> {key, name, tab, faceless, id_prefix, country}. Falls back to a lone 'ana' if unset."""
+    """key -> {key, name, tab, id_prefix, country}. Tab name == character name. Falls
+    back to a lone 'ana' if the roster is unset."""
     raw = _state().get("characters") or {"ana": {"name": "Ana", "id_prefix": "tt"}}
     out = {}
     for key, c in raw.items():
         c = c or {}
         name = c.get("name") or key.capitalize()
-        faceless = bool(c.get("faceless"))
-        # a faceless character has no persona; suffix her tab so she's identifiable on the front end
-        tab = f"{name} (Faceless)" if faceless else name
-        out[key] = {"key": key, "name": name, "tab": tab, "faceless": faceless,
+        out[key] = {"key": key, "name": name, "tab": name,
                     "id_prefix": c.get("id_prefix", "tt"), "country": c.get("country", "")}
     return out
 
@@ -115,10 +111,11 @@ def _char_for(arg):
             return c
     sys.exit(f"[sheets] unknown character {arg!r}; known: {', '.join(chars)}")
 
+
 # ── colours (0..1 rgb) ────────────────────────────────────────────────────────
-CORAL  = {"red": 0.949, "green": 0.318, "blue": 0.259}   # meat
-NAVY   = {"red": 0.075, "green": 0.227, "blue": 0.290}   # stats / metadata
-GRAY   = {"red": 0.45,  "green": 0.45,  "blue": 0.45}     # ai metadata
+CORAL  = {"red": 0.949, "green": 0.318, "blue": 0.259}   # POST CREATION (the meat)
+NAVY   = {"red": 0.075, "green": 0.227, "blue": 0.290}   # STATS / metadata
+GRAY   = {"red": 0.45,  "green": 0.45,  "blue": 0.45}     # AI metadata
 GREEN  = {"red": 0.18,  "green": 0.49,  "blue": 0.20}     # HUMAN INPUT
 WHITE  = {"red": 1, "green": 1, "blue": 1}
 T_CORAL = {"red": 0.992, "green": 0.918, "blue": 0.902}
@@ -133,138 +130,59 @@ HUMAN_NOTE = ("GREEN = your input. Write here; the AI reads it when you ask, act
               "and clears the cell. Leave blank when you have nothing to say.")
 AI_NOTE    = "AI-only bookkeeping. You don't need to touch this."
 
+# ── framework rotation constants (the durable 2.0 spec) ───────────────────────
+FRAMEWORKS = ["A", "B", "C1", "C2"]
+VARIANTS   = ["human", "nohuman"]
+VARIANT_DEFAULT = {"A": "human", "B": "human", "C1": "human", "C2": "nohuman"}
+
 # ── dropdown options ──────────────────────────────────────────────────────────
-CREATOR_OPTS   = ["AI", "AI + Human Feedback", "Human"]
-PLACEMENT_OPTS = ["cover", "body", "close", "caption"]
-DROPDOWNS = {("TikTok Hooks", "Creator"): CREATOR_OPTS,
-             ("TikTok CTA", "Creator"): CREATOR_OPTS,
-             ("TikTok Funnels", "Creator"): CREATOR_OPTS,
-             ("TikTok CTA", "Placement"): PLACEMENT_OPTS}
+# Framework + Variant dropdowns are attached to every character fact tab (built below).
+DROPDOWNS = {}
 
 
 # ── SPEC: the single source of truth ─────────────────────────────────────────
-# C(name, section, who, desc, example, link)
+# C(name, section, who, desc, example)
 #   section: meat | stats | meta | human | ai
 #   who    : "AI" | "Human" | "AI + Human"   (shown in the Dictionary)
-#   link   : None | hooks | cta | funnels | inspo | auto | post_multi | funnels_multi
-def C(name, section, who, desc, example, link=None):
-    return {"name": name, "section": section, "who": who,
-            "desc": desc, "example": example, "link": link}
+def C(name, section, who, desc, example):
+    return {"name": name, "section": section, "who": who, "desc": desc, "example": example}
+
 
 def _fact_spec():
-    """The per-character fact table (one row per post). Same schema for every character."""
+    """The per-character fact table (one row per post). Same schema for every character.
+    Columns A–T. Bands: POST CREATION (coral) ID→Notes · STATS (navy) Post Link→Stats Last
+    Updated · HUMAN INPUT (green) Human Feedback · AI METADATA (grey) Metadata."""
     return {
-        "sections": {"meat": "POST CREATION (the post)", "stats": "STATS (this post's performance)",
+        "sections": {"meat": "POST CREATION", "stats": "STATS",
                      "human": "HUMAN INPUT", "ai": "AI METADATA"},
         "columns": [
-            C("ID", "meat", "AI", "Unique post id. Presence here = a planned/built post.", "tt-16"),
-            C("Platform", "meat", "AI", "Which channel the post is for.", "tiktok"),
-            C("Title", "meat", "AI", "Post title / the output folder name.", "16 - Things to Do in Vietnam"),
+            C("ID", "meat", "AI", "Unique post id (continues each account's 1.0 numbering). Presence here = a planned/built post.", "tt-28"),
+            C("Country", "meat", "AI", "The content country this post targets.", "Vietnam"),
+            C("Framework", "meat", "AI", "Which content framework this post runs (A/B/C1/C2). Empty = a 1.0-era marker row (ignored by rotation).", "A"),
+            C("Variant", "meat", "AI", "human = character-in-scene cover+ending · nohuman = pure scenic, same text.", "human"),
+            C("Copy Iteration", "meat", "AI", "Nth time this (Framework, Country) copy has been run across ALL characters.", "1"),
+            C("Title", "meat", "AI", "Post title / the local outputs/<char>/ folder name AND the Drive folder name.", "28 - Hidden Gems in Vietnam"),
             C("Output Folder", "meat", "AI", "Drive link to the built carousel.", "https://drive.google.com/drive/folders/..."),
             C("Caption", "meat", "AI", "The caption posted with the carousel.", "saving you the research for vietnam ..."),
-            C("Hook", "meat", "AI", "The concrete opener used in THIS post.", "top things to do in vietnam (even if it's not your first time)"),
-            C("Hook ID", "meat", "AI", "Which Hook-library pattern this used. Click to open it.", "H003", "hooks"),
-            C("CTA", "meat", "AI", "The concrete ask used in THIS post.", "comment 'vietnam' and i'll dm the itinerary"),
-            C("CTA ID", "meat", "AI", "Which CTA-library pattern this used. Click to open it.", "C002", "cta"),
-            C("Funnel ID", "meat", "AI", "Which funnel strategy this post ran. Click to open it.", "F3", "funnels"),
-            C("Script", "meat", "AI", "The body copy / slide-by-slide text.", "slide1: ... slide2: ..."),
-            C("Inspo ID", "meat", "AI", "The inspiration this post was derived from. Click to open it.", "I001", "inspo"),
-            C("Date Created", "meat", "AI", "When the post was built.", "2026-06-19"),
-            C("Notes", "meat", "AI", "Plain-English context the HUMAN should read about this post.", "first end-to-end test run"),
+            C("Date Created", "meat", "AI", "When the post was built.", "2026-07-23"),
+            C("Notes", "meat", "AI", "Plain-English context the HUMAN should read about this post.", "first framework-A run for Vietnam"),
             C("Post Link", "stats", "AI + Human", "The live TikTok URL once posted. Drop it here; presence = 'posted'. Feeds the stats scraper.", "https://www.tiktok.com/@user/photo/123"),
-            C("Posting Date", "stats", "AI", "When it went live (scraped).", "2026-06-20"),
+            C("Posting Date", "stats", "AI", "When it went live (scraped).", "2026-07-24"),
             C("Views", "stats", "AI", "Views (scraped).", "12000"),
             C("Likes", "stats", "AI", "Likes (scraped).", "800"),
             C("Comments", "stats", "AI", "Comments (scraped).", "40"),
             C("Share", "stats", "AI", "Shares (scraped).", "25"),
             C("Save", "stats", "AI", "Saves / bookmarks (scraped).", "300"),
-            C("Stats Last Updated", "stats", "AI", "When the stats above were last refreshed.", "2026-06-22 18:00"),
-            C("Human Feedback", "human", "Human", "YOUR steer on this post. The AI reads it when you ask, acts, and clears it.", "hook felt weak, try a confession opener"),
-            C("Metadata", "ai", "AI", "AI-only bookkeeping (e.g. when feedback was processed).", "feedback processed 2026-06-20"),
+            C("Stats Last Updated", "stats", "AI", "When the stats above were last refreshed.", "2026-07-26 18:00"),
+            C("Human Feedback", "human", "Human", "YOUR steer on this post. The AI reads it when you ask, acts, and clears it.", "cover felt flat, try a bolder hook"),
+            C("Metadata", "ai", "AI", "AI-only bookkeeping (e.g. when feedback was processed, slot-reservation stamps).", "feedback processed 2026-07-25"),
         ],
     }
 
 
-SHARED_SPEC = {
-    INSPO_TAB: {
-        "sections": {"meat": "ANALYSIS (what we learned)", "stats": "INSPIRATION STATS (how the original did)",
-                     "human": "HUMAN INPUT"},
-        "columns": [
-            C("Inspo ID", "meat", "AI", "Unique id for this analyzed inspiration.", "I001"),
-            C("URL", "meat", "AI", "The original TikTok post.", "https://www.tiktok.com/@user/photo/123"),
-            C("Date Analyzed", "meat", "AI", "When we analyzed it (not when it was posted).", "2026-06-18"),
-            C("Slides", "meat", "AI", "Drive link to the saved slides (inspo-sync fills it; the local inspo/NN folder is disposable scratch).", "https://drive.google.com/drive/folders/..."),
-            C("Format", "meat", "AI", "The post's structure.", "listicle / storytime / notes-app"),
-            C("Storytelling / Copy", "meat", "AI", "How the body copy / story works.", "personal anecdote then a payoff list"),
-            C("Design notes (+image refs)", "meat", "AI", "Font / casing / placement + links to slide refs.", "Montserrat white centered; inspo/01/2.jpg"),
-            C("Hook", "meat", "AI", "The opener observed in the post.", "everyone gets the iced coffee and stops there"),
-            C("Hook ID", "meat", "AI", "Maps to a Hook-library row. Click to open it.", "H003", "hooks"),
-            C("CTA / Funnel", "meat", "AI", "The ask + mechanism observed (free text).", "comment for the guide"),
-            C("CTA ID", "meat", "AI", "Maps to a CTA-library row. Click to open it.", "C002", "cta"),
-            C("Funnel ID", "meat", "AI", "Which funnel the inspiration ran. Click to open it.", "F3", "funnels"),
-            C("Hypothesis on Why it Worked", "meat", "AI", "The AI's analysis of WHY this post performed.", "curiosity gap + a genuinely save-worthy list"),
-            C("Possible Holicay Content", "meat", "AI", "AI synthesis: how to turn this (format+hook+story+design+cta+funnel, wrapped around the why) into a Holicay post.", "F3 DM-magnet listicle of hidden cafes, withhold the map"),
-            C("Posting Date", "stats", "AI", "When the inspiration was originally posted (scraped).", "2026-05-30"),
-            C("Views", "stats", "AI", "The inspiration's views (scraped).", "250000"),
-            C("Likes", "stats", "AI", "The inspiration's likes (scraped).", "18000"),
-            C("Comments", "stats", "AI", "The inspiration's comments (scraped).", "600"),
-            C("Share", "stats", "AI", "The inspiration's shares (scraped).", "1200"),
-            C("Save", "stats", "AI", "The inspiration's saves (scraped).", "9000"),
-            C("Stats Last Updated", "stats", "AI", "When the stats above were last refreshed.", "2026-06-22"),
-            C("Human Feedback", "human", "Human", "YOUR notes on this inspiration. The AI reads it when you ask, acts, and clears it.", "great F5 example, replicate the reveal"),
-        ],
-    },
-    HOOKS_TAB: {
-        "sections": {"meat": "THE HOOK", "meta": "TRACKING / METADATA", "human": "HUMAN INPUT"},
-        "columns": [
-            C("Hook ID", "meat", "AI", "Unique id.", "H001"),
-            C("Hook Pattern (general)", "meat", "AI", "The agnostic mechanism, topic-free (dress onto any subject).", "top [N] things to do in [place]"),
-            C("Type", "meat", "AI", "Category of hook.", "listicle / curiosity gap / confession"),
-            C("Funnel Affinity", "meat", "AI", "Funnels this hook tends to open well (soft, comma-separated). Click to open.", "F1, F5", "funnels_multi"),
-            C("Example", "meat", "AI", "A concrete instance of the pattern.", "top 7 cafes in Hoi An"),
-            C("Creator", "meta", "AI", "Where this technique came from.", "AI"),
-            C("Origin Ref", "meta", "AI", "Back-link to the inspo / post / feedback that birthed it. Click to open.", "I001", "auto"),
-            C("Lessons", "meta", "AI", "Dated learnings accumulated as the hook gets reused.", "- [2026-06-20] lands harder with a specific number"),
-            C("Posts Used", "meta", "AI", "Posts that used this hook (comma-separated). Click any to open it. Higher count = leaned on more.", "tt-01, tt-09", "post_multi"),
-            C("Last Updated", "meta", "AI", "When this row last changed.", "2026-06-20"),
-            C("Human Feedback", "human", "Human", "YOUR steer (e.g. 'tired, use less' / 'great, push it'). The AI reads, acts, clears.", "feels overused, vary it"),
-        ],
-    },
-    CTA_TAB: {
-        "sections": {"meat": "THE CTA", "meta": "TRACKING / METADATA", "human": "HUMAN INPUT"},
-        "columns": [
-            C("CTA ID", "meat", "AI", "Unique id.", "C001"),
-            C("Pattern (general)", "meat", "AI", "The agnostic ask phrasing, topic-free.", "comment [keyword] for the [resource]"),
-            C("Funnel ID", "meat", "AI", "The ONE funnel this CTA executes. Click to open.", "F3", "funnels"),
-            C("Placement", "meat", "AI", "Where the ask sits in the post (a subtle in-body mention is still a CTA).", "close"),
-            C("Mechanism", "meat", "AI", "How the ask actually works.", "comment keyword -> auto-DM the plan"),
-            C("Example", "meat", "AI", "A concrete instance.", "comment 'vietnam' and i'll dm the itinerary"),
-            C("Creator", "meta", "AI", "Where this technique came from.", "AI"),
-            C("Origin Ref", "meta", "AI", "Back-link to the inspo / post / feedback that birthed it. Click to open.", "I001", "auto"),
-            C("Lessons", "meta", "AI", "Dated learnings accumulated as the CTA gets reused.", "- [2026-06-20] keyword in the cover doubles comments"),
-            C("Posts Used", "meta", "AI", "Posts that used this CTA (comma-separated). Click any to open it.", "tt-16", "post_multi"),
-            C("Last Updated", "meta", "AI", "When this row last changed.", "2026-06-20"),
-            C("Human Feedback", "human", "Human", "YOUR steer on this CTA. The AI reads, acts, clears.", "stop using the hard close, too salesy"),
-        ],
-    },
-    FUNNEL_TAB: {
-        "sections": {"meat": "THE FUNNEL (strategy)", "meta": "TRACKING / METADATA", "human": "HUMAN INPUT"},
-        "columns": [
-            C("Funnel ID", "meat", "AI + Human", "The funnel id (F1-F6 + any candidates).", "F3"),
-            C("Name", "meat", "AI + Human", "Short name.", "DM Magnet"),
-            C("Trigger / When to use", "meat", "AI + Human", "The condition that selects this funnel.", "high-value guide that can withhold the full plan"),
-            C("Canonical Ask", "meat", "AI + Human", "The funnel's signature action.", "comment a keyword -> auto-DM"),
-            C("Primary KPI", "meat", "AI + Human", "The metric to judge it on (never grade it on another).", "comments / DMs (leads)"),
-            C("Creator", "meta", "AI", "Where this funnel came from.", "Human"),
-            C("Origin Ref", "meta", "AI", "Back-link to its source. Click to open.", "funnel_skill.md"),
-            C("Lessons", "meta", "AI", "Dated learnings accumulated as the funnel gets used.", "- [2026-06-20] keyword posts out-save plain lists"),
-            C("Posts Used", "meta", "AI", "Posts that ran this funnel (comma-separated). Click any to open it. Higher count = leaned on more.", "tt-16", "post_multi"),
-            C("Last Updated", "meta", "AI", "When this row last changed.", "2026-06-20"),
-            C("Human Feedback", "human", "Human", "YOUR steer on this funnel. The AI reads, acts, clears.", "run F3 more this month"),
-        ],
-    },
-    BRAND_TAB: {
-        # whole tab is human-owned -> every section is "human" (all green)
+def _brand_spec():
+    # whole tab is human-owned -> every section is "human" (all green). Kept verbatim from 1.0.
+    return {
         "sections": {"human": "HOLICAY BRAND — YOU OWN THIS TAB (the AI reads it)"},
         "columns": [
             C("ID", "human", "Human", "Row id.", "B001"),
@@ -275,48 +193,57 @@ SHARED_SPEC = {
             C("Funnel Fit", "human", "Human", "Which funnels this feature suits.", "F4, F5"),
             C("Notes", "human", "Human", "Anything else the AI should know.", "emphasize the use case, never say 'download'"),
         ],
-    },
-}
+    }
 
-# Build SPEC: one fact tab per character (roster order), then the shared library/inspo/brand tabs.
+
+def _connectors_spec():
+    # Every column is AI-maintained reference EXCEPT Notes, which is GREEN (yours). Status is
+    # seeded but you may edit it. Rows are seeded by `connectors-init`.
+    return {
+        "sections": {"meat": "CONNECTOR (integration / credential register)", "human": "HUMAN INPUT"},
+        "columns": [
+            C("Connector", "meat", "AI", "The integration / service.", "Google Places"),
+            C("Purpose", "meat", "AI", "What the pipeline uses it for.", "user photos + Maps Embed route shots"),
+            C("Auth (env var / credential file)", "meat", "AI", "How it authenticates: keys.env var name or the credential file at repo root.", "keys.env PLACES"),
+            C("Account / identity", "meat", "AI", "The account / service identity behind it.", "billed to that key's Google Cloud project"),
+            C("Console URL", "meat", "AI", "Where a human manages it.", "console.cloud.google.com"),
+            C("Plan & cost", "meat", "AI", "Pricing tier / cost model.", "billed to the Google Cloud project of that key"),
+            C("Status", "meat", "AI", "Working state (ACTIVE / PARTIAL / legacy·optional) + a short qualifier.", "ACTIVE — primary UGC source"),
+            C("Notes", "human", "Human", "YOUR notes / steers on this connector. The AI reads it when you ask, acts, and clears it.", "rotate the key before launch"),
+        ],
+    }
+
+
+# Build SPEC: one fact tab per character (roster order), then the shared tabs. The Dashboard is
+# NOT in SPEC — it is a derived analytics view written by `dashboard-init`.
 SPEC = {c["tab"]: _fact_spec() for c in _characters().values()}
-SPEC.update(SHARED_SPEC)
+SPEC[BRAND_TAB] = _brand_spec()
+SPEC[CONN_TAB]  = _connectors_spec()
 
 # derived: HEADERS[tab] = ordered column names; HEADER_ROWS = 2 for all SPEC tabs
 HEADERS = {tab: [c["name"] for c in s["columns"]] for tab, s in SPEC.items()}
 HEADER_ROWS = 2
 
-# link target tab per (single-value) link-key
-LINK_TAB = {"hooks": HOOKS_TAB, "cta": CTA_TAB, "funnels": FUNNEL_TAB, "inspo": INSPO_TAB}
+# Framework + Variant dropdowns on every fact tab
+for _c in _characters().values():
+    DROPDOWNS[(_c["tab"], "Framework")] = FRAMEWORKS
+    DROPDOWNS[(_c["tab"], "Variant")]   = VARIANTS
 
-# Seed funnels (F1-F6) lifted from knowledge/funnels/funnel_skill.md §3.
-FUNNEL_SEED = [
-    ("F1", "Trust Builder", "default; pure value; no honest app fit; growing the account",
-     "Follow (+ save) = audience capture", "follows, saves, reach"),
-    ("F2", "Honest Mention", "a value post naturally lists tools or raises a planning pain",
-     "Brand recall (assist, not a click) - app named flat among real tools", "profile taps (assist)"),
-    ("F3", "DM Magnet", "high-value guide OR strong story that can withhold the full plan",
-     "Comment a keyword -> auto-DM a real itinerary", "comments / DMs (leads)"),
-    ("F4", "Soft Demo", "audience = overwhelmed planners; teachable 'how I do it'",
-     "Save + use the app her way (app shown in use)", "saves, app opens"),
-    ("F5", "Decoy Reveal", "high-intent searchers; can disguise the post as the listicle",
-     "Make their own / save (app revealed at the back)", "app opens, saves"),
-    ("F6", "Before/After", "a relatable before->after transformation; app = the turning point",
-     "Want the after -> use app / save", "saves, shares, app opens"),
-]
+
+# The set of fact-tab names (character tabs), in roster order.
+def _fact_tabs():
+    return [c["tab"] for c in _characters().values()]
 
 
 # ── plumbing ─────────────────────────────────────────────────────────────────
 def _sheet_id():
-    env = os.environ.get("MASQUERADE_SHEET_ID")
+    env = os.environ.get("HOLICAY_SHEET_ID")
     if env:
         return env
-    sp = os.path.join(_root(), "state.json")
-    if os.path.exists(sp):
-        sid = (json.load(open(sp)) or {}).get("sheet_id")
-        if sid:
-            return sid
-    sys.exit("[sheets] no sheet id — set sheet_id in state.json or $MASQUERADE_SHEET_ID")
+    sid = (_state() or {}).get("sheet_id")
+    if sid:
+        return sid
+    sys.exit("[sheets] state.json sheet_id is empty — run engine/setup/provision.py first")
 
 
 def _find_creds():
@@ -335,7 +262,8 @@ def _find_creds():
         if parent == p:
             break
         p = parent
-    sys.exit("[sheets] no service-account JSON found at repo root (set $HOLICAY_SA_JSON)")
+    sys.exit("[sheets] no service-account JSON found at repo root (holicay-*.json) — "
+             "run engine/setup/provision.py or place it there (set $HOLICAY_SA_JSON to override)")
 
 
 def _client():
@@ -349,7 +277,8 @@ def _client():
 
 
 def _open():
-    return _client().open_by_key(_sheet_id())
+    sid = _sheet_id()        # check sheet_id FIRST (the most actionable fix: provision.py fills it)
+    return _client().open_by_key(sid)
 
 
 def _today():
@@ -358,6 +287,10 @@ def _today():
 
 def _now():
     return datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
+
+
+def _iso_ts():
+    return datetime.datetime.now().isoformat(timespec="seconds")
 
 
 def _a1col(i):                                   # 0-based -> A1 column letters
@@ -377,12 +310,25 @@ def _ws(sh, title):
 
 
 def _next_id(ws, prefix):
-    """Largest prefix+NNN in column A, +1. Skips banner/header (non prefix+digits)."""
+    """Largest prefix+NNN in column A, +1 (3-digit; used for Brand B-ids)."""
     n = 0
     for v in ws.col_values(1):
         if v.startswith(prefix) and v[len(prefix):].isdigit():
             n = max(n, int(v[len(prefix):]))
     return f"{prefix}{n + 1:03d}"
+
+
+def _next_post_id(ws, prefix):
+    """Next `<prefix>-NN` id: scan col A for the character's ids, return (id, nn) = max+1.
+    Skips banner/header and any non `<prefix>-<digits>` rows. 2-digit zero-padded (wider if needed)."""
+    pre = prefix + "-"
+    n = 0
+    for v in ws.col_values(1):
+        v = (v or "").strip()
+        if v.startswith(pre) and v[len(pre):].isdigit():
+            n = max(n, int(v[len(pre):]))
+    nn = n + 1
+    return f"{prefix}-{nn:02d}", nn
 
 
 def _row_for_id(ws, target, header_rows=HEADER_ROWS):
@@ -490,10 +436,6 @@ def _format_tab(sh, ws, tab, cols, runs):
         reqs.append({"updateDimensionProperties": {
             "range": {"sheetId": gid, "dimension": "COLUMNS", "startIndex": i, "endIndex": i + 1},
             "properties": {"pixelSize": w}, "fields": "pixelSize"}})
-    # a faceless character's tab gets a distinct slate colour — instant visual ID on the front end
-    if tab.endswith("(Faceless)"):
-        reqs.append({"updateSheetProperties": {"properties": {"sheetId": gid,
-            "tabColor": {"red": 0.26, "green": 0.26, "blue": 0.28}}, "fields": "tabColor"}})
     try:
         sh.batch_update({"requests": reqs})
     except Exception as e:
@@ -501,17 +443,15 @@ def _format_tab(sh, ws, tab, cols, runs):
 
 
 def _width(c):
-    long_text = {"Caption", "Script", "Storytelling / Copy", "Design notes (+image refs)",
-                 "Hypothesis on Why it Worked", "Possible Holicay Content", "Lessons",
-                 "Human Feedback", "Notes", "Metadata", "Mechanism", "Description",
-                 "Trigger / When to use", "Hook Pattern (general)", "Pattern (general)",
-                 "Hook", "CTA", "CTA / Funnel", "Use Case"}
-    ids = {"ID", "Hook ID", "CTA ID", "Funnel ID", "Inspo ID", "Platform"}
-    if c["name"] in ids or c["link"] in ("hooks", "cta", "funnels", "inspo"):
-        return 80
+    long_text = {"Caption", "Human Feedback", "Notes", "Metadata", "Description",
+                 "Use Case", "Purpose", "Account / identity", "Plan & cost", "Status",
+                 "Auth (env var / credential file)"}
+    ids = {"ID", "Framework", "Variant", "Copy Iteration"}
+    if c["name"] in ids:
+        return 90
     if c["name"] in long_text:
         return 300
-    if c["name"] in ("URL", "Output Folder", "Post Link", "Media Asset Link", "Slides"):
+    if c["name"] in ("Output Folder", "Post Link", "Media Asset Link", "Console URL", "Connector"):
         return 200
     return 130
 
@@ -526,82 +466,37 @@ def _read_rows(sh, tab):
     return [dict(zip(headers, r + [""] * (len(headers) - len(r)))) for r in vals]
 
 
-# ── commands: build / migrate / dictionary / relink ──────────────────────────
+# ── commands: build / migrate / dictionary ───────────────────────────────────
+# 2.0 starts from a fresh Sheet, so there is no legacy data to remap. These maps are
+# intentionally EMPTY (migrate-schema still realigns a hand-edited sheet onto the SPEC by
+# column NAME + rebuilds the banded layout). Populate them only if a real migration arises.
+TAB_RENAMES = {}          # legacy whole-worksheet renames (old title -> new title)
+RENAMES = {}              # per-tab {old col -> new col}
+DROPS = {}                # per-tab {cols to discard}
+
+
 def cmd_init(_):
     sh = _open()
-    for old, new in TAB_RENAMES.items():          # legacy whole-tab renames (idempotent; preserves gid + rows)
-        if _ws(sh, old) and not _ws(sh, new):
-            _ws(sh, old).update_title(new); print(f"[init] renamed worksheet {old!r} -> {new!r}")
-    for old in ("Pipeline", "Feedback Log"):
-        w = _ws(sh, old)
-        if w and not _ws(sh, f"{old} (archived)"):
-            try:
-                w.update_title(f"{old} (archived)")
-                sh.batch_update({"requests": [{"updateSheetProperties": {
-                    "properties": {"sheetId": w.id, "hidden": True}, "fields": "hidden"}}]})
-            except Exception as e:
-                print(f"[sheets] could not archive '{old}': {e}", file=sys.stderr)
     for tab in SPEC:
         _ensure_tab(sh, tab)
-    _seed_funnels(_ws(sh, FUNNEL_TAB))
     _build_dictionary(sh)
-    _relink(sh)
-    print("[sheets] init OK — tabs: " + ", ".join(list(SPEC) + [DICT_TAB]))
+    try:
+        _seed_connectors(sh)
+    except Exception as e:
+        print(f"[sheets] connectors seed skipped: {e}", file=sys.stderr)
+    try:
+        _build_dashboard(sh)
+    except Exception as e:
+        print(f"[sheets] dashboard build skipped: {e}", file=sys.stderr)
+    print("[sheets] init OK — tabs: " + ", ".join(list(SPEC) + [DASH_TAB, DICT_TAB]))
     print(f"  https://docs.google.com/spreadsheets/d/{_sheet_id()}/edit")
-
-
-def _seed_funnels(ws):
-    have = set(ws.col_values(1)[HEADER_ROWS:])
-    added = 0
-    for fid, name, trigger, ask, kpi in FUNNEL_SEED:
-        if fid in have:
-            continue
-        row = {"Funnel ID": fid, "Name": name, "Trigger / When to use": trigger,
-               "Canonical Ask": ask, "Primary KPI": kpi, "Creator": "Human",
-               "Origin Ref": "funnel_skill.md", "Last Updated": _today()}
-        ws.append_row([row.get(h, "") for h in HEADERS[FUNNEL_TAB]], value_input_option="USER_ENTERED")
-        added += 1
-    if added:
-        print(f"[sheets] seeded {added} funnel row(s)")
-
-
-# legacy WHOLE-WORKSHEET renames (old title -> new title); applied first by migrate-schema so the
-# column realign finds the renamed tab. update_title preserves the tab's gid + rows.
-TAB_RENAMES = {"Ashley": "Ana", "Mia": "Mia (Faceless)"}  # Mia is faceless -> tab suffixed for front-end ID
-# old-name -> new-name for migrating a populated sheet onto the current SPEC (per fact tab + shared).
-_FACT_RENAMES = {"Funnel": "Funnel ID", "Inspo URL": "Inspo ID", "Feedback": "Human Feedback"}
-_FACT_DROPS = {"Follows", "Link Clicks"}
-RENAMES = {
-    INSPO_TAB:  {"Date": "Date Analyzed", "Funnel": "Funnel ID",
-                 "Why it worked / metrics": "Hypothesis on Why it Worked",
-                 "Verdict": "Possible Holicay Content", "Notes": "Human Feedback"},
-    HOOKS_TAB:  {"Source": "Creator", "Posts": "Posts Used", "Steer": "Human Feedback"},
-    CTA_TAB:    {"Funnel": "Funnel ID", "Source": "Creator", "Posts": "Posts Used", "Steer": "Human Feedback"},
-    FUNNEL_TAB: {"Source": "Creator", "Posts": "Posts Used", "Steer": "Human Feedback"},
-    BRAND_TAB:  {},
-}
-# old Source vocabulary -> new Creator dropdown vocabulary
-CREATOR_NORM = {"inspo": "AI", "feedback": "AI + Human Feedback", "manual": "Human",
-                "ai": "AI", "human": "Human", "ai + human feedback": "AI + Human Feedback", "": "AI"}
-# columns intentionally dropped during migration (their data is discarded)
-DROPS = {
-    INSPO_TAB:  {"Author"},
-    HOOKS_TAB:  {"Times Used", "Success / Perf", "Status"},
-    CTA_TAB:    {"Times Used", "Success / Perf", "Status"},
-    FUNNEL_TAB: {"Success / Perf", "Status"},
-    BRAND_TAB:  {"Status"},
-}
-for _c in _characters().values():            # every character fact tab shares the fact renames/drops
-    RENAMES.setdefault(_c["tab"], _FACT_RENAMES)
-    DROPS.setdefault(_c["tab"], _FACT_DROPS)
 
 
 def cmd_migrate_schema(_):
     """Realign existing rows to the current SPEC by column NAME, honouring RENAMES/DROPS,
-    and converting every tab to the 2-row banded layout. Run BEFORE `init`. Idempotent."""
+    and convert every tab to the 2-row banded layout. Run BEFORE `init`. Idempotent.
+    (On a fresh 2.0 sheet this is a no-op; it exists for hand-edited-column recovery.)"""
     sh = _open()
-    # 0) legacy whole-worksheet renames first (preserve gid + rows) so the column realign below
-    #    finds the renamed tab instead of `init` creating an empty one beside the orphan.
     for old, new in TAB_RENAMES.items():
         if _ws(sh, old) and not _ws(sh, new):
             _ws(sh, old).update_title(new)
@@ -614,8 +509,6 @@ def cmd_migrate_schema(_):
         grid = ws.get_all_values()
         if not grid:
             print(f"[migrate-schema] {tab}: empty"); continue
-        # detect the real header row by its first cell (the first header name is rename-stable):
-        # flat tabs have it on row 1; banded tabs (a banner above) have it on row 2.
         first = new_headers[0]
         if grid[0] and grid[0][0] == first:
             hidx = 0
@@ -639,9 +532,6 @@ def cmd_migrate_schema(_):
                 if not h or h in drop:
                     continue
                 g[ren.get(h, h)] = r[i] if i < len(r) else ""
-            if "Creator" in new_headers:        # normalize old Source vocab -> Creator dropdown
-                g["Creator"] = CREATOR_NORM.get((g.get("Creator", "") or "").strip().lower(),
-                                                g.get("Creator", "").strip() or "AI")
             out.append([g.get(h, "") for h in new_headers])
         ws.clear()
         _ensure_tab(sh, tab)            # writes banner + headers + formatting
@@ -650,7 +540,7 @@ def cmd_migrate_schema(_):
             ws.batch_update([{"range": f"A3:{end}{2 + len(out)}", "values": out}],
                             value_input_option="USER_ENTERED")
         print(f"[migrate-schema] {tab}: {len(out)} row(s) -> {len(new_headers)} cols (banded)")
-    print("[migrate-schema] done. Run `init` to seed funnels + build the Dictionary + relink.")
+    print("[migrate-schema] done. Run `init` to rebuild the Dictionary + Dashboard + Connectors.")
 
 
 def _build_dictionary(sh):
@@ -671,10 +561,10 @@ def _build_dictionary(sh):
     SUB = ["Column", "Who fills it", "Meaning", "Example value"]
     rows, heads, subs = [], [], []             # heads/subs = 0-based row indices to format
     rows.append(["DICTIONARY — what every tab + column means.  GREEN = human input (you fill "
-                 "it; the AI reads & clears it). The Holicay Brand tab is entirely yours.",
-                 "", "", ""])
-    rows.append([f'=HYPERLINK("{BLUEPRINT_URL}","START HERE  →  the full system blueprint '
-                 '(architecture · engines · data model · workflow · how to run it) — on GitHub")',
+                 "it; the AI reads & clears it). The Holicay Brand tab is entirely yours; the "
+                 "Connectors Notes column is yours.", "", "", ""])
+    rows.append([f'=HYPERLINK("{BLUEPRINT_URL}","START HERE  →  the full Project Ana 2.0 system '
+                 '(frameworks · engine · data model · workflow · how to run it) — on GitHub")',
                  "", "", ""])
     rows.append(["", "", "", ""])
     for tab, spec in SPEC.items():
@@ -684,14 +574,24 @@ def _build_dictionary(sh):
         subs.append(len(rows))
         rows.append(SUB[:])
         for ci, c in enumerate(spec["columns"]):
-            # link the column name to its actual header cell (row 2) in the tab
             name = (f'=HYPERLINK("#gid={g}&range={_a1col(ci)}2","{c["name"]}")'
                     if g is not None else c["name"])
             rows.append([name, c["who"], c["desc"], c["example"]])
         rows.append(["", "", "", ""])          # spacer between groups
+    # mention the Dashboard (a derived analytics view, not in SPEC)
+    dw = _ws(sh, DASH_TAB)
+    dg = dw.id if dw else None
+    heads.append(len(rows))
+    rows.append([f'=HYPERLINK("#gid={dg}","{DASH_TAB}")' if dg is not None else DASH_TAB, "", "", ""])
+    subs.append(len(rows))
+    rows.append(SUB[:])
+    rows.append([DASH_TAB, "AI", "Live formulas only (no data of its own): per-character pipeline "
+                 "state + performance analytics over the fact tabs. Rebuilt by `dashboard-init`.", ""])
+    rows.append(["", "", "", ""])
     end = _a1col(NCOL - 1)
     ws.batch_update([{"range": f"A1:{end}{len(rows)}", "values": rows}],
                     value_input_option="USER_ENTERED")    # USER_ENTERED so HYPERLINK evaluates
+
     def band(r, bg, white, merge):
         out = []
         if merge:
@@ -721,124 +621,6 @@ def _build_dictionary(sh):
     print(f"[sheets] Dictionary rebuilt ({len(heads)} tab sections)")
 
 
-def _id_row_maps(sh):
-    """{tab: {id: rownum}} for building back-links."""
-    maps = {}
-    for tab in (HOOKS_TAB, CTA_TAB, FUNNEL_TAB, INSPO_TAB,
-                *[c["tab"] for c in _characters().values()]):
-        ws = _ws(sh, tab)
-        m = {}
-        if ws:
-            for i, v in enumerate(ws.col_values(1)[HEADER_ROWS:], start=HEADER_ROWS + 1):
-                if v:
-                    m[v] = i
-        maps[tab] = (ws.id if ws else None, m)
-    return maps
-
-
-def _link_tab_for(value):
-    if value.startswith("I") and value[1:].isdigit():
-        return INSPO_TAB
-    # post ids route to their character's fact tab by id_prefix (tt- -> Ana, ttc- -> Chloe).
-    # longest prefix first so "ttc-" wins over "tt-" (the trailing "-" already disambiguates).
-    for c in sorted(_characters().values(), key=lambda c: -len(c["id_prefix"])):
-        if value.startswith(c["id_prefix"] + "-"):
-            return c["tab"]
-    if value.startswith("H") and value[1:].isdigit():
-        return HOOKS_TAB
-    if value.startswith("C") and value[1:].isdigit():
-        return CTA_TAB
-    if value.startswith("F") and value[1:].isdigit():
-        return FUNNEL_TAB
-    return None
-
-
-def _relink(sh):
-    """(Re)write clickable HYPERLINK back-links for every link column. Idempotent."""
-    maps = _id_row_maps(sh)
-    sid = _sheet_id()
-    total = 0
-    for tab, spec in SPEC.items():
-        ws = _ws(sh, tab)
-        if ws is None:
-            continue
-        headers = HEADERS[tab]
-        grid = ws.get_all_values()
-        data = grid[HEADER_ROWS:]
-        if not data:
-            continue
-        link_cols = [(i, c) for i, c in enumerate(spec["columns"]) if c["link"]]
-        if not link_cols:
-            continue
-        updates = []
-        rich = []      # (row, col, plain, [(start,end,uri)])
-        for ridx, row in enumerate(data):
-            row = row + [""] * (len(headers) - len(row))
-            for ci, c in link_cols:
-                raw = row[ci].strip()
-                if not raw or raw.startswith("="):
-                    continue
-                kind = c["link"]
-                if kind in ("hooks", "cta", "funnels", "inspo"):
-                    target = LINK_TAB[kind]
-                    gid, m = maps[target]
-                    if raw in m and gid is not None:
-                        updates.append((ridx + HEADER_ROWS + 1, ci,
-                                        f'=HYPERLINK("#gid={gid}&range=A{m[raw]}","{raw}")'))
-                elif kind == "auto":
-                    target = _link_tab_for(raw)
-                    if target:
-                        gid, m = maps[target]
-                        if raw in m and gid is not None:
-                            updates.append((ridx + HEADER_ROWS + 1, ci,
-                                            f'=HYPERLINK("#gid={gid}&range=A{m[raw]}","{raw}")'))
-                elif kind in ("post_multi", "funnels_multi"):
-                    # a Posts Used cell can mix characters (tt-19, ttc-01) -> resolve EACH id's
-                    # tab by prefix; funnels_multi always points at the Funnels tab.
-                    parts = [p.strip() for p in raw.replace(";", ",").split(",") if p.strip()]
-                    plain = ", ".join(parts)
-                    runs, cur = [], 0
-                    for p in parts:
-                        st, en = cur, cur + len(p)
-                        tgt = FUNNEL_TAB if kind == "funnels_multi" else _link_tab_for(p)
-                        gid, m = maps.get(tgt, (None, {})) if tgt else (None, {})
-                        if gid is not None and p in m:
-                            uri = f"https://docs.google.com/spreadsheets/d/{sid}/edit#gid={gid}&range=A{m[p]}"
-                            runs.append((st, en, uri))
-                        cur = en + 2    # ", "
-                    if runs:
-                        rich.append((ridx + HEADER_ROWS + 1, ci, plain, runs))
-        if updates:
-            ws.batch_update([{"range": f"{_a1col(ci)}{r}", "values": [[f]]} for (r, ci, f) in updates],
-                            value_input_option="USER_ENTERED")
-            total += len(updates)
-        for (r, ci, plain, runs) in rich:
-            try:
-                _set_rich_links(sh, ws.id, r - 1, ci, plain, runs)
-                total += 1
-            except Exception as e:
-                print(f"[relink] {tab} r{r}: rich-link skipped: {e}", file=sys.stderr)
-    print(f"[sheets] relink: {total} cell(s) linked")
-
-
-def _set_rich_links(sh, gid, row0, col0, text, runs):
-    """One cell, multiple in-text hyperlinks via textFormatRuns."""
-    tf_runs = []
-    last = 0
-    for (st, en, uri) in runs:
-        if st > last:
-            tf_runs.append({"startIndex": last, "format": {}})
-        tf_runs.append({"startIndex": st, "format": {"link": {"uri": uri},
-                        "foregroundColor": {"red": 0.06, "green": 0.4, "blue": 0.75},
-                        "underline": True}})
-        last = en
-    cell = {"userEnteredValue": {"stringValue": text}, "textFormatRuns": tf_runs}
-    req = {"updateCells": {"rows": [{"values": [cell]}],
-                           "fields": "userEnteredValue,textFormatRuns",
-                           "start": {"sheetId": gid, "rowIndex": row0, "columnIndex": col0}}}
-    sh.batch_update({"requests": [req]})
-
-
 # ── commands: posts (per-character fact tables) ──────────────────────────────
 def _char_ws(sh, char):
     return _ws(sh, char["tab"]) or _ensure_tab(sh, char["tab"])
@@ -849,14 +631,13 @@ def cmd_post_upsert(a):
     sh = _open()
     ws = _char_ws(sh, char)
     headers = HEADERS[char["tab"]]
-    fields = {"ID": a.id, "Platform": a.platform or "tiktok", "Title": a.title or "",
-              "Output Folder": a.folder or "", "Caption": a.caption or "", "Hook": a.hook or "",
-              "Hook ID": a.hook_id or "", "CTA": a.cta or "", "CTA ID": a.cta_id or "",
-              "Funnel ID": a.funnel or "", "Script": a.script or "", "Inspo ID": a.inspo or "",
-              "Notes": a.notes or ""}
+    fields = {"ID": a.id, "Country": a.country or "", "Framework": a.framework or "",
+              "Variant": a.variant or "", "Copy Iteration": a.iteration or "",
+              "Title": a.title or "", "Output Folder": a.folder or "", "Caption": a.caption or "",
+              "Notes": a.notes or "", "Metadata": a.metadata or ""}
     row = _row_for_id(ws, a.id)
     if row is None:
-        fields["Date Created"] = a.created or _today()
+        fields["Date Created"] = _today()
         ws.append_row([fields.get(h, "") for h in headers],
                       value_input_option="USER_ENTERED", table_range="A2")
         print(f"[sheets] inserted {a.id}")
@@ -878,11 +659,11 @@ def cmd_post_set(a):
         sys.exit(f"[sheets] no {char['name']} row for {a.id}; post-upsert it first")
     pairs = {}
     for arg, col in [("title", "Title"), ("folder", "Output Folder"), ("caption", "Caption"),
-                     ("hook", "Hook"), ("hook_id", "Hook ID"), ("cta", "CTA"), ("cta_id", "CTA ID"),
-                     ("funnel", "Funnel ID"), ("script", "Script"), ("inspo", "Inspo ID"),
-                     ("notes", "Notes"), ("post_link", "Post Link"), ("posting_date", "Posting Date"),
+                     ("country", "Country"), ("framework", "Framework"), ("variant", "Variant"),
+                     ("iteration", "Copy Iteration"), ("notes", "Notes"), ("metadata", "Metadata"),
+                     ("post_link", "Post Link"), ("posting_date", "Posting Date"),
                      ("views", "Views"), ("likes", "Likes"), ("comments", "Comments"),
-                     ("share", "Share"), ("save", "Save"), ("metadata", "Metadata")]:
+                     ("share", "Share"), ("save", "Save")]:
         v = getattr(a, arg, None)
         if v is not None:
             pairs[col] = _today() if v == "today" else v
@@ -893,32 +674,87 @@ def cmd_post_set(a):
     print(f"[sheets] set {a.id}: {list(pairs)}")
 
 
-def cmd_next_number(a):
-    """Next post number for a character, derived from the SHEET (the source of truth) — never a
-    local counter. Scans the character's fact tab col A for <prefix>-NN ids and returns max+1
-    (1 if none). Prints JSON {character, prefix, nn, nn_padded, id}.
+# ── rotation logic (pure — offline-testable) ─────────────────────────────────
+def _other_variant(v):
+    return "nohuman" if v == "human" else "human"
 
-    With --reserve, also appends a stub row claiming that id immediately, so a teammate running
-    this a moment later sees the claim on the shared Sheet and gets the next number — this is what
-    kills the old race (the claim used to live only in an uncommitted local state.json). Delivery
-    (post-upsert, same id) later fills the row in. Idempotent claim: if the id somehow already
-    exists, the stub append is skipped."""
+
+def compute_next_slot(char_rows, all_rows, country):
+    """PURE rotation math (no I/O) — the durable 2.0 spec, mirrored by the Dashboard formula.
+
+    char_rows : list of row-dicts for THIS character's fact tab (marker/1.0 rows included; they
+                carry an EMPTY Framework so they are ignored here).
+    all_rows  : list of row-dicts across ALL character fact tabs (for the cross-character copy count).
+    country   : the resolved content country (override or the registry default).
+
+    Returns {framework, variant, copy_iteration}. (id + country are decided by the caller.)
+      framework      = FRAMEWORKS[len(my framework-bearing rows) % 4]
+      variant        = default(framework) if that framework's prior count is even, else the other
+                       (defaults: A/B/C1 -> human, C2 -> nohuman)
+      copy_iteration = count of (framework, country) rows across ALL fact tabs + 1
+    """
+    mine = [r for r in char_rows if (r.get("Framework") or "").strip()]
+    framework = FRAMEWORKS[len(mine) % 4]
+    prior = sum(1 for r in mine if (r.get("Framework") or "").strip() == framework)
+    default = VARIANT_DEFAULT[framework]
+    variant = default if prior % 2 == 0 else _other_variant(default)
+    ci = 1 + sum(1 for r in all_rows
+                 if (r.get("Framework") or "").strip() == framework
+                 and (r.get("Country") or "").strip() == country)
+    return {"framework": framework, "variant": variant, "copy_iteration": ci}
+
+
+def cmd_next_slot(a):
+    """The next framework/variant slot for a character, DERIVED from the Sheet (never a local
+    counter). Prints JSON {id, framework, variant, country, copy_iteration, reserved}.
+
+    --reserve appends a stub row that atomically CLAIMS the slot on the shared Sheet (ID, Country,
+    Framework, Variant, Copy Iteration, Title="(building)", Date Created, Metadata="reserved <ts>"),
+    so a teammate running this a moment later sees the claim and rotates past it. Delivery
+    (post-upsert, same id) fills the row in. An ABORTED build leaves the stub — clean it with
+    `post-delete --character <k> --id <id>` so the number + rotation slot free up again."""
+    char = _char_for(a.character)
+    sh = _open()
+    char_rows, all_rows = [], []
+    for c in _characters().values():
+        rows = _read_rows(sh, c["tab"])
+        all_rows += rows
+        if c["key"] == char["key"]:
+            char_rows = rows
+    country = a.country or char["country"]
+    slot = compute_next_slot(char_rows, all_rows, country)
+    ws = _char_ws(sh, char)
+    pid, _nn = _next_post_id(ws, char["id_prefix"])
+    out = {"id": pid, "framework": slot["framework"], "variant": slot["variant"],
+           "country": country, "copy_iteration": slot["copy_iteration"], "reserved": False}
+    if getattr(a, "reserve", False) and _row_for_id(ws, pid) is None:
+        headers = HEADERS[char["tab"]]
+        stub = {"ID": pid, "Country": country, "Framework": slot["framework"],
+                "Variant": slot["variant"], "Copy Iteration": slot["copy_iteration"],
+                "Title": "(building)", "Date Created": _today(),
+                "Metadata": f"reserved {_iso_ts()}"}
+        ws.append_row([stub.get(h, "") for h in headers],
+                      value_input_option="USER_ENTERED", table_range="A2")
+        out["reserved"] = True
+    print(json.dumps(out))
+
+
+def cmd_next_number(a):
+    """Just the next post NUMBER for a character (lower-level than next-slot), derived from the
+    Sheet: scans the fact tab col A for `<prefix>-NN` and returns max+1. Prints JSON. For framework
+    posts prefer `next-slot` (it also picks framework + variant + copy iteration).
+
+    --reserve appends a minimal stub claiming the id (no Framework, so it does NOT consume a
+    rotation slot — use next-slot --reserve for that). Idempotent: skips the append if the id exists."""
     char = _char_for(a.character)
     sh = _open()
     ws = _char_ws(sh, char)
-    pre = char["id_prefix"] + "-"
-    n = 0
-    for v in ws.col_values(1):
-        v = (v or "").strip()
-        if v.startswith(pre) and v[len(pre):].isdigit():
-            n = max(n, int(v[len(pre):]))
-    nn = n + 1
-    pid = f"{char['id_prefix']}-{nn:02d}"
+    pid, nn = _next_post_id(ws, char["id_prefix"])
     reserved = False
     if getattr(a, "reserve", False) and _row_for_id(ws, pid) is None:
         headers = HEADERS[char["tab"]]
-        rowvals = {"ID": pid, "Platform": "tiktok", "Title": a.title or "(building)",
-                   "Date Created": _today(), "Metadata": f"reserved {_now()}"}
+        rowvals = {"ID": pid, "Title": a.title or "(building)",
+                   "Date Created": _today(), "Metadata": f"reserved {_iso_ts()}"}
         ws.append_row([rowvals.get(h, "") for h in headers],
                       value_input_option="USER_ENTERED", table_range="A2")
         reserved = True
@@ -928,8 +764,8 @@ def cmd_next_number(a):
 
 
 def cmd_post_delete(a):
-    """Delete a post's row from its character tab (e.g. removing a duplicate). Does NOT touch Drive or
-    local files — remove those separately. Frees the number: next-number will hand it out again."""
+    """Delete a post's row from its character tab (e.g. removing a duplicate or an aborted stub).
+    Does NOT touch Drive or local files. Frees the number + rotation slot."""
     char = _char_for(a.character)
     sh = _open()
     ws = _char_ws(sh, char)
@@ -941,31 +777,32 @@ def cmd_post_delete(a):
 
 
 def cmd_deliver_missing(a):
-    """Drive-canonical safety net: deliver every post that has a local outputs/<Title>/final/ but no
-    Drive link on its Sheet row yet (shelling out to drive_sync.py --post), then record the returned
-    link. Ensures a built-but-undelivered post is never the only copy — so local can stay disposable.
-    Sweeps all characters (or one via --character). --dry-run just lists what it would deliver.
-    The Title column is the bridge: it equals both the local outputs/ folder name and the Drive folder."""
-    import subprocess
+    """Drive-canonical safety net: deliver every post that has a local build but no Drive link on
+    its Sheet row yet (shelling out to drive_sync.py --post), then record the returned link. Posts
+    live at outputs/<char-key>/<Title>/ — the Title column bridges the Sheet row to the folder (it
+    equals the local folder basename AND the Drive folder). Sweeps all characters (or one via
+    --character). --dry-run lists what it would deliver."""
     sh = _open()
     root = _root()
     ds = os.path.join(root, "engine", "drive", "drive_sync.py")
-    out_dir = os.path.join(root, "outputs")
     chars = [_char_for(a.character)] if a.character else list(_characters().values())
     dry = getattr(a, "dry_run", False)
     delivered = already = 0
     for char in chars:
         ws = _char_ws(sh, char)
         headers = HEADERS[char["tab"]]
+        char_out = os.path.join(root, "outputs", char["key"])   # per-character subdir
         grid = ws.get_all_values()
         for ridx, row in enumerate(grid[HEADER_ROWS:], start=HEADER_ROWS + 1):
             rec = dict(zip(headers, row + [""] * (len(headers) - len(row))))
-            pid, title, folder = (rec.get("ID") or "").strip(), (rec.get("Title") or "").strip(), (rec.get("Output Folder") or "").strip()
-            if not pid or not title or not os.path.isdir(os.path.join(out_dir, title, "final")):
-                continue                                   # no row id / no local build for this row
+            pid = (rec.get("ID") or "").strip()
+            title = (rec.get("Title") or "").strip()
+            folder = (rec.get("Output Folder") or "").strip()
+            local = os.path.join(char_out, title)
+            if not pid or not title or not os.path.isdir(os.path.join(local, "final")):
+                continue                                   # no id / no local build for this row
             if folder:
                 already += 1; continue                     # already on Drive (has a link)
-            local = os.path.join(out_dir, title)
             if dry:
                 print(f"[deliver-missing] WOULD deliver {pid}  {title}  ({char['name']})"); delivered += 1; continue
             print(f"[deliver-missing] {pid}  {title} -> Drive ({char['name']})")
@@ -981,175 +818,6 @@ def cmd_deliver_missing(a):
                                 value_input_option="USER_ENTERED")
             delivered += 1
     print(f"[deliver-missing] done — {'would deliver' if dry else 'delivered'} {delivered}, {already} already on Drive")
-
-
-# ── commands: inspo ──────────────────────────────────────────────────────────
-def cmd_inspo_add(a):
-    sh = _open()
-    ws = _ws(sh, INSPO_TAB) or _ensure_tab(sh, INSPO_TAB)
-    iid = a.id or _next_id(ws, "I")
-    row = {"Inspo ID": iid, "URL": a.url or "", "Date Analyzed": _today(),
-           "Slides": a.slides or "", "Format": a.format or "", "Hook": a.hook or "",
-           "Hook ID": a.hook_id or "", "Storytelling / Copy": a.story or "",
-           "Design notes (+image refs)": a.design or "", "CTA / Funnel": a.cta or "",
-           "CTA ID": a.cta_id or "", "Funnel ID": a.funnel or "",
-           "Hypothesis on Why it Worked": a.why or "", "Possible Holicay Content": a.idea or ""}
-    ws.append_row([row.get(h, "") for h in HEADERS[INSPO_TAB]], value_input_option="USER_ENTERED")
-    print(f"[sheets] inspo {iid} added")
-
-
-def cmd_inspo_set(a):
-    sh = _open()
-    ws = _ws(sh, INSPO_TAB) or _ensure_tab(sh, INSPO_TAB)
-    headers = HEADERS[INSPO_TAB]
-    row = _row_for_id(ws, a.id)
-    if row is None:
-        sys.exit(f"[sheets] no inspo row {a.id}")
-    pairs = {}
-    for arg, col in [("url", "URL"), ("slides", "Slides"), ("format", "Format"),
-                     ("story", "Storytelling / Copy"), ("design", "Design notes (+image refs)"),
-                     ("hook", "Hook"), ("hook_id", "Hook ID"), ("cta", "CTA / Funnel"),
-                     ("cta_id", "CTA ID"), ("funnel", "Funnel ID"),
-                     ("why", "Hypothesis on Why it Worked"), ("idea", "Possible Holicay Content")]:
-        v = getattr(a, arg, None)
-        if v is not None:
-            pairs[col] = v
-    ws.batch_update([{"range": f"{_a1col(headers.index(h))}{row}", "values": [[v]]}
-                     for h, v in pairs.items()], value_input_option="USER_ENTERED")
-    print(f"[sheets] inspo set {a.id}: {list(pairs)}")
-
-
-def cmd_inspo_sync(a):
-    """Make inspo Drive-canonical: for every inspo row whose Slides isn't already a Drive link, push
-    its local inspo/NN folder to Drive (via drive_sync.py --inspo) and store the returned link in
-    Slides — Sheets auto-renders a URL as clickable. Backfills existing rows and enforces going
-    forward (the Inspo ID is canonical; the local inspo/NN folder is disposable scratch). --dry-run
-    previews; --id limits to one row."""
-    import subprocess
-    sh = _open()
-    ws = _ws(sh, INSPO_TAB)
-    if ws is None:
-        sys.exit("[sheets] no inspo tab")
-    headers = HEADERS[INSPO_TAB]
-    ds = os.path.join(_root(), "engine", "drive", "drive_sync.py")
-    dry = getattr(a, "dry_run", False)
-    synced = already = 0
-    for ridx, r in enumerate(ws.get_all_values()[HEADER_ROWS:], start=HEADER_ROWS + 1):
-        rec = dict(zip(headers, r + [""] * (len(headers) - len(r))))
-        iid, slides = (rec.get("Inspo ID") or "").strip(), (rec.get("Slides") or "").strip()
-        if not iid or (a.id and iid != a.id):
-            continue
-        if slides.startswith("http"):
-            already += 1; continue                          # already a Drive link
-        folder = slides if slides.startswith("inspo/") else ""
-        local = os.path.join(_root(), folder) if folder else ""
-        if not folder or not os.path.isdir(local):
-            print(f"  [warn] {iid}: no local folder for Slides={slides!r} — skipping", file=sys.stderr); continue
-        if dry:
-            print(f"[inspo-sync] WOULD push {folder} -> Drive, link {iid}"); synced += 1; continue
-        print(f"[inspo-sync] {iid}: pushing {folder} -> Drive")
-        p = subprocess.run([sys.executable, ds, "--inspo", local], capture_output=True, text=True)
-        sys.stdout.write(p.stdout)
-        if p.returncode != 0:
-            print(f"  [warn] push failed for {iid}: {p.stderr.strip()}", file=sys.stderr); continue
-        url = next((ln.split("-> ", 1)[-1].strip() for ln in p.stdout.splitlines()
-                    if "drive.google.com/drive/folders/" in ln), "")
-        if url:
-            ws.batch_update([{"range": f"{_a1col(headers.index('Slides'))}{ridx}", "values": [[url]]}],
-                            value_input_option="USER_ENTERED")
-            synced += 1
-    print(f"[inspo-sync] done — {'would sync' if dry else 'synced'} {synced}, {already} already linked")
-
-
-# ── commands: technique libraries ────────────────────────────────────────────
-def _lib_append_lesson(ws, headers, post_id, lesson, row):
-    cur = ws.row_values(row)
-    cur += [""] * (len(headers) - len(cur))
-    g = {h: cur[i] for i, h in enumerate(headers)}
-    new_lessons = g["Lessons"]
-    if lesson:
-        new_lessons = (g["Lessons"] + ("\n" if g["Lessons"] else "") + f"- [{_today()}] {lesson}")
-    posts = g.get("Posts Used", "")
-    if post_id and post_id not in posts:
-        posts = (posts + ", " + post_id) if posts else post_id
-    ws.batch_update([
-        {"range": f"{_a1col(headers.index('Lessons'))}{row}", "values": [[new_lessons]]},
-        {"range": f"{_a1col(headers.index('Posts Used'))}{row}", "values": [[posts]]},
-        {"range": f"{_a1col(headers.index('Last Updated'))}{row}", "values": [[_today()]]},
-    ], value_input_option="USER_ENTERED")
-
-
-def cmd_hook_add(a):
-    sh = _open()
-    ws = _ws(sh, HOOKS_TAB) or _ensure_tab(sh, HOOKS_TAB)
-    hid = _next_id(ws, "H")
-    row = {"Hook ID": hid, "Hook Pattern (general)": a.pattern or "", "Type": a.type or "",
-           "Funnel Affinity": a.affinity or "", "Example": a.example or "",
-           "Creator": a.creator or "AI", "Origin Ref": a.origin or "",
-           "Lessons": (f"- [{_today()}] {a.lesson}" if a.lesson else ""),
-           "Posts Used": a.post or "", "Last Updated": _today()}
-    ws.append_row([row.get(h, "") for h in HEADERS[HOOKS_TAB]], value_input_option="USER_ENTERED")
-    print(f"[sheets] hook {hid} added")
-
-
-def cmd_hook_append_lesson(a):
-    sh = _open()
-    ws = _ws(sh, HOOKS_TAB) or _ensure_tab(sh, HOOKS_TAB)
-    row = _row_for_id(ws, a.id)
-    if row is None:
-        sys.exit(f"[sheets] no hook {a.id}")
-    _lib_append_lesson(ws, HEADERS[HOOKS_TAB], a.post, a.lesson, row)
-    print(f"[sheets] hook {a.id}: lesson appended")
-
-
-def cmd_cta_add(a):
-    sh = _open()
-    ws = _ws(sh, CTA_TAB) or _ensure_tab(sh, CTA_TAB)
-    cid = _next_id(ws, "C")
-    row = {"CTA ID": cid, "Pattern (general)": a.pattern or "", "Funnel ID": a.funnel or "",
-           "Placement": a.placement or "", "Mechanism": a.mechanism or "", "Example": a.example or "",
-           "Creator": a.creator or "AI", "Origin Ref": a.origin or "",
-           "Lessons": (f"- [{_today()}] {a.lesson}" if a.lesson else ""),
-           "Posts Used": a.post or "", "Last Updated": _today()}
-    ws.append_row([row.get(h, "") for h in HEADERS[CTA_TAB]], value_input_option="USER_ENTERED")
-    print(f"[sheets] cta {cid} added")
-
-
-def cmd_cta_append_lesson(a):
-    sh = _open()
-    ws = _ws(sh, CTA_TAB) or _ensure_tab(sh, CTA_TAB)
-    row = _row_for_id(ws, a.id)
-    if row is None:
-        sys.exit(f"[sheets] no cta {a.id}")
-    _lib_append_lesson(ws, HEADERS[CTA_TAB], a.post, a.lesson, row)
-    print(f"[sheets] cta {a.id}: lesson appended")
-
-
-def cmd_funnel_list(_):
-    print(json.dumps(_read_rows(_open(), FUNNEL_TAB), ensure_ascii=False, indent=2))
-
-
-def cmd_funnel_add(a):
-    sh = _open()
-    ws = _ws(sh, FUNNEL_TAB) or _ensure_tab(sh, FUNNEL_TAB)
-    fid = a.id or _next_id(ws, "F")
-    row = {"Funnel ID": fid, "Name": a.name or "", "Trigger / When to use": a.trigger or "",
-           "Canonical Ask": a.ask or "", "Primary KPI": a.kpi or "",
-           "Creator": a.creator or "Human", "Origin Ref": a.origin or "",
-           "Lessons": (f"- [{_today()}] {a.lesson}" if a.lesson else ""),
-           "Posts Used": a.post or "", "Last Updated": _today()}
-    ws.append_row([row.get(h, "") for h in HEADERS[FUNNEL_TAB]], value_input_option="USER_ENTERED")
-    print(f"[sheets] funnel {fid} added")
-
-
-def cmd_funnel_append_lesson(a):
-    sh = _open()
-    ws = _ws(sh, FUNNEL_TAB) or _ensure_tab(sh, FUNNEL_TAB)
-    row = _row_for_id(ws, a.id)
-    if row is None:
-        sys.exit(f"[sheets] no funnel {a.id}")
-    _lib_append_lesson(ws, HEADERS[FUNNEL_TAB], a.post, a.lesson, row)
-    print(f"[sheets] funnel {a.id}: lesson appended")
 
 
 # ── commands: brand ──────────────────────────────────────────────────────────
@@ -1168,10 +836,85 @@ def cmd_brand_add(a):
     print(f"[sheets] brand {bid} added")
 
 
+# ── commands: connectors register ────────────────────────────────────────────
+# EXACT seed set (upsert by Connector name; Status seeded, Notes left GREEN/empty for the human).
+# Owner account for the Google surfaces: creators@holicay.com.
+CONNECTOR_SEED = [
+    ("Pexels", "photo search", "keys.env PEXELS", "Pexels API account",
+     "pexels.com/api", "free", "legacy · optional"),
+    ("Unsplash", "photo search", "keys.env UNSPLASH", "Unsplash developer account",
+     "unsplash.com/developers", "free", "legacy · optional"),
+    ("SerpAPI", "Google Images sourcing (brightdata.py gimg)", "keys.env SERP", "SerpAPI account",
+     "serpapi.com", "paid per-search", "ACTIVE"),
+    ("Google Places", "user photos + Maps Embed route shots", "keys.env PLACES",
+     "creators@holicay.com (Google Cloud project of that key)", "console.cloud.google.com",
+     "billed to the Google Cloud project of that key", "ACTIVE — primary UGC source"),
+    ("scrape.do", "proxy fallback", "keys.env SCRAPE_TOKEN", "scrape.do account",
+     "scrape.do", "free tier", "legacy · optional"),
+    ("Bright Data", "greviews backend", "keys.env BRIGHTDATA", "Bright Data account",
+     "brightdata.com", "pay-as-you-go", "PARTIAL — Google-reviews flaky, Instagram KYC-blocked"),
+    ("Apify", "Instagram UGC (brightdata.py ig)", "keys.env APIFY", "Apify account",
+     "console.apify.com", "FREE plan $5/mo credit", "ACTIVE — the working IG backend"),
+    ("Google service account", "Sheets read/write + Drive reads", "holicay-*.json at repo root",
+     "holicay-message-machine@holicay-402208.iam.gserviceaccount.com (GCP project holicay-402208)",
+     "console.cloud.google.com", "free", "ACTIVE — share the new Sheet/Drive with this email"),
+    ("Google OAuth Drive client", "Drive uploads/creation as creators@holicay.com",
+     "client_secret*.json + per-user drive_token.json",
+     "creators@holicay.com (GCP project masquerade-2 — a DIFFERENT project than the SA)",
+     "console.cloud.google.com", "free", "ACTIVE"),
+    ("ChatGPT", "character/cover image gen via logged-in browser (NO API key)",
+     "~/.masquerade_chrome CDP profile", "that ChatGPT account", "chatgpt.com",
+     "per that ChatGPT account's plan", "ACTIVE — re-login in the masquerade Chrome when gens fail"),
+    ("TikTok", "stats scraping via logged-in browser session (same profile)",
+     "~/.masquerade_chrome CDP profile", "@solo.with.ana / @chloe.belletravel", "tiktok.com",
+     "free", "ACTIVE — views are login-gated; re-auth with engine/scrape/tiktok_login.js --open"),
+    ("GitHub", "code home", "gh CLI", "Davenkoh", "github.com/Davenkoh/Project-Ana-2",
+     "free", "ACTIVE"),
+    ("iTunes Search API", "real app icons", "keyless", "—", "—", "free", "ACTIVE"),
+]
+
+
+def _seed_connectors(sh):
+    ws = _ws(sh, CONN_TAB) or _ensure_tab(sh, CONN_TAB)
+    headers = HEADERS[CONN_TAB]
+    grid = ws.get_all_values()
+    existing = {}
+    for ridx, r in enumerate(grid[HEADER_ROWS:], start=HEADER_ROWS + 1):
+        if r and r[0].strip():
+            existing[r[0].strip()] = ridx
+    added = updated = 0
+    REF_COLS = ["Purpose", "Auth (env var / credential file)", "Account / identity",
+                "Console URL", "Plan & cost"]      # refreshed on re-run; Status + Notes preserved
+    for (name, purpose, auth, acct, url, plan, status) in CONNECTOR_SEED:
+        vals = {"Connector": name, "Purpose": purpose, "Auth (env var / credential file)": auth,
+                "Account / identity": acct, "Console URL": url, "Plan & cost": plan,
+                "Status": status, "Notes": ""}
+        if name in existing:
+            row = existing[name]
+            ups = [{"range": f"{_a1col(headers.index(h))}{row}", "values": [[vals[h]]]} for h in REF_COLS]
+            ws.batch_update(ups, value_input_option="USER_ENTERED")
+            updated += 1
+        else:
+            ws.append_row([vals.get(h, "") for h in headers],
+                          value_input_option="USER_ENTERED", table_range="A2")
+            added += 1
+    print(f"[sheets] connectors seeded ({added} added, {updated} refreshed; Status/Notes preserved on re-run)")
+
+
+def cmd_connectors_init(_):
+    _seed_connectors(_open())
+
+
 # ── commands: human feedback (every GREEN cell) ──────────────────────────────
-# character keys (ana, chloe, …) -> their fact tab; the shared libraries keep their short keys.
+# GREEN feedback channels: each fact tab's "Human Feedback" column, the Connectors "Notes"
+# column, and the Holicay Brand "Notes" column. _feedback_col picks the right one per tab.
 FEEDBACK_TABS = {**{c["key"]: c["tab"] for c in _characters().values()},
-                 "inspo": INSPO_TAB, "hook": HOOKS_TAB, "cta": CTA_TAB, "funnel": FUNNEL_TAB}
+                 "brand": BRAND_TAB, "connectors": CONN_TAB}
+
+
+def _feedback_col(tab):
+    headers = HEADERS[tab]
+    return "Human Feedback" if "Human Feedback" in headers else "Notes"
 
 
 def cmd_feedback_poll(_):
@@ -1179,16 +922,17 @@ def cmd_feedback_poll(_):
     out = []
     for key, tab in FEEDBACK_TABS.items():
         headers = HEADERS[tab]
-        if "Human Feedback" not in headers:
+        col = _feedback_col(tab)
+        if col not in headers:
             continue
-        fi = headers.index("Human Feedback")
+        fi = headers.index(col)
         ws = _ws(sh, tab)
         if ws is None:
             continue
         for r in ws.get_all_values()[HEADER_ROWS:]:
             if len(r) > fi and r[fi].strip():
-                out.append({"tab": key, "tab_name": tab, "id": r[0] if r else "",
-                            "feedback": r[fi].strip()})
+                out.append({"tab": key, "tab_name": tab, "column": col,
+                            "id": r[0] if r else "", "feedback": r[fi].strip()})
     print(json.dumps(out, ensure_ascii=False, indent=2))
 
 
@@ -1199,24 +943,19 @@ def cmd_feedback_clear(a):
         sys.exit(f"[sheets] feedback-clear --tab must be one of {list(FEEDBACK_TABS)}")
     tab = FEEDBACK_TABS[key]
     headers = HEADERS[tab]
+    col = _feedback_col(tab)
     ws = _ws(sh, tab) or _ensure_tab(sh, tab)
     row = _row_for_id(ws, a.id)
     if row is None:
         sys.exit(f"[sheets] no {a.id} in {tab}")
-    ups = [{"range": f"{_a1col(headers.index('Human Feedback'))}{row}", "values": [[""]]}]
+    ups = [{"range": f"{_a1col(headers.index(col))}{row}", "values": [[""]]}]
     stamp = (f": {a.note}" if a.note else "")
-    if "Metadata" in headers:        # fact tabs carry Metadata; the libraries use Lessons instead
+    if "Metadata" in headers:        # fact tabs carry Metadata; stamp when feedback was processed
         prev = ws.cell(row, headers.index("Metadata") + 1).value or ""
         meta = (prev + "\n" if prev else "") + f"[{_now()}] feedback processed{stamp}"
         ups.append({"range": f"{_a1col(headers.index('Metadata'))}{row}", "values": [[meta]]})
-    else:
-        cur = ws.row_values(row); cur += [""] * (len(headers) - len(cur))
-        prev = cur[headers.index("Lessons")]
-        new = prev + ("\n" if prev else "") + f"- [{_today()}] (your feedback) {a.note or 'applied'}"
-        ups.append({"range": f"{_a1col(headers.index('Lessons'))}{row}", "values": [[new]]})
-        ups.append({"range": f"{_a1col(headers.index('Last Updated'))}{row}", "values": [[_today()]]})
     ws.batch_update(ups, value_input_option="USER_ENTERED")
-    print(f"[sheets] feedback cleared for {a.id} in {tab}")
+    print(f"[sheets] feedback cleared for {a.id} in {tab} ({col})")
 
 
 # ── commands: stats scraping ─────────────────────────────────────────────────
@@ -1279,31 +1018,262 @@ def cmd_post_stats(a):
         print("[sheets]   re-auth the masquerade Chrome:  node engine/scrape/tiktok_login.js --open", file=sys.stderr)
 
 
-def cmd_inspo_stats(a):
+# ── commands: dashboard (live formulas over the fact tabs) ────────────────────
+def _stack_range(tabs, letter):
+    """A vertically-stacked array literal of one column across all fact tabs, e.g.
+    {'Ana'!C3:C1000;'Chloe'!C3:C1000;'Hannah'!C3:C1000} — safe inside SUMPRODUCT."""
+    return "{" + ";".join(f"'{t}'!{letter}3:{letter}1000" for t in tabs) + "}"
+
+
+def _stack_all(tabs):
+    """The full A3:T stack across all fact tabs — for QUERY (Col1..Col20)."""
+    return "{" + ";".join(f"'{t}'!A3:T1000" for t in tabs) + "}"
+
+
+def _build_dashboard(sh):
+    """(Re)build the Dashboard tab as LIVE formulas (USER_ENTERED). No data of its own; every
+    number recomputes from the fact tabs. Tab names are read from state.json, so re-running after a
+    character is added extends it. Columns on a fact tab: A=ID B=Country C=Framework D=Variant
+    E=Copy Iteration F=Title G=Output Folder H=Caption I=Date Created J=Notes K=Post Link
+    L=Posting Date M=Views N=Likes O=Comments P=Share Q=Save R=Stats Last Updated S=Human
+    Feedback T=Metadata."""
+    tabs = _fact_tabs()
+    ws = _ws(sh, DASH_TAB)
+    if ws is None:
+        ws = sh.add_worksheet(title=DASH_TAB, rows=200, cols=8)
+    ws.clear()
+    gid = ws.id
+    NCOL = 6
+    C_ = _stack_range(tabs, "C"); D_ = _stack_range(tabs, "D"); B_ = _stack_range(tabs, "B")
+    M_ = _stack_range(tabs, "M"); O_ = _stack_range(tabs, "O"); Q_ = _stack_range(tabs, "Q")
+    STACK = _stack_all(tabs)
+
+    def cnt(cond):   return f'=SUMPRODUCT(({cond})*({M_}>0))'
+    def avgv(cond):  return f'=IFERROR(SUMPRODUCT(({cond})*({M_}>0)*{M_})/SUMPRODUCT(({cond})*({M_}>0)),"")'
+    def srate(cond): return f'=IFERROR(SUMPRODUCT(({cond})*({M_}>0)*{Q_})/SUMPRODUCT(({cond})*({M_}>0)*{M_}),"")'
+    def crate(cond): return f'=IFERROR(SUMPRODUCT(({cond})*({M_}>0)*{O_})/SUMPRODUCT(({cond})*({M_}>0)*{M_}),"")'
+
+    rows = []          # each row = list of up to NCOL cell strings
+    titles, headers_idx, rate_cells = [], [], []   # 0-based row indices / (row,col) for formatting
+
+    def pad(r):
+        return (r + [""] * NCOL)[:NCOL]
+
+    def add(r):
+        rows.append(pad(r))
+
+    def title(text):
+        titles.append(len(rows)); add([text])
+
+    def header(cells):
+        headers_idx.append(len(rows)); add(cells)
+
+    def metric_row(label, cond, extra=None):
+        # label [| extra] | count | avg views | save-rate | comment-rate
+        base = [label] if extra is None else [label, extra]
+        rate_c = len(base) + 2                       # save-rate column index (0-based)
+        r = base + [cnt(cond), avgv(cond), srate(cond), crate(cond)]
+        rate_cells.append((len(rows), rate_c)); rate_cells.append((len(rows), rate_c + 1))
+        add(r)
+
+    add([f"PROJECT ANA 2.0 — DASHBOARD   (live; rebuilt by dashboard-init on {_today()})"])
+    add(["Every number recomputes from the character fact tabs. Performance rows count only posts with Views > 0."])
+    add([])
+
+    # ── Block 1: per-character pipeline ───────────────────────────────────────
+    title("PIPELINE  ·  per character")
+    header(["Character", "Total 2.0 posts", "Posted", "Last built", "Next framework"])
+    for t in tabs:
+        q = f"'{t}'"
+        total = f'=COUNTIF({q}!C3:C1000,"<>")'
+        posted = f'=COUNTIF({q}!K3:K1000,"<>")'
+        last = f'=IF(COUNT({q}!I3:I1000)=0,"",TEXT(MAX({q}!I3:I1000),"yyyy-mm-dd"))'
+        nextfw = f'=INDEX({{"A";"B";"C1";"C2"}},MOD(COUNTIF({q}!C3:C1000,"<>"),4)+1)'
+        add([t, total, posted, last, nextfw])
+    add([])
+
+    # ── Block 2: performance ──────────────────────────────────────────────────
+    title("PERFORMANCE  ·  by framework")
+    header(["Framework", "Posts (views>0)", "Avg views", "Save-rate", "Comment-rate"])
+    for fw in FRAMEWORKS:
+        metric_row(fw, f'{C_}="{fw}"')
+    add([])
+
+    title("PERFORMANCE  ·  by variant")
+    header(["Variant", "Posts (views>0)", "Avg views", "Save-rate", "Comment-rate"])
+    for v in VARIANTS:
+        metric_row(v, f'{D_}="{v}"')
+    add([])
+
+    title("PERFORMANCE  ·  framework × variant")
+    header(["Framework", "Variant", "Posts (views>0)", "Avg views", "Save-rate", "Comment-rate"])
+    for fw in FRAMEWORKS:
+        for v in VARIANTS:
+            metric_row(fw, f'({C_}="{fw}")*({D_}="{v}")', extra=v)
+    add([])
+
+    # by country — enumerate the roster's distinct content countries (robust default)
+    countries = []
+    for c in _characters().values():
+        if c["country"] and c["country"] not in countries:
+            countries.append(c["country"])
+    title("PERFORMANCE  ·  by country")
+    header(["Country", "Posts (views>0)", "Avg views", "Save-rate", "Comment-rate"])
+    for ct in countries:
+        metric_row(ct, f'{B_}="{ct}"')
+    add([])
+
+    # by character — per-tab (not stacked)
+    title("PERFORMANCE  ·  by character")
+    header(["Character", "Posts (views>0)", "Avg views", "Save-rate", "Comment-rate"])
+    for t in tabs:
+        q = f"'{t}'"
+        c_cnt = f'=SUMPRODUCT(({q}!M3:M1000>0)*1)'
+        c_avg = f'=IFERROR(SUMPRODUCT(({q}!M3:M1000>0)*{q}!M3:M1000)/SUMPRODUCT(({q}!M3:M1000>0)*1),"")'
+        c_sr  = f'=IFERROR(SUMPRODUCT(({q}!M3:M1000>0)*{q}!Q3:Q1000)/SUMPRODUCT(({q}!M3:M1000>0)*{q}!M3:M1000),"")'
+        c_cr  = f'=IFERROR(SUMPRODUCT(({q}!M3:M1000>0)*{q}!O3:O1000)/SUMPRODUCT(({q}!M3:M1000>0)*{q}!M3:M1000),"")'
+        rate_cells.append((len(rows), 3)); rate_cells.append((len(rows), 4))
+        add([t, c_cnt, c_avg, c_sr, c_cr])
+    add([])
+
+    # ── Block 3: top-10 posts by save-rate ────────────────────────────────────
+    title("TOP 10 POSTS  ·  by save-rate (across all characters, views>0)")
+    header(["Title", "Framework", "Variant", "Views", "Save-rate"])
+    top = (f'=IFERROR(SORTN({{'
+           f'QUERY({STACK},"select Col6,Col3,Col4,Col13 where Col13>0",0),'
+           f'ARRAYFORMULA(IFERROR('
+           f'QUERY({STACK},"select Col17 where Col13>0",0)/'
+           f'QUERY({STACK},"select Col13 where Col13>0",0),0))'
+           f'}},10,0,5,FALSE),"")')
+    r0 = len(rows)
+    add([top])
+    for k in range(10):                              # the spill fills 5 cols; format save-rate col
+        rate_cells.append((r0 + k, 4))
+
+    # write everything at once (USER_ENTERED so formulas evaluate)
+    end = _a1col(NCOL - 1)
+    ws.batch_update([{"range": f"A1:{end}{len(rows)}", "values": rows}],
+                    value_input_option="USER_ENTERED")
+
+    # formatting
+    reqs = []
+
+    def band(r, bg, white, bold, merge):
+        out = []
+        if merge:
+            out.append({"mergeCells": {"range": {"sheetId": gid, "startRowIndex": r, "endRowIndex": r + 1,
+                "startColumnIndex": 0, "endColumnIndex": NCOL}, "mergeType": "MERGE_ALL"}})
+        tf = {"bold": bold}
+        if white:
+            tf["foregroundColor"] = WHITE
+        out.append({"repeatCell": {"range": {"sheetId": gid, "startRowIndex": r, "endRowIndex": r + 1,
+            "startColumnIndex": 0, "endColumnIndex": NCOL},
+            "cell": {"userEnteredFormat": {"backgroundColor": bg, "wrapStrategy": "WRAP", "textFormat": tf}},
+            "fields": "userEnteredFormat(backgroundColor,wrapStrategy,textFormat)"}})
+        return out
+
+    reqs += band(0, NAVY, True, True, True)          # page title
+    for r in titles:
+        reqs += band(r, CORAL, True, True, True)     # section titles (coral banners)
+    for r in headers_idx:
+        reqs += band(r, T_NAVY, False, True, False)  # column headers
+    for (r, c) in rate_cells:                        # rate cells -> percentage
+        reqs.append({"repeatCell": {"range": {"sheetId": gid, "startRowIndex": r, "endRowIndex": r + 1,
+            "startColumnIndex": c, "endColumnIndex": c + 1},
+            "cell": {"userEnteredFormat": {"numberFormat": {"type": "PERCENT", "pattern": "0.00%"}}},
+            "fields": "userEnteredFormat.numberFormat"}})
+    reqs.append({"updateSheetProperties": {"properties": {"sheetId": gid,
+        "gridProperties": {"frozenRowCount": 1}}, "fields": "gridProperties.frozenRowCount"}})
+    for i, w in enumerate((230, 150, 120, 110, 110, 110)):
+        reqs.append({"updateDimensionProperties": {
+            "range": {"sheetId": gid, "dimension": "COLUMNS", "startIndex": i, "endIndex": i + 1},
+            "properties": {"pixelSize": w}, "fields": "pixelSize"}})
+    try:
+        sh.batch_update({"requests": reqs})
+    except Exception as e:
+        print(f"[sheets] dashboard formatting partial: {e}", file=sys.stderr)
+    print(f"[sheets] Dashboard rebuilt ({len(tabs)} character tab(s), {len(titles)} sections)")
+
+
+def cmd_dashboard_init(_):
+    _build_dashboard(_open())
+
+
+# ── commands: stats-summary (client-side rollups for the analyze skill) ──────
+def _num(v):
+    try:
+        return float(str(v).replace(",", "").strip())
+    except Exception:
+        return None
+
+
+def _summarize(rows):
+    """Group fact rows (dicts) by framework / variant / framework×variant / country / character and
+    compute count, sum/avg views, avg save-rate, avg comment-rate (per-row rates), plus aggregate
+    save-/comment-rate (sum/sum). Only rows with Views > 0 are counted."""
+    def blank():
+        return {"count": 0, "sum_views": 0.0, "_srates": [], "_crates": [],
+                "_sum_save": 0.0, "_sum_comments": 0.0}
+    groups = {"by_framework": {}, "by_variant": {}, "by_framework_variant": {},
+              "by_country": {}, "by_character": {}}
+
+    def bump(bucket, key, views, save, comments):
+        d = bucket.setdefault(key, blank())
+        d["count"] += 1
+        d["sum_views"] += views
+        d["_sum_save"] += save
+        d["_sum_comments"] += comments
+        d["_srates"].append(save / views)
+        d["_crates"].append(comments / views)
+
+    for r in rows:
+        views = _num(r.get("Views"))
+        if not views or views <= 0:
+            continue
+        save = _num(r.get("Save")) or 0.0
+        comments = _num(r.get("Comments")) or 0.0
+        fw = (r.get("Framework") or "").strip()
+        var = (r.get("Variant") or "").strip()
+        country = (r.get("Country") or "").strip()
+        char = (r.get("_character") or "").strip()
+        if fw:
+            bump(groups["by_framework"], fw, views, save, comments)
+        if var:
+            bump(groups["by_variant"], var, views, save, comments)
+        if fw and var:
+            bump(groups["by_framework_variant"], f"{fw} / {var}", views, save, comments)
+        if country:
+            bump(groups["by_country"], country, views, save, comments)
+        if char:
+            bump(groups["by_character"], char, views, save, comments)
+
+    def finish(d):
+        n = d["count"]
+        return {
+            "count": n,
+            "sum_views": round(d["sum_views"], 2),
+            "avg_views": round(d["sum_views"] / n, 2) if n else None,
+            "avg_save_rate": round(sum(d["_srates"]) / n, 6) if n else None,
+            "avg_comment_rate": round(sum(d["_crates"]) / n, 6) if n else None,
+            "agg_save_rate": round(d["_sum_save"] / d["sum_views"], 6) if d["sum_views"] else None,
+            "agg_comment_rate": round(d["_sum_comments"] / d["sum_views"], 6) if d["sum_views"] else None,
+        }
+    return {dim: {k: finish(v) for k, v in sorted(bucket.items())}
+            for dim, bucket in groups.items()}
+
+
+def cmd_stats_summary(a):
     sh = _open()
-    ws = _ws(sh, INSPO_TAB) or _ensure_tab(sh, INSPO_TAB)
-    headers = HEADERS[INSPO_TAB]
-    ui = headers.index("URL")
-    grid = ws.get_all_values()[HEADER_ROWS:]
-    targets = []
-    for i, r in enumerate(grid, start=HEADER_ROWS + 1):
-        if a.all:
-            if len(r) > ui and r[ui].strip():
-                targets.append((i, r[0], r[ui].strip()))
-        elif r and r[0] == a.id:
-            url = r[ui].strip() if len(r) > ui else ""
-            if not url:
-                sys.exit(f"[sheets] {a.id} has no URL to scrape")
-            targets.append((i, r[0], url))
-    if not a.all and not targets:
-        sys.exit(f"[sheets] no inspo row {a.id}")
-    for (row, iid, url) in targets:
-        s = _scrape_stats(url)
-        got = _apply_stats(ws, headers, row, s)
-        print(f"[sheets] {iid}: {got}")
+    rows = []
+    for c in _characters().values():
+        for r in _read_rows(sh, c["tab"]):
+            r = dict(r); r["_character"] = c["name"]
+            rows.append(r)
+    summary = _summarize(rows)
+    print(json.dumps(summary, ensure_ascii=False, indent=(None if getattr(a, "json", False) else 2)))
 
 
-# ── commands: read / relink / dictionary / migrate(outputs) ──────────────────
+# ── commands: read / dictionary ──────────────────────────────────────────────
 def cmd_read(a):
     sh = _open()
     if a.tab in SPEC:
@@ -1311,84 +1281,51 @@ def cmd_read(a):
     ws = _ws(sh, a.tab)
     if ws is None:
         sys.exit(f"[sheets] no tab named {a.tab!r}")
-    print(json.dumps(ws.get_all_records(), ensure_ascii=False, indent=2))
-
-
-def cmd_relink(_):
-    _relink(_open())
+    try:
+        print(json.dumps(ws.get_all_records(), ensure_ascii=False, indent=2))
+    except Exception:
+        print(json.dumps(ws.get_all_values(), ensure_ascii=False, indent=2))
 
 
 def cmd_dictionary(_):
     _build_dictionary(_open())
 
 
-def cmd_migrate(a):
-    """Seed a character's fact tab from the built posts in outputs/ (one row each)."""
-    char = _char_for(getattr(a, "character", None))
-    sh = _open()
-    ws = _char_ws(sh, char)
-    headers = HEADERS[char["tab"]]
-    out_dir = os.path.join(_root(), "outputs")
-    if not os.path.isdir(out_dir):
-        sys.exit("[sheets] no outputs/ dir")
-    existing = set(ws.col_values(1)[HEADER_ROWS:])
-    added = 0
-    for name in sorted(os.listdir(out_dir)):
-        d = os.path.join(out_dir, name)
-        if not os.path.isdir(d):
-            continue
-        num = name.split(" ", 1)[0].split("-")[0].strip()
-        pid = f"{char['id_prefix']}-{num.zfill(2)}" if num.isdigit() else f"{char['id_prefix']}-{name[:6]}"
-        if pid in existing:
-            continue
-        cap = ""
-        cp = os.path.join(d, "caption.txt")
-        if os.path.exists(cp):
-            cap = open(cp, encoding="utf-8").read().strip()
-        try:
-            created = datetime.date.fromtimestamp(os.path.getmtime(d)).isoformat()
-        except Exception:
-            created = _today()
-        rowvals = {"ID": pid, "Platform": "tiktok", "Title": name, "Caption": cap,
-                   "Date Created": created, "Notes": "migrated from outputs/",
-                   "Metadata": f"migrated {_today()}"}
-        ws.append_row([rowvals.get(h, "") for h in headers],
-                      value_input_option="USER_ENTERED", table_range="A2")
-        added += 1
-        print(f"  + {pid}  {name}")
-    print(f"[sheets] migrate done — {added} new row(s)")
-
-
 def main():
-    p = argparse.ArgumentParser(description="Project Ana Google Sheet (spec-driven front-end)")
+    p = argparse.ArgumentParser(description="Project Ana 2.0 Google Sheet (spec-driven front-end)")
     sub = p.add_subparsers(dest="cmd", required=True)
 
     sub.add_parser("init").set_defaults(fn=cmd_init)
-    mig = sub.add_parser("migrate"); mig.set_defaults(fn=cmd_migrate); mig.add_argument("--character")
     sub.add_parser("migrate-schema").set_defaults(fn=cmd_migrate_schema)
-    sub.add_parser("relink").set_defaults(fn=cmd_relink)
     sub.add_parser("dictionary").set_defaults(fn=cmd_dictionary)
+    sub.add_parser("dashboard-init").set_defaults(fn=cmd_dashboard_init)
+    sub.add_parser("connectors-init").set_defaults(fn=cmd_connectors_init)
 
     u = sub.add_parser("post-upsert"); u.set_defaults(fn=cmd_post_upsert)
     u.add_argument("--character"); u.add_argument("--id", required=True)
-    for f in ("platform", "title", "folder", "caption", "hook", "hook-id", "cta", "cta-id",
-              "funnel", "script", "inspo", "notes", "created"):
+    for f in ("title", "folder", "caption", "country", "framework", "variant",
+              "iteration", "notes", "metadata"):
         u.add_argument(f"--{f}")
 
     s = sub.add_parser("post-set"); s.set_defaults(fn=cmd_post_set)
     s.add_argument("--character"); s.add_argument("--id", required=True)
-    for f in ("title", "folder", "caption", "hook", "hook-id", "cta", "cta-id", "funnel",
-              "script", "inspo", "notes", "post-link", "posting-date", "views", "likes",
-              "comments", "share", "save", "metadata"):
+    for f in ("title", "folder", "caption", "country", "framework", "variant", "iteration",
+              "notes", "metadata", "post-link", "posting-date", "views", "likes",
+              "comments", "share", "save"):
         s.add_argument(f"--{f}")
 
     asx = sub.add_parser("post-stats"); asx.set_defaults(fn=cmd_post_stats)
     asx.add_argument("--character"); asx.add_argument("--id"); asx.add_argument("--all", action="store_true")
 
+    ns = sub.add_parser("next-slot"); ns.set_defaults(fn=cmd_next_slot)
+    ns.add_argument("--character"); ns.add_argument("--country")
+    ns.add_argument("--reserve", action="store_true",
+                    help="atomically claim the slot by appending a stub row (visible to the team)")
+
     nn = sub.add_parser("next-number"); nn.set_defaults(fn=cmd_next_number)
     nn.add_argument("--character"); nn.add_argument("--title")
     nn.add_argument("--reserve", action="store_true",
-                    help="also claim the id now by appending a stub row (visible to the team)")
+                    help="claim the id now by appending a stub row (no framework — use next-slot for a rotation slot)")
 
     dm = sub.add_parser("deliver-missing"); dm.set_defaults(fn=cmd_deliver_missing)
     dm.add_argument("--character"); dm.add_argument("--dry-run", action="store_true")
@@ -1396,38 +1333,8 @@ def main():
     pdel = sub.add_parser("post-delete"); pdel.set_defaults(fn=cmd_post_delete)
     pdel.add_argument("--character"); pdel.add_argument("--id", required=True)
 
-    ia = sub.add_parser("inspo-add"); ia.set_defaults(fn=cmd_inspo_add)
-    for f in ("id", "url", "slides", "format", "hook", "hook-id", "story", "design",
-              "cta", "cta-id", "funnel", "why", "idea"):
-        ia.add_argument(f"--{f}")
-    isx = sub.add_parser("inspo-stats"); isx.set_defaults(fn=cmd_inspo_stats)
-    isx.add_argument("--id"); isx.add_argument("--all", action="store_true")
-    iss = sub.add_parser("inspo-set"); iss.set_defaults(fn=cmd_inspo_set)
-    iss.add_argument("--id", required=True)
-    for f in ("url", "slides", "format", "story", "design", "hook", "hook-id",
-              "cta", "cta-id", "funnel", "why", "idea"):
-        iss.add_argument(f"--{f}")
-    isy = sub.add_parser("inspo-sync"); isy.set_defaults(fn=cmd_inspo_sync)
-    isy.add_argument("--id"); isy.add_argument("--dry-run", action="store_true")
-
-    ha = sub.add_parser("hook-add"); ha.set_defaults(fn=cmd_hook_add)
-    for f in ("pattern", "type", "affinity", "example", "creator", "origin", "lesson", "post"):
-        ha.add_argument(f"--{f}")
-    hl = sub.add_parser("hook-append-lesson"); hl.set_defaults(fn=cmd_hook_append_lesson)
-    hl.add_argument("--id", required=True); hl.add_argument("--lesson", required=True); hl.add_argument("--post")
-
-    ca = sub.add_parser("cta-add"); ca.set_defaults(fn=cmd_cta_add)
-    for f in ("pattern", "funnel", "placement", "mechanism", "example", "creator", "origin", "lesson", "post"):
-        ca.add_argument(f"--{f}")
-    cl = sub.add_parser("cta-append-lesson"); cl.set_defaults(fn=cmd_cta_append_lesson)
-    cl.add_argument("--id", required=True); cl.add_argument("--lesson", required=True); cl.add_argument("--post")
-
-    sub.add_parser("funnel-list").set_defaults(fn=cmd_funnel_list)
-    fa = sub.add_parser("funnel-add"); fa.set_defaults(fn=cmd_funnel_add)
-    for f in ("id", "name", "trigger", "ask", "kpi", "creator", "origin", "lesson", "post"):
-        fa.add_argument(f"--{f}")
-    fl = sub.add_parser("funnel-append-lesson"); fl.set_defaults(fn=cmd_funnel_append_lesson)
-    fl.add_argument("--id", required=True); fl.add_argument("--lesson", required=True); fl.add_argument("--post")
+    ss = sub.add_parser("stats-summary"); ss.set_defaults(fn=cmd_stats_summary)
+    ss.add_argument("--json", action="store_true", help="compact single-line JSON")
 
     sub.add_parser("brand-list").set_defaults(fn=cmd_brand_list)
     ba = sub.add_parser("brand-add"); ba.set_defaults(fn=cmd_brand_add)
@@ -1436,7 +1343,7 @@ def main():
 
     sub.add_parser("feedback-poll").set_defaults(fn=cmd_feedback_poll)
     fc = sub.add_parser("feedback-clear"); fc.set_defaults(fn=cmd_feedback_clear)
-    fc.add_argument("--tab", required=True, help="ana | chloe | inspo | hook | cta | funnel")
+    fc.add_argument("--tab", required=True, help="ana | chloe | hannah | brand | connectors")
     fc.add_argument("--id", required=True); fc.add_argument("--note")
 
     r = sub.add_parser("read"); r.set_defaults(fn=cmd_read); r.add_argument("--tab", required=True)

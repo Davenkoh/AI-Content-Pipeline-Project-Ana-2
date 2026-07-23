@@ -1,20 +1,23 @@
 #!/usr/bin/env python3
-"""Push a finished post's deliverables to Google Drive via the service account.
-Creates <shared root>/<Character>/<Platform>/<NN - Title>/ and uploads final/*.png + caption.txt + _review.md.
+"""Push a finished post's deliverables to Google Drive (OAuth-as-user, SA fallback for reads).
+Creates <shared root>/<Character>/<Platform>/<Title>/ and uploads final/*.png + caption.txt +
+copy.json + flags.md + sources.md (+ _review.md if present, for back-compat). Local post folders
+live at outputs/<char-key>/<Title>/; the Title is the basename that becomes the Drive folder.
 
-Requires: Drive API enabled on project holicay-402208 (390823350744) AND the target Drive
-folder shared with holicay-message-machine@holicay-402208.iam.gserviceaccount.com (edit access).
+Requires: Drive API enabled AND the target Drive folder shared (edit access) with the service
+account holicay-message-machine@holicay-402208.iam.gserviceaccount.com. Uploads/creation use the
+per-user OAuth token (drive_token.json); the SA has no My-Drive quota and is used only for reads.
 Deps: google-api-python-client (installed).
 
 Usage:
   python3 drive_sync.py --list-shared                       # see folders the SA can access
-  python3 drive_sync.py --post "<local post folder>" --character Ana --platform Tiktok [--root-id ID | --root-name NAME]
-  python3 drive_sync.py --inspo "inspo/NN"                   # upload an inspo folder, print a shareable link
+  python3 drive_sync.py --post "outputs/ana/28 - Title" --character ana --platform Tiktok [--root-id ID | --root-name NAME]
   python3 drive_sync.py --mirror character/Ana --dest Ana    # UP: upload a character's gitignored refs to <root>/Ana/
+  python3 drive_sync.py --mirror-all [--prune]               # UP: push ALL local media stores to Drive (Drive-canonical)
   python3 drive_sync.py --pull Ana --to character/Ana        # DOWN: fill in a character's gitignored refs (skips post libraries + files present)
-  python3 drive_sync.py --fetch-post "NN - Title" --character Ana  # DOWN: reconstitute one finished post into outputs/ (local can stay disposable)
+  python3 drive_sync.py --fetch-post "28 - Title" --character ana  # DOWN: reconstitute one finished post into outputs/ (local can stay disposable)
 
-Default shared root is "Project Ana" (auto-resolved by name); override with --root-id/--root-name.
+Default shared root is state.json's drive_root_name ("Project Ana 2.0"); override with --root-id/--root-name.
 """
 import argparse, os, sys, glob, json, mimetypes, hashlib
 
@@ -125,7 +128,7 @@ def list_shared(svc):
 
 
 def _drive_root_name():
-    """The canonical shared-root name from state.json (drive_root_name = 'Project Ana')."""
+    """The canonical shared-root name from state.json (drive_root_name = 'Project Ana 2.0')."""
     try:
         return (json.load(open(os.path.join(_root(), "state.json"))) or {}).get("drive_root_name")
     except Exception:
@@ -139,16 +142,15 @@ def resolve_root(svc, root_id, root_name):
         root_name = _drive_root_name()     # so the SA's many other Holicay folders can't make this ambiguous
     fs = _q(svc, f"mimeType='{FOLDER_MIME}' and trashed=false")
     if root_name:
-        for f in fs:
-            if f["name"] == root_name:
-                return f["id"]
-        sys.exit(f"no shared folder named {root_name!r}; run --list-shared")
-    prefer = [f for f in fs if f["name"].lower() in
-              ("project masquerade 2.0", "masquerade", "ana", "holicay",
-               "ai content workflow", "content")]
-    if len(prefer) == 1:
-        return prefer[0]["id"]
-    if len(fs) == 1:
+        matches = [f for f in fs if f["name"] == root_name]
+        if len(matches) == 1:
+            return matches[0]["id"]
+        if len(matches) > 1:
+            sys.exit(f"[drive_sync] {len(matches)} folders named {root_name!r} are visible — "
+                     f"pass --root-id to disambiguate (run --list-shared to see ids)")
+        sys.exit(f"[drive_sync] no shared folder named {root_name!r}; run --list-shared "
+                 f"(or run engine/setup/provision.py to create it), or pass --root-id")
+    if len(fs) == 1:                       # no configured name and exactly one visible folder
         return fs[0]["id"]
     print("Need an explicit root (--root-id or --root-name). Visible folders:")
     for f in fs:
@@ -318,14 +320,18 @@ def mirror_up(svc, local_dir, dest_name, root_id, prune=False):
 
 
 def pull_down(svc, dest_name, local_dir, root_id, overwrite=False):
-    """Recursively download Drive <root>/<dest_name>/ into local_dir. By default SKIPS files that
-    already exist locally, so it fills in gitignored media (persona refs, brand assets) without
-    clobbering git-tracked text. Authenticated (works on a privately-shared folder)."""
-    src = next((f["id"] for f in _q(svc, f"mimeType='{FOLDER_MIME}' and '{root_id}' in parents "
-                                         f"and trashed=false") if f["name"] == dest_name), None)
-    if not src:
-        print(f"[pull] (no Drive folder {dest_name!r} under root — skipping)")
-        return
+    """Recursively download Drive <root>/<dest_name>/ into local_dir. dest_name may be NESTED
+    ("media/graded") — the segments are walked from root (a single-segment name behaves exactly as
+    before). By default SKIPS files that already exist locally, so it fills in gitignored media
+    (persona refs, brand/graded assets, chars) without clobbering git-tracked text. Authenticated
+    (works on a privately-shared folder)."""
+    src = root_id
+    for seg in dest_name.split("/"):
+        src = next((f["id"] for f in _q(svc, f"mimeType='{FOLDER_MIME}' and '{src}' in parents "
+                                             f"and trashed=false") if f["name"] == seg), None)
+        if not src:
+            print(f"[pull] (no Drive folder {dest_name!r} under root — skipping)")
+            return
     got = skipped = 0
 
     def rec(folder_id, path):
@@ -348,11 +354,12 @@ def pull_down(svc, dest_name, local_dir, root_id, overwrite=False):
 
 
 def mirror_all(svc, root_id, prune=False):
-    """Push EVERY local character-media store up to Drive in one shot — Drive-canonical for ALL media,
-    not just posts/inspo. Mirrors each character/<Name>/ -> <Name>/ (refs + profile pics),
-    character/_shared -> _shared, and knowledge/brand -> Holicay Brand. Idempotent (updates only
-    changed files; skips git-tracked). Posts sync via `sheets.py deliver-missing`, inspo via
-    `sheets.py inspo-sync` — run all three to fully reconcile local -> Drive."""
+    """Push EVERY local media store up to Drive in one shot — Drive-canonical for ALL media, not just
+    posts. Mirrors each character/<Name>/ -> <Name>/ (refs + profile pics), character/_shared ->
+    _shared, knowledge/brand -> Holicay Brand, PLUS chars -> chars, media/graded -> media/graded,
+    media/brand -> media/brand. media/library is LOCAL SCRATCH (pruned per CONTRACT hygiene) and is
+    never mirrored. Idempotent (updates only changed files; skips git-tracked). Finished posts sync
+    via `sheets.py deliver-missing` — run both to fully reconcile local -> Drive."""
     root = _root()
     st = {}
     try:
@@ -373,6 +380,11 @@ def mirror_all(svc, root_id, prune=False):
             if os.path.isdir(os.path.join(shared, sub)):
                 targets.append((os.path.join(shared, sub), f"_shared/{sub}"))
     targets.append((os.path.join(root, "knowledge", "brand"), "Holicay Brand"))
+    # 2.0 media stores (framework machine): sourced/graded photo picks + first-party brand assets +
+    # the chosen character photos. media/library is deliberately EXCLUDED (local scratch).
+    targets.append((os.path.join(root, "chars"), "chars"))
+    targets.append((os.path.join(root, "media", "graded"), "media/graded"))
+    targets.append((os.path.join(root, "media", "brand"), "media/brand"))
     for local, dest in targets:
         if not os.path.isdir(local):
             print(f"[mirror-all] (skip — no local {os.path.relpath(local, root)})")
@@ -381,7 +393,7 @@ def mirror_all(svc, root_id, prune=False):
         for seg in dest.split("/")[:-1]:                  # resolve the nested dest chain under root
             parent = ensure_folder(svc, seg, parent)
         mirror_up(svc, local, dest.split("/")[-1], parent, prune)
-    print("[mirror-all] done. (posts: `sheets.py deliver-missing` · inspo: `sheets.py inspo-sync`)")
+    print("[mirror-all] done. (finished posts sync via `sheets.py deliver-missing`)")
 
 
 def fetch_post(svc, title, char_name, platform, local_dir, root_id, overwrite=False):
@@ -424,7 +436,6 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--post")
     ap.add_argument("--character", help="which character's Drive folder to deliver under (registry key or name; default from state.json)")
-    ap.add_argument("--inspo", help="local inspo folder to upload to <root>/inspo/<name>/ (prints a shareable link)")
     ap.add_argument("--platform", default="Tiktok")
     ap.add_argument("--root-id")
     ap.add_argument("--root-name")
@@ -469,37 +480,25 @@ def main():
         brand_get(svc, a.brand_get, a.out or os.path.basename(a.brand_get)); return
     if a.brand_put:
         brand_put(svc, a.brand_put, a.brand_folder); return
-    if a.inspo:
-        src = a.inspo.rstrip("/")
-        if not os.path.isdir(src):
-            sys.exit(f"[drive_sync] no such inspo folder: {src}")
-        root = resolve_root(svc, a.root_id, a.root_name)
-        folder = ensure_folder(svc, os.path.basename(src), ensure_folder(svc, "inspo", root))
-        imgs = sorted(os.path.join(src, f) for f in os.listdir(src)
-                      if f.lower().endswith((".jpg", ".jpeg", ".png", ".webp")))
-        if not imgs:
-            print(f"[drive_sync] (no images in {src})")
-        for p in imgs:
-            print(f"  {upload_file(svc, p, folder)}: {os.path.basename(p)}")
-        print(f"-> https://drive.google.com/drive/folders/{folder}")
-        return
     if not a.post:
         sys.exit("--post <local post folder> required")
     post_dir = a.post.rstrip("/")
     title = os.path.basename(post_dir)
     final_dir = os.path.join(post_dir, "final")
-    caption = os.path.join(post_dir, "caption.txt")
-    review = os.path.join(post_dir, "_review.md")
-    if not os.path.isdir(final_dir):
+    if not os.path.isdir(final_dir):                 # final/ is the one hard requirement
         sys.exit(f"no final/ in {post_dir}")
     root = resolve_root(svc, a.root_id, a.root_name)
-    char_name = _char_name(a.character)
+    char_name = _char_name(a.character)              # registry key/name -> Drive folder <Character>
     folder = ensure_folder(svc, title, ensure_folder(svc, a.platform, ensure_folder(svc, char_name, root)))
     files = sorted(os.path.join(final_dir, f) for f in os.listdir(final_dir) if f.lower().endswith(".png"))
-    if os.path.exists(caption):
-        files.append(caption)
-    if os.path.exists(review):                       # ship the rationale too, so reviewers on Drive see the "why"
-        files.append(review)
+    # the deliverable sidecars — each optional-if-absent. caption.txt is expected (warn if missing);
+    # _review.md is kept for back-compat with older builds.
+    if not os.path.exists(os.path.join(post_dir, "caption.txt")):
+        print(f"  [warn] no caption.txt in {post_dir}", file=sys.stderr)
+    for extra in ("caption.txt", "copy.json", "flags.md", "sources.md", "_review.md"):
+        p = os.path.join(post_dir, extra)
+        if os.path.exists(p):
+            files.append(p)
     for p in files:
         print(f"  {upload_file(svc, p, folder)}: {os.path.basename(p)}")
     print(f"-> https://drive.google.com/drive/folders/{folder}")

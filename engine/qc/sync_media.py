@@ -7,14 +7,17 @@
 `--if-changed` is wired to the Claude **Stop hook** (.claude/settings.local.json), so any session that
 touches the media files auto-syncs to Drive as each turn finishes — no daemon, no watcher. On a turn
 that didn't touch media it's a sub-second no-op. Fails SOFT: a push error prints a warning and exits 0,
-so it never breaks the turn. For a FULL reconcile (media + posts + inspo) run `./sync.sh`.
+so it never breaks the turn. For a FULL reconcile (media + posts) run `./sync.sh`.
 """
 import hashlib
 import os
 import subprocess
 import sys
 
-WATCH_DIRS = ["character/_shared", "knowledge/brand", "inspo"]
+# Must stay consistent with drive_sync.mirror_all's targets (this shells out to --mirror-all --prune).
+# Per-character Base References / Profile Pictures are added dynamically in _dirs(). media/library is
+# LOCAL SCRATCH and is intentionally NOT watched (never mirrored).
+WATCH_DIRS = ["character/_shared", "knowledge/brand", "chars", "media/graded", "media/brand"]
 IMG_EXT = (".png", ".jpg", ".jpeg", ".webp")
 
 
