@@ -1,0 +1,135 @@
+{
+  "_note": "Self-growing travel-hashtag pool for creator-agnostic discovery. discover_inspo.js --graph scans these tags (any creator), and after each pull harvests the hashtags from the posts it pulled, keeps the travel-relevant ones (relevance_keywords gate), and adds the new ones here. So the graph widens as the workflow runs. Prune junk by hand any time.",
+  "relevance_keywords": [
+    "travel",
+    "trip",
+    "vietnam",
+    "viet nam",
+    "saigon",
+    "hanoi",
+    "hochiminh",
+    "ho chi minh",
+    "danang",
+    "da nang",
+    "hoian",
+    "hoi an",
+    "nhatrang",
+    "phuquoc",
+    "dalat",
+    "halong",
+    "sapa",
+    "mekong",
+    "asia",
+    "southeastasia",
+    "sea",
+    "itinerary",
+    "guide",
+    "backpack",
+    "foodie",
+    "streetfood",
+    "cafe",
+    "coffee",
+    "explore",
+    "wander",
+    "vacation",
+    "holiday",
+    "thingstodo",
+    "whereto",
+    "traveltok",
+    "fyp travel",
+    "travelguide",
+    "traveltips",
+    "hiddengems",
+    "bucketlist",
+    "wanderlust",
+    "destination",
+    "citytrip",
+    "solotravel"
+  ],
+  "hashtags": {
+    "vietnamtravel": {
+      "source": "seed",
+      "added": "2026-06-12"
+    },
+    "saigon": {
+      "source": "seed",
+      "added": "2026-06-12"
+    },
+    "vietnam": {
+      "source": "seed",
+      "added": "2026-06-12"
+    },
+    "hochiminh": {
+      "source": "seed",
+      "added": "2026-06-12"
+    },
+    "thingstodoinvietnam": {
+      "source": "seed",
+      "added": "2026-06-12"
+    },
+    "travelguide": {
+      "source": "seed",
+      "added": "2026-06-12"
+    },
+    "traveltips": {
+      "source": "seed",
+      "added": "2026-06-12"
+    },
+    "koreatravel": {
+      "source": "harvested:10",
+      "added": "2026-06-12"
+    },
+    "seoultrip": {
+      "source": "harvested:10",
+      "added": "2026-06-12"
+    },
+    "saigonshopping": {
+      "source": "harvested:11",
+      "added": "2026-06-12"
+    },
+    "hongkongtravel": {
+      "source": "harvested:12",
+      "added": "2026-06-12"
+    },
+    "hongkongtrip": {
+      "source": "harvested:12",
+      "added": "2026-06-12"
+    },
+    "chinatravel": {
+      "source": "harvested:15",
+      "added": "2026-06-12"
+    },
+    "chinatrip": {
+      "source": "harvested:15",
+      "added": "2026-06-12"
+    },
+    "travelitinerary": {
+      "source": "harvested:15",
+      "added": "2026-06-12"
+    },
+    "hanoifood": {
+      "source": "harvested:4",
+      "added": "2026-06-12"
+    },
+    "vietnamfood": {
+      "source": "harvested:4",
+      "added": "2026-06-12"
+    },
+    "wheretoeat": {
+      "source": "harvested:4",
+      "added": "2026-06-12"
+    },
+    "hanoi": {
+      "source": "harvested:4",
+      "added": "2026-06-12"
+    },
+    "travel": {
+      "source": "harvested:8",
+      "added": "2026-06-12"
+    },
+    "traveltiktok": {
+      "source": "harvested:9",
+      "added": "2026-06-12"
+    }
+  }
+}

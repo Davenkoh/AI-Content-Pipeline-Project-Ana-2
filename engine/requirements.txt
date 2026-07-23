@@ -1,0 +1,8 @@
+# Masquerade engine — Python runtime deps. Pinned to the versions the workflow is known to run on.
+# Install:  python3 -m pip install -r engine/requirements.txt
+gspread==6.2.1                 # Google Sheets front-end (engine/sheets/sheets.py)
+google-api-python-client==2.197.0  # Google Drive upload/read (engine/drive/*)
+google-auth-oauthlib==1.4.0    # one-time Drive OAuth consent (engine/drive/drive_auth.py)
+google-auth==2.53.0            # service-account + user creds
+Pillow==12.2.0                 # image grade/patch/montage/cover (engine/design/*, engine/source/*)
+gdown>=5.2.0                   # bootstrap: pull the shared _setup/ bundle from Drive (engine/setup/bootstrap.py)

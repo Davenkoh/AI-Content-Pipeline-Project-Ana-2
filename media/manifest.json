@@ -1,0 +1,920 @@
+[
+ {
+  "id": "app_deepl",
+  "platform": "app-store",
+  "author": "DeepL SE",
+  "source_url": "https://apps.apple.com/app/deepl/id1552407475",
+  "license": "app-icon",
+  "sha256": "c0591bbad720ff6a3b90a388e0a30be4ec434aae3a0b8f95aef76c72a6417e4d",
+  "w": 512,
+  "h": 512,
+  "local_path": "media/graded/app_deepl.png",
+  "used_in": [
+   "C2"
+  ],
+  "note": "official app icon"
+ },
+ {
+  "id": "app_google-translate",
+  "platform": "app-store",
+  "author": "Google",
+  "source_url": "https://apps.apple.com/app/google-translate/id414706506",
+  "license": "app-icon",
+  "sha256": "dda161f15829869940499cfd74f8da5d3b8318701ac1e1a1f48166be4ae6e6e6",
+  "w": 512,
+  "h": 512,
+  "local_path": "media/graded/app_google-translate.png",
+  "used_in": [
+   "C2"
+  ],
+  "note": "official app icon"
+ },
+ {
+  "id": "autumn_leaves",
+  "platform": "repo-graded",
+  "author": "Chloe / ttc-06 (Japan Travel Tips That Matter)",
+  "source_url": "outputs/06 - Japan Travel Tips That Matter",
+  "license": "repo-graded",
+  "sha256": "57793034ff7cbac1fb9e3e1b256295a92f5f065da1d8410fc2446ff2bd419a03",
+  "w": 1080,
+  "h": 1440,
+  "local_path": "media/graded/autumn_leaves.jpg",
+  "used_in": [
+   "C2"
+  ],
+  "note": "ginkgo avenue, single walker"
+ },
+ {
+  "id": "carry_bag_trash",
+  "platform": "google_images",
+  "author": "ANABA JAPAN",
+  "source_url": "https://anaba-japan.net/en/manners/m_trash_how-en/",
+  "license": "editorial-web",
+  "sha256": "3ad7ca8400cc63cf7df9e160960a71cfc5e02b5d30bf27cbd477e5d014da9263",
+  "w": 2560,
+  "h": 1703,
+  "local_path": "media/graded/carry_bag_trash.jpg",
+  "used_in": [
+   "A"
+  ],
+  "note": "candid rear POV walking"
+ },
+ {
+  "id": "cat_street",
+  "platform": "google_places_user_photo",
+  "author": "F M",
+  "source_url": "https://maps.google.com/maps/contrib/109932753407941539927",
+  "license": "places-tos",
+  "sha256": "6d8d6ab816af23ca55a795a796811cc5e3aaf0e09d08997c707b4f87d9083d3a",
+  "w": 1600,
+  "h": 720,
+  "local_path": "media/graded/cat_street.jpg",
+  "used_in": [
+   "B"
+  ],
+  "note": "real Cat Street, fashion crowd (incumbent was a Mia/ttm-01 Harajuku stand-in, not actually this street)"
+ },
+ {
+  "id": "cherry_blossom_crowds",
+  "platform": "repo-graded (untracked, pre-existing)",
+  "author": "n/a",
+  "source_url": "n/a",
+  "license": "repo-graded",
+  "sha256": "bc3985b6f43e0d7ab8995dec28f0f7389002913c149813b8cc9897e339f2a00b",
+  "w": 1280,
+  "h": 853,
+  "local_path": "media/graded/cherry_blossom_crowds.jpg",
+  "used_in": [
+   "A"
+  ],
+  "note": "crowd phones-up night blossoms"
+ },
+ {
+  "id": "cramped_hotel_room",
+  "platform": "google_images",
+  "author": "YouTube",
+  "source_url": "https://www.youtube.com/watch?v=tg5lz_zIAao",
+  "license": "editorial-web",
+  "sha256": "93eff490a6f308cb1b5076414a3e0c3fbbd50776504de73b846fdddfb705a9ee",
+  "w": 960,
+  "h": 720,
+  "local_path": "media/graded/cramped_hotel_room.jpg",
+  "used_in": [
+   "A"
+  ],
+  "note": "fisheye vlog selfie tiny-room"
+ },
+ {
+  "id": "flight_expensive",
+  "platform": "google_images",
+  "author": "Drava Shop",
+  "source_url": "https://drava.shop/blogs/airlines/how-to-choose-your-seat-on-a-long-haul-flight",
+  "license": "editorial-web",
+  "sha256": "f0ae86e40a3fb440cd0dba035538f936e179bfb14cfc110647a0284cde0d61aa",
+  "w": 1920,
+  "h": 1440,
+  "local_path": "media/graded/flight_expensive.jpg",
+  "used_in": [
+   "A"
+  ],
+  "note": "candid cabin window seat"
+ },
+ {
+  "id": "flight_layover_asia",
+  "platform": "google_places_user_photo",
+  "author": "SeungJun Kim",
+  "source_url": "https://maps.google.com/maps/contrib/100958975977925692266",
+  "license": "places-tos",
+  "sha256": "b715f3173255a90fb58cd791b675427e120bae99168f12d337f20087f708ddb3",
+  "w": 1600,
+  "h": 1200,
+  "local_path": "media/graded/flight_layover_asia.jpg",
+  "used_in": [
+   "A"
+  ],
+  "note": "travelers waiting cactus seating"
+ },
+ {
+  "id": "food_queue",
+  "platform": "google_images",
+  "author": "Reddit",
+  "source_url": "https://www.reddit.com/r/sushi/comments/o5avst/which_conveyor_belt_sushi_do_you_like_best/",
+  "license": "editorial-web",
+  "sha256": "494167f80757db8643f59fefffd3ba9ddc50cc9b323472a0b5f79caf8c96e7b0",
+  "w": 3024,
+  "h": 4032,
+  "local_path": "media/graded/food_queue.jpg",
+  "used_in": [
+   "A",
+   "C1"
+  ],
+  "note": "Kura Sushi table POV (2026-07-23: re-checked vs banked Kura Sushi Places photos, incumbent's candid tablet/gacha-machine POV still wins)"
+ },
+ {
+  "id": "fuji_lake",
+  "platform": "google_images",
+  "author": "Trip.com",
+  "source_url": "https://sg.trip.com/moments/detail/fujikawaguchiko-60548-129960833/",
+  "license": "editorial-web",
+  "sha256": "fb4ecca219d163633ba0f15d19d6f83843147472c2ebae29951151cd59e1307f",
+  "w": 1080,
+  "h": 1440,
+  "local_path": "media/graded/fuji_lake.jpg",
+  "used_in": [
+   "A",
+   "B",
+   "C1",
+   "C2"
+  ],
+  "note": "untouchable, approved candid sunset"
+ },
+ {
+  "id": "ghibli_park",
+  "platform": "google_images",
+  "author": "Japan Cheapo",
+  "source_url": "https://japancheapo.com/entertainment/ghibli-park-guide/",
+  "license": "editorial-web",
+  "sha256": "f400ab35b664c0bc8e61bb93c4ec65f3321dbdffcb6f70ae2b6b356dacc09a37",
+  "w": 4080,
+  "h": 3072,
+  "local_path": "media/graded/ghibli_park.jpg",
+  "used_in": [
+   "C2"
+  ],
+  "note": "Totoro building, visitors for scale (2026-07-23: 4 banked Places photos were gorgeous interior details but none read as instantly \"Ghibli Park\" the way the Totoro statue does, kept)"
+ },
+ {
+  "id": "golden_gai",
+  "platform": "repo-graded (untracked, pre-existing)",
+  "author": "n/a",
+  "source_url": "n/a",
+  "license": "repo-graded",
+  "sha256": "e00785fd5c1e4201ebc0f67117fb5b9799361d45de69298a5e97cb1046ff4c48",
+  "w": 1080,
+  "h": 1440,
+  "local_path": "media/graded/golden_gai.jpg",
+  "used_in": [
+   "A",
+   "C1",
+   "C2"
+  ],
+  "note": "handheld night alley lanterns"
+ },
+ {
+  "id": "hakone",
+  "platform": "google_places_user_photo",
+  "author": "Natchakorn M.",
+  "source_url": "https://maps.google.com/maps/contrib/116711223853249344106",
+  "license": "places-tos",
+  "sha256": "df9dae68a6448f3a182010650350eb2b2d530d9b6d3cec5acd808c9a2ca93b02",
+  "w": 1080,
+  "h": 1440,
+  "local_path": "media/graded/hakone.jpg",
+  "used_in": [
+   "C1"
+  ],
+  "note": "couple wading, torii gate close"
+ },
+ {
+  "id": "hakone_glass_museum",
+  "platform": "google_places_user_photo",
+  "author": "shigeru kawanishi",
+  "source_url": "https://maps.google.com/maps/contrib/105435231794808096907",
+  "license": "places-tos",
+  "sha256": "acab47231cd457d74d3276b39cca904e822de8f83e9faeef7bdff4bde3cb46c7",
+  "w": 1600,
+  "h": 1200,
+  "local_path": "media/graded/hakone_glass_museum.jpg",
+  "used_in": [
+   "C1"
+  ],
+  "note": "rowboat visitors, pond, tower"
+ },
+ {
+  "id": "hakone_lake_ashi",
+  "platform": "google_places_user_photo",
+  "author": "Annie Vanoverbeke",
+  "source_url": "https://maps.google.com/maps/contrib/114097642364750983294",
+  "license": "places-tos",
+  "sha256": "36c4cf3f8a8207fb00ca848e368b26304a44fc18b3212459f635c00dd8a36f42",
+  "w": 739,
+  "h": 1600,
+  "local_path": "media/graded/hakone_lake_ashi.jpg",
+  "used_in": [
+   "C1"
+  ],
+  "note": "dusk pirate-ship, railing, passengers"
+ },
+ {
+  "id": "hakone_owakudani",
+  "platform": "google_images",
+  "author": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/%C5%8Cwakudani",
+  "license": "editorial-web",
+  "sha256": "6fcd9652e78f79fba0de6251115699becb6c995c97adc754e76876d948f05c7c",
+  "w": 4608,
+  "h": 3456,
+  "local_path": "media/graded/hakone_owakudani.jpg",
+  "used_in": [
+   "C1"
+  ],
+  "note": "ropeway gondola window, valley (2026-07-23: incumbent shows readable \"HAKONE ROPEWAY\" cabin branding + live steam vents, beats all 4 banked Places alternatives, kept)"
+ },
+ {
+  "id": "haneda_airport",
+  "platform": "google_places_user_photo",
+  "author": "のりこ",
+  "source_url": "https://maps.google.com/maps/contrib/116216329288578781287",
+  "license": "places-tos",
+  "sha256": "501990c932c39ed228322a4b248bfc1da544a7a1cbbff84662144f2d7b893cc4",
+  "w": 1600,
+  "h": 1200,
+  "local_path": "media/graded/haneda_airport.jpg",
+  "used_in": [
+   "A"
+  ],
+  "note": "railing foreground plane-spotting tarmac"
+ },
+ {
+  "id": "holicay_app_itinerary",
+  "platform": "holicay-app",
+  "author": "Holicay",
+  "source_url": "https://holicay.com",
+  "license": "first-party",
+  "sha256": "6f984c325807b951f2c93e5cd895cc83a73ee46761edb16bd66a3e3db5cc85a2",
+  "w": 589,
+  "h": 1280,
+  "local_path": "media/graded/holicay_app_itinerary.jpg",
+  "used_in": [
+   "C1"
+  ],
+  "note": "first-party app screenshot; C1 plug mockup"
+ },
+ {
+  "id": "ichiran_queue",
+  "platform": "google_images",
+  "author": "守口・門真つーしん",
+  "source_url": "https://www.morikado2.jp/photo/ichiran-20241205.html",
+  "license": "editorial-web",
+  "sha256": "5b8d3e6b2db57a0d03d04e88e287c6bd1798e51e4453a9e41756c6b91eefc91d",
+  "w": 1200,
+  "h": 900,
+  "local_path": "media/graded/ichiran_queue.jpg",
+  "used_in": [
+   "B"
+  ],
+  "note": "night queue, faces blurred (2026-07-23: 2 unused banked Places photos exist but both show the ramen bowl, not the line — message needs the queue, kept)"
+ },
+ {
+  "id": "jr_pass_ticket",
+  "platform": "google_images",
+  "author": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Japan_Rail_Pass",
+  "license": "editorial-web",
+  "sha256": "f264c26aee8295f840ff8dcc8e06f0dc42566f1062410ffad6e424e2bfb39c9f",
+  "w": 4000,
+  "h": 1868,
+  "local_path": "media/graded/jr_pass_ticket.jpg",
+  "used_in": [
+   "A"
+  ],
+  "note": "flat-lay used physical ticket"
+ },
+ {
+  "id": "kyoto_arashiyama",
+  "platform": "google_places_user_photo",
+  "author": "Miquel Lapuente Marquès",
+  "source_url": "https://maps.google.com/maps/contrib/111855457621476804308",
+  "license": "places-tos",
+  "sha256": "6c114f7c27f9f46b647af53997b062f0ae22bcc4854fbb628d2a03edb4ddd3d3",
+  "w": 1200,
+  "h": 1600,
+  "local_path": "media/graded/kyoto_arashiyama.jpg",
+  "used_in": [
+   "C1"
+  ],
+  "note": "real crowd, bamboo path"
+ },
+ {
+  "id": "kyoto_botanical_gardens",
+  "platform": "google_images",
+  "author": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Kyoto_Botanical_Garden",
+  "license": "editorial-web",
+  "sha256": "4e815b2a5f3fb72b512c490bc8a4d3351c01d8a4ea783136766faf8b29442cb7",
+  "w": 3887,
+  "h": 3107,
+  "local_path": "media/graded/kyoto_botanical_gardens.jpg",
+  "used_in": [
+   "C1"
+  ],
+  "note": "schoolchildren crossing bridge candid"
+ },
+ {
+  "id": "kyoto_fushimi_inari",
+  "platform": "google_places_user_photo",
+  "author": "Rahil Agrawal",
+  "source_url": "https://maps.google.com/maps/contrib/115439389244360929764",
+  "license": "places-tos",
+  "sha256": "cdefd99e47adf4e6251344510d356f9f76d4366f4691e1cd807609aaf5122e17",
+  "w": 1600,
+  "h": 1205,
+  "local_path": "media/graded/kyoto_fushimi_inari.jpg",
+  "used_in": [
+   "C1"
+  ],
+  "note": "oblique angle, real visitor glimpse"
+ },
+ {
+  "id": "kyoto_street",
+  "platform": "repo-graded",
+  "author": "Chloe / ttc-06 (Japan Travel Tips That Matter)",
+  "source_url": "outputs/06 - Japan Travel Tips That Matter",
+  "license": "repo-graded",
+  "sha256": "cdc41f2538cf9c2b6fad68ef5dd98444ed31b77f55ffcd8309bfa3e071660b3a",
+  "w": 1080,
+  "h": 1440,
+  "local_path": "media/graded/kyoto_street.jpg",
+  "used_in": [
+   "C1"
+  ],
+  "note": "muted filter, quiet backstreet"
+ },
+ {
+  "id": "local_neighbourhood",
+  "platform": "google_images",
+  "author": "Trot Op!",
+  "source_url": "https://www.trotop.be/en/tokyo-ueno-yanaka-sights/",
+  "license": "editorial-web",
+  "sha256": "fb7bc0435430bb5b2b48b981e54842a61f62455a1e89b566b2d6734776cc6177",
+  "w": 1200,
+  "h": 798,
+  "local_path": "media/graded/local_neighbourhood.jpg",
+  "used_in": [
+   "A"
+  ],
+  "note": "daytime alley cafe signage"
+ },
+ {
+  "id": "nara_deer_park",
+  "platform": "google_images",
+  "author": "BBC",
+  "source_url": "https://www.bbc.co.uk/programmes/articles/ZhDnsVPGqg84KgcbvNz98L/the-marvellous-nara-deer",
+  "license": "editorial-web",
+  "sha256": "11cd7f612909c89a4174b5ff7d7606a8b0e59709a71fe1bd18d7468f5f17b524",
+  "w": 1040,
+  "h": 1040,
+  "local_path": "media/graded/nara_deer_park.jpg",
+  "used_in": [
+   "C1"
+  ],
+  "note": "woman feeding deer crosswalk (2026-07-23: best banked Places alternative was a lone deer with no crowd-interaction moment, kept)"
+ },
+ {
+  "id": "nara_street",
+  "platform": "google_images",
+  "author": "Thailande et Asie",
+  "source_url": "https://thailande-et-asie.com/en/balade-vieille-ville-nara-ancienne-capitale",
+  "license": "editorial-web",
+  "sha256": "7cd2e424e3babbd898d294d6d5683d434c80d7e9f2554be28f5249716c25d37f",
+  "w": 1800,
+  "h": 1200,
+  "local_path": "media/graded/nara_street.jpg",
+  "used_in": [
+   "C1"
+  ],
+  "note": "overcast old-town shopfront"
+ },
+ {
+  "id": "nara_todaiji",
+  "platform": "google_places_user_photo",
+  "author": "Raven kisses",
+  "source_url": "https://maps.google.com/maps/contrib/104234940698931303596",
+  "license": "places-tos",
+  "sha256": "7cf980949f54bc7724d2cc04da07406693ea911a8863e374ed920807f6198785",
+  "w": 1600,
+  "h": 1067,
+  "local_path": "media/graded/nara_todaiji.jpg",
+  "used_in": [
+   "C1"
+  ],
+  "note": "wider altar view, barrier rope"
+ },
+ {
+  "id": "nara_wakakusayama",
+  "platform": "google_images",
+  "author": "LensTokyo",
+  "source_url": "https://www.lenstokyo.com/locations/wakakusayama-hill",
+  "license": "editorial-web",
+  "sha256": "a10ff04cc13d5587252e7facb68278004beff7da6eeac5ca6bf96ce09de7c36a",
+  "w": 1200,
+  "h": 800,
+  "local_path": "media/graded/nara_wakakusayama.jpg",
+  "used_in": [
+   "C1"
+  ],
+  "note": "deer, hazy natural hilltop (2026-07-23: best banked Places alt was a dramatic god-ray golden-hour shot that read as more processed/staged than this one, kept)"
+ },
+ {
+  "id": "narita_airport",
+  "platform": "google_places_user_photo",
+  "author": "Kazuk Hiros",
+  "source_url": "https://maps.google.com/maps/contrib/117996966271017479971",
+  "license": "places-tos",
+  "sha256": "9ef7e6405daf143e76e5b40d5f42c470d04a71a226aac5d4eedd0e9ffc902e8a",
+  "w": 1600,
+  "h": 1200,
+  "local_path": "media/graded/narita_airport.jpg",
+  "used_in": [
+   "A"
+  ],
+  "note": "candid travelers, Narita+Train signage"
+ },
+ {
+  "id": "neighbourhoods",
+  "platform": "repo-graded (untracked, pre-existing)",
+  "author": "n/a",
+  "source_url": "n/a",
+  "license": "repo-graded",
+  "sha256": "a6520603df5bdae54f87480df4e26b0070e5f316929bd884ca6111913c3153f6",
+  "w": 1080,
+  "h": 1440,
+  "local_path": "media/graded/neighbourhoods.jpg",
+  "used_in": [
+   "C2"
+  ],
+  "note": "faded alley, morning-glory vines"
+ },
+ {
+  "id": "no_trash_cans_street",
+  "platform": "google_images",
+  "author": "WHEN IN TOKYO",
+  "source_url": "https://whenin.tokyo/Yanaka-Area-Guide",
+  "license": "editorial-web",
+  "sha256": "1d74ac3870c9f926a843dd0d31675c4ac644316984e3ba51dad7e7c57e02572a",
+  "w": 2500,
+  "h": 1667,
+  "local_path": "media/graded/no_trash_cans_street.jpg",
+  "used_in": [
+   "A"
+  ],
+  "note": "blue-hour Yanaka alley corner"
+ },
+ {
+  "id": "omoide_yokocho",
+  "platform": "google_images",
+  "author": "Hello! Tokyo Tours",
+  "source_url": "https://hellotokyotours.com/blog/tokyo-places-to-eat-shinjuku-omoide-yokocho",
+  "license": "editorial-web",
+  "sha256": "66d2329d3b3c5b03c5262f482ae0bd6ac2479330d675b585c977e74fe8ff2479",
+  "w": 1300,
+  "h": 975,
+  "local_path": "media/graded/omoide_yokocho.jpg",
+  "used_in": [
+   "B"
+  ],
+  "note": "lantern alley moody handheld (2026-07-23: 4 banked Places photos checked, none show the lantern-alley subject, kept)"
+ },
+ {
+  "id": "osaka_amerikamura",
+  "platform": "google_places_user_photo",
+  "author": "R",
+  "source_url": "https://maps.google.com/maps/contrib/105736855936668713202",
+  "license": "places-tos",
+  "sha256": "762b15cb92724e32ac44cf7e138fc35d4bc95f8848fde1adfdeb074890615505",
+  "w": 900,
+  "h": 1600,
+  "local_path": "media/graded/osaka_amerikamura.jpg",
+  "used_in": [
+   "C1"
+  ],
+  "note": "portrait-blur mural, cyclists passing"
+ },
+ {
+  "id": "osaka_dotonbori",
+  "platform": "google_images",
+  "author": "Snow Monkey Resorts",
+  "source_url": "https://www.snowmonkeyresorts.com/activities/the-glico-man-sign-in-osaka/",
+  "license": "editorial-web",
+  "sha256": "e3bfc1a61df927e1ed5018564e2d8434783b1ec8b40eb03f07c7cb4fe2a082f9",
+  "w": 1024,
+  "h": 768,
+  "local_path": "media/graded/osaka_dotonbori.jpg",
+  "used_in": [
+   "C1"
+  ],
+  "note": "night canal, candid crowd (2026-07-23: 4 banked Places photos were all elevated/wrong-landmark shots, kept)"
+ },
+ {
+  "id": "osaka_street_food",
+  "platform": "google_images",
+  "author": "YouTube",
+  "source_url": "https://www.youtube.com/watch?v=kh-yNMGl2tA",
+  "license": "editorial-web",
+  "sha256": "5bba38cf8abe11ed9ba233cdaae6c95a6d921a8b3aa8bb07195c8ca96f931afd",
+  "w": 1280,
+  "h": 720,
+  "local_path": "media/graded/osaka_street_food.jpg",
+  "used_in": [
+   "C1"
+  ],
+  "note": "takoyaki stall, kimono customer"
+ },
+ {
+  "id": "osaka_universal_studios",
+  "platform": "google_places_user_photo",
+  "author": "Tama Chang (たまちゃん)",
+  "source_url": "https://maps.google.com/maps/contrib/103339197892598787171",
+  "license": "places-tos",
+  "sha256": "7a6179c7ab8ea4bd696d193f3602c4ffca15ff502cfb03ee6dae755893465287",
+  "w": 1600,
+  "h": 1200,
+  "local_path": "media/graded/osaka_universal_studios.jpg",
+  "used_in": [
+   "C1"
+  ],
+  "note": "archway distance, crowd barriers visible"
+ },
+ {
+  "id": "plug_scenic",
+  "platform": "google_images",
+  "author": "unknown",
+  "source_url": "",
+  "license": "editorial-web",
+  "sha256": "07942c55b425d29e22c4be5dbb6d8757dabae24c7aeda128073112410b6801d3",
+  "w": 1235,
+  "h": 1800,
+  "local_path": "media/graded/plug_scenic.jpg",
+  "used_in": [
+   "A",
+   "B",
+   "C2"
+  ],
+  "note": "picturesque Kiyomizu-dera night scenic; A/B/C2 plug backdrop (exempt from UGC gate)"
+ },
+ {
+  "id": "roppongi_hills",
+  "platform": "google_places_user_photo",
+  "author": "TRIP STAR",
+  "source_url": "https://maps.google.com/maps/contrib/112646953105542800877",
+  "license": "places-tos",
+  "sha256": "497613687d0baa47bb80f18807f132822f5f67b3dfdeddf09da992feccbfc3ac",
+  "w": 1200,
+  "h": 1600,
+  "local_path": "media/graded/roppongi_hills.jpg",
+  "used_in": [
+   "B"
+  ],
+  "note": "night Tokyo Tower deck view"
+ },
+ {
+  "id": "route_map",
+  "platform": "google_images (pre-selected, japan-route pool)",
+  "author": "n/a",
+  "source_url": "n/a",
+  "license": "unknown",
+  "sha256": "32870c68642825ac5f62ecef41987d0550c3526726620213b4230c51cf81ebc5",
+  "w": 1080,
+  "h": 1920,
+  "local_path": "media/graded/route_map.png",
+  "used_in": [
+   "C2"
+  ],
+  "note": "untouchable, real map screenshot"
+ },
+ {
+  "id": "shibuya_crossing",
+  "platform": "google_images",
+  "author": "Japan A to Z (Substack)",
+  "source_url": "https://tani.substack.com/p/55-shibuya-crossing",
+  "license": "editorial-web",
+  "sha256": "8a96ab6e87887e26e2eb7271dade0b21d5e7c8d8557153e2def1dfe293cda9dd",
+  "w": 3765,
+  "h": 1647,
+  "local_path": "media/graded/shibuya_crossing.jpg",
+  "used_in": [
+   "B",
+   "C1"
+  ],
+  "note": "accessible walkway angle, no blur"
+ },
+ {
+  "id": "shibuya_sky",
+  "platform": "google_images",
+  "author": "Travel Caffeine",
+  "source_url": "https://www.travelcaffeine.com/shibuya-sky-review-best-observation-tokyo-japan/",
+  "license": "editorial-web",
+  "sha256": "7ca72e0a6b5861f5ef8704f5a68b70af5051ba25d098bfc233e366da0ef4b33b",
+  "w": 1200,
+  "h": 771,
+  "local_path": "media/graded/shibuya_sky.jpg",
+  "used_in": [
+   "B"
+  ],
+  "note": "packed sunset deck crowd (2026-07-23: re-checked vs 3 unused banked Places photos of the deck, all empty-of-crowd — incumbent uniquely sells \"packed shoulder to shoulder\", kept)"
+ },
+ {
+  "id": "shimokitazawa",
+  "platform": "repo-graded",
+  "author": "Chloe / ttc-01 (Tokyo Worth It or Overrated)",
+  "source_url": "outputs/01 - Tokyo Worth It or Overrated",
+  "license": "repo-graded",
+  "sha256": "b7e781841da44feb4371ed428a5bcb91cae91592375f6a84906e56276e79cd72",
+  "w": 1080,
+  "h": 1440,
+  "local_path": "media/graded/shimokitazawa.jpg",
+  "used_in": [
+   "B"
+  ],
+  "note": "grainy vintage storefront crop"
+ },
+ {
+  "id": "skytree",
+  "platform": "google_places_user_photo",
+  "author": "Riccardo Widera",
+  "source_url": "https://maps.google.com/maps/contrib/107192220437452611381",
+  "license": "places-tos",
+  "sha256": "b5171269828928269f26e48a0ccbc587a44b53a7db347a2d60dcd92c9fd3b59f",
+  "w": 900,
+  "h": 1600,
+  "local_path": "media/graded/skytree.jpg",
+  "used_in": [
+   "B"
+  ],
+  "note": "near-identical low-angle, now attributed"
+ },
+ {
+  "id": "spring_cherry_blossom",
+  "platform": "google_images",
+  "author": "fooddiversity.today",
+  "source_url": "https://fooddiversity.today/en/article_85799.html",
+  "license": "editorial-web",
+  "sha256": "7db7d95bc79990a0dcc1bacfae6b7d33caac1f7def36939ceb4166e34e441d10",
+  "w": 1280,
+  "h": 1707,
+  "local_path": "media/graded/spring_cherry_blossom.jpg",
+  "used_in": [
+   "C2"
+  ],
+  "note": "street banners, pedestrians, bloom"
+ },
+ {
+  "id": "station_pov",
+  "platform": "google_places_user_photo",
+  "author": "Shichao Zhang",
+  "source_url": "https://maps.google.com/maps/contrib/105049472035051034972",
+  "license": "places-tos",
+  "sha256": "264df5fe2d0ccce6d8195a52cff96dbd83be8819196cc32cd473321425df7cef",
+  "w": 1600,
+  "h": 1200,
+  "local_path": "media/graded/station_pov.jpg",
+  "used_in": [
+   "C2"
+  ],
+  "note": "huge Shinjuku exterior, JR signage (incumbent was an unlabeled Osaka-area Hankyu platform, not even Tokyo)"
+ },
+ {
+  "id": "suica_card_tap",
+  "platform": "google_images",
+  "author": "Trip.com",
+  "source_url": "https://us.trip.com/guide/transport/suica-card.html",
+  "license": "editorial-web",
+  "sha256": "8c0b9426b829e7880ae0acaccea0ce0fa8f7343ba30ab0ea07cb51fe9b078027",
+  "w": 1099,
+  "h": 746,
+  "local_path": "media/graded/suica_card_tap.jpg",
+  "used_in": [
+   "A"
+  ],
+  "note": "hand tapping card reader"
+ },
+ {
+  "id": "suica_tap_train",
+  "platform": "google_images",
+  "author": "Real Japan Guide",
+  "source_url": "https://real-japan-guide.com/japan-suica-pasmo-icoca-guide-2026/",
+  "license": "editorial-web",
+  "sha256": "a8e26919fe6dfbf2d2549245f9a7269c47395972b9fc08165167e2b0b4d0d51f",
+  "w": 1376,
+  "h": 768,
+  "local_path": "media/graded/suica_tap_train.jpg",
+  "used_in": [
+   "C2"
+  ],
+  "note": "phone tap, motion-blur train"
+ },
+ {
+  "id": "summer_festival",
+  "platform": "google_images",
+  "author": "The Japan Times",
+  "source_url": "https://www.japantimes.co.jp/life/2026/07/14/travel/uchiwa-festival-kumagaya-heat-matsuri-traditional-culture/",
+  "license": "editorial-web",
+  "sha256": "edfb4bfe101c18bfa54f727dee4960967068671152a9f11cdbd58a373a94fbad",
+  "w": 1500,
+  "h": 999,
+  "local_path": "media/graded/summer_festival.jpg",
+  "used_in": [
+   "C2"
+  ],
+  "note": "ground-level crowd, lantern floats"
+ },
+ {
+  "id": "takeshita",
+  "platform": "google_places_user_photo",
+  "author": "Alex Giles",
+  "source_url": "https://maps.google.com/maps/contrib/109318730940402039565",
+  "license": "places-tos",
+  "sha256": "6c4f24d91055d2235592780fb724256535e4fa4e6996412f0555613b1a7524cf",
+  "w": 1200,
+  "h": 1600,
+  "local_path": "media/graded/takeshita.jpg",
+  "used_in": [
+   "B"
+  ],
+  "note": "immersed crowd POV, phone filming"
+ },
+ {
+  "id": "temples",
+  "platform": "google_images",
+  "author": "Genki Mobile",
+  "source_url": "https://www.genkimobile.com/meiji-shrine-yoyogi-forest/",
+  "license": "editorial-web",
+  "sha256": "068ef0ae2a21e5a3be9c227936970bd2b70185b0f9af238cb82c76d3c6fce5a6",
+  "w": 1536,
+  "h": 1024,
+  "local_path": "media/graded/temples.jpg",
+  "used_in": [
+   "C1"
+  ],
+  "note": "Meiji torii approach, real tourists (2026-07-23: checked vs 4 banked Sensoji Places photos — the strongest was a dead-empty, perfectly symmetric Kaminarimon gate, an even worse gate-9 fit despite real attribution; incumbent's real pedestrian crowd kept)"
+ },
+ {
+  "id": "tokyo_gov_building",
+  "platform": "google_places_user_photo",
+  "author": "Frederic K",
+  "source_url": "https://maps.google.com/maps/contrib/105211076524162208846",
+  "license": "places-tos",
+  "sha256": "53bdadcc59636206e1fd90d1aafa2a2ad4331b6f5def48f47a10423c8a64c069",
+  "w": 1600,
+  "h": 1200,
+  "local_path": "media/graded/tokyo_gov_building.jpg",
+  "used_in": [
+   "B"
+  ],
+  "note": "through-glass reflection hazy Shinjuku"
+ },
+ {
+  "id": "tokyo_offseason_quiet",
+  "platform": "google_images",
+  "author": "Travely Notes",
+  "source_url": "https://www.travelynotes.com/blog-japan/autumn-walk-around-jindai-ji-discover-tokyos-hidden-gem-for-fall-foliage",
+  "license": "editorial-web",
+  "sha256": "3f99e5a6345412ad105f6bf39ca3fac09fec9445e4b7938b752226c60aa4f2c6",
+  "w": 2500,
+  "h": 1875,
+  "local_path": "media/graded/tokyo_offseason_quiet.jpg",
+  "used_in": [
+   "A"
+  ],
+  "note": "quiet autumn alley pedestrians"
+ },
+ {
+  "id": "tokyo_skyline",
+  "platform": "google_places_user_photo",
+  "author": "たろきち",
+  "source_url": "https://maps.google.com/maps/contrib/115497063726678117311",
+  "license": "places-tos",
+  "sha256": "ddc0875b26084d337f3f705a9a438fb7366c536951e005eb9625f981e0682d82",
+  "w": 1600,
+  "h": 1200,
+  "local_path": "media/graded/tokyo_skyline.jpg",
+  "used_in": [
+   "A",
+   "B",
+   "C1",
+   "C2"
+  ],
+  "note": "deck net glass escalator"
+ },
+ {
+  "id": "winter_snow",
+  "platform": "google_images",
+  "author": "Delta News Hub",
+  "source_url": "https://news.delta.com/snow-slopes-and-serenity-exploring-japans-skiing-resorts",
+  "license": "editorial-web",
+  "sha256": "7ad43f261d01410cd55edfe39243ad35eaddf4f347a3fc2110eda99b0321fcdf",
+  "w": 6000,
+  "h": 3375,
+  "local_path": "media/graded/winter_snow.jpg",
+  "used_in": [
+   "C2"
+  ],
+  "note": "skiers group, rear-view mountain"
+ },
+ {
+  "id": "holicay_app_itinerary__master",
+  "platform": "holicay-app",
+  "author": "Holicay",
+  "source_url": "https://holicay.com",
+  "license": "first-party",
+  "sha256": "6f984c325807b951f2c93e5cd895cc83a73ee46761edb16bd66a3e3db5cc85a2",
+  "w": 589,
+  "h": 1280,
+  "local_path": "media/brand/holicay_app_itinerary.jpg",
+  "used_in": [
+   "C1"
+  ],
+  "note": "first-party app screenshot master"
+ },
+ {
+  "id": "chloe_cover",
+  "platform": "character-gen",
+  "author": "Chloe (character)",
+  "source_url": "",
+  "license": "first-party",
+  "sha256": "1215d1ee30ea0e66b48e591a749efd592a09c76aa8185fb0e802be7cfc5344bc",
+  "w": 1086,
+  "h": 1448,
+  "local_path": "chars/chloe_cover.png",
+  "used_in": [
+   "A",
+   "B",
+   "C1",
+   "C2"
+  ],
+  "note": "character cover/ending photo"
+ },
+ {
+  "id": "chloe_ending",
+  "platform": "character-gen",
+  "author": "Chloe (character)",
+  "source_url": "",
+  "license": "first-party",
+  "sha256": "40da9b417a47c6980f7c4f4743b25f70cd9a3a8447bf63946647e0f4e4305d0a",
+  "w": 1086,
+  "h": 1448,
+  "local_path": "chars/chloe_ending.png",
+  "used_in": [
+   "A",
+   "B",
+   "C1",
+   "C2"
+  ],
+  "note": "character cover/ending photo"
+ },
+ {
+  "id": "plug_scenic_c1",
+  "platform": "google_images",
+  "author": "Wayless Travelers",
+  "source_url": "https://waylesstravelers.com/hidden-fushimi-inari-route/",
+  "license": "editorial-scenic",
+  "sha256": "b4c9a2dd63f4075ebfebf084ed998f40a563104b78952fa2ef77517b22264a39",
+  "w": 877,
+  "h": 1200,
+  "local_path": "media/graded/plug_scenic_c1.jpg",
+  "used_in": [
+   "C1"
+  ],
+  "note": "Fushimi Inari torii tunnel; C1 plug dark-tinted backdrop (exempt from UGC gate)"
+ }
+]

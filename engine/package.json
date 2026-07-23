@@ -1,0 +1,13 @@
+{
+  "name": "masquerade-engine",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Masquerade TikTok carousel engine — agent-agnostic CLI scripts (Playwright browser automation + HTML→PNG rendering). Driven by any AI coding agent via shell.",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "playwright": "1.60.0"
+  },
+  "scripts": {
+    "postinstall": "playwright install chromium"
+  }
+}

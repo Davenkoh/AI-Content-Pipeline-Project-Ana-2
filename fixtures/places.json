@@ -1,0 +1,260 @@
+[
+  { "slug": "chloe_cover", "slide_ref": ["A#1 char_photo", "B#1 char_photo", "C1#1 char_photo", "C2#1 char_photo"],
+    "subject": "Chloe (character)", "category": "cover-human", "query": "n/a — generated persona photo",
+    "geometry": "full 1080×1920", "status": "existing (chars/chloe_cover.png)",
+    "notes": "Already generated, dated today. Reused as the human-variant cover across all four options — the doc doesn't ask for a per-option cover photoshoot, and one candid Chloe shot is enough to test the box-hugging text layout over a person. Do not confuse with chars/chloe_fixture.png (renderer test-only)." },
+
+  { "slug": "chloe_ending", "slide_ref": ["A#10 char_photo", "B#8 char_photo", "C1#14 char_photo"],
+    "subject": "Chloe (character)", "category": "save-human", "query": "n/a — generated persona photo",
+    "geometry": "full 1080×1920", "status": "existing (chars/chloe_ending.png)",
+    "notes": "Human-variant ending/save photo, already generated. Not used on C2 — C2 has no save-type slide (see flags.md)." },
+
+  { "slug": "fuji_lake", "slide_ref": ["A#1 scenic_photo", "A#10 scenic_photo", "C1#1 scenic_photo", "C1#14 scenic_photo", "C2#1 scenic_photo"],
+    "subject": "Japan (Mt Fuji + Kawaguchiko)", "category": "nature / scenic hero", "query": "mount fuji lake kawaguchiko sunset golden hour",
+    "geometry": "full 1080×1920", "status": "existing (media/graded/fuji_lake.jpg; sourced media/library/japan-fuji/c4f4bf57.jpg)",
+    "notes": "The one iconic-Japan hero shot in the pool — reused as the nohuman cover/save scenic across A, C1, and C2's default cover. B and C2's non-cover scenic slots deliberately use tokyo_skyline instead for variety within the deck." },
+
+  { "slug": "tokyo_skyline", "slide_ref": ["B#1 scenic_photo", "B#8 scenic_photo", "C2#5(favorites) photo"],
+    "subject": "Tokyo skyline / cityscape", "category": "nature / scenic", "query": "tokyo skyline daytime cityscape",
+    "geometry": "full 1080×1920", "status": "existing (media/graded/tokyo_skyline.jpg)",
+    "notes": "B's cover+save scenic (fits 'places in Japan' theme better than a Fuji shot) and C2's favorites backdrop. Verify it reads as candid UGC, not polished stock, per the doc's realism rule — if it's too clean, swap for a phone-shot skyline." },
+
+  { "slug": "shibuya_crossing", "slide_ref": ["B#3 top_photo", "C1#2(divider tokyo) cells[0]"],
+    "subject": "Shibuya Crossing, Tokyo", "category": "visit / landmark", "query": "shibuya crossing crowd tokyo",
+    "geometry": "half 1080×960 (B#3) + cell 540×960 (C1 divider)", "status": "existing (media/graded/shibuya_crossing.jpg)",
+    "notes": "Also used as A's food-chains-vs-izakaya ❌ side was NOT this — double check A doesn't need it; confirmed A doesn't reference this slug." },
+
+  { "slug": "food_queue", "slide_ref": ["A#7 top_photo", "B#7 top_photo", "C1#2(divider tokyo) cells[2]"],
+    "subject": "Crowded food queue, Tokyo (viral ramen / Ichiran-style line)", "category": "eat / crowd", "query": "long queue ramen shop tokyo",
+    "geometry": "half 1080×960 (A#7, B#7) + cell 540×960 (C1 divider)", "status": "existing (media/graded/food_queue.jpg)",
+    "notes": "Reused as A's tourist-chain ❌ photo and B's Ichiran-queue ❌ photo — same visual idea (a queue), different post, no conflict since they're separate carousels." },
+
+  { "slug": "golden_gai", "slide_ref": ["A#7 bottom_photo", "C1#2(divider tokyo) cells[3]", "C2#10 photo"],
+    "subject": "Golden Gai, Shinjuku (tiny bar alley)", "category": "eat/nightlife", "query": "golden gai shinjuku alley night",
+    "geometry": "half 1080×960 (A#7) + cell 540×960 (C1) + full 1080×1920 (C2#10)", "status": "existing (media/graded/golden_gai.jpg)",
+    "notes": "Triple duty: A's izakaya ✅ side, C1 Tokyo divider's 'people-in-scene' cell, and reused as C2 step 7 (mobile data)'s neon-night backdrop — that last one is an APPROXIMATE stand-in (Golden Gai is not literally about eSIMs, just visually a 'neon street at night' per the doc's step-7 spec). Flagged in flags.md; swap for a genuine neon-street/night shot if the approximation reads oddly." },
+
+  { "slug": "skytree", "slide_ref": ["B#6 top_photo"],
+    "subject": "Tokyo Skytree", "category": "visit / landmark (❌ side)", "query": "tokyo skytree tower",
+    "geometry": "half 1080×960", "status": "existing (media/graded/skytree.jpg)", "notes": "" },
+
+  { "slug": "takeshita", "slide_ref": ["B#5 top_photo"],
+    "subject": "Takeshita Street, Harajuku", "category": "visit / shopping street (❌ side)", "query": "takeshita street harajuku crowd",
+    "geometry": "half 1080×960", "status": "existing (media/graded/takeshita.jpg)", "notes": "" },
+
+  { "slug": "temples", "slide_ref": ["C1#2(divider tokyo) cells[1]"],
+    "subject": "Tokyo temple/shrine (generic — Meiji Jingu or Senso-ji)", "category": "visit / landmark", "query": "meiji shrine tokyo torii gate",
+    "geometry": "cell 540×960", "status": "existing (media/graded/temples.jpg)", "notes": "" },
+
+  { "slug": "neighbourhoods", "slide_ref": ["A#8 bottom_photo", "C2#8(step5 language) photo"],
+    "subject": "Tokyo backstreet / neighbourhood (generic Ikebukuro-Nippori-Kinshicho stand-in)", "category": "visit / residential", "query": "tokyo backstreet alley residential",
+    "geometry": "half 1080×960 (A#8) + full 1080×1920 (C2#8)", "status": "existing (media/graded/neighbourhoods.jpg)",
+    "notes": "A#8's ✅ side is a generic stand-in for 'Ikebukuro/Nippori/Kinshicho' (essay names three neighbourhoods, one photo can't be all three — flagged). C2#8 reuses it purely as a generic Tokyo backdrop behind the language-app frosted panel, matching the fixture's own choice." },
+
+  { "slug": "route_map", "slide_ref": ["C2#3(step2 route) photo"],
+    "subject": "Japan itinerary route map (Tokyo/Kyoto/Osaka pins)", "category": "map", "query": "japan itinerary route map tokyo kyoto osaka pins screenshot",
+    "geometry": "full 1080×1920", "status": "existing (media/graded/route_map.png; sourced from media/library/japan-route/, 3 candidates)", "notes": "" },
+
+  { "slug": "app_deepl", "slide_ref": ["C2#8(step5 language) icons"],
+    "subject": "DeepL app icon", "category": "icon", "query": "n/a — app icon asset",
+    "geometry": "icon (~320×320, per app_icons.py)", "status": "existing (media/graded/app_deepl.png)",
+    "notes": "Duplicate-looking asset icon_deepl.png also exists in graded/ — unclear which pass produced which; app_deepl.png matches the fixture's own slug naming so it's the one referenced here." },
+
+  { "slug": "app_google-translate", "slide_ref": ["C2#8(step5 language) icons"],
+    "subject": "Google Translate app icon", "category": "icon", "query": "n/a — app icon asset",
+    "geometry": "icon (~320×320, per app_icons.py)", "status": "existing (media/graded/app_google-translate.png)",
+    "notes": "Duplicate-looking asset icon_gtrans.png also exists in graded/ — same note as app_deepl." },
+
+  { "slug": "narita_airport", "slide_ref": ["A#2 top_photo"],
+    "subject": "Narita Airport / train to Tokyo", "category": "mistake — airport", "query": "narita airport train platform arrival",
+    "geometry": "half 1080×960", "status": "needs sourcing — not in pool", "notes": "" },
+
+  { "slug": "haneda_airport", "slide_ref": ["A#2 bottom_photo"],
+    "subject": "Haneda Airport / central Tokyo arrival", "category": "fix — airport", "query": "haneda airport tokyo monorail",
+    "geometry": "half 1080×960", "status": "needs sourcing — not in pool", "notes": "" },
+
+  { "slug": "cherry_blossom_crowds", "slide_ref": ["A#3 top_photo"],
+    "subject": "Cherry blossom season crowd, Japan", "category": "mistake — timing", "query": "cherry blossom hanami crowd japan crowded",
+    "geometry": "half 1080×960", "status": "needs sourcing — not in pool", "notes": "" },
+
+  { "slug": "tokyo_offseason_quiet", "slide_ref": ["A#3 bottom_photo"],
+    "subject": "Japan in Nov/Feb — quiet, off-season street", "category": "fix — timing", "query": "tokyo quiet street winter uncrowded",
+    "geometry": "half 1080×960", "status": "needs sourcing — not in pool",
+    "notes": "tokyo_skyline (existing) is an acceptable temporary stand-in if sourcing is delayed — it reads as calm/uncrowded even if not literally off-season." },
+
+  { "slug": "no_trash_cans_street", "slide_ref": ["A#5 top_photo"],
+    "subject": "Japan street corner, no public trash bin visible", "category": "mistake — etiquette (doc-sanctioned resonance fill)", "query": "japan street no trash can konbini",
+    "geometry": "half 1080×960", "status": "needs sourcing — not in pool", "notes": "This whole beat is the doc's own resonance example, not mined copy — see flags.md." },
+
+  { "slug": "carry_bag_trash", "slide_ref": ["A#5 bottom_photo"],
+    "subject": "Small bag for carrying trash while sightseeing", "category": "fix — etiquette", "query": "small tote bag tourist carrying trash japan",
+    "geometry": "half 1080×960", "status": "needs sourcing — not in pool", "notes": "" },
+
+  { "slug": "flight_expensive", "slide_ref": ["A#6 top_photo"],
+    "subject": "Long-haul direct flight (plane cabin / boarding pass)", "category": "mistake — flights", "query": "airplane cabin window long haul flight",
+    "geometry": "half 1080×960", "status": "needs sourcing — not in pool", "notes": "" },
+
+  { "slug": "flight_layover_asia", "slide_ref": ["A#6 bottom_photo"],
+    "subject": "Layover in China/Korea airport", "category": "fix — flights", "query": "incheon airport transit korea layover",
+    "geometry": "half 1080×960", "status": "needs sourcing — not in pool", "notes": "" },
+
+  { "slug": "cramped_hotel_room", "slide_ref": ["A#8 top_photo"],
+    "subject": "Tiny tourist-district hotel room (Shibuya/Shinjuku)", "category": "mistake — accommodation", "query": "tiny tokyo hotel room compact",
+    "geometry": "half 1080×960", "status": "needs sourcing — not in pool", "notes": "" },
+
+  { "slug": "jr_pass_ticket", "slide_ref": ["A#9 top_photo"],
+    "subject": "JR Pass ticket / Shinkansen gate", "category": "mistake — transport", "query": "jr pass ticket shinkansen gate japan",
+    "geometry": "half 1080×960", "status": "needs sourcing — not in pool", "notes": "" },
+
+  { "slug": "suica_card_tap", "slide_ref": ["A#9 bottom_photo"],
+    "subject": "Suica card tap at ticket gate", "category": "fix — transport", "query": "suica card tap ticket gate japan",
+    "geometry": "half 1080×960", "status": "needs sourcing — not in pool", "notes": "" },
+
+  { "slug": "shibuya_sky", "slide_ref": ["B#2 top_photo"],
+    "subject": "Shibuya Sky observation deck, crowded", "category": "overrated / viewpoint", "query": "shibuya sky observation deck crowd",
+    "geometry": "half 1080×960", "status": "needs GRADING — raw candidates already sourced",
+    "notes": "4 candidates already sit in media/library/japan-tokyo/: c6cd7fc1.jpg, 1c19fb00.jpg, 3de00c1f.jpg, 9582f21a.jpg (per manifest.json). Just needs an OODA pick + grade + save as graded/shibuya_sky.jpg — no fresh sourcing pass needed." },
+
+  { "slug": "tokyo_gov_building", "slide_ref": ["B#2 bottom_photo"],
+    "subject": "Tokyo Metropolitan Government Building observatory", "category": "underrated / free viewpoint", "query": "tokyo metropolitan government building observatory view",
+    "geometry": "half 1080×960", "status": "needs GRADING — raw candidates already sourced",
+    "notes": "3 candidates already in media/library/japan-tokyo/: 2292f90c.jpg, b414898d.jpg, ddbd86f8.jpg. Same as shibuya_sky — grade, don't re-source." },
+
+  { "slug": "shimokitazawa", "slide_ref": ["B#3 bottom_photo"],
+    "subject": "Shimokitazawa neighbourhood (vintage shops, cafes)", "category": "underrated / neighbourhood", "query": "shimokitazawa tokyo vintage shop street",
+    "geometry": "half 1080×960", "status": "needs sourcing — not in pool", "notes": "" },
+
+  { "slug": "cat_street", "slide_ref": ["B#5 bottom_photo"],
+    "subject": "Cat Street, Harajuku", "category": "underrated / shopping street", "query": "cat street harajuku tokyo fashion",
+    "geometry": "half 1080×960", "status": "needs sourcing — not in pool", "notes": "" },
+
+  { "slug": "roppongi_hills", "slide_ref": ["B#6 bottom_photo"],
+    "subject": "Roppongi Hills / Mori Tower observation deck", "category": "underrated / viewpoint", "query": "mori tower roppongi hills observation deck tokyo tower view",
+    "geometry": "half 1080×960", "status": "needs sourcing — not in pool", "notes": "" },
+
+  { "slug": "omoide_yokocho", "slide_ref": ["B#7 bottom_photo", "C1#3(notes tokyo) — referenced in copy, not a photo slot"],
+    "subject": "Omoide Yokocho, Shinjuku (yakitori alley)", "category": "underrated / eat", "query": "omoide yokocho shinjuku yakitori alley night",
+    "geometry": "half 1080×960", "status": "needs sourcing — not in pool", "notes": "" },
+
+  { "slug": "kyoto_arashiyama", "slide_ref": ["C1#6(divider kyoto) cells[0]"],
+    "subject": "Arashiyama bamboo grove, Kyoto", "category": "visit / landmark", "query": "arashiyama bamboo grove kyoto",
+    "geometry": "cell 540×960", "status": "needs sourcing — not in pool", "notes": "Kyoto has ZERO existing pool coverage — see flags.md gap note." },
+
+  { "slug": "kyoto_fushimi_inari", "slide_ref": ["C1#6(divider kyoto) cells[1]"],
+    "subject": "Fushimi Inari torii gates, Kyoto", "category": "visit / landmark", "query": "fushimi inari torii gates kyoto",
+    "geometry": "cell 540×960", "status": "needs sourcing — not in pool", "notes": "" },
+
+  { "slug": "kyoto_botanical_gardens", "slide_ref": ["C1#6(divider kyoto) cells[2]"],
+    "subject": "Kyoto Botanical Gardens", "category": "visit / nature", "query": "kyoto botanical gardens",
+    "geometry": "cell 540×960", "status": "needs sourcing — not in pool", "notes": "" },
+
+  { "slug": "kyoto_street", "slide_ref": ["C1#6(divider kyoto) cells[3]"],
+    "subject": "Kyoto street / culture scene (e.g. Gion, Pontocho)", "category": "street/culture (divider 4th cell)", "query": "kyoto gion street traditional",
+    "geometry": "cell 540×960", "status": "needs sourcing — not in pool",
+    "notes": "The 'street/culture shot' generic 4th cell the doc's divider spec calls for; no specific venue named in any mined source, pick freely once Kyoto sourcing starts." },
+
+  { "slug": "osaka_dotonbori", "slide_ref": ["C1#8(divider osaka) cells[0]"],
+    "subject": "Dotonbori, Osaka", "category": "visit / landmark", "query": "dotonbori osaka canal glico sign night",
+    "geometry": "cell 540×960", "status": "needs sourcing — not in pool", "notes": "" },
+
+  { "slug": "osaka_universal_studios", "slide_ref": ["C1#8(divider osaka) cells[1]"],
+    "subject": "Universal Studios Japan, Osaka", "category": "visit / landmark", "query": "universal studios japan osaka entrance",
+    "geometry": "cell 540×960", "status": "needs sourcing — not in pool", "notes": "" },
+
+  { "slug": "osaka_amerikamura", "slide_ref": ["C1#8(divider osaka) cells[2]"],
+    "subject": "Amerikamura, Osaka", "category": "visit / street", "query": "amerikamura osaka street fashion",
+    "geometry": "cell 540×960", "status": "needs sourcing — not in pool", "notes": "" },
+
+  { "slug": "osaka_street_food", "slide_ref": ["C1#8(divider osaka) cells[3]"],
+    "subject": "Osaka street food (takoyaki / okonomiyaki stall)", "category": "food (divider 4th cell)", "query": "osaka takoyaki street stall",
+    "geometry": "cell 540×960", "status": "needs sourcing — not in pool",
+    "notes": "Generic food cell for the divider's 'signature food or drink' slot — not tied to a specific mined fact." },
+
+  { "slug": "nara_deer_park", "slide_ref": ["C1#10(divider nara) cells[0]"],
+    "subject": "Nara Park deer", "category": "visit / landmark", "query": "nara park deer bowing",
+    "geometry": "cell 540×960", "status": "needs sourcing — not in pool", "notes": "" },
+
+  { "slug": "nara_todaiji", "slide_ref": ["C1#10(divider nara) cells[1]"],
+    "subject": "Todaiji temple, Nara", "category": "visit / landmark", "query": "todaiji temple nara great buddha hall",
+    "geometry": "cell 540×960", "status": "needs sourcing — not in pool", "notes": "" },
+
+  { "slug": "nara_wakakusayama", "slide_ref": ["C1#10(divider nara) cells[2]"],
+    "subject": "Mt Wakakusayama, Nara", "category": "visit / nature", "query": "wakakusayama mountain nara view",
+    "geometry": "cell 540×960", "status": "needs sourcing — not in pool", "notes": "" },
+
+  { "slug": "nara_street", "slide_ref": ["C1#10(divider nara) cells[3]"],
+    "subject": "Nara street / culture scene", "category": "street/culture (divider 4th cell)", "query": "nara japan old town street",
+    "geometry": "cell 540×960", "status": "needs sourcing — not in pool", "notes": "" },
+
+  { "slug": "hakone_owakudani", "slide_ref": ["C1#12(divider hakone) cells[1]"],
+    "subject": "Owakudani volcanic valley, Hakone", "category": "visit / nature", "query": "owakudani hakone volcanic valley steam",
+    "geometry": "cell 540×960", "status": "needs sourcing — not in pool", "notes": "" },
+
+  { "slug": "hakone_glass_museum", "slide_ref": ["C1#12(divider hakone) cells[2]"],
+    "subject": "Hakone Glass no Mori (glass museum)", "category": "visit / landmark", "query": "hakone glass museum garden",
+    "geometry": "cell 540×960", "status": "needs sourcing — not in pool",
+    "notes": "Doc's C2 favorites row just says 'glass museum' — this is the obvious real match (Hakone Glass no Mori Venetian Glass Museum) but the specific proper name is my inference, not doc-stated. Flag before ship." },
+
+  { "slug": "hakone_lake_ashi", "slide_ref": ["C1#12(divider hakone) cells[3]"],
+    "subject": "Lake Ashi, Hakone", "category": "nature (divider 4th cell)", "query": "lake ashi hakone torii boat",
+    "geometry": "cell 540×960", "status": "needs sourcing — not in pool",
+    "notes": "Not doc-named; a reasonable generic Hakone 4th cell (matches the C2 fixture's own 'Lake Ashi' favorites pick), flagged as my addition." },
+
+  { "slug": "hakone", "slide_ref": ["C1#12(divider hakone) cells[0]"],
+    "subject": "Hakone (generic)", "category": "visit", "query": "hakone japan mountain onsen town",
+    "geometry": "cell 540×960", "status": "existing (media/graded/hakone.jpg)",
+    "notes": "The only non-Tokyo/Fuji/route asset already in the sandbox pool. Good candidate for the Hakone divider's landmark cell." },
+
+  { "slug": "spring_cherry_blossom", "slide_ref": ["C2#2(step1 seasons) cells[0]"],
+    "subject": "Japan spring — cherry blossoms", "category": "season", "query": "japan cherry blossom spring street",
+    "geometry": "c2cell (540×960)", "status": "needs sourcing — not in pool", "notes": "" },
+
+  { "slug": "summer_festival", "slide_ref": ["C2#2(step1 seasons) cells[1]"],
+    "subject": "Japan summer — festival (matsuri)", "category": "season", "query": "japan summer festival matsuri yukata",
+    "geometry": "c2cell (540×960)", "status": "needs sourcing — not in pool", "notes": "" },
+
+  { "slug": "autumn_leaves", "slide_ref": ["C2#2(step1 seasons) cells[2]"],
+    "subject": "Japan autumn — koyo leaves", "category": "season", "query": "japan autumn leaves koyo momiji",
+    "geometry": "c2cell (540×960)", "status": "needs sourcing — not in pool", "notes": "" },
+
+  { "slug": "winter_snow", "slide_ref": ["C2#2(step1 seasons) cells[3]"],
+    "subject": "Japan winter — snow / ski", "category": "season", "query": "japan winter snow ski resort",
+    "geometry": "c2cell (540×960)", "status": "needs sourcing — not in pool", "notes": "" },
+
+  { "slug": "station_pov", "slide_ref": ["C2#6(step3 accommodation) photo"],
+    "subject": "Japan train station platform, POV", "category": "transport / accommodation-adjacent", "query": "japan train station platform pov wide",
+    "geometry": "full 1080×1920", "status": "needs sourcing — not in pool", "notes": "" },
+
+  { "slug": "ghibli_park", "slide_ref": ["C2#7(step4 activities) photo"],
+    "subject": "Ghibli Park, Nagoya", "category": "attraction (sell-out example)", "query": "ghibli park nagoya entrance",
+    "geometry": "full 1080×1920", "status": "needs sourcing — not in pool",
+    "notes": "Uses the doc's own C2-table example (Ghibli Park) rather than teamLab, per the task brief. teamlab.jpg exists in the pool if you'd rather swap the example back to teamLab and reuse an existing asset." },
+
+  { "slug": "suica_tap_train", "slide_ref": ["C2#9(step6 transport) photo"],
+    "subject": "Suica tap at a train gate / on a train", "category": "transport", "query": "japan train suica tap gate commuter",
+    "geometry": "full 1080×1920", "status": "needs sourcing — not in pool",
+    "notes": "Distinct from station_pov (accommodation slide wants a platform/POV establishing shot; this slide wants a closer tap-to-ride moment)." },
+
+  { "slug": "areas", "slide_ref": [], "subject": "n/a — unused existing asset", "category": "n/a", "query": "n/a",
+    "geometry": "n/a", "status": "existing, UNUSED (media/graded/areas.jpg)",
+    "notes": "From post 08's 'Areas Worth Your Time' slide. Not referenced by any current slug but available if a body slide needs a generic Tokyo-areas photo." },
+
+  { "slug": "coffee", "slide_ref": [], "subject": "n/a — unused existing asset", "category": "n/a", "query": "n/a",
+    "geometry": "n/a", "status": "existing, UNUSED (media/graded/coffee.jpg)", "notes": "From post 02's coffee & matcha tips slide. Could sub in for a Tokyo cafe mention if the shop/eat lists get reshuffled." },
+
+  { "slug": "cute_stores", "slide_ref": [], "subject": "n/a — unused existing asset", "category": "n/a", "query": "n/a",
+    "geometry": "n/a", "status": "existing, UNUSED (media/graded/cute_stores.jpg)", "notes": "From post 02. Candidate for C1 Tokyo's shop divider cell if swapped in for food_queue." },
+
+  { "slug": "thrift", "slide_ref": [], "subject": "n/a — unused existing asset", "category": "n/a", "query": "n/a",
+    "geometry": "n/a", "status": "existing, UNUSED (media/graded/thrift.jpg)", "notes": "From post 02. Fits the RAGTAG/2nd Street shop items in C1 Tokyo's shopping section if a photo is ever needed there." },
+
+  { "slug": "teamlab", "slide_ref": [], "subject": "n/a — unused existing asset", "category": "n/a", "query": "n/a",
+    "geometry": "n/a", "status": "existing, UNUSED (media/graded/teamlab.jpg)",
+    "notes": "Deliberately NOT used for C2#7 (Book Activities Early) — that slide's copy uses the doc's Ghibli Park example instead of teamLab. This asset is the easy swap-back if the human prefers teamLab there (it's a graded asset vs ghibli_park's not-yet-sourced status)." },
+
+  { "slug": "icon_deepl", "slide_ref": [], "subject": "n/a — likely duplicate of app_deepl", "category": "n/a", "query": "n/a",
+    "geometry": "n/a", "status": "existing, UNUSED (media/graded/icon_deepl.png)", "notes": "Not referenced — app_deepl.png used instead per the fixture's naming convention. Confirm which of the two is the intended final asset and delete the other." },
+
+  { "slug": "icon_gtrans", "slide_ref": [], "subject": "n/a — likely duplicate of app_google-translate", "category": "n/a", "query": "n/a",
+    "geometry": "n/a", "status": "existing, UNUSED (media/graded/icon_gtrans.png)", "notes": "Same note as icon_deepl." }
+]

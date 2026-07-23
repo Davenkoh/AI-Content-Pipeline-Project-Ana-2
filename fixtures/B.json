@@ -1,0 +1,163 @@
+{
+  "option": "B",
+  "hook": {
+    "title": "OVERRATED vs UNDERRATED places in Japan",
+    "subtitle": ""
+  },
+  "hashtags": [
+    "#japantravel",
+    "#japantips",
+    "#traveljapan",
+    "#japantrip",
+    "#japan"
+  ],
+  "caption": {
+    "title_line": "🇯🇵 OVERRATED vs UNDERRATED places in Japan",
+    "body_draft": "Japan has a few spots that get hyped constantly online, but after going to a lot of them myself, some are genuinely worth it and some are not. Here are my honest overrated versus underrated takes, plus a real fact behind each one.\n\nShibuya Sky gets recommended everywhere, but the ticket is about $20 and the deck is packed shoulder to shoulder at sunset. The Tokyo Government Building observatory has the same skyline, Shibuya included, and it's completely free.\n\nShibuya Crossing is iconic and worth crossing once, but it's smaller and over quicker than the videos make it look. The crowd is honestly the whole show. Shimokitazawa is the area nearby that nobody expects to fall for, with vintage shops, tiny cafes, and record stores instead of a photo op.\n\nTakeshita Street is one loud, crowded lane of tourist crepes. It's fun for about half an hour, but Cat Street right next door is where the actual Tokyo fashion is, without the crowds.\n\nTokyo Skytree is pricey, packed, and a bit far out for what it is. Mori Tower in Roppongi Hills is an easier ticket, cheaper, less packed, and gives a closer view of Tokyo Tower.\n\nThe two hour queue for Ichiran is mostly for the algorithm, not the ramen itself. Omoide Yokocho in Shinjuku has tiny yakitori bars where skewers run about 150 to 300 yen each, with no wait at all.\n\nThese are just my honest opinions, so let me know if you disagree. Save this before your Japan trip."
+  },
+  "slides": [
+    {
+      "type": "cover",
+      "flag": "🇯🇵",
+      "title_lines": [
+        "OVERRATED vs",
+        "UNDERRATED",
+        "places in Japan"
+      ],
+      "subtitle_lines": [],
+      "char_photo": "chloe_cover",
+      "scenic_photo": "tokyo_skyline"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't pay for Shibuya Sky"
+      ],
+      "x_why_lines": [
+        "the hyped deck is $20 and packed",
+        "shoulder to shoulder at sunset"
+      ],
+      "check_title_lines": [
+        "✅ Go to the",
+        "Tokyo Gov Building"
+      ],
+      "check_why_lines": [
+        "same skyline, Shibuya",
+        "included, for free"
+      ],
+      "top_photo": "shibuya_sky",
+      "bottom_photo": "tokyo_gov_building"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't hype",
+        "Shibuya Crossing"
+      ],
+      "x_why_lines": [
+        "it's smaller and over",
+        "quicker than the videos",
+        "make it look"
+      ],
+      "check_title_lines": [
+        "✅ Go wander Shimokitazawa"
+      ],
+      "check_why_lines": [
+        "vintage shops and tiny cafes,",
+        "the one no one expects to love"
+      ],
+      "top_photo": "shibuya_crossing",
+      "bottom_photo": "shimokitazawa"
+    },
+    {
+      "type": "plug",
+      "paragraphs": [
+        [
+          "❌ i regret using google doc",
+          "and sheets to plan my trip"
+        ],
+        [
+          "alot of my research came from",
+          "tiktok, i saved videos on",
+          "tiktok, but never revisted it"
+        ],
+        [
+          "✅ HOLICAY.COM was",
+          "a game changer"
+        ],
+        [
+          "i can forward it my tiktok",
+          "links, travel documents, any",
+          "notes i have, and it saves",
+          "the locations and organizes my",
+          "notes for me all in one place"
+        ]
+      ],
+      "bg_photo": "plug_scenic"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Skip Takeshita Street"
+      ],
+      "x_why_lines": [
+        "one loud, crowded lane",
+        "of tourist crepes"
+      ],
+      "check_title_lines": [
+        "✅ Walk Cat Street instead"
+      ],
+      "check_why_lines": [
+        "the actual Tokyo fashion is here"
+      ],
+      "top_photo": "takeshita",
+      "bottom_photo": "cat_street"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Skip Tokyo Skytree"
+      ],
+      "x_why_lines": [
+        "pricey, packed, and a bit far out"
+      ],
+      "check_title_lines": [
+        "✅ Go to Mori Tower instead"
+      ],
+      "check_why_lines": [
+        "easier ticket, cheaper,",
+        "less packed"
+      ],
+      "top_photo": "skytree",
+      "bottom_photo": "roppongi_hills"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Skip the 2hr",
+        "Ichiran line"
+      ],
+      "x_why_lines": [
+        "that ramen isn't even",
+        "worth the wait"
+      ],
+      "check_title_lines": [
+        "✅ Go to Omoide Yokocho"
+      ],
+      "check_why_lines": [
+        "yakitori skewers, about",
+        "150 to 300 yen"
+      ],
+      "top_photo": "ichiran_queue",
+      "bottom_photo": "omoide_yokocho"
+    },
+    {
+      "type": "save",
+      "title": "am I right? 🤷🏻‍♀️",
+      "subtitle": "",
+      "char_photo": "chloe_ending",
+      "scenic_photo": "fuji_lake",
+      "title_style": "outline"
+    }
+  ]
+}

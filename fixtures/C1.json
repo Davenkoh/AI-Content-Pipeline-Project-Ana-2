@@ -1,0 +1,476 @@
+{
+  "option": "C1",
+  "hook": {
+    "title": "Going to Japan & have no idea what to do?",
+    "subtitle": "here's the whole trip, save it"
+  },
+  "hashtags": [
+    "#japantravel",
+    "#japantips",
+    "#traveljapan",
+    "#japantrip",
+    "#japan"
+  ],
+  "caption": {
+    "title_line": "🇯🇵 Going to Japan & have no idea what to do?",
+    "body_draft": "comment \"JAPAN\" and i'll send you the full itinerary\n\nIf you're heading to Japan and have no idea where to start, here is the whole trip laid out so you can save it and stop stressing about the planning part.\n\nStart in Tokyo. Senso-ji is best before 8am while it's still empty and golden, Shibuya Crossing is worth crossing once, and teamLab Planets sells out weeks ahead so book it early. For food, the Lawson egg sando is an underrated konbini breakfast, and Omoide Yokocho in Shinjuku has tiny yakitori bars for about 150 to 300 yen a skewer. For shopping, Don Quijote and the Pokemon Center are the chaos everyone films, and Harajuku's Laforet plus the secondhand racks at RAGTAG cover the rest.\n\nFrom Tokyo, Kyoto is next. Arashiyama's bamboo grove, the Fushimi Inari torii gates, and the Kyoto Botanical Gardens are the three to prioritize.\n\nOsaka is close by and worth a couple of days. Dotonbori, Universal Studios, and Amerikamura are the main areas, and for shopping BIOTOP, Shinsaibashi PARCO, and the secondhand stores nearby are worth the detour.\n\nNara makes an easy day trip, mainly for the deer park, Todaiji, and the hike up Wakakusayama.\n\nHakone is the last stop, good for a night away from the cities, with its shrine, the volcanic valley at Owakudani, and a glass museum.\n\nSave this so you have the whole trip in one place, and follow for more Japan."
+  },
+  "slides": [
+    {
+      "type": "cover",
+      "flag": "🇯🇵",
+      "title_lines": [
+        "Going to Japan &",
+        "have no idea",
+        "what to do?"
+      ],
+      "subtitle_lines": [
+        "here's the whole trip, save it"
+      ],
+      "char_photo": "chloe_cover",
+      "scenic_photo": "fuji_lake"
+    },
+    {
+      "type": "divider",
+      "label": "tokyo",
+      "cells": [
+        "shibuya_crossing",
+        "temples",
+        "food_queue",
+        "golden_gai"
+      ]
+    },
+    {
+      "type": "notes",
+      "place": "tokyo",
+      "sections": [
+        {
+          "emoji": "📍",
+          "header": "places to visit",
+          "items": [
+            {
+              "text": "Senso-ji, Asakusa",
+              "gloss": "go before 8am, empty and golden"
+            },
+            {
+              "text": "Shibuya Crossing",
+              "gloss": "cross it once, the crowd's the show"
+            },
+            {
+              "text": "teamLab Planets",
+              "gloss": "book weeks ahead, closing 2027"
+            },
+            {
+              "text": "Shibuya Sky",
+              "gloss": "book the sunset slot early"
+            },
+            {
+              "text": "Meiji Jingu",
+              "gloss": "before 8am while it's empty"
+            },
+            {
+              "text": "Shimokitazawa",
+              "gloss": "vintage shops, tiny cafes"
+            },
+            {
+              "text": "Golden Gai",
+              "gloss": "worth it if you know the doors"
+            }
+          ]
+        },
+        {
+          "emoji": "🍜",
+          "header": "where to eat",
+          "items": [
+            {
+              "text": "Lawson egg sando",
+              "gloss": "the konbini breakfast that's actually elite"
+            },
+            {
+              "text": "Omoide Yokocho, Shinjuku",
+              "gloss": "yakitori, 150 to 300 yen a skewer"
+            },
+            {
+              "text": "tsukemen",
+              "gloss": "dip the noodles, dont drown them"
+            },
+            {
+              "text": "a local izakaya",
+              "gloss": "skip the tourist chains"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "notes",
+      "place": "tokyo",
+      "contd": true,
+      "sections": [
+        {
+          "emoji": "🛍️",
+          "header": "where to shop",
+          "items": [
+            {
+              "text": "Don Quijote",
+              "gloss": "the chaos everyone films"
+            },
+            {
+              "text": "Pokemon Center"
+            },
+            {
+              "text": "Laforet Harajuku"
+            },
+            {
+              "text": "BEAMS JAPAN"
+            },
+            {
+              "text": "Shibuya PARCO"
+            },
+            {
+              "text": "RAGTAG",
+              "gloss": "secondhand"
+            },
+            {
+              "text": "2nd Street",
+              "gloss": "thrift"
+            },
+            {
+              "text": "Tokyu Hands",
+              "gloss": "cute stores & gifts"
+            },
+            {
+              "text": "@cosme TOKYO",
+              "gloss": "beauty"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "plug",
+      "paragraphs": [
+        [
+          "if you're a lazy planner like",
+          "me, you can copy people's",
+          "itinerary on HOLICAY.COM!"
+        ],
+        [
+          "comment \"JAPAN\" and I will",
+          "send you my itinerary"
+        ]
+      ],
+      "mockup": "holicay_app_itinerary",
+      "bg_photo": "plug_scenic_c1"
+    },
+    {
+      "type": "divider",
+      "label": "kyoto",
+      "cells": [
+        "kyoto_arashiyama",
+        "kyoto_fushimi_inari",
+        "kyoto_botanical_gardens",
+        "kyoto_street"
+      ]
+    },
+    {
+      "type": "notes",
+      "place": "kyoto",
+      "sections": [
+        {
+          "emoji": "📍",
+          "header": "places to visit",
+          "items": [
+            {
+              "text": "Arashiyama"
+            },
+            {
+              "text": "Fushimi Inari"
+            },
+            {
+              "text": "Kyoto Botanical Gardens"
+            }
+          ]
+        },
+        {
+          "emoji": "🍜",
+          "header": "where to eat",
+          "items": [
+            {
+              "text": "Nishiki Market",
+              "gloss": "kyoto's kitchen, street food stalls"
+            },
+            {
+              "text": "Pontocho Alley",
+              "gloss": "riverside dining near gion"
+            },
+            {
+              "text": "a kaiseki dinner",
+              "gloss": "kyoto's multi course specialty"
+            },
+            {
+              "text": "yudofu in Arashiyama",
+              "gloss": "simmered tofu, a kyoto classic"
+            }
+          ]
+        },
+        {
+          "emoji": "🍵",
+          "header": "where to matcha",
+          "items": [
+            {
+              "text": "Uji",
+              "gloss": "the matcha region, day trip from kyoto"
+            },
+            {
+              "text": "% Arabica, Higashiyama",
+              "gloss": "the river view everyone posts"
+            },
+            {
+              "text": "Tsujiri, Gion",
+              "gloss": "matcha parfaits, expect a queue"
+            },
+            {
+              "text": "Nakamura Tokichi",
+              "gloss": "uji's famous matcha house"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "divider",
+      "label": "osaka",
+      "cells": [
+        "osaka_dotonbori",
+        "osaka_universal_studios",
+        "osaka_amerikamura",
+        "osaka_street_food"
+      ]
+    },
+    {
+      "type": "notes",
+      "place": "osaka",
+      "sections": [
+        {
+          "emoji": "📍",
+          "header": "places to visit",
+          "items": [
+            {
+              "text": "Dotonbori"
+            },
+            {
+              "text": "Universal Studios Japan"
+            },
+            {
+              "text": "Amerikamura"
+            }
+          ]
+        },
+        {
+          "emoji": "🍜",
+          "header": "where to eat",
+          "items": [
+            {
+              "text": "takoyaki on Dotonbori",
+              "gloss": "osaka's signature street food"
+            },
+            {
+              "text": "okonomiyaki",
+              "gloss": "the savory pancake, osaka style"
+            },
+            {
+              "text": "Kuromon Ichiba Market",
+              "gloss": "osaka's kitchen, stall hopping"
+            },
+            {
+              "text": "kushikatsu in Shinsekai",
+              "gloss": "fried skewers, no double dipping"
+            }
+          ]
+        },
+        {
+          "emoji": "🛍️",
+          "header": "where to shop",
+          "items": [
+            {
+              "text": "BIOTOP",
+              "gloss": "fashion + concept"
+            },
+            {
+              "text": "Shinsaibashi PARCO"
+            },
+            {
+              "text": "LUCUA Osaka"
+            },
+            {
+              "text": "RAGTAG",
+              "gloss": "secondhand"
+            },
+            {
+              "text": "KINJI BIGSTEP",
+              "gloss": "secondhand"
+            },
+            {
+              "text": "Kindal Minamisenba",
+              "gloss": "secondhand"
+            },
+            {
+              "text": "@cosme OSAKA",
+              "gloss": "beauty"
+            },
+            {
+              "text": "AINZ&TULPE",
+              "gloss": "beauty"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "divider",
+      "label": "nara",
+      "cells": [
+        "nara_deer_park",
+        "nara_todaiji",
+        "nara_wakakusayama",
+        "nara_street"
+      ]
+    },
+    {
+      "type": "notes",
+      "place": "nara",
+      "sections": [
+        {
+          "emoji": "📍",
+          "header": "places to visit",
+          "items": [
+            {
+              "text": "Nara deer park"
+            },
+            {
+              "text": "Todaiji"
+            },
+            {
+              "text": "Wakakusayama"
+            }
+          ]
+        },
+        {
+          "emoji": "🍜",
+          "header": "where to eat",
+          "items": [
+            {
+              "text": "Nakatanidou mochi",
+              "gloss": "the rapid mochi pounding show"
+            },
+            {
+              "text": "kakinoha-zushi",
+              "gloss": "persimmon leaf wrapped sushi"
+            },
+            {
+              "text": "Naramachi",
+              "gloss": "the old merchant quarter, cafes and lunch"
+            },
+            {
+              "text": "Nara-zuke pickles",
+              "gloss": "sake lees pickled vegetables, a local souvenir"
+            }
+          ]
+        },
+        {
+          "emoji": "🏞️",
+          "header": "nature",
+          "items": [
+            {
+              "text": "Kasugayama Primeval Forest",
+              "gloss": "untouched forest behind kasuga taisha"
+            },
+            {
+              "text": "Yoshikien Garden",
+              "gloss": "a quiet traditional garden, often free"
+            },
+            {
+              "text": "Isuien Garden",
+              "gloss": "borrowed scenery of todaiji in the background"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "divider",
+      "label": "hakone",
+      "cells": [
+        "hakone",
+        "hakone_owakudani",
+        "hakone_glass_museum",
+        "hakone_lake_ashi"
+      ]
+    },
+    {
+      "type": "notes",
+      "place": "hakone",
+      "sections": [
+        {
+          "emoji": "📍",
+          "header": "places to visit",
+          "items": [
+            {
+              "text": "Hakone Shrine"
+            },
+            {
+              "text": "Owakudani"
+            },
+            {
+              "text": "the glass museum"
+            }
+          ]
+        },
+        {
+          "emoji": "🍜",
+          "header": "where to eat",
+          "items": [
+            {
+              "text": "kuro tamago at Owakudani",
+              "gloss": "the black eggs, said to add 7 years to your life"
+            },
+            {
+              "text": "soba noodles",
+              "gloss": "a hakone specialty, mountain buckwheat"
+            },
+            {
+              "text": "a ryokan kaiseki dinner",
+              "gloss": "multi course, usually included with your stay"
+            }
+          ]
+        },
+        {
+          "emoji": "♨️",
+          "header": "onsen + nature",
+          "items": [
+            {
+              "text": "Lake Ashi",
+              "gloss": "the pirate ship cruise, mount fuji views"
+            },
+            {
+              "text": "an onsen ryokan",
+              "gloss": "book one with a private outdoor bath"
+            },
+            {
+              "text": "the Hakone Ropeway",
+              "gloss": "volcanic steam vents from above"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "save",
+      "title": "SAVE THIS",
+      "subtitle": "just incase you need it ❤️",
+      "char_photo": "chloe_ending",
+      "scenic_photo": "tokyo_skyline"
+    }
+  ]
+}

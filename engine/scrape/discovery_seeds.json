@@ -1,0 +1,16 @@
+{
+  "_note": "Curated sources discover_inspo.js scans for fresh photo-carousel posts to use as inspo. Keep it tight and high-quality (the loop is only as good as what it studies). Add creators whose carousel FORMAT + energy you want the active character to model, plus hashtags for GENERAL travel trends going on right now (NOT just one country) — the strategy is to study why broad travel winners work, then transplant the winning format/hook to the active character's default country (Ana = Vietnam, Chloe = Japan; playbook §8). discover_inspo.js loads each page, collects recent post URLs, dedupes against what's already in inspo/, and reports the new candidates (or pulls them with --pull).",
+  "tiktok": {
+    "creators": [
+      "https://www.tiktok.com/@ninjabread_"
+    ],
+    "hashtags": [
+      "https://www.tiktok.com/tag/travelguide",
+      "https://www.tiktok.com/tag/traveltips",
+      "https://www.tiktok.com/tag/thingstodo",
+      "https://www.tiktok.com/tag/traveltiktok",
+      "https://www.tiktok.com/tag/vietnamtravel",
+      "https://www.tiktok.com/tag/saigon"
+    ]
+  }
+}

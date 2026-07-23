@@ -1,0 +1,74 @@
+# === secrets: NEVER commit ===
+# All API keys live in this one file (loaded by keys.py). Keep it out of version control.
+keys.env
+*.env
+# Google service-account keys (Sheets/Drive). Contain a private key — NEVER commit.
+holicay-*.json
+masquerade-*.json
+*service_account*.json
+*-service-account.json
+# OAuth (user-delegated Drive upload) — client secret + cached token
+oauth_client*.json
+client_secret*.json
+*_token.json
+
+# python
+__pycache__/
+*.py[cod]
+
+# node: the one real install + all the (often broken, absolute) symlinks named node_modules
+node_modules
+
+# macOS
+.DS_Store
+
+# === images + media: NOT versioned (code & docs only; media lives on Google Drive) ===
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+*.bmp
+*.tif
+*.tiff
+*.heic
+*.heif
+*.svg
+*.ico
+*.mp4
+*.mov
+*.webm
+*.psd
+*.ai
+
+# EXCEPTION: doc diagrams in assets/ ARE versioned — they render inside the .md docs on GitHub
+!assets/
+!assets/*.svg
+
+# EXCEPTION: the four framework reference contact sheets ARE versioned — they are the visual
+# regression spec (render parity is checked against them; full decks live on Drive _reference/).
+!fixtures/reference/
+!fixtures/reference/*.png
+
+# per-post build scratch: regenerated every run (render html, sourcing raw, variant renders).
+# The post's final/, caption.txt, copy.json, flags.md, sources.md stay tracked as text where
+# applicable; everything under _work/ does not. (final/ PNGs are still images -> Drive.)
+outputs/**/_work/
+
+# inbox drop zone: README.txt is tracked; consumed drops get archived here by engine/qc/clear_inbox.py
+inbox/_used/
+
+# local sync fingerprint cache (engine/qc/sync_media.py --if-changed, run by the Stop hook)
+.sync_state
+
+# local sheet safety backups: auto-dumped before sheet mutations; machine-local scratch.
+engine/sheets/_backups/
+
+# machine-specific / personal (not shared)
+.claude/settings.local.json
+.claude/tmp/
+.claude/worktrees/
+
+# misc binaries / archives
+*.zip
+*.7z

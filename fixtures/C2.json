@@ -1,0 +1,336 @@
+{
+  "option": "C2",
+  "hook": {
+    "title": "How to plan & prep the perfect Japan trip for first timers",
+    "subtitle": "everything you need to know"
+  },
+  "hashtags": [
+    "#japantravel",
+    "#japantips",
+    "#traveljapan",
+    "#japantrip",
+    "#japan"
+  ],
+  "caption": {
+    "title_line": "🇯🇵 How to plan & prep the perfect Japan trip for first timers",
+    "body_draft": "Planning a first Japan trip can feel overwhelming, so here is everything to know before you go, from when to visit to how to get online.\n\nEach season in Japan looks completely different, so it's worth planning around it. Spring brings cherry blossoms but it's peak season, so avoid Golden Week if you can. Summer has festivals but it's extremely humid. Autumn has nice weather, fewer crowds, and the leaves changing. Winter is ski season and also when the seafood is best.\n\nFor the route, a loop that goes Tokyo for 4 days, Hakone for 1 night, Kyoto for 3 days, and Osaka for 2 days covers the highlights without backtracking, with Nara as an easy day trip from Kyoto.\n\nA few of my favorite spots for a first timer are teamLab, Sensoji, Shibuya Sky, and Omoide Yokocho in Tokyo, Dotonbori and Universal Studios in Osaka, Arashiyama and Fushimi Inari in Kyoto, the deer park and Todaiji in Nara, Ghibli Park in Nagoya, and the shrine and Owakudani in Hakone.\n\nBook your hotel close to a main train station. Japanese stations are huge, and you don't want to waste time commuting every day.\n\nBook your activities early. Popular spots like Ghibli Park sell out months in advance, so plan ahead. If you miss the Shibuya Sky sunset slot, the night slots are still great.\n\nMost locals don't speak much English, so it helps to learn a few key words and keep a translation app like DeepL or Google Translate on hand for menus and signs.\n\nGet a Suica card loaded onto Apple Wallet and top it up with about ¥1000 to start. It's the easiest way to ride trains and buses around the country.\n\nFor internet, an eSIM is convenient and affordable for solo travelers, while pocket wifi is the better option if you're traveling as a group."
+  },
+  "slides": [
+    {
+      "type": "cover",
+      "flag": "🇯🇵",
+      "title_lines": [
+        "How to plan & prep",
+        "the perfect Japan trip",
+        "for first timers"
+      ],
+      "subtitle_lines": [
+        "everything you need to know"
+      ],
+      "char_photo": "chloe_cover",
+      "scenic_photo": "fuji_lake"
+    },
+    {
+      "type": "step",
+      "pill": "1. When to Go",
+      "layout": "grid4",
+      "cells": [
+        "spring_cherry_blossom",
+        "summer_festival",
+        "autumn_leaves",
+        "winter_snow"
+      ],
+      "blocks": [
+        {
+          "lines": [
+            "each season is SO different",
+            "you need to plan accordingly"
+          ],
+          "size": "body"
+        }
+      ],
+      "cell_labels": [
+        {
+          "title_lines": [
+            "Spring",
+            "(Mar - May)"
+          ],
+          "note_lines": [
+            "Cherry blossoms",
+            "Peak season",
+            "Avoid Golden Week"
+          ]
+        },
+        {
+          "title_lines": [
+            "Summer",
+            "(Jun - Aug)"
+          ],
+          "note_lines": [
+            "Summer festivals",
+            "Extremely humid 🥵"
+          ]
+        },
+        {
+          "title_lines": [
+            "Autumn",
+            "(Sep - Nov)"
+          ],
+          "note_lines": [
+            "Nice weather",
+            "Fewer crowds",
+            "Autumn leaves"
+          ]
+        },
+        {
+          "title_lines": [
+            "Winter",
+            "(Dec - Feb)"
+          ],
+          "note_lines": [
+            "Ski season",
+            "Best seafood"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "step",
+      "pill": "2. Route & Days",
+      "layout": "map",
+      "photo": "route_map",
+      "blocks": [
+        {
+          "lines": [
+            "tokyo 4 · hakone 1 night",
+            "kyoto 3 · osaka 2"
+          ],
+          "size": "headline"
+        },
+        {
+          "lines": [
+            "loop west, never backtrack:",
+            "tokyo → hakone → kyoto → osaka",
+            "nara = a day trip from kyoto"
+          ],
+          "size": "body"
+        }
+      ]
+    },
+    {
+      "type": "plug",
+      "paragraphs": [
+        [
+          "❌ i regret using google doc",
+          "and sheets to plan my trip"
+        ],
+        [
+          "alot of my research came from",
+          "tiktok, i saved videos on",
+          "tiktok, but never revisted it"
+        ],
+        [
+          "✅ HOLICAY.COM was",
+          "a game changer"
+        ],
+        [
+          "i can forward it my tiktok",
+          "links, travel documents, any",
+          "notes i have, and it saves",
+          "the locations and organizes my",
+          "notes for me all in one place"
+        ]
+      ],
+      "bg_photo": "plug_scenic"
+    },
+    {
+      "type": "favorites",
+      "photo": "tokyo_skyline",
+      "title_lines": [
+        "A few of my favorite",
+        "spots in Japan for a",
+        "first time visit"
+      ],
+      "cities": [
+        {
+          "pill": "Tokyo",
+          "lines": [
+            "Teamlab",
+            "Sensoji",
+            "Shibuya sky",
+            "Omoide Yokocho",
+            "Meiji Jingu"
+          ]
+        },
+        {
+          "pill": "Osaka",
+          "lines": [
+            "Dotonbori",
+            "Universal",
+            "Amerikamura"
+          ]
+        },
+        {
+          "pill": "Kyoto",
+          "lines": [
+            "Arashiyama",
+            "Fushimi Inari",
+            "Botanical Gardens"
+          ]
+        },
+        {
+          "pill": "Nara",
+          "lines": [
+            "Deer park",
+            "Todaiji",
+            "Wakakusayama"
+          ]
+        },
+        {
+          "pill": "Nagoya",
+          "lines": [
+            "Ghibli Park",
+            "Castle",
+            "Toyota Museum"
+          ]
+        },
+        {
+          "pill": "Hakone",
+          "lines": [
+            "Shrine",
+            "Owakudani",
+            "Glass museum"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "step",
+      "pill": "3. Accommodation",
+      "layout": "photo",
+      "photo": "station_pov",
+      "blocks": [
+        {
+          "lines": [
+            "BOOK YOUR HOTEL CLOSE TO",
+            "A MAIN TRAIN STATION"
+          ],
+          "size": "headline"
+        },
+        {
+          "lines": [
+            "stations are huge,",
+            "don't waste time commuting"
+          ],
+          "size": "body"
+        }
+      ]
+    },
+    {
+      "type": "step",
+      "pill": "4. Book Activities Early",
+      "layout": "photo",
+      "photo": "ghibli_park",
+      "blocks": [
+        {
+          "lines": [
+            "Ghibli Park sells out",
+            "months ahead, book early"
+          ],
+          "size": "body"
+        },
+        {
+          "lines": [
+            "Tip: miss the Shibuya Sky",
+            "sunset slot, the night",
+            "slots are still great"
+          ],
+          "size": "tip"
+        }
+      ]
+    },
+    {
+      "type": "step",
+      "pill": "5. Language",
+      "layout": "icons",
+      "photo": "neighbourhoods",
+      "icons": [
+        {
+          "slug": "app_deepl",
+          "name": "DeepL"
+        },
+        {
+          "slug": "app_google-translate",
+          "name": "Google Translate"
+        }
+      ],
+      "blocks": [
+        {
+          "lines": [
+            "Locals may not speak English,",
+            "learn a few key words"
+          ],
+          "size": "body"
+        },
+        {
+          "lines": [
+            "Keep a scan-and-translate",
+            "app on hand for menus"
+          ],
+          "size": "tip"
+        }
+      ]
+    },
+    {
+      "type": "step",
+      "pill": "6. Internal Transport",
+      "layout": "photo",
+      "photo": "suica_tap_train",
+      "blocks": [
+        {
+          "lines": [
+            "Add Suica to Apple Wallet",
+            "and top up ¥1000 to start"
+          ],
+          "size": "body"
+        },
+        {
+          "lines": [
+            "it's the easiest way to ride",
+            "trains and buses everywhere"
+          ],
+          "size": "tip"
+        }
+      ]
+    },
+    {
+      "type": "step",
+      "pill": "7. Mobile Data",
+      "layout": "photo",
+      "photo": "golden_gai",
+      "blocks": [
+        {
+          "lines": [
+            "Get an eSIM before you land,",
+            "convenient and affordable"
+          ],
+          "size": "body"
+        },
+        {
+          "lines": [
+            "Traveling as a group?",
+            "pocket wifi is the better call"
+          ],
+          "size": "body"
+        }
+      ]
+    },
+    {
+      "type": "save",
+      "title": "SAVE THIS",
+      "subtitle": "just incase you need it ❤️",
+      "char_photo": "chloe_ending",
+      "scenic_photo": "tokyo_skyline"
+    }
+  ]
+}
