@@ -19,8 +19,13 @@ if [ -f "$ROOT/keys.env" ]; then echo "  [ok]   keys.env present"
 else echo "  [FAIL] keys.env missing at repo root"; fail=1; fi
 
 # 2. Google service-account key (Sheets dashboard + Drive delivery)
-if ls "$ROOT"/holicay-*.json "$ROOT"/masquerade-*.json "$ROOT"/*service_account*.json "$ROOT"/*-service-account.json >/dev/null 2>&1; then
-  echo "  [ok]   Google service-account key present"
+# (compgen per pattern — a multi-glob `ls` exits non-zero when ANY pattern is unmatched,
+#  which false-warned even with the key present)
+sa_found=0
+for pat in "holicay-*.json" "masquerade-*.json" "*service_account*.json" "*-service-account.json"; do
+  if compgen -G "$ROOT/$pat" >/dev/null 2>&1; then sa_found=1; break; fi
+done
+if [ "$sa_found" = 1 ]; then echo "  [ok]   Google service-account key present"
 else echo "  [warn] service-account key missing — Sheets dashboard + Drive delivery will fail"; fi
 
 # 3. CDP Chrome on :9222 (cover gen + TikTok inspo pullers)
