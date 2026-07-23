@@ -1,6 +1,6 @@
 # Japan · Framework A (fear of making mistakes)
 
-## 2026-07-23 · Chloe · — (sandbox fixture, not shipped)
+## iteration 0 (fixture — sandbox calibration, unposted) · 2026-07-23 · Chloe
 - Hook title: ❌ Things you should NEVER do in Japan _(subtitle: and what to do INSTEAD 🇯🇵)_
 - Slides (angle / place per slide):
   - Cover — "things you should NEVER do in Japan"

@@ -13,6 +13,16 @@ the caption angle — not the full verbatim copy (the design + copy spec lives i
   `vietnam/C1.md`. `<OPT>` is one of `A`, `B`, `C1`, `C2`.
 - Within each file, **one entry per copy iteration**, newest at the bottom.
 
+## Iteration numbering (matches the Sheet)
+
+- **Iteration 0** = the four `japan/{A,B,C1,C2}.md` entries are **sandbox-calibration fixtures**
+  (the decks in `fixtures/` + `outputs/` used to lock the design). They were **never posted**, so
+  they do not consume a real slot — they are marked `iteration 0 (fixture ...)`.
+- **Iteration 1 = the first REAL posted pack** for that country × framework. This is why
+  `sheets.py next-slot --character chloe` reports `copy_iteration: 1` for Japan A even though a
+  fixture entry already exists here: the Sheet counts posted rows, not fixtures. Keep the two in
+  step — the first shipped Japan A post appends the `iteration 1` entry below the fixture.
+
 ## Entry format
 
 ```

@@ -1,6 +1,6 @@
 # Japan · Framework B (controversial takes)
 
-## 2026-07-23 · Chloe · — (sandbox fixture, not shipped)
+## iteration 0 (fixture — sandbox calibration, unposted) · 2026-07-23 · Chloe
 - Hook title: 🇯🇵 OVERRATED vs UNDERRATED places in Japan _(no subtitle)_
 - Slides (angle / place per slide):
   - Cover — "OVERRATED vs UNDERRATED places in Japan"
