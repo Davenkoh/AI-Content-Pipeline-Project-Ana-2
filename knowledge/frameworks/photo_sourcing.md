@@ -4,7 +4,7 @@
 > with [`engine/source/SOURCING_STATUS.md`](../../engine/source/SOURCING_STATUS.md) tracking live
 > backend status (which sources work today, which need a human unlock). This doc is the **design
 > rationale** behind the frameworks' real-UGC body-slide photos
-> ([content_frameworks.md](content_frameworks.md) §Design): the library keying, the manifest schema,
+> ([CREATIVE.md](../../CREATIVE.md) §Photo direction + [DESIGN.md](../../DESIGN.md) Gate 9): the library keying, the manifest schema,
 > and the rights posture. A `BRIGHTDATA` token in `keys.env` unlocks the Bright Data backends (the
 > account/token is the human's to create); Google Places / Google Images / Instagram work today
 > without it (see SOURCING_STATUS.md).

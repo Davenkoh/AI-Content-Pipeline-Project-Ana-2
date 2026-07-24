@@ -57,11 +57,11 @@ def _sa_email():
 def _subtree():
     """The relative folder paths to create under the root (roster-driven)."""
     paths = ["_setup",
-             "_reference/decks/A", "_reference/decks/B", "_reference/decks/C1", "_reference/decks/C2"]
+             "_reference/decks/A", "_reference/decks/B", "_reference/decks/C", "_reference/decks/D"]
     for c in S._characters().values():
         n = c["name"]
         paths += [f"{n}/Base References", f"{n}/Profile Pictures", f"{n}/Tiktok"]
-    paths += ["_shared/Wardrobe References", "chars", "media/graded", "media/brand", "Holicay Brand"]
+    paths += ["_shared/Wardrobe References", "chars", "media/graded", "media/brand"]
     return paths
 
 

@@ -1,13 +1,13 @@
-# Copy extraction flags — Options A / B / C1 / C2 (Japan, Chloe)
+# Copy extraction flags — Options A / B / C / D (Japan, Chloe)
 
-For the human + a future fact-check pass. Everything quoted as "doc" = `knowledge/frameworks/content_frameworks.md`.
+For the human + a future fact-check pass. Everything quoted as "doc" = `../CREATIVE.md` (the content wheel).
 Everything quoted as a post number ("09", "01", "08", "05", "02", "10") = that post's shipped, already-approved
-copy under `outputs/`. Verbatim requirements (the Option A essay, both plug blocks, the C1 keyword plug, the C2
+copy under `outputs/`. Verbatim requirements (the Option A essay, both plug blocks, the C keyword plug, the D
 favorites table) were checked programmatically word-for-word against the doc source — all match exactly.
 
 **Follow-up pass (same session):** the coordinator asked for three edits after the first draft shipped — (1) fill
-every C1 Kyoto/Nara/Hakone/Osaka `[needs copy — no mined source]` placeholder with drafted stand-in copy
-(explicitly unapproved — see the loud section below), (2) append an optional save/ending slide to C2.json so the
+every C Kyoto/Nara/Hakone/Osaka `[needs copy — no mined source]` placeholder with drafted stand-in copy
+(explicitly unapproved — see the loud section below), (2) append an optional save/ending slide to D.json so the
 human can A/B it, and (3) normalize every `char_photo` slug to `chloe_cover`/`chloe_ending`. All three are done;
 details inline below plus a dedicated DRAFT FILLS section. No `scenic_photo` values were touched, per instruction.
 
@@ -50,10 +50,10 @@ other split slide was freely re-broken to fit budget.
 - Plug slide: restored the doc's deliberate misspellings **"alot"** and **"revisted"** exactly — the sandbox
   fixture had silently "corrected" both (and dropped "alot" entirely). Confirmed byte-verbatim against the doc.
 
-## C1.json — full-trip dump (Kyoto / Nara / Osaka / Hakone gap — NOW FILLED WITH DRAFTS, see loud section below)
+## C.json — full-trip dump (Kyoto / Nara / Osaka / Hakone gap — NOW FILLED WITH DRAFTS, see loud section below)
 
 **All five mining-source posts (09, 01, 08, 05, 02+10) are Tokyo-only, except post 10 which covers Osaka
-shopping.** None of them mention Kyoto, Nara, or Hakone at all. The doc's C2 favorites-row table (reused here
+shopping.** None of them mention Kyoto, Nara, or Hakone at all. The doc's D favorites-row table (reused here
 per the task's explicit instruction to mine it) is the *only* sanctioned source for those three places, and it
 gives just 3 terse place names each, with zero eat/matcha/nature/onsen content:
 
@@ -71,7 +71,7 @@ content.
 recognizable picks, for design-density purposes. **Every single item this pass added is general knowledge, not
 mined from any shipped post or the doc, and is explicitly unapproved** — see the loud DRAFT FILLS section
 immediately below for the full per-city list and the fact-check flags on individual items. The placeholder text
-is gone from C1.json; nothing in the file reads `[needs copy]` anymore, but none of the new content should be
+is gone from C.json; nothing in the file reads `[needs copy]` anymore, but none of the new content should be
 read as "sourced" the way the rest of this doc's flagged items are.
 
 Other flags (unchanged from the original pass):
@@ -98,7 +98,7 @@ Other flags (unchanged from the original pass):
 # ⚠️ DRAFT FILLS (UNAPPROVED, NEEDS HUMAN SIGN-OFF + FACT-CHECK) ⚠️
 
 **None of the items below came from a mined post, the doc, or any other approved source. They are my own general
-knowledge, drafted this follow-up pass specifically to make C1's four thin places render at a believable design
+knowledge, drafted this follow-up pass specifically to make C's four thin places render at a believable design
 density, per the coordinator's explicit request.** Every price, hour, "still operating," and exact-name claim in
 here is **unverified** per the doc's own fact-check framework (§Sourcing the copy) — treat this whole block as
 Step 1 (Draft) only, with Step 2 (Verify facts) not yet done. Do not ship any of it without a human pass. Items
@@ -147,27 +147,27 @@ visit" — expected overlap for a compact place like Hakone, not treated as a du
 invented venues) — the flag is that their *inclusion, current operating status, and exact framing* have not been
 verified against a primary source, per the doc's own two-step draft-then-verify rule.
 
-## C2.json — first-timers planning guide
+## D.json — first-timers planning guide
 
-- **⚠️ Slide 11 (save/ending) is OPTIONAL and NOT part of the doc's C2 table — appended this follow-up pass on
-  the coordinator's explicit request.** The doc's C2 table is exactly 10 rows (cover + 9 content rows) ending at
-  "7. Mobile data," with no save/ending slide defined anywhere in the C2 spec. It's rendered here purely so the
+- **⚠️ Slide 11 (save/ending) is OPTIONAL and NOT part of the doc's D table — appended this follow-up pass on
+  the coordinator's explicit request.** The doc's D table is exactly 10 rows (cover + 9 content rows) ending at
+  "7. Mobile data," with no save/ending slide defined anywhere in the D spec. It's rendered here purely so the
   human can A/B the ending-with-human-photo/nohuman-scenic-photo treatment consistently across all four options
   in this design test — **drop or adopt is entirely the human's call, this is not a recommendation to add a
-  permanent ending to C2.** Copy is a plain reuse: `title: "SAVE THIS"`, `subtitle: "just incase you need it
+  permanent ending to D.** Copy is a plain reuse: `title: "SAVE THIS"`, `subtitle: "just incase you need it
   ❤️"`, `char_photo: "chloe_ending"`, `scenic_photo: "fuji_lake"` — all four values copied exactly from A.json's
-  save slide, per instruction. C2.json is now 11 slides, not the doc's 10; every other C2 flag below still
-  applies to slides 1–10 unchanged. (Original context, still true of slides 1–10: CONTRACT.md's general
+  save slide, per instruction. D.json is now 11 slides, not the doc's 10; every other D flag below still
+  applies to slides 1–10 unchanged. (Original context, still true of slides 1–10: DESIGN.md's general
   test-definition line "render the cover and the ending slide in two variants... for each option" is written
   across all four options generically, but the renderer's actual dual-variant mechanism (`build.js`'s
-  `TWO_VARIANT` set) is type-driven — only `cover`/`save` slides get rendered twice — which is why C2 had zero
+  `TWO_VARIANT` set) is type-driven — only `cover`/`save` slides get rendered twice — which is why D had zero
   save-type slides before this pass.)
 - **Step 2 (route)**: doc's literal string "tokyo 4 days · hakone 1 night · kyoto 3 · osaka 2" trimmed to
   "tokyo 4 · hakone 1 night · kyoto 3 · osaka 2" (dropped "days") to fit the line budget — matches the sandbox's
-  own C2 fixture convention for this exact line. Meaning unchanged.
+  own D fixture convention for this exact line. Meaning unchanged.
 - **Step 2's route order/logic** ("loop west, never backtrack: tokyo → hakone → kyoto → osaka, nara = a day trip
   from kyoto") **is my construction**, not literally stated anywhere — the doc gives day-*counts* only, not the
-  order. Built from standard Japan geography (matches the sandbox's own C2 fixture, which makes the same
+  order. Built from standard Japan geography (matches the sandbox's own D fixture, which makes the same
   "Hakone & Nara = day trips" call). Flag for a geography sanity check before ship.
 - **Step 1 (seasons)** month ranges ("Mar - May" etc.) are not from any mined source or the doc — added as
   standard Northern Hemisphere calendar quartiles (low-risk, objectively checkable), matching the sandbox
@@ -183,27 +183,27 @@ verified against a primary source, per the doc's own two-step draft-then-verify 
   backdrop per the doc's visual spec — thematically a stretch (a bar alley isn't really about eSIMs) but the
   only existing night-street shot in the pool. Flagged as a placeholder pick.
 - **Favorites slide's 6 city groups** (Tokyo/Osaka/Kyoto/Nara/Nagoya/Hakone) are copied verbatim from the doc's
-  own C2 table favorites row, per the task's explicit instruction. Nagoya appears here even though it's not one
-  of C1's five places — that's correct, the doc's table includes Nagoya specifically for C2's favorites slide.
+  own D table favorites row, per the task's explicit instruction. Nagoya appears here even though it's not one
+  of C's five places — that's correct, the doc's table includes Nagoya specifically for D's favorites slide.
 - Per the doc's "Note on the insert," no "see next slide" teaser was written into the activities slide (nothing
   to soften — none was drafted in the first place, since the plug now sits before favorites, not after
   activities).
 
 ---
 
-## Captions — B, C1, C2 body_draft are DRAFTS, not approved copy
+## Captions — B, C, D body_draft are DRAFTS, not approved copy
 
 Only **A's `caption.body_draft`** is approved copy — it's the doc's own Caption essay example, verified
-word-for-word verbatim against the source. **B, C1, and C2's `caption.body_draft` are fresh copywriting I wrote
+word-for-word verbatim against the source. **B, C, and D's `caption.body_draft` are fresh copywriting I wrote
 for this pass**, one paragraph per major beat, in the same register as the A essay. Per the task brief these are
 explicitly secondary to the design round — flagging clearly so they aren't mistaken for pre-approved copy the
-way the slide/plug text is. C1's caption additionally follows the doc's stated exception: the keyword CTA
+way the slide/plug text is. C's caption additionally follows the doc's stated exception: the keyword CTA
 (`comment "JAPAN" and i'll send you the full itinerary`) is the literal first line of the body, ahead of the
-essay, per the doc's C1 caption-exception rule.
+essay, per the doc's C caption-exception rule.
 
-## Schema conventions inferred from the sandbox's fixtures/build.js (not spelled out in CONTRACT.md itself)
+## Schema conventions inferred from the sandbox's fixtures/build.js (not spelled out in DESIGN.md itself)
 
-CONTRACT.md's `copy JSON schema` section is abstract; `sandbox/frameworks-test/fixtures/*.json` and
+DESIGN.md's `copy JSON schema` section is abstract; `sandbox/frameworks-test/fixtures/*.json` and
 `build.js`'s `TEMPLATES` show the concrete field shapes in practice, so those were treated as authoritative
 whenever the two diverged in specificity (the fixtures' actual *wording*, however, was never trusted — see
 "alot"/"revisted" above; only their *structure* was reused):
@@ -213,14 +213,14 @@ whenever the two diverged in specificity (the fixtures' actual *wording*, howeve
   title), the ❌ IS part of `title_lines` (see `fixtures/A.json` slide 1) and `caption.title_line` carries
   it too. (Corrected 2026-07-23 — an earlier version of this bullet wrongly claimed ❌ never appears in
   `title_lines`.)
-- `save.title` / `save.subtitle` and `divider.label` are plain strings, not line arrays (per CONTRACT's own
+- `save.title` / `save.subtitle` and `divider.label` are plain strings, not line arrays (per DESIGN.md's own
   schema line and the fixtures).
 - `notes` item objects are `{text, gloss?}` plain strings, **not** pre-broken `lines[]` — the FORMAT RULES
   "every text field is pre-broken into lines" instruction was applied only to fields that are arrays per the
-  CONTRACT schema (title_lines, why_lines, paragraphs, blocks[].lines, cities[].lines, etc.), not to the notes
+  DESIGN.md schema (title_lines, why_lines, paragraphs, blocks[].lines, cities[].lines, etc.), not to the notes
   item text/gloss or to pill/label strings, matching how `build.js`'s `notes()` template actually consumes them.
 - `TWO_VARIANT` (dual human/nohuman render) is driven by slide **type** (`cover`, `save`), not slide position —
-  relevant to the C2 "no ending slide" note above.
+  relevant to the D "no ending slide" note above.
 
 If the human's mental model of the schema differs from the fixtures here, these are the first places a mismatch
 would surface when `build.js` runs against these files.
@@ -228,19 +228,19 @@ would surface when `build.js` runs against these files.
 ## Line-break QC
 
 Ran an automated ≤24-char-title / ≤34-char-body / no-orphan-single-word-line check across all four files.
-Two genuine issues were fixed: B's "✅ Go to the Tokyo Gov Building" title reflowed to two lines; C2's route
+Two genuine issues were fixed: B's "✅ Go to the Tokyo Gov Building" title reflowed to two lines; D's route
 headline trimmed ("tokyo 4 days ·" → "tokyo 4 ·"). The checker also flagged several **false positives** that
 were left as-is because they match the sandbox fixtures' own established pattern of one name/word per line in a
 stacked list or an emphasis word getting its own line (not an accidental orphan): B's cover "UNDERRATED" alone
-on a line, C2's season names (Spring/Summer/Autumn/Winter) alone on their label line, and C2's favorites-slide
+on a line, D's season names (Spring/Summer/Autumn/Winter) alone on their label line, and D's favorites-slide
 venue names (Teamlab, Sensoji, Dotonbori, etc.) one per line.
 
 ## Char photo normalization (follow-up pass, item 3)
 
 Checked every `char_photo` field across all four files against the coordinator's request (cover slides →
 `chloe_cover`, save slides → `chloe_ending`, matching the final picks now in `chars/`). **Result: already
-consistent from the original pass — zero fields needed changing.** All cover slides (A/B/C1/C2) already used
-`"chloe_cover"`; all save slides (A/B/C1, plus the new C2 slide 11 above) already used `"chloe_ending"`; nothing
+consistent from the original pass — zero fields needed changing.** All cover slides (A/B/C/D) already used
+`"chloe_cover"`; all save slides (A/B/C, plus the new D slide 11 above) already used `"chloe_ending"`; nothing
 anywhere referenced `chloe_fixture` (the renderer-test-only asset). Slugs are kept extension-less
 (`"chloe_cover"`, not `"chloe_cover.png"`) to match every other photo reference in these files — `build.js`'s
 `resolveIn()` appends the file extension itself, and writing it inline would be inconsistent with `fuji_lake`,

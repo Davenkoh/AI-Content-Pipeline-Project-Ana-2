@@ -12,8 +12,8 @@ for the commands.
 The point is leverage: a regen fixes one deck; a governing-doc edit fixes the whole factory.
 
 ## Touches
-- **Knowledge / spec:** `CONTRACT.md`, `knowledge/frameworks/content_frameworks.md`,
-  `knowledge/copy_bank/<country>/<OPT>.md`, `knowledge/tuning/02_copywriting.md · 03_sourcing.md`,
+- **Knowledge / spec:** `CREATIVE.md` (content wheel), `DESIGN.md` (visual/build spec),
+  `knowledge/brand/holicay_brand.md`, `knowledge/tuning/02_copywriting.md · 03_sourcing.md`,
   `knowledge/realism/*`, `knowledge/voice/humanizer.md`, `CONNECTORS.md`,
   `knowledge/tuning/propagation-log.md` (the append-only audit).
 - **Engine:** `engine/sheets/sheets.py feedback-poll` / `feedback-clear`.
@@ -61,14 +61,13 @@ python3 engine/sheets/sheets.py feedback-clear --tab <ana|chloe|hannah|brand|con
 
 | Feedback is about | Edit |
 | --- | --- |
-| on-slide design / type / sticker mechanism / flag / plug visual / **photo-gate rules** | `CONTRACT.md` |
-| framework structure / slide map / copy slots / verbatim plug copy / caption formula | `knowledge/frameworks/content_frameworks.md` |
-| copy angles / wording / which places to pick / freshness | `knowledge/copy_bank/<country>/<OPT>.md` + `knowledge/tuning/02_copywriting.md` |
+| content / copy / caption / hook direction — framework structure, slide map, copy slots, verbatim plug copy, caption formula, copy angles, which places, freshness | `CREATIVE.md` (+ `knowledge/tuning/02_copywriting.md` for a durable craft lesson) |
+| on-slide visual / design / type / sticker mechanism / flag / plug visual / QC gates | `DESIGN.md` |
+| photo direction / sourcing — what shots read as real UGC, stock-vs-UGC, wrong subject, which backend | `CREATIVE.md` §Photo direction + the technical gate in `DESIGN.md` Gate 9 + `knowledge/tuning/03_sourcing.md` |
 | realism / "looks fake" / persona / cover-polish / skin / framing | `knowledge/realism/*` (realism_book, persona_gen_prompt_reference, winning_prompts) |
 | caption voice / wording / em dashes / anti-AI-tell | `knowledge/voice/humanizer.md` |
-| sourcing / wrong subject / UGC-vs-stock / which backend | `knowledge/tuning/03_sourcing.md` + `CONTRACT.md` Gate 9 |
 | a connector / account / billing / credential issue | `CONNECTORS.md` + the Sheet **Connectors** tab (its Notes column is the GREEN channel) |
-| what Holicay is / how to name a use case | the Sheet **Holicay Brand** tab (the human owns it) — do not edit the cache |
+| what Holicay is / how to name a use case (brand facts) | `knowledge/brand/holicay_brand.md` (the standing brand reference) |
 
 When an item spans two themes, edit the doc future *builds* actually read at the moment the mistake
 happens, and cross-reference the other in the log line.

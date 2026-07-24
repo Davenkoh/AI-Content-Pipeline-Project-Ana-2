@@ -17,7 +17,7 @@ import sys
 # Must stay consistent with drive_sync.mirror_all's targets (this shells out to --mirror-all --prune).
 # Per-character Base References / Profile Pictures are added dynamically in _dirs(). media/library is
 # LOCAL SCRATCH and is intentionally NOT watched (never mirrored).
-WATCH_DIRS = ["character/_shared", "knowledge/brand", "chars", "media/graded", "media/brand"]
+WATCH_DIRS = ["character/_shared", "chars", "media/graded", "media/brand"]
 IMG_EXT = (".png", ".jpg", ".jpeg", ".webp")
 
 

@@ -1,7 +1,7 @@
 # Photo provenance — UGC re-curation pass (2026-07-22; user-photo upgrade sweep 2026-07-23)
 
-Every slug referenced by `copy/{A,B,C1,C2}.json` photo fields (`scenic_photo`, `top_photo`,
-`bottom_photo`, `photo`, `cells`, `icons`), audited against **CONTRACT.md QC gate 9**
+Every slug referenced by `copy/{A,B,C,D}.json` photo fields (`scenic_photo`, `top_photo`,
+`bottom_photo`, `photo`, `cells`, `icons`), audited against **DESIGN.md QC gate 9**
 (UGC-framing: reject drone/aerial, tripod long-exposure, editorial symmetry/perfectly-timed
 shots, HDR postcard grades, anything professionally staged). Grouped by deck, in slide order.
 `NN` = slide position in that deck's own `copy/<X>.json`.
@@ -63,7 +63,7 @@ now read REPLACED with the new photo's details).
 07 omoide_yokocho — KEPT — google_images — Hello! Tokyo Tours — https://hellotokyotours.com/blog/tokyo-places-to-eat-shinjuku-omoide-yokocho — lantern alley moody handheld (2026-07-23: 4 banked Places photos checked, none show the lantern-alley subject, kept)
 08 fuji_lake — KEPT — google_images — Trip.com — (shared, see A#1) — untouchable, approved candid sunset
 
-## Deck C1 (14 slides)
+## Deck C (14 slides)
 
 01 fuji_lake — KEPT — google_images — Trip.com — (shared, see A#1) — untouchable, approved candid sunset
 02 shibuya_crossing (divider tokyo, cell 1) — REPLACED — google_images — Japan A to Z (Substack) — (shared, see B#3) — accessible walkway angle, no blur
@@ -88,7 +88,7 @@ now read REPLACED with the new photo's details).
 12 hakone_lake_ashi (cell 4) — REPLACED — google_places_user_photo — Annie Vanoverbeke — https://maps.google.com/maps/contrib/114097642364750983294 — dusk pirate-ship, railing, passengers
 14 tokyo_skyline — REPLACED — google_places_user_photo — たろきち — (shared, see A#10) — deck net glass escalator
 
-## Deck C2 (11 slides)
+## Deck D (11 slides)
 
 01 fuji_lake — KEPT — google_images — Trip.com — (shared, see A#1) — untouchable, approved candid sunset
 02 spring_cherry_blossom (cell 1) — KEPT — google_images — fooddiversity.today — https://fooddiversity.today/en/article_85799.html — street banners, pedestrians, bloom
@@ -111,14 +111,14 @@ now read REPLACED with the new photo's details).
 ## Per-deck source counts
 
 Counts are per row above (a shared slug reused across multiple slides in the same deck, e.g.
-`golden_gai` on A#5 and again as a C1 divider cell, counts once per deck it appears in).
+`golden_gai` on A#5 and again as a C divider cell, counts once per deck it appears in).
 
 | Deck | instagram | google_places_user_photo | google_images | repo-graded | kept-other (untraceable) | Rows |
 |---|---|---|---|---|---|---|
 | A  | 0 | 4 | 10 | 0 | 2 | 16 |
 | B  | 0 | 6 | 5  | 1 | 0 | 12 |
-| C1 | 0 | 9 | 11 | 1 | 1 | 22 |
-| C2 | 0 | 3 | 7  | 1 | 4 | 15 |
+| C | 0 | 9 | 11 | 1 | 1 | 22 |
+| D | 0 | 3 | 7  | 1 | 4 | 15 |
 | **Total** | **0** | **22** | **33** | **3** | **7** | **65** |
 
 **2026-07-23 sweep result:** 10 of 65 rows (10 distinct venues — `skytree`, `takeshita`,

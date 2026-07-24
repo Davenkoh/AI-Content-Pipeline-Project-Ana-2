@@ -1,34 +1,25 @@
-# Holicay content frameworks — spec-driven TikTok carousels
+# Creative direction: the content wheel
 
-> **Status: copywriting + content structure done; design done for A, B, C1, and C2 — including the
-> Holicay plug slide.** The shared visual system + the A/B body slides are in §Design; **C1 and C2
-> each carry their own design block** under their variant. The **plug slide design is now specced in
-> `CONTRACT.md`** (the plug-design treatments): C1 = a framed Holicay-app mockup on a dark-tinted
-> scenic; A / B / C2 = a full-bleed scenic + scrim behind the ❌ / ✅ sticker cluster.
+This is your content wheel — where you steer what every post SAYS. Tell Claude Code to change any part ('make Framework A's hook punchier', 'stop using cherry blossoms for Japan') or edit here directly. Sister files: how posts LOOK/are built = DESIGN.md; the full voice ruleset = knowledge/voice/humanizer.md; what Holicay is = knowledge/brand/holicay_brand.md. This doc wins any conflict on content/copy/caption direction.
 
-**What this is.** Three ready-to-run carousel blueprints: **A — fear of making mistakes**,
-**B — controversial takes**, **C — itinerary**. These are **prescriptive** — the hook titles, the
-slide-by-slide map, the Holicay plug copy, the hashtags, the caption formula, and the design are all
-specified here, so a post can be built straight from this doc. Pick **ONE option per post** and dress
-it in the target country.
+> **All quoted copy in this doc is verbatim and paste-ready** — plug blocks, hook titles, subtitles, "SAVE THIS". The lowercase, the emoji, and the casual spelling (including "alot", "revisted", "incase") ARE the voice; do not clean them up. This framework set is the production system: where it differs from an older default (canvas size, caption length, slide structure), this doc wins — don't reconcile a framework post back to the old way.
 
-**This framework is the production system.** It's a self-governing spec, not an extension of 1.0's
-inspo-derived post formats. Where it differs from an older default (canvas size, caption length, slide
-structure), **this doc wins** — don't reconcile a framework post back to the old way, and don't weave
-it into the inspo-derived format conventions.
+## Frameworks
 
-All quoted copy below (plug blocks, "SAVE THIS", subtitles) is **verbatim, paste-ready** — the
-lowercase, the emoji, and the casual spelling are the voice; don't clean it up.
+| ID | Name | What it is | Status |
+|----|------|-----------|--------|
+| A | Fear of Mistakes | the mistakes tourists make + what to do instead | active |
+| B | Hot Takes | overrated vs underrated, honest takes | active |
+| C | Full-Trip Dump | the whole itinerary, "comment {COUNTRY} for it" | active |
+| D | Plan & Prep | first-timer's numbered planning guide | active |
 
----
-
-## Shared rules (every option)
+## Shared rules (every post)
 
 - **Country is a template variable.** `{country}` and the flag emoji swap to the target country
   (the 🇯🇵 / 🇻🇳 in the examples are just samples). Subject still defaults to the active
   character's country unless the run says otherwise.
 - **The Holicay plug is always slide 4** — front/middle placement (viewers don't scroll to the
-  end). Use that option's verbatim plug copy below.
+  end). Use that framework's verbatim plug copy below.
 - **Plugs speak in first person** — a testimonial ("holicay.com is my game changer. when i dump
   in..."), never an imperative pitch ("use holicay.com..."). The ❌ is her mess, the ✅ is what she
   does now.
@@ -47,20 +38,18 @@ lowercase, the emoji, and the casual spelling are the voice; don't clean it up.
 - **Lead with the most recognizable beat.** A famous named place beats an etiquette rule for instant
   recognition — put the landmark everyone pictures on slide 2, and let culture/etiquette rules land
   from slide 5 on.
-- **Hashtags (all options):** `#{country}travel #{country}tips #travel{country} #{country}trip #{country}`
+- **Hashtags (all frameworks):** `#{country}travel #{country}tips #travel{country} #{country}trip #{country}`
   — e.g. Japan → `#japantravel #japantips #traveljapan #japantrip #japan`
-- **Caption (all options):** line 1 = **the hook title verbatim** (e.g. `❌ Things you should NEVER
+- **Caption (all frameworks):** line 1 = **the hook title verbatim** (e.g. `❌ Things you should NEVER
   do in Japan`), then a full **essay on the content — one paragraph per slide** — in clean,
   explanatory prose (register per the caption essay example at the bottom of this doc; still no em/en
   dashes anywhere). For framework posts this essay caption **overrides** the "short casual caption"
-  default in `../platform/tiktok_style.md`.
+  default in `knowledge/platform/tiktok_style.md`.
 
-**Why the plugs work (absorbed from 1.0's funnel doctrine).** A / B / C2's ❌ → ✅ plug is a
-first-person before/after testimonial (her mess, then what she does now); C1's comment-keyword plug is
+**Why the plugs work (absorbed from 1.0's funnel doctrine).** A / B / D's ❌ → ✅ plug is a
+first-person before/after testimonial (her mess, then what she does now); C's comment-keyword plug is
 a comment → DM magnet. Both are value-first with the bias hidden inside a genuinely useful post, and
 the essay caption runs as a parallel funnel for non-swipers.
-
----
 
 ## Sourcing the copy (fact-check)
 
@@ -75,15 +64,15 @@ Draft from what you know, then **verify the facts before shipping**.
 — they are NOT verified against Reddit / X / Threads / Google reviews. That pass is deliberately
 skipped (login gates and blocked fetches made it slow and unreliable). To keep a take defensible
 anyway, **anchor every opinion to a verified fact** — a real price, a real queue, a real closure — so
-it reads as informed rather than arbitrary. This matters most for **Option B**, whose whole
+it reads as informed rather than arbitrary. This matters most for **Framework B**, whose whole
 credibility rests on its hot takes.
 
 **Flag what you couldn't verify.** Any number left unchecked gets called out to the human before the
 post ships, never buried in the copy.
 
----
+## Framework A — Fear of Mistakes
 
-## Option A — fear of making mistakes hook
+**Status:** active
 
 ### Slide 1 — hook (pick one title)
 
@@ -106,6 +95,25 @@ Every body slide is written **problem → solution** (the mistake + what to do i
 | 6 | no tight restriction on topic — still problem → solution |
 | 7–9 | no tight restriction |
 | 10 | title: `SAVE THIS` · subtitle: `just incase you need it ❤️` |
+
+**Body-slide copy shape** — each body slide is a tight ❌/✅ cluster (four lines): the mistake, one line on why, the fix, one line on why. (The visual split-frame layout is in DESIGN.md; this is just how the copy reads.)
+
+```
+❌ Don't {fly into / pay for / skip / do} {place}
+{one sentence on why}
+✅ {Fly into / Go to / Do} {place / remedy} instead
+{one sentence on why}
+```
+
+Example:
+
+```
+❌ Don't fly into Narita
+it's far out, then a 90 min train
+and $15 to $20 just to reach the city
+✅ Fly into Haneda instead
+only 25 min from central Tokyo
+```
 
 ### Slide 4 plug copy (group planning angle — pick one)
 
@@ -132,9 +140,9 @@ documents, and tiktok links, it saves the locations and organizes our whole
 plan in one place!
 ```
 
----
+## Framework B — Hot Takes
 
-## Option B — controversial takes
+**Status:** active
 
 ### Slide 1 — hook (pick one title)
 
@@ -158,6 +166,16 @@ parks" known in Japan), with the matching emoji in the title.
 | 5–7 | more popular, very touristy places people know |
 | 8 | title: `am I right? 🤷🏻‍♀️` |
 
+**Body-slide copy shape** — same tight ❌/✅ four-line cluster as A, but here ❌ = the **overrated** place and ✅ = the **underrated** one (each can be a real place in its own right). (Visual split-frame in DESIGN.md.)
+
+```
+❌ Don't pay for Shibuya Sky
+the hyped deck is $20 and packed
+shoulder to shoulder at sunset
+✅ Go to the Tokyo Gov Building
+same skyline, Shibuya included, for free
+```
+
 ### Slide 4 plug copy
 
 ```
@@ -168,13 +186,11 @@ documents, any notes i have, and it saves the locations and organizes my
 notes for me all in one place
 ```
 
----
+## Framework C — Full-Trip Dump
 
-## Option C — itinerary
+**Status:** active
 
-Hashtags + caption: same formula as Options A and B.
-
-### Variant C1 — "no idea what to do" full-trip dump
+Hashtags + caption: same formula as Frameworks A and B.
 
 Hook — title: `{flag} Going to {country} & have no idea what to do?` · subtitle: `here's the whole
 trip, save it`. (Modeled on [@solo.with.ana](https://www.tiktok.com/@solo.with.ana/photo/7653076886599240973?lang=en-GB),
@@ -189,7 +205,7 @@ our own Ana post.)
 | … | repeat the **{divider + listicle}** pair for each remaining place (~5 places total) |
 | last | title: `SAVE THIS` · subtitle: `just incase you need it ❤️` |
 
-Listicles that run long **spill onto extra slides** (see C1 design), so the deck length flexes —
+Listicles that run long **spill onto extra slides** (see C design), so the deck length flexes —
 treat the numbers as a minimum, and keep the **plug front/middle** (~slide 4, right after the first
 place's list) even if that first list spilled.
 
@@ -202,19 +218,19 @@ holicay.com!
 comment "{COUNTRY}" and I will send you my itinerary
 ```
 
-**C1 caption exception:** the hook title still leads (same as every option), but the **keyword CTA is
+**C caption exception:** the hook title still leads (same as every framework), but the **keyword CTA is
 the FIRST LINE OF THE BODY**, directly under it — `comment "{COUNTRY}" and i'll send you the full
 itinerary` — because the comment is this variant's conversion beat and only ~1 line shows before
 "…more". The essay starts after it.
 
-#### C1 design
+### C design
 
-C1 alternates **two slide types** down the deck: a **place-collage divider** that announces each
+C alternates **two slide types** down the deck: a **place-collage divider** that announces each
 city, then one or more **iPhone-Notes-style listicle** slides beneath it.
 
 - **Font = bold TikTok Sans (the real TikTok typeface), same as A and B** — used everywhere,
   *including inside the Notes-styled slides*: the body only *looks* like Notes, it is not a literal
-  iOS / SF-Pro screenshot. (Type authority = `CONTRACT.md` §Type system.)
+  iOS / SF-Pro screenshot. (Type authority = `DESIGN.md` §Type system.)
 - **9:16, text held in the vertical middle** — the shared canvas rule.
 - **Place divider** (slides 2, 5, 7, …) — a **2×2 collage of 4 real photos** of that place: its
   landmark, a street / culture shot, and a signature food or drink (a people-in-scene shot is fine
@@ -230,13 +246,17 @@ city, then one or more **iPhone-Notes-style listicle** slides beneath it.
   gloss ("pho gia truyen, bat dan (get the tai nam)"). Lead each category with its 3 most famous,
   resonant picks. **If a place's list overflows one slide, continue it on the next** (repeat the
   heading with "(contd)"); never cram.
-- **Person = cover + SAVE THIS only** (C1 is NOT faceless). The dividers and listicles carry no
+- **Person = cover + SAVE THIS only** (C is NOT faceless). The dividers and listicles carry no
   character — but a real person who happens to be in a sourced collage photo (a rider, someone on a
   bridge) is fine; that's authentic UGC, not a character gen.
 - **Photos = real UGC, not stock** — Instagram / Google images / Google reviews / Bing; Unsplash or
-  Pexels only when the shot genuinely looks candid (full sourcing in §Design).
+  Pexels only when the shot genuinely looks candid (full sourcing in `knowledge/frameworks/photo_sourcing.md`).
 
-### Variant C2 — "how to plan & prep" first-timers guide
+## Framework D — Plan & Prep
+
+**Status:** active
+
+Hashtags + caption: same formula as Frameworks A and B.
 
 Hook — title: `{flag} How to plan & prep the perfect {country} trip for first timers` · subtitle:
 `everything you need to know`. (Modeled on [@itsjustinjapan](https://www.tiktok.com/@itsjustinjapan/photo/7506840814442581249),
@@ -253,7 +273,7 @@ you can see what each slot holds.
 | 1 | **Cover** — scenic hero of the country's most iconic landscape; hook title in white boxes upper-middle + tiny white-box subtitle. No person. | the iconic hero shot (e.g. Mt Fuji at golden hour over a lake) |
 | 2 | **`1.` {when to go}** — 2×2 photo grid of the destination's distinct travel seasons; black-pill title top; one white-box line under it (e.g. "each season is SO different you need to plan accordingly"); each cell = a real season photo + white-box `{Season} ({months})` label + a 2–3 line white-box note | the seasons + bullets (e.g. Spring / cherry blossoms / peak / avoid Golden Week · Summer / festivals / humid · Autumn / nice weather / fewer crowds / leaves · Winter / ski / seafood). **Flex the cell count** to the country's real seasons (a tropical country → dry vs wet, etc.) |
 | 3 | **`2.` Route & days** — a real **digital-map screenshot** with pinned markers as the backdrop; black-pill title; white boxes = **the day split, named** ("tokyo 4 days · hakone 1 night · kyoto 3 · osaka 2") + the **route order that never backtracks** (+ which stops are day trips, not overnights). **No setup slide, no "do some research"** — the numbers ARE the value | the cities, their day counts, and the geographically sensible order for {country} |
-| 4 | **HOLICAY PLUG** (our mandatory insert) — lands right after "pin your bucket list onto a digital map," which it answers directly. Copy = the Option B plug (below). **Design = the A / B / C2 plug treatment** (full-bleed scenic `bg_photo` + scrim + the ❌ / ✅ sticker cluster, per `CONTRACT.md`). | keyword / country in the plug if used |
+| 4 | **HOLICAY PLUG** (our mandatory insert) — lands right after "pin your bucket list onto a digital map," which it answers directly. Copy = the Framework B plug (below). **Design = the A / B / D plug treatment** (full-bleed scenic `bg_photo` + scrim + the ❌ / ✅ sticker cluster, per `DESIGN.md`). | keyword / country in the plug if used |
 | 5 | **Favorite spots** — scenic iconic photo; white-box title "A few of my favorite spots in {country} for a first time visit"; then 4–6 **black-pill city headers**, each with a white-box list of 3–5 spots. Lead with the famous, resonant ones. | cities + spots (e.g. Tokyo / Teamlab, Sensoji, Shibuya sky, Omoide Yokocho, Meiji Jingu · Osaka / Dotonbori, Universal, Amerikamura · Kyoto / Arashiyama, Fushimi Inari, Botanical Gardens · Nara / deer park, Todaiji, Wakakusayama · Nagoya / Ghibli Park, castle, Toyota Museum · Hakone / shrine, Owakudani, glass museum) |
 | 6 | **`3.` {accommodation}** — real train-platform / POV photo; black-pill title; a white-box emphasis headline + a white-box why | the location rule that matters in {country} (e.g. "BOOK YOUR HOTEL CLOSE TO A MAIN TRAIN STATION" — stations are huge, don't waste time commuting; another country → near the metro / old town / the strip) |
 | 7 | **`4.` Book your activities early** — real attraction photo; black-pill title; white-box paragraph (must-dos sell out, book months ahead) + a white-box "Tip:" insider note | the sell-out attractions + a real insider tip (e.g. Ghibli Park; tip: miss the Shibuya Sky sunset slot, the night slots are still great) |
@@ -266,7 +286,7 @@ slide >" teaser. Since the plug now sits at slide 4, either drop that teaser or 
 up") so it isn't a broken promise — the plug reads as the natural answer to "pin it onto a map," and
 the favorites land one slide later.
 
-**Slide 4 plug copy** (Option B, first person):
+**Slide 4 plug copy** (Framework B, first person):
 
 ```
 ❌ i regret using google doc and sheets to plan my trip. alot of my research
@@ -276,114 +296,57 @@ documents, any notes i have, and it saves the locations and organizes my
 notes for me all in one place
 ```
 
-#### C2 design
+### D design
 
 - **Two text treatments:** **black rounded pills with white bold text** for the numbered step titles
   (`1.` `2.` `3.` …), and the **white per-line highlight boxes** (black bold text) from the A/B spec
   for everything else (labels, lists, paragraphs). Step pills sit top-center; body boxes cluster
   mid-frame.
 - **Font = a rounded bold sans** (Poppins / Nunito look) — softer and rounder than the TikTok Sans A
-  and B use. C2 is the one variant that does NOT use the TikTok Sans face the others use.
-  (Type authority = `CONTRACT.md` §Type system.)
+  and B use. D is the one variant that does NOT use the TikTok Sans face the others use.
+  (Type authority = `DESIGN.md` §Type system.)
 - **9:16, text kept in the vertical middle** — the shared canvas rule.
-- **Faceless — NO person on any slide** (A and B put the character on the first + last; C2 does not).
+- **Faceless — NO person on any slide** (A and B put the character on the first + last; D does not).
   The cover is a pure scenic landscape of the country. If you'd rather feature the active character,
   swap that scenic hero for a character-in-scene cover instead.
 - **Photo choices = real UGC, per step:** scenic hero (cover), 2×2 season collage, a real
   digital-map screenshot, scenic + text (favorites), POV train / street / attraction shots, a
   frosted app-icon panel. Build grids with the **`step`/`grid4` templates in `engine/render/build.js`**
   and pull real app icons with **`engine/source/app_icons.py`**. Same "real people's photos, not stock"
-  sourcing as A/B (§Design). Patch out any watermark on a sourced photo.
+  sourcing as A/B (`knowledge/frameworks/photo_sourcing.md`). Patch out any watermark on a sourced photo.
 
----
+## Voice
 
-## Design
+How every post reads, in copy and captions:
 
-> This section specs the **shared visual system** and the **A / B body slides**. **C1 and C2 each
-> carry their own design block** under their variant, because their layouts are specific to them. The
-> **Holicay plug slide design is specced in `CONTRACT.md`** (C1 = a framed app mockup on a dark-tinted
-> scenic; A / B / C2 = a full-bleed scenic + scrim behind the ❌ / ✅ sticker cluster).
+- **lowercase by default.** Sentence case only for deliberate emphasis (a shouted "NEVER", "OVERRATED").
+- **casual and conversational.** Texting a friend, not writing a brochure.
+- **first person.** It's the character's own trip: her mess, her fix ("i regret using google sheets...", "holicay.com is my game changer").
+- **specific, not generic.** Name the place, the price, the queue, the day split. A tip you can't act on is filler.
+- **the casual spelling and emoji ARE the voice.** Keep "alot", "revisted", "incase" and the ❌ / ✅ / 😭 / 😅 exactly. Do not clean them up.
+- **HARD RULE: no em dashes or en dashes anywhere** in post copy or captions. Rewrite the sentence instead.
 
-### Global — every framework slide
+Full ruleset → knowledge/voice/humanizer.md.
 
-- **Canvas 9:16 (1080×1920)** — the 2.0 repo is 9:16-native, so this is simply the repo canvas. It's
-  a tall frame, so **keep all text in the vertical middle** (centered): that holds it in the safe
-  zone, clear of TikTok's top and bottom UI chrome.
-- **Text = the TikTok-native white-box style:** black **bold TikTok Sans** — the real TikTok typeface
-  (SIL OFL), bundled at `engine/render/assets/fonts/`; Montserrat is only the network fallback (type
-  authority = `CONTRACT.md` §Type system). Each line sits on its **own white rounded highlight box
-  hugging that line's width**, boxes stacked and center-aligned. NOT one big rectangle — per-line
-  boxes, TikTok's "background" text setting. The headline line(s) bigger/bolder; the "why" line smaller.
-- **Line breaks must fall on natural phrase boundaries.** Because each line is its own hugging box,
-  an awkward wrap (a lonely "at sunset." box) looks broken. Break where a person would pause, so
-  every boxed line reads as a clean phrase.
-- **A person appears on the FIRST and LAST slides ONLY** (Options A, B, and C1; **Variant C2 is
-  faceless** — no person on any slide, see its design). The cover and the closing slide feature the
-  character, shot candidly in a real setting that fits the topic (gen per the normal pipeline), with
-  the hook title in white boxes upper-middle and the subtitle just under it. **Every body slide in
-  between has NO person** — real place photos only (next bullet).
-- **Body-slide photos = real UGC, never polished stock.** Use photos actual people took and posted:
-  scrape **Instagram**, **Google image search**, **Google reviews**, or **Bing image search**; use
-  **Unsplash / Pexels only when they have a shot that genuinely looks candid**. The whole point is
-  authenticity, so a slightly imperfect real photo beats a clean stock frame every time. (Still
-  degrade/grade per `../realism/realism_book.md`.) **How it's sourced** — Bright Data backends + a
-  reusable, place-keyed library; UGC posted as-is with stored attribution: [photo_sourcing.md](photo_sourcing.md).
-  The working implementation is `engine/source/brightdata.py` (Google Places user photos prioritized
-  per `CONTRACT.md` Gate 9; `engine/source/SOURCING_STATUS.md` for live backend status).
+## Photo direction
 
-### Options A + B body slides — the split ❌ / ✅
+Every body photo must read like a real visitor's phone shot, not a brand asset.
 
-Both options build every body slide the same way: **split the frame into a top half and a bottom
-half.**
+- **real UGC.** Pull from Instagram, Google image search, Google reviews, or Bing; use Unsplash / Pexels only when a shot genuinely looks candid.
+- **reject** drone / aerial, tripod long-exposure, HDR-postcard, and staged / editorial shots. They read as stock and kill the authenticity.
+- **exception:** scenic covers, closing slides, and the plug background may be postcard-pretty. The ban is on the body slides that carry the tips.
 
-- **TOP half** = a real photo of the ❌ thing (Option B: the **overrated** place · Option A: the
-  **mistake**).
-- **BOTTOM half** = a real photo of the ✅ thing (Option B: the **underrated** place · Option A:
-  **what to do instead**).
-- **Text: one tight cluster centered on the middle seam** — four stacked white boxes, the ❌ pair
-  reading over the top photo and the ✅ pair over the bottom photo, meeting in the middle:
+Sourcing tool + gates → knowledge/frameworks/photo_sourcing.md and DESIGN.md (Gate 9).
 
-```
-❌ Don't {pay for / skip / go to / do} {place}
-{one sentence on why}
-✅ {Go to / Go / Do} {place / remedy}
-{one sentence on why}
-```
+## Brand
 
-Concrete **Option B** example — overrated on top, underrated below (each side can be a full place in
-its own right):
+Holicay is a travel itinerary-planner app (holicay.com), the app you plan your trip itinerary on. In copy, name the USE CASE, not the feature name (say "the ai plans it for you and you just drag things around", or "copy someone's real itinerary and tweak it"), and always give a discoverable signpost ("holicay.com" or "the holicay app"), never a bare "holicay".
 
-```
-❌ Don't pay for Shibuya Sky
-the hyped deck is $20 and packed
-shoulder to shoulder at sunset
-✅ Go to the Tokyo Gov Building
-same skyline, Shibuya included, for free
-```
+Full reference → knowledge/brand/holicay_brand.md.
 
-Concrete **Option A** example — same split, mistake on top, fix below:
+## Caption essay example
 
-```
-❌ Don't fly into Narita
-it's far out, then a 90 min train
-and $15 to $20 just to reach the city
-✅ Fly into Haneda instead
-only 25 min from central Tokyo
-```
-
-### Holicay plug slide (Options A + B + C)
-
-**Specced in `CONTRACT.md`** (the plug-design treatments). The plug copy is specced above; the visual
-is two treatments: **C1** renders a framed **Holicay-app `mockup`** (rounded phone screenshot, white
-border + soft shadow) centered on a dark-tinted scenic; **A / B / C2** render a **full-bleed scenic
-`bg_photo` + dark scrim** behind the ❌ / ✅ sticker cluster. The flat coral fallback is used only when
-neither asset is given.
-
----
-
-## Caption essay example (Option A, Japan)
-
-One paragraph per slide, written like this:
+One paragraph per slide, written like this (Framework A, Japan):
 
 > If you're planning a trip to Japan, there are a few mistakes that many tourists make without
 > realizing it. These mistakes can make your trip more expensive, more stressful, and sometimes

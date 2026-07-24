@@ -1,10 +1,10 @@
 # TikTok platform notes — voice + strategy
 
-> **Framework posts are governed by [`../frameworks/`](../frameworks/) + [`../../CONTRACT.md`](../../CONTRACT.md).**
-> Those own the A/B/C1/C2 blueprints, the on-slide design system, the type system, and the Holicay
+> **Framework posts are governed by [`../../CREATIVE.md`](../../CREATIVE.md) + [`../../DESIGN.md`](../../DESIGN.md).**
+> Those own the A/B/C/D blueprints, the on-slide design system, the type system, and the Holicay
 > plug. This file keeps only the **platform voice + strategy notes that still apply** across any
 > TikTok post; the shared build mechanics (canvas + safe zone, photo sourcing, character/wardrobe
-> identity, the render engine, OODA checkpoints) live in the engine + `knowledge/frameworks/`.
+> identity, the render engine, OODA checkpoints) live in the engine + `CREATIVE.md` / `DESIGN.md`.
 
 ## 1. Platform snapshot
 

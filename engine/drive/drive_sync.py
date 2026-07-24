@@ -188,30 +188,9 @@ def upload_file(svc, path, parent_id):
     return "created"
 
 
-# ── brand folder: the loop READS the user's Drive brand assets (and may push learned ones) ──
-def find_folder_by_name(svc, name):
-    hits = _q(svc, f"mimeType='{FOLDER_MIME}' and name='{name.replace(chr(39), chr(92) + chr(39))}' and trashed=false")
-    return hits[0]["id"] if hits else None
-
-
-def brand_list(svc, folder_name):
-    """List the user-owned Drive brand folder (one level of subfolders), for knowledge refresh."""
-    fid = find_folder_by_name(svc, folder_name)
-    if not fid:
-        print(f"(no Drive folder named {folder_name!r} visible to this account)"); return
-    items = _q(svc, f"'{fid}' in parents and trashed=false")
-    print(f"{folder_name}  ({fid})  — {len(items)} item(s):")
-    for it in sorted(items, key=lambda x: x["name"].lower()):
-        if it["mimeType"] == FOLDER_MIME:
-            print(f"  [dir]  {it['id']}  {it['name']}/")
-            for sub in sorted(_q(svc, f"'{it['id']}' in parents and trashed=false"), key=lambda x: x["name"].lower()):
-                print(f"         {sub['id']}  {it['name']}/{sub['name']}")
-        else:
-            print(f"  [file] {it['id']}  {it['name']}")
-
-
+# ── generic single-file download (the chunked downloader reused by --pull / --fetch-post) ──
 def brand_get(svc, file_id, out):
-    """Download one brand asset by file id (so the loop can actually use it in a design)."""
+    """Download one Drive file by id — the chunked downloader reused by pull_down/fetch_post."""
     import io
     from googleapiclient.http import MediaIoBaseDownload
     req = svc.files().get_media(fileId=file_id)
@@ -221,14 +200,6 @@ def brand_get(svc, file_id, out):
     while not done:
         _, done = dl.next_chunk()
     print("downloaded ->", out)
-
-
-def brand_put(svc, path, folder_name):
-    """Push a learned/reusable brand asset back into the Drive brand folder (persist for future runs)."""
-    fid = find_folder_by_name(svc, folder_name)
-    if not fid:
-        sys.exit(f"no Drive folder named {folder_name!r}; create it or share it first")
-    print(f"  {upload_file(svc, path, fid)}: {os.path.basename(path)} -> {folder_name}/")
 
 
 # ── two-way folder mirror (the gitignored media — persona refs, brand assets — lives on Drive) ──
@@ -356,7 +327,7 @@ def pull_down(svc, dest_name, local_dir, root_id, overwrite=False):
 def mirror_all(svc, root_id, prune=False):
     """Push EVERY local media store up to Drive in one shot — Drive-canonical for ALL media, not just
     posts. Mirrors each character/<Name>/ -> <Name>/ (refs + profile pics), character/_shared ->
-    _shared, knowledge/brand -> Holicay Brand, PLUS chars -> chars, media/graded -> media/graded,
+    _shared, PLUS chars -> chars, media/graded -> media/graded,
     media/brand -> media/brand. media/library is LOCAL SCRATCH (pruned per CONTRACT hygiene) and is
     never mirrored. Idempotent (updates only changed files; skips git-tracked). Finished posts sync
     via `sheets.py deliver-missing` — run both to fully reconcile local -> Drive."""
@@ -379,7 +350,6 @@ def mirror_all(svc, root_id, prune=False):
         for sub in sorted(os.listdir(shared)):
             if os.path.isdir(os.path.join(shared, sub)):
                 targets.append((os.path.join(shared, sub), f"_shared/{sub}"))
-    targets.append((os.path.join(root, "knowledge", "brand"), "Holicay Brand"))
     # 2.0 media stores (framework machine): sourced/graded photo picks + first-party brand assets +
     # the chosen character photos. media/library is deliberately EXCLUDED (local scratch).
     targets.append((os.path.join(root, "chars"), "chars"))
@@ -440,11 +410,6 @@ def main():
     ap.add_argument("--root-id")
     ap.add_argument("--root-name")
     ap.add_argument("--list-shared", action="store_true")
-    ap.add_argument("--brand-list", action="store_true", help="list the Drive brand folder")
-    ap.add_argument("--brand-folder", default="Holicay Brand", help="name of the Drive brand folder")
-    ap.add_argument("--brand-get", help="file id to download")
-    ap.add_argument("--brand-put", help="local asset to push into the brand folder")
-    ap.add_argument("--out", help="output path for --brand-get")
     ap.add_argument("--mirror", help="local folder to recursively UPLOAD to <root>/<dest>/ (media -> Drive)")
     ap.add_argument("--dest", help="Drive folder name under root for --mirror (default: the folder's basename)")
     ap.add_argument("--mirror-all", action="store_true", help="push ALL local character/_shared/brand media up to Drive (Drive-canonical)")
@@ -474,12 +439,6 @@ def main():
         root = resolve_root(svc, a.root_id, a.root_name)
         dest = a.to or os.path.join(_root(), "outputs", a.fetch_post)
         fetch_post(svc, a.fetch_post, _char_name(a.character), a.platform, dest, root, a.overwrite); return
-    if a.brand_list:
-        brand_list(svc, a.brand_folder); return
-    if a.brand_get:
-        brand_get(svc, a.brand_get, a.out or os.path.basename(a.brand_get)); return
-    if a.brand_put:
-        brand_put(svc, a.brand_put, a.brand_folder); return
     if not a.post:
         sys.exit("--post <local post folder> required")
     post_dir = a.post.rstrip("/")

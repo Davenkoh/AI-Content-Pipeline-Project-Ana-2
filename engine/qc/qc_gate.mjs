@@ -6,11 +6,11 @@
  * copy.json. Vision checks (legibility, cover identity, batch-graded look, watermark corners)
  * are NOT here — those are the routine's job via Read on the PNGs.
  *
- * Usage:  node qc_gate.mjs "<post folder>" [--framework A|B|C1|C2]
+ * Usage:  node qc_gate.mjs "<post folder>" [--framework A|B|C|D]
  * Output: JSON { pass, ok[], warn[], issues[] } then human-readable lines.
  *         exit 0 = pass · 1 = fail · 2 = bad usage.
  *
- * What it checks (all against the 1080x1920 framework spec in CONTRACT.md):
+ * What it checks (all against the 1080x1920 framework spec in DESIGN.md):
  *   1. copy.json exists + parses; if --framework given, copy.option must equal it.
  *   2. final/ exists; names ^NN_role.png^ (variant suffix stripped); numbering contiguous from
  *      01; 01_cover.png present; role sequence + count EXACTLY equal to copy.json's slides
@@ -54,7 +54,7 @@ for (let i = 0; i < argv.length; i++) {
   if (x === '--framework' || x === '-f') framework = argv[++i];
   else if (!dir) dir = x;
 }
-if (!dir) { console.error('usage: node qc_gate.mjs "<post folder>" [--framework A|B|C1|C2]'); process.exit(2); }
+if (!dir) { console.error('usage: node qc_gate.mjs "<post folder>" [--framework A|B|C|D]'); process.exit(2); }
 
 const issues = [];
 const ok = [];

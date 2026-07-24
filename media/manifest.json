@@ -10,7 +10,7 @@
     "h": 512,
     "local_path": "media/graded/app_deepl.png",
     "used_in": [
-      "C2"
+      "D"
     ],
     "note": "official app icon"
   },
@@ -25,7 +25,7 @@
     "h": 512,
     "local_path": "media/graded/app_google-translate.png",
     "used_in": [
-      "C2"
+      "D"
     ],
     "note": "official app icon"
   },
@@ -40,7 +40,7 @@
     "h": 1440,
     "local_path": "media/graded/autumn_leaves.jpg",
     "used_in": [
-      "C2"
+      "D"
     ],
     "note": "ginkgo avenue, single walker"
   },
@@ -146,7 +146,7 @@
     "local_path": "media/graded/food_queue.jpg",
     "used_in": [
       "A",
-      "C1"
+      "C"
     ],
     "note": "Kura Sushi table POV (2026-07-23: re-checked vs banked Kura Sushi Places photos, incumbent's candid tablet/gacha-machine POV still wins)"
   },
@@ -163,8 +163,8 @@
     "used_in": [
       "A",
       "B",
-      "C1",
-      "C2",
+      "C",
+      "D",
       "ttc-11"
     ],
     "note": "untouchable, approved candid sunset"
@@ -180,7 +180,7 @@
     "h": 3072,
     "local_path": "media/graded/ghibli_park.jpg",
     "used_in": [
-      "C2"
+      "D"
     ],
     "note": "Totoro building, visitors for scale (2026-07-23: 4 banked Places photos were gorgeous interior details but none read as instantly \"Ghibli Park\" the way the Totoro statue does, kept)"
   },
@@ -196,8 +196,8 @@
     "local_path": "media/graded/golden_gai.jpg",
     "used_in": [
       "A",
-      "C1",
-      "C2"
+      "C",
+      "D"
     ],
     "note": "handheld night alley lanterns"
   },
@@ -212,7 +212,7 @@
     "h": 1440,
     "local_path": "media/graded/hakone.jpg",
     "used_in": [
-      "C1"
+      "C"
     ],
     "note": "couple wading, torii gate close"
   },
@@ -227,7 +227,7 @@
     "h": 1200,
     "local_path": "media/graded/hakone_glass_museum.jpg",
     "used_in": [
-      "C1"
+      "C"
     ],
     "note": "rowboat visitors, pond, tower"
   },
@@ -242,7 +242,7 @@
     "h": 1600,
     "local_path": "media/graded/hakone_lake_ashi.jpg",
     "used_in": [
-      "C1"
+      "C"
     ],
     "note": "dusk pirate-ship, railing, passengers"
   },
@@ -257,7 +257,7 @@
     "h": 3456,
     "local_path": "media/graded/hakone_owakudani.jpg",
     "used_in": [
-      "C1"
+      "C"
     ],
     "note": "ropeway gondola window, valley (2026-07-23: incumbent shows readable \"HAKONE ROPEWAY\" cabin branding + live steam vents, beats all 4 banked Places alternatives, kept)"
   },
@@ -287,9 +287,9 @@
     "h": 1280,
     "local_path": "media/graded/holicay_app_itinerary.jpg",
     "used_in": [
-      "C1"
+      "C"
     ],
-    "note": "first-party app screenshot; C1 plug mockup"
+    "note": "first-party app screenshot; C plug mockup"
   },
   {
     "id": "ichiran_queue",
@@ -332,7 +332,7 @@
     "h": 1600,
     "local_path": "media/graded/kyoto_arashiyama.jpg",
     "used_in": [
-      "C1"
+      "C"
     ],
     "note": "real crowd, bamboo path"
   },
@@ -347,7 +347,7 @@
     "h": 3107,
     "local_path": "media/graded/kyoto_botanical_gardens.jpg",
     "used_in": [
-      "C1"
+      "C"
     ],
     "note": "schoolchildren crossing bridge candid"
   },
@@ -362,7 +362,7 @@
     "h": 1205,
     "local_path": "media/graded/kyoto_fushimi_inari.jpg",
     "used_in": [
-      "C1"
+      "C"
     ],
     "note": "oblique angle, real visitor glimpse"
   },
@@ -377,7 +377,7 @@
     "h": 1440,
     "local_path": "media/graded/kyoto_street.jpg",
     "used_in": [
-      "C1"
+      "C"
     ],
     "note": "muted filter, quiet backstreet"
   },
@@ -407,7 +407,7 @@
     "h": 1040,
     "local_path": "media/graded/nara_deer_park.jpg",
     "used_in": [
-      "C1"
+      "C"
     ],
     "note": "woman feeding deer crosswalk (2026-07-23: best banked Places alternative was a lone deer with no crowd-interaction moment, kept)"
   },
@@ -422,7 +422,7 @@
     "h": 1200,
     "local_path": "media/graded/nara_street.jpg",
     "used_in": [
-      "C1"
+      "C"
     ],
     "note": "overcast old-town shopfront"
   },
@@ -437,7 +437,7 @@
     "h": 1067,
     "local_path": "media/graded/nara_todaiji.jpg",
     "used_in": [
-      "C1"
+      "C"
     ],
     "note": "wider altar view, barrier rope"
   },
@@ -452,7 +452,7 @@
     "h": 800,
     "local_path": "media/graded/nara_wakakusayama.jpg",
     "used_in": [
-      "C1"
+      "C"
     ],
     "note": "deer, hazy natural hilltop (2026-07-23: best banked Places alt was a dramatic god-ray golden-hour shot that read as more processed/staged than this one, kept)"
   },
@@ -482,7 +482,7 @@
     "h": 1440,
     "local_path": "media/graded/neighbourhoods.jpg",
     "used_in": [
-      "C2"
+      "D"
     ],
     "note": "faded alley, morning-glory vines"
   },
@@ -527,7 +527,7 @@
     "h": 1600,
     "local_path": "media/graded/osaka_amerikamura.jpg",
     "used_in": [
-      "C1"
+      "C"
     ],
     "note": "portrait-blur mural, cyclists passing"
   },
@@ -542,7 +542,7 @@
     "h": 768,
     "local_path": "media/graded/osaka_dotonbori.jpg",
     "used_in": [
-      "C1"
+      "C"
     ],
     "note": "night canal, candid crowd (2026-07-23: 4 banked Places photos were all elevated/wrong-landmark shots, kept)"
   },
@@ -557,7 +557,7 @@
     "h": 720,
     "local_path": "media/graded/osaka_street_food.jpg",
     "used_in": [
-      "C1"
+      "C"
     ],
     "note": "takoyaki stall, kimono customer"
   },
@@ -572,7 +572,7 @@
     "h": 1200,
     "local_path": "media/graded/osaka_universal_studios.jpg",
     "used_in": [
-      "C1"
+      "C"
     ],
     "note": "archway distance, crowd barriers visible"
   },
@@ -589,10 +589,10 @@
     "used_in": [
       "A",
       "B",
-      "C2",
+      "D",
       "ttc-11"
     ],
-    "note": "picturesque Kiyomizu-dera night scenic; A/B/C2 plug backdrop (exempt from UGC gate)"
+    "note": "picturesque Kiyomizu-dera night scenic; A/B/D plug backdrop (exempt from UGC gate)"
   },
   {
     "id": "roppongi_hills",
@@ -620,7 +620,7 @@
     "h": 1920,
     "local_path": "media/graded/route_map.png",
     "used_in": [
-      "C2"
+      "D"
     ],
     "note": "untouchable, real map screenshot"
   },
@@ -636,7 +636,7 @@
     "local_path": "media/graded/shibuya_crossing.jpg",
     "used_in": [
       "B",
-      "C1"
+      "C"
     ],
     "note": "accessible walkway angle, no blur"
   },
@@ -696,7 +696,7 @@
     "h": 1707,
     "local_path": "media/graded/spring_cherry_blossom.jpg",
     "used_in": [
-      "C2"
+      "D"
     ],
     "note": "street banners, pedestrians, bloom"
   },
@@ -711,7 +711,7 @@
     "h": 1200,
     "local_path": "media/graded/station_pov.jpg",
     "used_in": [
-      "C2"
+      "D"
     ],
     "note": "huge Shinjuku exterior, JR signage (incumbent was an unlabeled Osaka-area Hankyu platform, not even Tokyo)"
   },
@@ -741,7 +741,7 @@
     "h": 768,
     "local_path": "media/graded/suica_tap_train.jpg",
     "used_in": [
-      "C2"
+      "D"
     ],
     "note": "phone tap, motion-blur train"
   },
@@ -756,7 +756,7 @@
     "h": 999,
     "local_path": "media/graded/summer_festival.jpg",
     "used_in": [
-      "C2"
+      "D"
     ],
     "note": "ground-level crowd, lantern floats"
   },
@@ -786,7 +786,7 @@
     "h": 1024,
     "local_path": "media/graded/temples.jpg",
     "used_in": [
-      "C1"
+      "C"
     ],
     "note": "Meiji torii approach, real tourists (2026-07-23: checked vs 4 banked Sensoji Places photos — the strongest was a dead-empty, perfectly symmetric Kaminarimon gate, an even worse gate-9 fit despite real attribution; incumbent's real pedestrian crowd kept)"
   },
@@ -833,8 +833,8 @@
     "used_in": [
       "A",
       "B",
-      "C1",
-      "C2",
+      "C",
+      "D",
       "ttc-11"
     ],
     "note": "deck net glass escalator"
@@ -850,7 +850,7 @@
     "h": 3375,
     "local_path": "media/graded/winter_snow.jpg",
     "used_in": [
-      "C2"
+      "D"
     ],
     "note": "skiers group, rear-view mountain"
   },
@@ -865,7 +865,7 @@
     "h": 1280,
     "local_path": "media/brand/holicay_app_itinerary.jpg",
     "used_in": [
-      "C1"
+      "C"
     ],
     "note": "first-party app screenshot master"
   },
@@ -882,8 +882,8 @@
     "used_in": [
       "A",
       "B",
-      "C1",
-      "C2"
+      "C",
+      "D"
     ],
     "note": "character cover/ending photo"
   },
@@ -900,8 +900,8 @@
     "used_in": [
       "A",
       "B",
-      "C1",
-      "C2"
+      "C",
+      "D"
     ],
     "note": "character cover/ending photo"
   },
@@ -916,9 +916,9 @@
     "h": 1200,
     "local_path": "media/graded/plug_scenic_c1.jpg",
     "used_in": [
-      "C1"
+      "C"
     ],
-    "note": "Fushimi Inari torii tunnel; C1 plug dark-tinted backdrop (exempt from UGC gate)"
+    "note": "Fushimi Inari torii tunnel; C plug dark-tinted backdrop (exempt from UGC gate)"
   },
   {
     "id": "inari_crowd_gates",

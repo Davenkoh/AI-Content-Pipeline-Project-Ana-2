@@ -5,7 +5,7 @@
 > single home and restates nothing. **DRY + MECE** — one row per capability, no overlap.
 
 Project Ana 2.0 is a **framework-first TikTok carousel machine.** Four locked blueprints — **A** (fear of
-mistakes), **B** (hot takes), **C1** (full-trip dump), **C2** (plan-&-prep guide) — reproduced every post;
+mistakes), **B** (hot takes), **C** (full-trip dump), **D** (plan-&-prep guide) — reproduced every post;
 only the **copy + sourced photos** change. The rotation (which framework + human/nohuman variant is next)
 is **derived live from the Google Sheet**, per account. `.claude/skills/` are plain markdown any agent can
 read; the engine is plain CLI you shell out to.
@@ -41,25 +41,25 @@ Full flags live in `WORKFLOW.md`; this table is the map. **Do not edit `engine/`
 > slug plan). Add a backend/template, not a new file.
 
 ## 3 · Knowledge — the brains, loaded at the stage that needs it
-Index: [`knowledge/README.md`](knowledge/README.md). The **spine is `CONTRACT.md` + `knowledge/frameworks/`**.
+Index: [`knowledge/README.md`](knowledge/README.md). The **spine is `CREATIVE.md` (content wheel) + `DESIGN.md` (visual/build spec)**.
 
 | Stage | Load |
 |---|---|
-| the output spec (design / type / plug / QC gates) | [`CONTRACT.md`](CONTRACT.md) |
-| the framework blueprints (hooks · slide maps · plug copy · caption) | [`knowledge/frameworks/content_frameworks.md`](knowledge/frameworks/content_frameworks.md) |
-| write the copy (§4) | `knowledge/copy_bank/<country>/<OPT>.md` + `knowledge/tuning/02_copywriting.md` + `knowledge/voice/humanizer.md` |
+| the output spec (design / type / plug / QC gates) | [`DESIGN.md`](DESIGN.md) |
+| the framework blueprints (hooks · slide maps · plug copy · caption) | [`CREATIVE.md`](CREATIVE.md) |
+| write the copy (§4) | `CREATIVE.md` + `knowledge/tuning/02_copywriting.md` + `knowledge/voice/humanizer.md` (freshness: scan recent `outputs/<char>/*/copy.json`) |
 | source photos (§5) | `knowledge/frameworks/photo_sourcing.md` + `knowledge/tuning/03_sourcing.md` + `engine/source/SOURCING_STATUS.md` |
 | character / scene realism (§3) | `knowledge/realism/*` (realism_book · persona_gen_prompt_reference · winning_prompts) |
 | what's winning (read before copy) | `knowledge/tuning/06_performance.md` (written by `analyze`) |
 | feedback audit trail | `knowledge/tuning/propagation-log.md` |
-| what Holicay is | the Sheet **Holicay Brand** tab (truth); `knowledge/brand/holicay_brand.md` is a cache |
+| what Holicay is | [`knowledge/brand/holicay_brand.md`](knowledge/brand/holicay_brand.md) (the standing brand reference) |
 
 ## 4 · The three homes — where state lives
 | Home | Holds | Link |
 |---|---|---|
 | **GitHub** (this repo) | code + text brains + skills | https://github.com/Davenkoh/Project-Ana-2 |
 | **Google Drive** — "Project Ana 2.0" | all media + finished posts + `_setup/` secrets | root in `creators@holicay.com` My Drive (find the folder link with `python3 engine/drive/drive_sync.py --list-shared`) |
-| **Google Sheet** — "Project Ana 2.0" | per-character fact tabs + Dashboard + Connectors + Accounts + Holicay Brand + Dictionary (GREEN cells = human feedback) | https://docs.google.com/spreadsheets/d/1Wskn2YPWwu3cEBJVTwyYpgM7XXVjJwODLjZVqLgAqWo/edit |
+| **Google Sheet** — "Project Ana 2.0" | per-character fact tabs + Dashboard + Connectors + Accounts + Content + Dictionary (GREEN cells = human feedback) | https://docs.google.com/spreadsheets/d/1Wskn2YPWwu3cEBJVTwyYpgM7XXVjJwODLjZVqLgAqWo/edit |
 
 `state.json` is the small local **registry** (each character = name + id_prefix + country + TikTok @handle)
 + the Sheet/Drive pointers. The rotation slot + next number are **derived from the Sheet**, never stored.

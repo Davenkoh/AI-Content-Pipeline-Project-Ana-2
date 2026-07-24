@@ -1,6 +1,6 @@
 # Photo provenance — ttc-11 (Japan · Framework A · Chloe · iteration 1)
 
-Every photo slug this deck renders, in slide order, audited against **CONTRACT.md QC gate 9**
+Every photo slug this deck renders, in slide order, audited against **DESIGN.md QC gate 9**
 (UGC-framing). Format: `NN slug — KEPT|REUSED — platform — author — source_url — note`.
 Body photos were freshly sourced + vision-curated this run (KEPT). Scenic cover/ending/plug
 backgrounds are Gate-9-EXEMPT and REUSE existing graded scenics. Char scene photos live in `chars/`.
@@ -11,7 +11,7 @@ backgrounds are Gate-9-EXEMPT and REUSE existing graded scenics. Char scene phot
 02 inari_quiet_gates — KEPT — google_places_user_photo — Rahil Agrawal — https://maps.google.com/maps/contrib/115439389244360929764 — empty iconic vermilion torii path — the ✅ 'gates almost empty' up the trail
 03 cash_only_register — KEPT — google_images — Cestee — https://www.cestee.com/blog/japan-things-that-will-surprise-you — bilingual 現金のみ / CASH ONLY sign — the ❌ card assumption
 03 seven_bank_atm — KEPT — google_places_user_photo — Masahiko Motono — https://maps.google.com/maps/contrib/110807531686252733131 — street 7-Eleven storefront — the ✅ 7-Eleven/Seven Bank ATM (recognizable konbini)
-04 plug_scenic — REUSED — google_images — unknown — n/a — picturesque Kiyomizu-dera night scenic; A/B/C2 plug backdrop (exempt from UGC gate)
+04 plug_scenic — REUSED — google_images — unknown — n/a — picturesque Kiyomizu-dera night scenic; A/B/D plug backdrop (exempt from UGC gate)
 05 onsen_no_tattoo — KEPT — google_images — point fu — http://pointfu.blogspot.com/2018/01/tattoos-in-japanese-baths.html — NO TATTOO A-board at a bath entrance — the ❌
 05 private_onsen_bath — KEPT — google_images — www.kashiwaya.org — https://www.kashiwaya.org/e/magazine/onsen/private-onsen.html — private wooden outdoor tub (kashikiri) — the ✅
 06 escalator_tokyo — KEPT — google_images — Vox — https://www.vox.com/the-goods/2018/12/28/18159506/escalators-public-transportation-tokyo — genuine Tokyo commuter escalator — the ❌ Tokyo side

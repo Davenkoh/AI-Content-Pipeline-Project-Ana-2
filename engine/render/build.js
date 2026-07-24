@@ -1,17 +1,17 @@
 // Framework slide renderer (engine/render) — the graduated sandbox renderer, re-anchored to the
-// repo root. Templates, sticker mechanism, type scale and CSS are LOCKED per CONTRACT.md; only
+// repo root. Templates, sticker mechanism, type scale and CSS are LOCKED per DESIGN.md; only
 // path resolution changed when this moved out of sandbox/frameworks-test into engine/render.
 //
-// Renders the content-framework carousels (Options A / B / C1 / C2) from a per-option
+// Renders the content-framework carousels (Options A / B / C / D) from a per-option
 // copy JSON into 1080x1920 PNGs. Playwright HTML->PNG, mirroring engine/design/build.js's
 // proven pattern (file:// HTML, Google-Fonts @import + networkidle + small wait, esc(),
 // screenshot clip).
 //
-// Design authority: knowledge/frameworks/content_frameworks.md.  Interface: ../../CONTRACT.md.
+// Content authority: CREATIVE.md.  Interface: ../../DESIGN.md.
 //
 // CLI:
 //   node build.js --copy <copy/X.json> --out <dir> [--only NN] [--contact] [--media <dir>] [--chars <dir>]
-//     * reads the copy JSON (schema in CONTRACT.md), renders every slide -> <dir>/NN_<role>.png
+//     * reads the copy JSON (schema in DESIGN.md), renders every slide -> <dir>/NN_<role>.png
 //     * cover/save slides render TWICE: _human (char_photo) and _nohuman (scenic_photo)
 //     * --only NN   renders just the slide at deck position NN (e.g. --only 02)
 //     * --contact   also writes <dir>/_contact.png — a labelled grid montage of the deck
@@ -76,10 +76,10 @@ const TTS_FACES = fs.readFileSync(path.join(FONTS_DIR, 'tiktok-sans.css'), 'utf8
   });
 const TIKTOK = "'TikTok Sans','Montserrat','Apple Color Emoji',-apple-system,Arial,sans-serif";
 const NUNITO = "'Nunito','Poppins','Apple Color Emoji',-apple-system,Arial,sans-serif";
-// A / B / C1 = bold TikTok Sans (the actual TikTok face; Montserrat was its stand-in) ;
-// C2 = rounded bold Nunito (Poppins fallback) per the doc's C2 design block
+// A / B / C = bold TikTok Sans (the actual TikTok face; Montserrat was its stand-in) ;
+// D = rounded bold Nunito (Poppins fallback) per the doc's D design block
 function fontFor(option) {
-  return option === 'C2'
+  return option === 'D'
     ? { fam: NUNITO, head: `@import url('${NUNITO_IMPORT}');` }
     : { fam: TIKTOK, head: `@import url('${MONT_IMPORT}');\n${TTS_FACES}` };
 }
@@ -355,13 +355,13 @@ const TEMPLATES = {
   },
 
   // ---- 4. plug — two treatments (human steer 2026-07-23):
-  //   * slide.mockup   (C1): the Holicay app shown as a framed phone on brand coral — the ✅ SOLUTION.
-  //   * slide.bg_photo (A/B/C2): a full-bleed picturesque country scenic + scrim — the plug copy's
+  //   * slide.mockup   (C): the Holicay app shown as a framed phone on brand coral — the ✅ SOLUTION.
+  //   * slide.bg_photo (A/B/D): a full-bleed picturesque country scenic + scrim — the plug copy's
   //                    ❌ problem / ✅ HOLICAY.COM fix rides on top. (was: flat #f2f2f2 placeholder.)
   plug(slide, option) {
     const font = fontFor(option);
 
-    // C1 — framed phone mockup of the Holicay app on a DARK-TINTED picturesque country scenic
+    // C — framed phone mockup of the Holicay app on a DARK-TINTED picturesque country scenic
     // (human steer 2026-07-23: bigger phone, text pulled in toward it, scenic+tint for hierarchy).
     if (slide.mockup) {
       const shot = photo(slide.mockup);
@@ -386,7 +386,7 @@ const TEMPLATES = {
       return doc({ font, css, body });
     }
 
-    // A / B / C2 — full-bleed picturesque country scenic behind the plug sticker cluster
+    // A / B / D — full-bleed picturesque country scenic behind the plug sticker cluster
     if (slide.bg_photo) {
       const img = photo(slide.bg_photo);
       const paras = (slide.paragraphs || []).map(
@@ -415,9 +415,9 @@ const TEMPLATES = {
     return doc({ font, frameBg: '#f2f2f2', css, body });
   },
 
-  // ---- 6. divider (C1) — 2x2 collage, soft center wash, lowercase white name on the seam ----
+  // ---- 6. divider (C) — 2x2 collage, soft center wash, lowercase white name on the seam ----
   divider(slide, option) {
-    const font = fontFor(option);           // C1 = Montserrat
+    const font = fontFor(option);           // C = Montserrat
     const c = (slide.cells || []).map(photo);
     const css = `
 .grid2{position:absolute;inset:0;display:grid;grid-template-columns:540px 540px;grid-template-rows:960px 960px}
@@ -438,9 +438,9 @@ const TEMPLATES = {
     return doc({ font, css, body });
   },
 
-  // ---- 7. notes (C1) — iPhone-Notes look but set entirely in Montserrat ----
+  // ---- 7. notes (C) — iPhone-Notes look but set entirely in Montserrat ----
   notes(slide, option) {
-    const font = fontFor(option);           // C1 = Montserrat (doc: NOT literal SF Pro)
+    const font = fontFor(option);           // C = Montserrat (doc: NOT literal SF Pro)
     const secs = (slide.sections || []).map(sec => {
       const header = esc(sec.header) + (slide.contd ? ' (contd)' : '');
       const items = (sec.items || []).map(it => {
@@ -469,9 +469,9 @@ const TEMPLATES = {
     return doc({ font, css, body });
   },
 
-  // ---- 8. step (C2) — black pill top-center + white-box blocks, four layouts ----
+  // ---- 8. step (D) — black pill top-center + white-box blocks, four layouts ----
   step(slide, option) {
-    const font = fontFor(option);           // C2 = Nunito
+    const font = fontFor(option);           // D = Nunito
     const layout = slide.layout || 'photo';
     const SIZE = { headline: 58, body: 52, tip: 44 }, WT = { headline: 800, body: 800, tip: 700 };
 
@@ -561,9 +561,9 @@ ${tip ? `<div class="s-tip">${tip}</div>` : ''}`;
     return doc({ font, css, body: layers });
   },
 
-  // ---- 9. favorites (C2) — scenic photo, title stack upper-middle, 4-6 city rows in two columns ----
+  // ---- 9. favorites (D) — scenic photo, title stack upper-middle, 4-6 city rows in two columns ----
   favorites(slide, option) {
-    const font = fontFor(option);           // C2 = Nunito
+    const font = fontFor(option);           // D = Nunito
     const img = photo(slide.photo);
     const title = sticker(slide.title_lines, 52, 800);
     const cities = slide.cities || [];

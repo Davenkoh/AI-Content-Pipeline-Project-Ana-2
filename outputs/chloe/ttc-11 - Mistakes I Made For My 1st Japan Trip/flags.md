@@ -4,7 +4,7 @@ Post: `🇯🇵 Mistakes I made for my 1st Japan trip`. Framework A (fear of mak
 Pattern follows `fixtures/flags.md`. Status legend: **VERIFIED** (primary/authoritative source cited) ·
 **UNVERIFIED** · **OPINION** (judgment, anchored to a verified fact). Fact-checked 2026-07-24 via WebSearch.
 
-## Freshness (copy_bank rule)
+## Freshness
 Iteration 0 (fixture, unposted) used: no-trash-cans, cherry-blossom timing, tourist chains/izakaya, Shibuya
 hotels, direct-flights/layover, JR-Pass/Suica, Narita-vs-Haneda. **This iteration-1 pack shares none of those
 beats** — all 7 mistakes are new. Hook title differs (iteration 0 = option 1 "Things you should NEVER do";
@@ -36,9 +36,9 @@ this = option 2 "Mistakes I made for my 1st Japan trip"). Plug = **Plug B** (ite
    etiquette anchored to the verified regional fact. No change recommended.
 
 ## Plug verbatim-vs-drafted (Plug B)
-Doc source (`content_frameworks.md` Option A, Plug B) rendered with the standing slide conventions:
-- `holicay.com` → **HOLICAY.COM** (CONTRACT: the brand is always HOLICAY.COM on slides).
-- Sentence-final periods dropped, and the doc's trailing `!` on "in one place!" dropped (CONTRACT slide-copy
+Doc source (`CREATIVE.md` Framework A, Plug B) rendered with the standing slide conventions:
+- `holicay.com` → **HOLICAY.COM** (DESIGN.md: the brand is always HOLICAY.COM on slides).
+- Sentence-final periods dropped, and the doc's trailing `!` on "in one place!" dropped (DESIGN.md slide-copy
   rule: no sentence-final periods on slide text; matches how `fixtures/A.json` rendered Plug A). Words otherwise
   verbatim; lowercase voice preserved ("i'm" kept lowercase, per the fixture's own Plug A treatment).
 - Plug B has no CTA/aside paragraph (that was Plug A's "you should try it with this tiktok 😉"), so this plug is

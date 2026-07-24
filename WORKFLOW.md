@@ -1,14 +1,14 @@
 # Project Ana 2.0 — The Workflow
 
 The canonical operating manual. One continuous loop turns a **country + a rotation slot** into a
-**finished framework carousel** (A / B / C1 / C2 per `CONTRACT.md`), delivered to Google Drive and
+**finished framework carousel** (A / B / C / D per `CREATIVE.md` + `DESIGN.md`), delivered to Google Drive and
 logged on the Google Sheet. Any AI coding agent with shell + vision drives it; the **Sheet + Drive
 folder are the front-end** (where the human watches, feeds back, and owns the brand).
 
 > **This is the command reference. Read it top to bottom the first time; after that jump to the stage
 > you need — every stage is independently runnable, so a regen re-enters mid-flow.** The `generate-post`
-> skill *sequences* these stages; it never restates their commands. `CONTRACT.md` +
-> `knowledge/frameworks/content_frameworks.md` own the output spec; this doc owns how you produce it.
+> skill *sequences* these stages; it never restates their commands. `CREATIVE.md` (content wheel) +
+> `DESIGN.md` (visual/build spec) own the output spec; this doc owns how you produce it.
 
 Every stage lists **inputs · command(s) · output · tuning doc**. The `generate-post` skill's stages 0–10
 map onto §1–§11 here one-for-one.
@@ -47,22 +47,22 @@ map onto §1–§11 here one-for-one.
   python3 engine/sheets/sheets.py next-slot --character <key> [--country <Country>] --reserve
   ```
 - **Output:** one line of JSON —
-  `{"id": "<prefix-NN>", "framework": "A|B|C1|C2", "variant": "human|nohuman", "country": "...", "copy_iteration": N, "reserved": true}`.
+  `{"id": "<prefix-NN>", "framework": "A|B|C|D", "variant": "human|nohuman", "country": "...", "copy_iteration": N, "reserved": true}`.
   Everything downstream keys off these five fields.
 - **How the slot is derived (never stored — computed live from the Sheet):**
-  - `framework` cycles **A → B → C1 → C2** by the count of this character's framework-bearing rows.
-  - `variant` alternates **per (account, framework)** from the framework default (**A/B/C1 → human,
-    C2 → nohuman**): even prior count → the default, odd → the other. This is the **human-vs-nohuman A/B
+  - `framework` cycles **A → B → C → D** by the count of this character's framework-bearing rows.
+  - `variant` alternates **per (account, framework)** from the framework default (**A/B/C → human,
+    D → nohuman**): even prior count → the default, odd → the other. This is the **human-vs-nohuman A/B
     test** — the same account posts both over time.
   - `copy_iteration` = the number of prior (framework, country) packs across all accounts + 1 (drives the
-    `copy_bank` freshness rule in §4). Iteration 0 in `copy_bank` is the unposted fixtures; the first real
-    pack is iteration 1.
+    freshness rule in §4 — scan prior packs' `copy.json`). Iteration 0 is the unposted fixtures; the first
+    real pack is iteration 1.
 - `--reserve` appends an atomic **`(building)`** stub row so a teammate running `next-slot` a moment later
   rotates *past* your slot. **An aborted build leaves that stub** — free the number + slot again with:
   ```bash
   python3 engine/sheets/sheets.py post-delete --character <key> --id <prefix-NN>
   ```
-- **Tuning:** the rotation is the durable 2.0 spec (`content_frameworks.md`); do not add a local counter.
+- **Tuning:** the rotation is the durable 2.0 spec (`CREATIVE.md`); do not add a local counter.
 
 ## 3 · Human-variant prerequisite (scene photos)
 
@@ -87,53 +87,53 @@ map onto §1–§11 here one-for-one.
 
 ## 4 · Copy + caption + fact-check
 
-- **Inputs:** the slot (§2). **Load before writing:** `CONTRACT.md` (§copy JSON schema + type system),
-  `knowledge/frameworks/content_frameworks.md` (the option spec for this framework — hook titles, slide
-  map, verbatim plug copy, hashtag + caption formula), `knowledge/copy_bank/<country>/<OPT>.md` (used
-  angles — obey the freshness rule), `knowledge/tuning/06_performance.md` (what is winning),
-  `knowledge/tuning/02_copywriting.md`, `knowledge/voice/humanizer.md`, and the live brand tab:
-  ```bash
-  python3 engine/sheets/sheets.py read --tab "Holicay Brand"
-  ```
-- **Write** `outputs/<key>/<ID - Title>/copy.json` — the schema is `CONTRACT.md §copy JSON schema`.
+- **Inputs:** the slot (§2). **Load before writing:** `DESIGN.md` (§copy JSON schema + type system),
+  `CREATIVE.md` (the content wheel — this framework's spec: hook titles, slide map, verbatim plug copy,
+  hashtag + caption formula, voice, photo direction), `knowledge/tuning/06_performance.md` (what is
+  winning), `knowledge/tuning/02_copywriting.md`, `knowledge/voice/humanizer.md`, and
+  `knowledge/brand/holicay_brand.md` (the standing brand reference — what Holicay is + how to name the
+  use case). **Check freshness** by scanning recent same-character/same-country/same-framework posts under
+  `outputs/<char>/*/copy.json` to avoid repeating angles/places (there is no separate freshness file to maintain).
+- **Write** `outputs/<key>/<ID - Title>/copy.json` — the schema is `DESIGN.md §copy JSON schema`.
   **Lines arrive PRE-BROKEN** in every `lines[]` / `*_lines[]` / `paragraphs[]` array; the renderer
   **never re-wraps**, so break on natural phrase boundaries yourself.
 - **Caption** → `caption.txt`: line 1 = the **hook title verbatim**, then an essay **one paragraph per
   slide**, then the hashtag formula `#{country}travel #{country}tips #travel{country} #{country}trip
-  #{country}`. **C1 exception:** the comment-keyword CTA (`comment "{COUNTRY}" and i'll send you the full
+  #{country}`. **C exception:** the comment-keyword CTA (`comment "{COUNTRY}" and i'll send you the full
   itinerary`) is the **first body line**, under the title.
 - **Fact-check** every price / hour / closure / transit rule against the **primary source** (the venue's
   or operator's own site) via `WebSearch` + `WebFetch` — never a listicle. Opinions ("overrated") are
   judgment calls, not fetched, but **anchor each to a verified fact**.
 - **Flag** what you could not verify → `outputs/<key>/<ID - Title>/flags.md` (verbatim-vs-drafted +
   unverified items), following the `fixtures/flags.md` pattern. Nothing unverified is buried in the copy.
-- **Freshness / paraphrase (copy_bank rule):** the next iteration for the same country × framework must
+- **Freshness / paraphrase:** the next iteration for the same country × framework must
   use **new angles / places** unless the run explicitly says `same`; when reusing a pack across accounts,
-  **paraphrase** (same places, reworded lines) rather than shipping identical text.
+  **paraphrase** (same places, reworded lines) rather than shipping identical text. Judge freshness by
+  scanning recent same-country/same-framework posts under `outputs/<char>/*/copy.json`.
 - **Output:** `copy.json` + `caption.txt` + `flags.md`.
-- **Tuning:** `02_copywriting.md`, `voice/humanizer.md`, `content_frameworks.md §Sourcing the copy`.
+- **Tuning:** `02_copywriting.md`, `voice/humanizer.md`, `CREATIVE.md §Sourcing the copy`.
 
 ## 5 · Source + curate photos
 
 - **Inputs:** the `copy.json` photo slugs (`scenic_photo`, `top_photo`, `bottom_photo`, `photo`, `cells`,
   `icons`). **Plan the slugs first** in the `fixtures/places.json` shape (slug → subject, category, query,
   geometry).
-- **Source** (Google Places user photos are the **prioritized** UGC source per `CONTRACT.md` Gate 9):
+- **Source** (Google Places user photos are the **prioritized** UGC source per `DESIGN.md` Gate 9):
   ```bash
   python3 engine/source/brightdata.py places --query "<venue>" --subject <country/city> --category <visit|eat|shop|...> --download 4 --gl <cc>
   python3 engine/source/brightdata.py gimg   --query "<specific shot>" --subject <country/city> --download 3
   python3 engine/source/brightdata.py ig     --query "<hashtag|venue>" --subject <country/city> --category <cat> --download 5
   ```
-  **C2-only** helper assets:
+  **D-only** helper assets:
   ```bash
   python3 engine/source/app_icons.py "DeepL" "Google Translate"      # real app icons -> media/graded/app_<slug>.png
   node    engine/source/route_map_shot.js                            # the pinned route map -> media/graded/route_map.png
   ```
   Downloads land in `media/library/<subject>/` and auto-append attribution rows to `media/manifest.json`.
-- **Curate by VISION against `CONTRACT.md` Gate 9 (UGC-framing):** every **body** photo must read as a
+- **Curate by VISION against `DESIGN.md` Gate 9 (UGC-framing):** every **body** photo must read as a
   real visitor's handheld phone shot. Reject drone/aerial, tripod long-exposure, editorial symmetry,
   HDR-postcard grades, anything staged. Prefer a UGC frame over a Google-Images one when both pass.
-  **Postcard exemption:** the scenic **cover / ending** photos and the **A / B / C2 plug `bg_photo`
+  **Postcard exemption:** the scenic **cover / ending** photos and the **A / B / D plug `bg_photo`
   scenic** are decorative brand backdrops — exempt from Gate 9.
 - **Install each pick with the `install` verb** (copies the file to `media/graded/<slug>`, writes the
   slug-keyed manifest row with attribution carried over, records `used_in`, and deletes the library
@@ -155,7 +155,7 @@ map onto §1–§11 here one-for-one.
   alternate query or fall back to `places` / `ig`.
 - **Output:** `media/graded/<slug>.jpg` for every slug + `sources.md` + confirmed manifest rows.
 - **Tuning:** `knowledge/tuning/03_sourcing.md`, `knowledge/frameworks/photo_sourcing.md`,
-  `engine/source/SOURCING_STATUS.md` (live backend status), `CONTRACT.md` Gate 9.
+  `engine/source/SOURCING_STATUS.md` (live backend status), `DESIGN.md` Gate 9.
 
 ## 6 · Render
 
@@ -169,7 +169,7 @@ map onto §1–§11 here one-for-one.
 - **Output:** every slide at **1080×1920** under `_work/render/`. Cover + save render **twice** —
   `NN_cover_human.png` / `NN_cover_nohuman.png` (and the save slide likewise); `--contact` also writes
   `_work/render/_contact.png`, the labeled review montage.
-- **Tuning:** `CONTRACT.md §Type system` + the framework's own design block. Templates + type scale are
+- **Tuning:** `DESIGN.md §Type system` + the framework's own design block. Templates + type scale are
   **locked** — do not edit `build.js`.
 
 ## 7 · Assemble the chosen variant
@@ -180,32 +180,32 @@ map onto §1–§11 here one-for-one.
   per `copy.json` slide (e.g. `variant=human` → `_work/render/01_cover_human.png` becomes
   `final/01_cover.png`). Keep `caption.txt` alongside.
 - **Output:** `outputs/<key>/<ID - Title>/final/NN_<role>.png` (the deliverable) + `caption.txt`.
-- **Tuning:** naming spec = `CONTRACT.md §Canvas + naming`.
+- **Tuning:** naming spec = `DESIGN.md §Canvas + naming`.
 
 ## 8 · Vision-review the contact sheet
 
 - **Inputs:** `_work/render/_contact.png`.
-- **Do:** `Read` the contact sheet and check it against **`CONTRACT.md` QC gates 1–8** — canvas + centered
-  text, per-line hugging boxes (no full-width bars), no broken orphan-word boxes, C1 divider name legible
-  on the seam, C2 pills + rounded font, split ❌/✅ over the right halves, the plug's specced treatment,
+- **Do:** `Read` the contact sheet and check it against **`DESIGN.md` QC gates 1–8** — canvas + centered
+  text, per-line hugging boxes (no full-width bars), no broken orphan-word boxes, C divider name legible
+  on the seam, D pills + rounded font, split ❌/✅ over the right halves, the plug's specced treatment,
   emoji + fonts actually loaded (no tofu / fallback serif). Fix copy or photos and re-render (§6) on any
   miss. This is the vision half QC that the mechanical gate cannot do.
 - **Output:** a deck that passes gates 1–8 by eye.
-- **Tuning:** `CONTRACT.md §QC gates`.
+- **Tuning:** `DESIGN.md §QC gates`.
 
 ## 9 · Hard QC gate
 
 - **Inputs:** the assembled post folder + its framework.
 - **Command:**
   ```bash
-  node engine/qc/qc_gate.mjs "outputs/<key>/<ID - Title>" --framework <A|B|C1|C2>
+  node engine/qc/qc_gate.mjs "outputs/<key>/<ID - Title>" --framework <A|B|C|D>
   ```
 - **Output:** JSON `{pass, ok[], warn[], issues[]}` + human-readable lines. **Exit 0 = pass · 1 = fail ·
   2 = bad usage.** It checks copy.json parses + matches `--framework`, `final/` names + count + contiguity
   vs `copy.json`, every PNG exactly 1080×1920, `caption.txt` non-empty and **dash-free**, `flags.md`
   present, and that every slug resolves under `media/graded` (mockup: graded or brand) with a manifest row
   (char photos under `chars/`). **Never skip it; fix until exit 0.**
-- **Tuning:** the gate encodes `CONTRACT.md §QC gates` — a failure means the deck, not the gate, is wrong.
+- **Tuning:** the gate encodes `DESIGN.md §QC gates` — a failure means the deck, not the gate, is wrong.
 
 ## 10 · Deliver to Drive + log the Sheet
 
@@ -219,10 +219,10 @@ map onto §1–§11 here one-for-one.
     [--notes "<context for the human>"]
   ```
   `drive_sync --post` uploads `final/*.png` + `caption.txt` + `copy.json` + `flags.md` + `sources.md` and
-  **prints the Drive folder link** (paste it into `--folder`). Then **append the `iteration N` entry** to
-  `knowledge/copy_bank/<country>/<OPT>.md` (newest at the bottom).
+  **prints the Drive folder link** (paste it into `--folder`). The delivered post's own `copy.json` is the
+  freshness record for the next iteration (there is no separate freshness file to maintain).
 - **Output:** the post on Drive under `<Character>/Tiktok/<ID - Title>/`, the Sheet row filled (the
-  `(building)` stub is upserted in place), and the copy_bank history advanced.
+  `(building)` stub is upserted in place); the delivered `copy.json` becomes the freshness record for next time.
 - **Note:** delivery + logging **auto-run on completion** (no manual go-ahead) — the Drive folder + Sheet
   are the review surface, and the human still posts to TikTok, so this is not auto-publishing. Sweep any
   built-but-undelivered post with `python3 engine/sheets/sheets.py deliver-missing`.
@@ -258,7 +258,7 @@ Then eyeball the Dashboard / `python3 engine/sheets/sheets.py stats-summary`. Fu
 ## Feedback — propagate the GREEN cells
 
 GREEN cells are the human's review channel (each fact tab's **Human Feedback** column + the **Connectors**
-and **Holicay Brand** Notes columns). Poll → classify → edit the ONE governing doc → log → clear:
+Notes column). Poll → classify → edit the ONE governing doc → log → clear:
 ```bash
 python3 engine/sheets/sheets.py feedback-poll
 python3 engine/sheets/sheets.py feedback-clear --tab <ana|chloe|hannah|brand|connectors> --id <id> --note "what I changed"
@@ -275,7 +275,7 @@ python3 engine/sheets/sheets.py stats-summary --json
 python3 engine/sheets/sheets.py read --tab <Ana|Chloe|Hannah>
 ```
 Join stats to frameworks / variants / countries / copy angles, rewrite
-`knowledge/tuning/06_performance.md` (evidence = post IDs), and PROPOSE any `CONTRACT` / frameworks edits
+`knowledge/tuning/06_performance.md` (evidence = post IDs), and PROPOSE any `DESIGN.md` / `CREATIVE.md` edits
 to the human. The **human-vs-nohuman verdict** lives here. Full method: `analyze` skill.
 
 ---
@@ -287,8 +287,8 @@ to the human. The **human-vs-nohuman verdict** lives here. Full method: `analyze
 - **Never skip `qc_gate.mjs`.** A draft ships only at exit 0.
 - **No em/en dashes anywhere** in captions or on slides. (Docs may use them; post copy never does.)
 - **UGC Gate 9 on every body photo** — real-visitor handheld framing; reject drone / tripod / editorial /
-  HDR-postcard / staged. Scenic covers, endings, and the A/B/C2 plug `bg_photo` are the only exemptions.
-- **Plug copy is verbatim** from `content_frameworks.md` — the lowercase, emoji, and casual misspellings
+  HDR-postcard / staged. Scenic covers, endings, and the A/B/D plug `bg_photo` are the only exemptions.
+- **Plug copy is verbatim** from `CREATIVE.md` — the lowercase, emoji, and casual misspellings
   ("alot", "revisted") are the voice; never clean them up.
 - **Lines arrive pre-broken** in `copy.json`; the renderer never re-wraps. Break on phrase boundaries.
 - **GREEN cells belong to the human** — read and clear only; never write into them.
@@ -301,6 +301,6 @@ to the human. The **human-vs-nohuman verdict** lives here. Full method: `analyze
   `media/brand/` + `manifest.json` (one slug-keyed row per kept asset).
 - **Never nest this repo inside another git repo** — credential discovery walks up to the `.gitignore`
   sentinel, so a parent repo would break `keys.env` / Playwright resolution.
-- **Don't edit `engine/`** (finished + verified) or the locked `CONTRACT.md` / `content_frameworks.md`
-  design spec as a side effect of a post — those change only through `propagate-feedback` / `analyze` with
+- **Don't edit `engine/`** (finished + verified) or the locked `DESIGN.md` / `CREATIVE.md`
+  spec as a side effect of a post — those change only through `propagate-feedback` / `analyze` with
   human sign-off.

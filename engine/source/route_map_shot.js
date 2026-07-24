@@ -1,5 +1,5 @@
 // Screenshot a REAL pinned Google Maps route (Tokyo -> Hakone -> Kyoto -> Osaka) at 1080x1920
-// for the C2 "Route & Days" slide. Uses the Maps Embed API (free) with the PLACES key from
+// for the D "Route & Days" slide. Uses the Maps Embed API (free) with the PLACES key from
 // keys.env; falls back to the public maps directions page if the embed errors.
 // Usage: node engine/source/route_map_shot.js [--out media/graded/route_map.png]
 const path = require('path');

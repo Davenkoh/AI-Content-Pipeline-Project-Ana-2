@@ -6,7 +6,7 @@ outfit you asked for. Drive stays canonical: the push uses `--prune`, so the Dri
 an EXACT mirror of the local one (numbering + deletions included).
 
   python3 engine/qc/file_inbox.py                 # file all inbox images -> Wardrobe References/, numbered, push to Drive
-  python3 engine/qc/file_inbox.py --to brand      # file into knowledge/brand/ instead
+  python3 engine/qc/file_inbox.py --to brand      # file into media/brand/logos/ instead
   python3 engine/qc/file_inbox.py --renumber      # also renumber existing non-numeric files in the target (normalize)
   python3 engine/qc/file_inbox.py --no-push       # file locally only; skip the Drive mirror+prune
 """
@@ -20,7 +20,7 @@ import sys
 # name -> (local target dir = also the mirror source, Drive nested dest under the shared root)
 TARGETS = {
     "wardrobe": ("character/_shared/Wardrobe References", "_shared/Wardrobe References"),
-    "brand":    ("knowledge/brand", "Holicay Brand"),
+    "brand":    ("media/brand/logos", "media/brand/logos"),
 }
 IMG_EXT = (".png", ".jpg", ".jpeg", ".webp")
 

@@ -7,17 +7,16 @@ tab and column: it generates the banded headers, the colours, the cell-notes, th
 dropdowns, AND the self-documenting Dictionary tab. Change a column in SPEC and
 everything else follows.
 
-2.0 is a FRAMEWORK-POST machine (A / B / C1 / C2 per CONTRACT.md). The 1.0 technique-
+2.0 is a FRAMEWORK-POST machine (A / B / C / D per DESIGN.md). The 1.0 technique-
 library tabs are gone — every post is one of four frameworks in a fixed rotation, each
 rendered in a `human` or `nohuman` variant. The rotation is DERIVED from the character's
 own fact tab (never a local counter) via `next-slot`; the whole Sheet is the source of truth.
 
 Reading conventions baked into the sheet
   • Each tab is split into visually-banded SECTIONS so the "meat" is obvious vs the
-    stats / metadata: POST CREATION=coral, STATS=navy, AI METADATA=grey, and
-    HUMAN INPUT=GREEN. Anything GREEN (the Human Feedback column, the Connectors
-    Notes column, or the whole Holicay Brand tab) is yours to fill; the AI only
-    reads + clears it when you ask.
+    stats / metadata: POST CREATION=coral, STATS=navy, and HUMAN INPUT=GREEN.
+    Anything GREEN (the Human Feedback column or the Connectors Notes column) is
+    yours to fill; the AI only reads + clears it when you ask.
   • Each character (Ana, Chloe, Hannah, …) has its OWN fact tab (one row per post)
     carrying the framework/variant it ran + that post's own stats. Rotation, the
     Dashboard and the analyze summary all read across these fact tabs — there are
@@ -25,8 +24,9 @@ Reading conventions baked into the sheet
 
 Tabs
   Ana, Chloe, Hannah, …   one row per post, per character (the per-character fact tables).
-  Holicay Brand           GREEN — you own this; the AI reads it.
   Connectors              the integrations/credentials register (Notes = GREEN, yours).
+  Accounts                per-character logins / VPN region (GREEN — you own it; the AI reads it).
+  Content                 AI-maintained framework reference, mirrored from CREATIVE.md (read-only).
   Dashboard               live formulas: pipeline state + performance analytics (dashboard-init).
   Dictionary              auto-generated reference for every tab + column.
 
@@ -36,13 +36,14 @@ Common commands
   python3 sheets.py next-slot --character ana [--country Vietnam] [--reserve]   # the next framework/variant slot
   python3 sheets.py next-number --character ana [--reserve]                     # just the next post number
   python3 sheets.py post-upsert --character ana --id tt-28 --title "..." --framework A --variant human \
-        --country Vietnam --iteration 1 --folder "<link>" --caption "..." --notes "..."
+        --country Vietnam --iteration 1 --folder "<link>" --notes "..."
   python3 sheets.py post-set --character ana --id tt-28 --post-link "<url>"
   python3 sheets.py post-stats --character ana --id tt-28    # scrape the live post's metrics (needs Post Link)
   python3 sheets.py post-stats --character ana --all
   python3 sheets.py deliver-missing             # push built-but-undelivered posts -> Drive, record the link
   python3 sheets.py dashboard-init              # (re)build the live Dashboard tab
   python3 sheets.py connectors-init             # seed/refresh the Connectors register
+  python3 sheets.py content-sync                # mirror CREATIVE.md's framework table into the Content tab
   python3 sheets.py stats-summary [--json]      # performance rollups for the analyze skill
   python3 sheets.py read --tab Ana              # -> JSON rows
   python3 sheets.py feedback-poll               # every GREEN cell with content
@@ -53,11 +54,11 @@ import argparse, glob, json, os, subprocess, sys, datetime
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
 # ── shared tab names ──────────────────────────────────────────────────────────
-BRAND_TAB = "Holicay Brand"
-CONN_TAB  = "Connectors"
-ACCT_TAB  = "Accounts"
-DASH_TAB  = "Dashboard"
-DICT_TAB  = "Dictionary"
+CONN_TAB    = "Connectors"
+ACCT_TAB    = "Accounts"
+CONTENT_TAB = "Content"
+DASH_TAB    = "Dashboard"
+DICT_TAB    = "Dictionary"
 
 # Repo doc the Dictionary tab points newcomers to (the full 2.0 blueprint, on GitHub).
 BLUEPRINT_URL = "https://github.com/Davenkoh/Project-Ana-2"
@@ -132,9 +133,9 @@ HUMAN_NOTE = ("GREEN = your input. Write here; the AI reads it when you ask, act
 AI_NOTE    = "AI-only bookkeeping. You don't need to touch this."
 
 # ── framework rotation constants (the durable 2.0 spec) ───────────────────────
-FRAMEWORKS = ["A", "B", "C1", "C2"]
+FRAMEWORKS = ["A", "B", "C", "D"]
 VARIANTS   = ["human", "nohuman"]
-VARIANT_DEFAULT = {"A": "human", "B": "human", "C1": "human", "C2": "nohuman"}
+VARIANT_DEFAULT = {"A": "human", "B": "human", "C": "human", "D": "nohuman"}
 
 # ── dropdown options ──────────────────────────────────────────────────────────
 # Framework + Variant dropdowns are attached to every character fact tab (built below).
@@ -151,20 +152,19 @@ def C(name, section, who, desc, example):
 
 def _fact_spec():
     """The per-character fact table (one row per post). Same schema for every character.
-    Columns A–T. Bands: POST CREATION (coral) ID→Notes · STATS (navy) Post Link→Stats Last
-    Updated · HUMAN INPUT (green) Human Feedback · AI METADATA (grey) Metadata."""
+    Columns A–R. Bands: POST CREATION (coral) ID→Notes · STATS (navy) Post Link→Stats Last
+    Updated · HUMAN INPUT (green) Human Feedback."""
     return {
         "sections": {"meat": "POST CREATION", "stats": "STATS",
-                     "human": "HUMAN INPUT", "ai": "AI METADATA"},
+                     "human": "HUMAN INPUT"},
         "columns": [
             C("ID", "meat", "AI", "Unique post id (continues each account's 1.0 numbering). Presence here = a planned/built post.", "tt-28"),
             C("Country", "meat", "AI", "The content country this post targets.", "Vietnam"),
-            C("Framework", "meat", "AI", "Which content framework this post runs (A/B/C1/C2). Empty = a 1.0-era marker row (ignored by rotation).", "A"),
+            C("Framework", "meat", "AI", "Which content framework this post runs (A/B/C/D). Empty = a 1.0-era marker row (ignored by rotation).", "A"),
             C("Variant", "meat", "AI", "human = character-in-scene cover+ending · nohuman = pure scenic, same text.", "human"),
             C("Copy Iteration", "meat", "AI", "Nth time this (Framework, Country) copy has been run across ALL characters.", "1"),
             C("Title", "meat", "AI", "Post title / the local outputs/<char>/ folder name AND the Drive folder name.", "28 - Hidden Gems in Vietnam"),
             C("Output Folder", "meat", "AI", "Drive link to the built carousel.", "https://drive.google.com/drive/folders/..."),
-            C("Caption", "meat", "AI", "The caption posted with the carousel.", "saving you the research for vietnam ..."),
             C("Date Created", "meat", "AI", "When the post was built.", "2026-07-23"),
             C("Notes", "meat", "AI", "Plain-English context the HUMAN should read about this post.", "first framework-A run for Vietnam"),
             C("Post Link", "stats", "AI + Human", "The live TikTok URL once posted. Drop it here; presence = 'posted'. Feeds the stats scraper.", "https://www.tiktok.com/@user/photo/123"),
@@ -176,23 +176,6 @@ def _fact_spec():
             C("Save", "stats", "AI", "Saves / bookmarks (scraped).", "300"),
             C("Stats Last Updated", "stats", "AI", "When the stats above were last refreshed.", "2026-07-26 18:00"),
             C("Human Feedback", "human", "Human", "YOUR steer on this post. The AI reads it when you ask, acts, and clears it.", "cover felt flat, try a bolder hook"),
-            C("Metadata", "ai", "AI", "AI-only bookkeeping (e.g. when feedback was processed, slot-reservation stamps).", "feedback processed 2026-07-25"),
-        ],
-    }
-
-
-def _brand_spec():
-    # whole tab is human-owned -> every section is "human" (all green). Kept verbatim from 1.0.
-    return {
-        "sections": {"human": "HOLICAY BRAND — YOU OWN THIS TAB (the AI reads it)"},
-        "columns": [
-            C("ID", "human", "Human", "Row id.", "B001"),
-            C("Brand Feature", "human", "Human", "A Holicay feature.", "AI trip planner"),
-            C("Use Case", "human", "Human", "The job the feature does (name the use case, not the feature).", "auto-build a day-by-day itinerary"),
-            C("Description", "human", "Human", "Plain description for the AI to ground copy in.", "describe your trip and it drafts a plan you can edit"),
-            C("Media Asset Link", "human", "Human", "Drive/asset link for screenshots/demos.", "https://drive.google.com/.../planner.png"),
-            C("Funnel Fit", "human", "Human", "Which funnels this feature suits.", "F4, F5"),
-            C("Notes", "human", "Human", "Anything else the AI should know.", "emphasize the use case, never say 'download'"),
         ],
     }
 
@@ -235,12 +218,28 @@ def _accounts_spec():
     }
 
 
+def _content_spec():
+    # AI-maintained reference tab: a read-only mirror of CREATIVE.md's framework table (refreshed by
+    # `content-sync`). Every column is AI-owned — there is NO green/human column. Banding follows the
+    # connectors register: one coral "meat" band across all columns.
+    return {
+        "sections": {"meat": "CONTENT — AI-maintained framework reference (mirrors CREATIVE.md; read-only)"},
+        "columns": [
+            C("Framework", "meat", "AI", "Framework id, mirrored from CREATIVE.md.", "A"),
+            C("Name", "meat", "AI", "The framework's short name.", "Hidden Gems"),
+            C("What it is", "meat", "AI", "One-line description of what the framework does.", "curated list of under-the-radar spots"),
+            C("Status", "meat", "AI", "Lifecycle status as recorded in CREATIVE.md.", "active"),
+            C("Source", "meat", "AI", "Where this row was synced from.", "CREATIVE.md"),
+        ],
+    }
+
+
 # Build SPEC: one fact tab per character (roster order), then the shared tabs. The Dashboard is
 # NOT in SPEC — it is a derived analytics view written by `dashboard-init`.
 SPEC = {c["tab"]: _fact_spec() for c in _characters().values()}
-SPEC[BRAND_TAB] = _brand_spec()
-SPEC[CONN_TAB]  = _connectors_spec()
-SPEC[ACCT_TAB]  = _accounts_spec()
+SPEC[CONN_TAB]    = _connectors_spec()
+SPEC[ACCT_TAB]    = _accounts_spec()
+SPEC[CONTENT_TAB] = _content_spec()
 
 # derived: HEADERS[tab] = ordered column names; HEADER_ROWS = 2 for all SPEC tabs
 HEADERS = {tab: [c["name"] for c in s["columns"]] for tab, s in SPEC.items()}
@@ -329,15 +328,6 @@ def _ws(sh, title):
         if w.title == title:
             return w
     return None
-
-
-def _next_id(ws, prefix):
-    """Largest prefix+NNN in column A, +1 (3-digit; used for Brand B-ids)."""
-    n = 0
-    for v in ws.col_values(1):
-        if v.startswith(prefix) and v[len(prefix):].isdigit():
-            n = max(n, int(v[len(prefix):]))
-    return f"{prefix}{n + 1:03d}"
 
 
 def _next_post_id(ws, prefix):
@@ -465,8 +455,8 @@ def _format_tab(sh, ws, tab, cols, runs):
 
 
 def _width(c):
-    long_text = {"Caption", "Human Feedback", "Notes", "Metadata", "Description",
-                 "Use Case", "Purpose", "Account / identity", "Plan & cost", "Status",
+    long_text = {"Human Feedback", "Notes", "What it is", "Purpose",
+                 "Account / identity", "Plan & cost", "Status",
                  "Auth (env var / credential file)"}
     ids = {"ID", "Framework", "Variant", "Copy Iteration"}
     if c["name"] in ids:
@@ -489,12 +479,13 @@ def _read_rows(sh, tab):
 
 
 # ── commands: build / migrate / dictionary ───────────────────────────────────
-# 2.0 starts from a fresh Sheet, so there is no legacy data to remap. These maps are
-# intentionally EMPTY (migrate-schema still realigns a hand-edited sheet onto the SPEC by
-# column NAME + rebuilds the banded layout). Populate them only if a real migration arises.
+# 2.0 starts from a fresh Sheet, so there is little legacy data to remap. TAB_RENAMES / RENAMES stay
+# EMPTY (migrate-schema still realigns a hand-edited sheet onto the SPEC by column NAME + rebuilds the
+# banded layout). DROPS retires the Caption + Metadata columns on every fact tab so an already-built
+# live tab realigns onto the current 18-column spec (all other data preserved, matched by NAME).
 TAB_RENAMES = {}          # legacy whole-worksheet renames (old title -> new title)
 RENAMES = {}              # per-tab {old col -> new col}
-DROPS = {}                # per-tab {cols to discard}
+DROPS = {t: {"Caption", "Metadata"} for t in _fact_tabs()}   # per-tab {cols to discard}
 
 
 def cmd_init(_):
@@ -510,6 +501,10 @@ def cmd_init(_):
         _build_dashboard(sh)
     except Exception as e:
         print(f"[sheets] dashboard build skipped: {e}", file=sys.stderr)
+    try:
+        cmd_content_sync(None)
+    except Exception as e:
+        print(f"[sheets] content sync skipped: {e}", file=sys.stderr)
     print("[sheets] init OK — tabs: " + ", ".join(list(SPEC) + [DASH_TAB, DICT_TAB]))
     print(f"  https://docs.google.com/spreadsheets/d/{_sheet_id()}/edit")
 
@@ -583,8 +578,8 @@ def _build_dictionary(sh):
     SUB = ["Column", "Who fills it", "Meaning", "Example value"]
     rows, heads, subs = [], [], []             # heads/subs = 0-based row indices to format
     rows.append(["DICTIONARY — what every tab + column means.  GREEN = human input (you fill "
-                 "it; the AI reads & clears it). The Holicay Brand tab is entirely yours; the "
-                 "Connectors Notes column is yours.", "", "", ""])
+                 "it; the AI reads & clears it). The Connectors Notes column and the whole Accounts "
+                 "tab are yours; the Content tab is an AI-maintained mirror of CREATIVE.md (read-only).", "", "", ""])
     rows.append([f'=HYPERLINK("{BLUEPRINT_URL}","START HERE  →  the full Project Ana 2.0 system '
                  '(frameworks · engine · data model · workflow · how to run it) — on GitHub")',
                  "", "", ""])
@@ -655,8 +650,8 @@ def cmd_post_upsert(a):
     headers = HEADERS[char["tab"]]
     fields = {"ID": a.id, "Country": a.country or "", "Framework": a.framework or "",
               "Variant": a.variant or "", "Copy Iteration": a.iteration or "",
-              "Title": a.title or "", "Output Folder": a.folder or "", "Caption": a.caption or "",
-              "Notes": a.notes or "", "Metadata": a.metadata or ""}
+              "Title": a.title or "", "Output Folder": a.folder or "",
+              "Notes": a.notes or ""}
     row = _row_for_id(ws, a.id)
     if row is None:
         fields["Date Created"] = _today()
@@ -680,9 +675,9 @@ def cmd_post_set(a):
     if row is None:
         sys.exit(f"[sheets] no {char['name']} row for {a.id}; post-upsert it first")
     pairs = {}
-    for arg, col in [("title", "Title"), ("folder", "Output Folder"), ("caption", "Caption"),
+    for arg, col in [("title", "Title"), ("folder", "Output Folder"),
                      ("country", "Country"), ("framework", "Framework"), ("variant", "Variant"),
-                     ("iteration", "Copy Iteration"), ("notes", "Notes"), ("metadata", "Metadata"),
+                     ("iteration", "Copy Iteration"), ("notes", "Notes"),
                      ("post_link", "Post Link"), ("posting_date", "Posting Date"),
                      ("views", "Views"), ("likes", "Likes"), ("comments", "Comments"),
                      ("share", "Share"), ("save", "Save")]:
@@ -712,7 +707,7 @@ def compute_next_slot(char_rows, all_rows, country):
     Returns {framework, variant, copy_iteration}. (id + country are decided by the caller.)
       framework      = FRAMEWORKS[len(my framework-bearing rows) % 4]
       variant        = default(framework) if that framework's prior count is even, else the other
-                       (defaults: A/B/C1 -> human, C2 -> nohuman)
+                       (defaults: A/B/C -> human, D -> nohuman)
       copy_iteration = count of (framework, country) rows across ALL fact tabs + 1
     """
     mine = [r for r in char_rows if (r.get("Framework") or "").strip()]
@@ -731,8 +726,9 @@ def cmd_next_slot(a):
     counter). Prints JSON {id, framework, variant, country, copy_iteration, reserved}.
 
     --reserve appends a stub row that atomically CLAIMS the slot on the shared Sheet (ID, Country,
-    Framework, Variant, Copy Iteration, Title="(building)", Date Created, Metadata="reserved <ts>"),
-    so a teammate running this a moment later sees the claim and rotates past it. Delivery
+    Framework, Variant, Copy Iteration, Title="(building)", Date Created), so a teammate running
+    this a moment later sees the claim and rotates past it. The filled Framework/Variant/Country/
+    Copy Iteration plus Title="(building)" ARE the claim marker. Delivery
     (post-upsert, same id) fills the row in. An ABORTED build leaves the stub — clean it with
     `post-delete --character <k> --id <id>` so the number + rotation slot free up again."""
     char = _char_for(a.character)
@@ -753,8 +749,7 @@ def cmd_next_slot(a):
         headers = HEADERS[char["tab"]]
         stub = {"ID": pid, "Country": country, "Framework": slot["framework"],
                 "Variant": slot["variant"], "Copy Iteration": slot["copy_iteration"],
-                "Title": "(building)", "Date Created": _today(),
-                "Metadata": f"reserved {_iso_ts()}"}
+                "Title": "(building)", "Date Created": _today()}
         ws.append_row([stub.get(h, "") for h in headers],
                       value_input_option="USER_ENTERED", table_range="A2")
         out["reserved"] = True
@@ -776,7 +771,7 @@ def cmd_next_number(a):
     if getattr(a, "reserve", False) and _row_for_id(ws, pid) is None:
         headers = HEADERS[char["tab"]]
         rowvals = {"ID": pid, "Title": a.title or "(building)",
-                   "Date Created": _today(), "Metadata": f"reserved {_iso_ts()}"}
+                   "Date Created": _today()}
         ws.append_row([rowvals.get(h, "") for h in headers],
                       value_input_option="USER_ENTERED", table_range="A2")
         reserved = True
@@ -840,22 +835,6 @@ def cmd_deliver_missing(a):
                                 value_input_option="USER_ENTERED")
             delivered += 1
     print(f"[deliver-missing] done — {'would deliver' if dry else 'delivered'} {delivered}, {already} already on Drive")
-
-
-# ── commands: brand ──────────────────────────────────────────────────────────
-def cmd_brand_list(_):
-    print(json.dumps(_read_rows(_open(), BRAND_TAB), ensure_ascii=False, indent=2))
-
-
-def cmd_brand_add(a):
-    sh = _open()
-    ws = _ws(sh, BRAND_TAB) or _ensure_tab(sh, BRAND_TAB)
-    bid = a.id or _next_id(ws, "B")
-    row = {"ID": bid, "Brand Feature": a.feature or "", "Use Case": a.use_case or "",
-           "Description": a.desc or "", "Media Asset Link": a.asset or "",
-           "Funnel Fit": a.funnel_fit or "", "Notes": a.notes or ""}
-    ws.append_row([row.get(h, "") for h in HEADERS[BRAND_TAB]], value_input_option="USER_ENTERED")
-    print(f"[sheets] brand {bid} added")
 
 
 # ── commands: connectors register ────────────────────────────────────────────
@@ -927,11 +906,81 @@ def cmd_connectors_init(_):
     _seed_connectors(_open())
 
 
+# ── commands: content reference (read-only mirror of CREATIVE.md) ────────────
+def _is_sep_cells(cells):
+    """True if every cell is a markdown table separator (only -, :, spaces), e.g. |---|:--:|."""
+    return bool(cells) and all(c.strip() != "" and set(c) <= set("-: ") for c in cells)
+
+
+def _parse_frameworks_table(md):
+    """Return the framework rows from the markdown table under the '## Frameworks' heading:
+    a list of [id, name, what_it_is, status]. Skips the header + separator rows. Returns None
+    when there is no '## Frameworks' section at all (vs [] for a heading with no table rows)."""
+    lines = md.splitlines()
+    start = None
+    for i, ln in enumerate(lines):
+        if ln.strip().lower().startswith("## frameworks"):
+            start = i + 1
+            break
+    if start is None:
+        return None
+    rows, in_table = [], False
+    for ln in lines[start:]:
+        s = ln.strip()
+        if s.startswith("## "):                  # next top-level section -> the table is done
+            break
+        if not s.startswith("|"):
+            if in_table:                         # a blank / prose line ends the table
+                break
+            continue                             # skip any prose between the heading and the table
+        in_table = True
+        cells = [c.strip() for c in s.strip("|").split("|")]
+        if _is_sep_cells(cells):                 # |---|---|...| separator row
+            continue
+        if cells and cells[0].strip().lower() in ("id", "framework"):   # header row
+            continue
+        rows.append((cells + ["", "", "", ""])[:4])
+    return rows
+
+
+def cmd_content_sync(a):
+    """Mirror CREATIVE.md's '## Frameworks' table into the read-only Content tab (one row per
+    framework: Framework=ID, Name, What it is, Status, Source='CREATIVE.md'). AI-maintained
+    reference — no human/green column. If CREATIVE.md is absent it's a clean no-op (exit 0)."""
+    path = os.path.join(_root(), "CREATIVE.md")
+    if not os.path.exists(path):
+        print(f"[sheets] content-sync: no CREATIVE.md at {path} — nothing to sync"); return
+    with open(path, encoding="utf-8") as f:
+        md = f.read()
+    parsed = _parse_frameworks_table(md)
+    if parsed is None:
+        print("[sheets] content-sync: CREATIVE.md has no '## Frameworks' table — nothing to sync"); return
+    sh = _open()
+    ws = _ws(sh, CONTENT_TAB) or _ensure_tab(sh, CONTENT_TAB)
+    headers = HEADERS[CONTENT_TAB]
+    out = []
+    for fid, name, what, status in parsed:
+        rec = {"Framework": fid, "Name": name, "What it is": what,
+               "Status": status, "Source": "CREATIVE.md"}
+        out.append([rec.get(h, "") for h in headers])
+    old_body = max(0, len(ws.get_all_values()) - HEADER_ROWS)
+    end = _a1col(len(headers) - 1)
+    updates = []
+    if out:
+        updates.append({"range": f"A3:{end}{2 + len(out)}", "values": out})
+    if old_body > len(out):                      # blank any surplus rows left by a previous, longer sync
+        blanks = [[""] * len(headers) for _ in range(old_body - len(out))]
+        updates.append({"range": f"A{3 + len(out)}:{end}{2 + old_body}", "values": blanks})
+    if updates:
+        ws.batch_update(updates, value_input_option="USER_ENTERED")
+    print(f"[sheets] content-sync: {len(out)} framework row(s) synced to the {CONTENT_TAB} tab from CREATIVE.md")
+
+
 # ── commands: human feedback (every GREEN cell) ──────────────────────────────
-# GREEN feedback channels: each fact tab's "Human Feedback" column, the Connectors "Notes"
-# column, and the Holicay Brand "Notes" column. _feedback_col picks the right one per tab.
+# GREEN feedback channels: each fact tab's "Human Feedback" column and the Connectors "Notes"
+# column. _feedback_col picks the right one per tab.
 FEEDBACK_TABS = {**{c["key"]: c["tab"] for c in _characters().values()},
-                 "brand": BRAND_TAB, "connectors": CONN_TAB}
+                 "connectors": CONN_TAB}
 
 
 def _feedback_col(tab):
@@ -971,13 +1020,9 @@ def cmd_feedback_clear(a):
     if row is None:
         sys.exit(f"[sheets] no {a.id} in {tab}")
     ups = [{"range": f"{_a1col(headers.index(col))}{row}", "values": [[""]]}]
-    stamp = (f": {a.note}" if a.note else "")
-    if "Metadata" in headers:        # fact tabs carry Metadata; stamp when feedback was processed
-        prev = ws.cell(row, headers.index("Metadata") + 1).value or ""
-        meta = (prev + "\n" if prev else "") + f"[{_now()}] feedback processed{stamp}"
-        ups.append({"range": f"{_a1col(headers.index('Metadata'))}{row}", "values": [[meta]]})
     ws.batch_update(ups, value_input_option="USER_ENTERED")
-    print(f"[sheets] feedback cleared for {a.id} in {tab} ({col})")
+    note = f": {a.note}" if a.note else ""
+    print(f"[sheets] feedback cleared for {a.id} in {tab} ({col}){note}")
 
 
 # ── commands: stats scraping ─────────────────────────────────────────────────
@@ -1048,17 +1093,16 @@ def _stack_range(tabs, letter):
 
 
 def _stack_all(tabs):
-    """The full A3:T stack across all fact tabs — for QUERY (Col1..Col20)."""
-    return "{" + ";".join(f"'{t}'!A3:T1000" for t in tabs) + "}"
+    """The full A3:R stack across all fact tabs — for QUERY (Col1..Col18)."""
+    return "{" + ";".join(f"'{t}'!A3:R1000" for t in tabs) + "}"
 
 
 def _build_dashboard(sh):
     """(Re)build the Dashboard tab as LIVE formulas (USER_ENTERED). No data of its own; every
     number recomputes from the fact tabs. Tab names are read from state.json, so re-running after a
     character is added extends it. Columns on a fact tab: A=ID B=Country C=Framework D=Variant
-    E=Copy Iteration F=Title G=Output Folder H=Caption I=Date Created J=Notes K=Post Link
-    L=Posting Date M=Views N=Likes O=Comments P=Share Q=Save R=Stats Last Updated S=Human
-    Feedback T=Metadata."""
+    E=Copy Iteration F=Title G=Output Folder H=Date Created I=Notes J=Post Link K=Posting Date
+    L=Views M=Likes N=Comments O=Share P=Save Q=Stats Last Updated R=Human Feedback."""
     tabs = _fact_tabs()
     ws = _ws(sh, DASH_TAB)
     if ws is None:
@@ -1067,13 +1111,13 @@ def _build_dashboard(sh):
     gid = ws.id
     NCOL = 6
     C_ = _stack_range(tabs, "C"); D_ = _stack_range(tabs, "D"); B_ = _stack_range(tabs, "B")
-    M_ = _stack_range(tabs, "M"); O_ = _stack_range(tabs, "O"); Q_ = _stack_range(tabs, "Q")
-    STACK = _stack_all(tabs)
+    L_ = _stack_range(tabs, "L"); N_ = _stack_range(tabs, "N"); P_ = _stack_range(tabs, "P")
+    STACK = _stack_all(tabs)     # L=Views · N=Comments · P=Save (shifted left after Caption was dropped)
 
-    def cnt(cond):   return f'=SUMPRODUCT(({cond})*({M_}>0))'
-    def avgv(cond):  return f'=IFERROR(SUMPRODUCT(({cond})*({M_}>0)*{M_})/SUMPRODUCT(({cond})*({M_}>0)),"")'
-    def srate(cond): return f'=IFERROR(SUMPRODUCT(({cond})*({M_}>0)*{Q_})/SUMPRODUCT(({cond})*({M_}>0)*{M_}),"")'
-    def crate(cond): return f'=IFERROR(SUMPRODUCT(({cond})*({M_}>0)*{O_})/SUMPRODUCT(({cond})*({M_}>0)*{M_}),"")'
+    def cnt(cond):   return f'=SUMPRODUCT(({cond})*({L_}>0))'
+    def avgv(cond):  return f'=IFERROR(SUMPRODUCT(({cond})*({L_}>0)*{L_})/SUMPRODUCT(({cond})*({L_}>0)),"")'
+    def srate(cond): return f'=IFERROR(SUMPRODUCT(({cond})*({L_}>0)*{P_})/SUMPRODUCT(({cond})*({L_}>0)*{L_}),"")'
+    def crate(cond): return f'=IFERROR(SUMPRODUCT(({cond})*({L_}>0)*{N_})/SUMPRODUCT(({cond})*({L_}>0)*{L_}),"")'
 
     rows = []          # each row = list of up to NCOL cell strings
     titles, headers_idx, rate_cells = [], [], []   # 0-based row indices / (row,col) for formatting
@@ -1108,9 +1152,9 @@ def _build_dashboard(sh):
     for t in tabs:
         q = f"'{t}'"
         total = f'=COUNTIF({q}!C3:C1000,"<>")'
-        posted = f'=COUNTIF({q}!K3:K1000,"<>")'
-        last = f'=IF(COUNT({q}!I3:I1000)=0,"",TEXT(MAX({q}!I3:I1000),"yyyy-mm-dd"))'
-        nextfw = f'=INDEX({{"A";"B";"C1";"C2"}},MOD(COUNTIF({q}!C3:C1000,"<>"),4)+1)'
+        posted = f'=COUNTIF({q}!J3:J1000,"<>")'                                    # Post Link (col J)
+        last = f'=IF(COUNT({q}!H3:H1000)=0,"",TEXT(MAX({q}!H3:H1000),"yyyy-mm-dd"))'  # Date Created (col H)
+        nextfw = f'=INDEX({{"A";"B";"C";"D"}},MOD(COUNTIF({q}!C3:C1000,"<>"),4)+1)'
         add([t, total, posted, last, nextfw])
     add([])
 
@@ -1150,10 +1194,10 @@ def _build_dashboard(sh):
     header(["Character", "Posts (views>0)", "Avg views", "Save-rate", "Comment-rate"])
     for t in tabs:
         q = f"'{t}'"
-        c_cnt = f'=SUMPRODUCT(({q}!M3:M1000>0)*1)'
-        c_avg = f'=IFERROR(SUMPRODUCT(({q}!M3:M1000>0)*{q}!M3:M1000)/SUMPRODUCT(({q}!M3:M1000>0)*1),"")'
-        c_sr  = f'=IFERROR(SUMPRODUCT(({q}!M3:M1000>0)*{q}!Q3:Q1000)/SUMPRODUCT(({q}!M3:M1000>0)*{q}!M3:M1000),"")'
-        c_cr  = f'=IFERROR(SUMPRODUCT(({q}!M3:M1000>0)*{q}!O3:O1000)/SUMPRODUCT(({q}!M3:M1000>0)*{q}!M3:M1000),"")'
+        c_cnt = f'=SUMPRODUCT(({q}!L3:L1000>0)*1)'
+        c_avg = f'=IFERROR(SUMPRODUCT(({q}!L3:L1000>0)*{q}!L3:L1000)/SUMPRODUCT(({q}!L3:L1000>0)*1),"")'
+        c_sr  = f'=IFERROR(SUMPRODUCT(({q}!L3:L1000>0)*{q}!P3:P1000)/SUMPRODUCT(({q}!L3:L1000>0)*{q}!L3:L1000),"")'
+        c_cr  = f'=IFERROR(SUMPRODUCT(({q}!L3:L1000>0)*{q}!N3:N1000)/SUMPRODUCT(({q}!L3:L1000>0)*{q}!L3:L1000),"")'
         rate_cells.append((len(rows), 3)); rate_cells.append((len(rows), 4))
         add([t, c_cnt, c_avg, c_sr, c_cr])
     add([])
@@ -1162,10 +1206,10 @@ def _build_dashboard(sh):
     title("TOP 10 POSTS  ·  by save-rate (across all characters, views>0)")
     header(["Title", "Framework", "Variant", "Views", "Save-rate"])
     top = (f'=IFERROR(SORTN({{'
-           f'QUERY({STACK},"select Col6,Col3,Col4,Col13 where Col13>0",0),'
+           f'QUERY({STACK},"select Col6,Col3,Col4,Col12 where Col12>0",0),'
            f'ARRAYFORMULA(IFERROR('
-           f'QUERY({STACK},"select Col17 where Col13>0",0)/'
-           f'QUERY({STACK},"select Col13 where Col13>0",0),0))'
+           f'QUERY({STACK},"select Col16 where Col12>0",0)/'
+           f'QUERY({STACK},"select Col12 where Col12>0",0),0))'
            f'}},10,0,5,FALSE),"")')
     r0 = len(rows)
     add([top])
@@ -1322,17 +1366,18 @@ def main():
     sub.add_parser("dictionary").set_defaults(fn=cmd_dictionary)
     sub.add_parser("dashboard-init").set_defaults(fn=cmd_dashboard_init)
     sub.add_parser("connectors-init").set_defaults(fn=cmd_connectors_init)
+    sub.add_parser("content-sync").set_defaults(fn=cmd_content_sync)
 
     u = sub.add_parser("post-upsert"); u.set_defaults(fn=cmd_post_upsert)
     u.add_argument("--character"); u.add_argument("--id", required=True)
-    for f in ("title", "folder", "caption", "country", "framework", "variant",
-              "iteration", "notes", "metadata"):
+    for f in ("title", "folder", "country", "framework", "variant",
+              "iteration", "notes"):
         u.add_argument(f"--{f}")
 
     s = sub.add_parser("post-set"); s.set_defaults(fn=cmd_post_set)
     s.add_argument("--character"); s.add_argument("--id", required=True)
-    for f in ("title", "folder", "caption", "country", "framework", "variant", "iteration",
-              "notes", "metadata", "post-link", "posting-date", "views", "likes",
+    for f in ("title", "folder", "country", "framework", "variant", "iteration",
+              "notes", "post-link", "posting-date", "views", "likes",
               "comments", "share", "save"):
         s.add_argument(f"--{f}")
 
@@ -1358,14 +1403,9 @@ def main():
     ss = sub.add_parser("stats-summary"); ss.set_defaults(fn=cmd_stats_summary)
     ss.add_argument("--json", action="store_true", help="compact single-line JSON")
 
-    sub.add_parser("brand-list").set_defaults(fn=cmd_brand_list)
-    ba = sub.add_parser("brand-add"); ba.set_defaults(fn=cmd_brand_add)
-    for f in ("id", "feature", "use-case", "desc", "asset", "funnel-fit", "notes"):
-        ba.add_argument(f"--{f}")
-
     sub.add_parser("feedback-poll").set_defaults(fn=cmd_feedback_poll)
     fc = sub.add_parser("feedback-clear"); fc.set_defaults(fn=cmd_feedback_clear)
-    fc.add_argument("--tab", required=True, help="ana | chloe | hannah | brand | connectors")
+    fc.add_argument("--tab", required=True, help="ana | chloe | hannah | connectors")
     fc.add_argument("--id", required=True); fc.add_argument("--note")
 
     r = sub.add_parser("read"); r.set_defaults(fn=cmd_read); r.add_argument("--tab", required=True)

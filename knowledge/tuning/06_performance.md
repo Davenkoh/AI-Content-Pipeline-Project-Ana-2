@@ -9,14 +9,14 @@ still routes through `propagate-feedback` into the other tuning docs).
 > **No data yet — first `analyze` run pending.** The tables below stay empty until the first pass over
 > the Sheet stats.
 
-## By framework (A / B / C1 / C2)
+## By framework (A / B / C / D)
 
 | Framework | Posts | Median views | Median saves | Read |
 |---|---|---|---|---|
 | A — mistakes | — | — | — | — |
 | B — hot takes | — | — | — | — |
-| C1 — full-trip dump | — | — | — | — |
-| C2 — plan & prep guide | — | — | — | — |
+| C — full-trip dump | — | — | — | — |
+| D — plan & prep guide | — | — | — | — |
 
 ## By variant (human / nohuman cover + ending)
 

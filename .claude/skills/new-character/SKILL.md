@@ -135,7 +135,7 @@ python3 engine/sheets/sheets.py dashboard-init   # re-run so the Dashboard picks
 ```
 
 ## 5 · Generate her framework scene photos → `chars/<key>_cover.png` + `chars/<key>_ending.png` (NEW)
-The **human-variant** A / B / C1 decks lay the hook title over a candid **cover** scene and the "SAVE THIS"
+The **human-variant** A / B / C decks lay the hook title over a candid **cover** scene and the "SAVE THIS"
 over a candid **ending** scene. Generate both **before her first human-variant post** (this is the
 `generate-post` §3 blocker):
 - Use the **§5.9 real-background method** (`realism_book.md`) — give GPT a **real sourced background**
@@ -160,11 +160,11 @@ carry the human-variant cover/ending.
 ## Faceless variant (no face)
 **2.0 has no `"faceless": true` character flag** (that was a 1.0 feature — the engine here reads only
 name / id_prefix / country / tiktok). In 2.0, "faceless" is a **framework property, not a character
-property**: **C2 is faceless by spec**, and the **`nohuman` variant** of A / B / C1 shows no person on the
+property**: **D is faceless by spec**, and the **`nohuman` variant** of A / B / C shows no person on the
 cover/ending either. So to run an account facelessly, register her (§1) + create her tab (§4), **skip §2
-and §5** (no Base References, no `chars/` scene photos), and ship only her **`nohuman` / C2** slots — her
+and §5** (no Base References, no `chars/` scene photos), and ship only her **`nohuman` / D** slots — her
 decks build from real location/food UGC + the render templates, never the persona/cover-gen path. Caveat:
-the rotation still *proposes* `human` slots for her (A/B/C1 default human), and a `human` slot with no
+the rotation still *proposes* `human` slots for her (A/B/C default human), and a `human` slot with no
 `chars/<key>_cover.png` is blocked (`generate-post` §3) — so either treat her human slots as nohuman or
 give her the scene photos after all. Flag this to the human rather than papering over it.
 

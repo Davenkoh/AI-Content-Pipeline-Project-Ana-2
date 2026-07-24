@@ -6,7 +6,7 @@
      The folder is PRIVATELY shared, so this is normally a MANUAL step (SETUP.md step 1); bootstrap
      only attempts an automated gdown pull if drive_setup_url is set, and falls back gracefully.
   3. with the secrets present, pulls the gitignored build media from Drive — character refs, _shared,
-     knowledge/brand, chars, media/graded, media/brand (add --full to also pull media/library scratch)
+     chars, media/graded, media/brand (add --full to also pull media/library scratch)
   4. runs preflight
 
 The Drive folder link comes from state.json -> "drive_setup_url". Idempotent; safe to re-run.
@@ -97,7 +97,7 @@ def pull_setup_bundle():
 def pull_media_assets(full=False):
     """Fill in the gitignored, build-critical media from the shared Drive, using the creds that
     pull_setup_bundle just placed: each character's persona references (so the cover gen has a face
-    to work from), the shared wardrobe/pfp refs (_shared), the Holicay brand assets, the chosen
+    to work from), the shared wardrobe/pfp refs (_shared), the chosen
     character photos (chars/), and the sourced/first-party media picks (media/graded, media/brand).
     Skips files already present, so it is safe to re-run. The finished-post libraries (Ana/Tiktok, …)
     are NOT pulled here (browse on Drive, or pull on demand with e.g.
@@ -118,7 +118,6 @@ def pull_media_assets(full=False):
         name = (c or {}).get("name") or key.capitalize()
         targets.append((name, f"character/{name}"))
     targets.append(("_shared", "character/_shared"))
-    targets.append(("Holicay Brand", "knowledge/brand"))
     targets.append(("chars", "chars"))
     targets.append(("media/graded", "media/graded"))
     targets.append(("media/brand", "media/brand"))

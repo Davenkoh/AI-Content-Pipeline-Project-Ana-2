@@ -1,7 +1,7 @@
 # Project Ana 2.0
 
 **A framework-first TikTok carousel factory you drive with any AI coding agent.** Pick a character and a
-country; it claims the next **rotation slot** (which of the four blueprints A / B / C1 / C2, in a human or
+country; it claims the next **rotation slot** (which of the four blueprints A / B / C / D, in a human or
 no-human variant), writes humanized story-first copy, sources real UGC photos, renders a **1080×1920**
 carousel, QCs it, delivers it to Google Drive, and logs a Google Sheet row — then folds your feedback and
 the scraped stats back in so the next post is better. Four locked blueprints; **only the copy + photos
@@ -17,13 +17,13 @@ travel itinerary-planner app). **You post to TikTok yourself** — nothing publi
             │
             ▼
    ┌──────────────────────┐   rotation is DERIVED from the Sheet (per account):
-   │  next-slot (Sheet)   │   framework cycles A → B → C1 → C2;
+   │  next-slot (Sheet)   │   framework cycles A → B → C → D;
    │  → framework+variant │   the human / no-human variant alternates per framework
    └──────────┬───────────┘   (the A/B test)
               ▼
    ┌──────────────────────┐   copy.json (pre-broken lines) + fact-checked caption
    │  copy + photos        │   real UGC photos, curated against the UGC gate
-   │  per CONTRACT.md      │   → media/graded/<slug>.jpg
+   │  per CREATIVE+DESIGN   │   → media/graded/<slug>.jpg
    └──────────┬───────────┘
               ▼
    ┌──────────────────────┐        ┌──────────────────┐
@@ -64,7 +64,7 @@ scene) and a **no-human** one (pure scenic, same text). The rotation alternates 
 ## The three homes (all owned by `creators@holicay.com`)
 
 - **GitHub** — code, brains, skills: https://github.com/Davenkoh/Project-Ana-2
-- **Google Sheet** — "Project Ana 2.0" (fact tabs + Dashboard + Connectors + Accounts + Holicay Brand + Dictionary; GREEN cells are yours): https://docs.google.com/spreadsheets/d/1Wskn2YPWwu3cEBJVTwyYpgM7XXVjJwODLjZVqLgAqWo/edit
+- **Google Sheet** — "Project Ana 2.0" (fact tabs + Dashboard + Connectors + Accounts + Content + Dictionary; GREEN cells are yours): https://docs.google.com/spreadsheets/d/1Wskn2YPWwu3cEBJVTwyYpgM7XXVjJwODLjZVqLgAqWo/edit
 - **Google Drive** — "Project Ana 2.0" (all media + delivered posts + `_setup/` secrets), in `creators@holicay.com` My Drive. Find the folder link with `python3 engine/drive/drive_sync.py --list-shared`.
 
 ## Quickstart
@@ -81,11 +81,12 @@ First time on this machine? [`SETUP.md`](SETUP.md) walks clone → bootstrap →
 
 ```
 AGENTS.md         the front-door resolver: capability -> the one canonical home
-CONTRACT.md       the durable OUTPUT SPEC (design · type · plug · QC gates) the renderer reproduces
+CREATIVE.md       the content wheel (frameworks · voice · photo direction) — what every post SAYS
+DESIGN.md         the durable OUTPUT SPEC (design · type · plug · QC gates) the renderer reproduces
 WORKFLOW.md       the operating manual (stages §1-§11 + Stats/Feedback/Analyze + Guardrails)
 SETUP.md          new-machine onboarding · CONNECTORS.md  the billing/troubleshooting registry
 engine/           the deterministic tools (sheets · source · render · qc · drive · scrape · design · setup · lib)
-knowledge/        the brains: frameworks (the spine) + copy_bank · realism · voice · tuning · brand
+knowledge/        the craft brains: realism · voice · tuning · brand · platform · photo-sourcing
 .claude/skills/   the agent's verbs (generate-post · scrape-stats · propagate-feedback · analyze · new-character)
 fixtures/         the four framework copy exemplars + reference contact sheets (the render regression spec)
 media/            graded/ (render-ready picks) · brand/ (first-party) · library/ (scratch) · manifest.json

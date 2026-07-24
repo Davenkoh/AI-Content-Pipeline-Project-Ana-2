@@ -7,7 +7,7 @@ wrong subjects, or watermarks lands here.
 - **Target = composed-candid:** the subject is the attractively-framed hero AND the
   background is genuine, uncontrolled real life. Reject all three failure shapes:
   studio-clean, random-ugly, and fake-prop staged.
-- **Hierarchy (framework body photos, per CONTRACT Gate 9):** Google Places user photos
+- **Hierarchy (framework body photos, per `DESIGN.md` Gate 9):** Google Places user photos
   (prioritized) → Instagram via Apify → SerpAPI Google Images (native-language + context
   modifiers); Pexels/Unsplash only when the shot genuinely reads candid. Tool:
   `engine/source/brightdata.py`. (Persona BACKGROUNDS invert — Pexels/Unsplash first; see

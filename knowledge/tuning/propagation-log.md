@@ -163,7 +163,7 @@ Sheet's Feedback cell is cleared and the row's Metadata stamped. Format per entr
 
 ## ⎯⎯ ERA 2.0 — frameworks graduated (2026-07-23) ⎯⎯
 
-The A/B/C1/C2 content frameworks graduated from the 1.0 `sandbox/frameworks-test/` into **the
+The A/B/C/D content frameworks graduated from the 1.0 `sandbox/frameworks-test/` into **the
 production system** of this repo (Project Ana 2.0). This is an era divider, not a feedback item.
 
 - **Everything ABOVE is 1.0-era historical context** — it records where past feedback propagated in
@@ -172,4 +172,4 @@ production system** of this repo (Project Ana 2.0). This is an era divider, not 
   record. History is preserved, not rewritten.
 - **New 2.0 feedback entries continue BELOW**, in the same entry format, newest at the bottom. The
   governing docs a 2.0 lesson can propagate to now live under `knowledge/` (frameworks/, realism/,
-  voice/, brand/, platform/, tuning/) + `CONTRACT.md`.
+  voice/, brand/, platform/, tuning/) + the repo-root `CREATIVE.md` / `DESIGN.md`.

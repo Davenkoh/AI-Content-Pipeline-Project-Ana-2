@@ -28,6 +28,6 @@ The analysis itself is written to the Sheet's **TikTok Inspo Analysis** tab.
 - Study general travel winners (any destination), then transplant the winning
   format/hook to the active character's default country (Ana = Vietnam, Chloe = Japan) —
   keep the format, swap the subject.
-- Compare every new-format candidate against **A / B / C1 / C2**. A strong post that fits
+- Compare every new-format candidate against **A / B / C / D**. A strong post that fits
   none of them is a candidate **fifth framework** to propose to the human, not a forced fit
   (and not a discard).

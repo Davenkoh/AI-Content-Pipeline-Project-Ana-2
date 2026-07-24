@@ -31,7 +31,7 @@ voice, hooks, story beats, or claims lands here.
   over how real people typed it (see the echo-the-phrasing lesson below).
 - **One post = one hook + one funnel + one CTA.** Put the hook AND the money CTA on the
   cover + caption line 1; never bury the key beat on a last slide.
-- **Feature exactly one Holicay thing** (from the **Holicay Brand** tab), and only where a
+- **Feature exactly one Holicay thing** (from `../brand/holicay_brand.md`), and only where a
   real traveler would reach for it. Name the *use case*, never the feature name.
 
 ## Lessons (append-only; newest at bottom)
@@ -55,7 +55,7 @@ voice, hooks, story beats, or claims lands here.
   Sa Pa to the town). See hook H002 / cta C003 (tt-04) + the F5 extension C004 (tt-17).
 - [2026-06-23] **The Holicay plug slide goes FRONT or MIDDLE, never the back.** User steer:
   viewers usually don't scroll to the end, so an app reveal/demo on a late slide is wasted
-  reach. Per the frameworks the plug is **slide 4** (C1: slide 4, or slide 5 when the first
+  reach. Per the frameworks the plug is **slide 4** (C: slide 4, or slide 5 when the first
   place's list spills) — front/middle, never the last slide — and a one-line app mention still
   rides the caption for non-swipers. This sharpens "never bury the key beat on a last slide."
 - [2026-07-10] **Reddit = primary source of truth, cross-checked (made explicit).** User steer
