@@ -64,7 +64,7 @@ scene) and a **no-human** one (pure scenic, same text). The rotation alternates 
 ## The three homes (all owned by `creators@holicay.com`)
 
 - **GitHub** — code, brains, skills: https://github.com/Davenkoh/Project-Ana-2
-- **Google Sheet** — "Project Ana 2.0" (fact tabs + Dashboard + Connectors + Holicay Brand + Dictionary; GREEN cells are yours): https://docs.google.com/spreadsheets/d/1Wskn2YPWwu3cEBJVTwyYpgM7XXVjJwODLjZVqLgAqWo/edit
+- **Google Sheet** — "Project Ana 2.0" (fact tabs + Dashboard + Connectors + Accounts + Holicay Brand + Dictionary; GREEN cells are yours): https://docs.google.com/spreadsheets/d/1Wskn2YPWwu3cEBJVTwyYpgM7XXVjJwODLjZVqLgAqWo/edit
 - **Google Drive** — "Project Ana 2.0" (all media + delivered posts + `_setup/` secrets), in `creators@holicay.com` My Drive. Find the folder link with `python3 engine/drive/drive_sync.py --list-shared`.
 
 ## Quickstart

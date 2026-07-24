@@ -21,7 +21,7 @@ Status + Notes**.
 | **Google service account** | Sheets read/write + Drive reads | `holicay-*.json` at repo root | `holicay-message-machine@holicay-402208.iam.gserviceaccount.com` (GCP **holicay-402208**) | console.cloud.google.com | free | ACTIVE — share the Sheet/Drive with this email |
 | **Google OAuth Drive client** | Drive uploads/creation as `creators@holicay.com` | `client_secret*.json` + per-user `drive_token.json` | `creators@holicay.com` (GCP **masquerade-2** — a DIFFERENT project than the SA) | console.cloud.google.com | free | ACTIVE |
 | **ChatGPT** | character/cover image gen via logged-in browser (**NO API key**) | `~/.masquerade_chrome` CDP profile | that ChatGPT account | chatgpt.com | per that account's plan | ACTIVE — re-login in the masquerade Chrome when gens fail |
-| **TikTok** | stats scraping via logged-in browser (same profile) | `~/.masquerade_chrome` CDP profile | @solo.with.ana / @chloe.belletravel | tiktok.com | free | ACTIVE — views are login-gated; re-auth `tiktok_login.js --open` |
+| **TikTok** | stats scraping via logged-in browser (same profile) | `~/.masquerade_chrome` CDP profile | @solo.with.ana / @chloe.belletravel | tiktok.com | free | ACTIVE — views login-gated; re-auth `tiktok_login.js --open`. **Per-account logins/VPN/Gmail live on the Sheet's Accounts tab.** |
 | **GitHub** | code home | `gh` CLI | Davenkoh | github.com/Davenkoh/Project-Ana-2 | free | ACTIVE |
 | **iTunes Search API** | real app icons (`app_icons.py`) | keyless | — | — | free | ACTIVE |
 

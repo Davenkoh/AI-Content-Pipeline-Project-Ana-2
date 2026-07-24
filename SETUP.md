@@ -15,7 +15,7 @@ Three shared resources, **all owned by `creators@holicay.com`**:
 |---|---|---|
 | **GitHub repo** | https://github.com/Davenkoh/Project-Ana-2 | All code, `knowledge/`, `.claude/skills/`, docs, `AGENTS.md`, `state.json`. **No secrets, no media.** |
 | **Google Drive** — "Project Ana 2.0" | in `creators@holicay.com` My Drive · `_setup/` = [secrets folder](https://drive.google.com/drive/folders/19pUGwusqcvf5cdJuyx6AQKysVleiNHv5) | The `_setup/` secrets bundle, one folder per character (`Ana/`, `Chloe/`, `Hannah/`) + `_shared/`, brand assets, the media library, and every delivered post. |
-| **Google Sheet** — "Project Ana 2.0" | https://docs.google.com/spreadsheets/d/1Wskn2YPWwu3cEBJVTwyYpgM7XXVjJwODLjZVqLgAqWo/edit | The human front-end: a fact tab per character + Dashboard + Connectors + Holicay Brand + Dictionary. GREEN cells = your feedback channel. |
+| **Google Sheet** — "Project Ana 2.0" | https://docs.google.com/spreadsheets/d/1Wskn2YPWwu3cEBJVTwyYpgM7XXVjJwODLjZVqLgAqWo/edit | The human front-end: a fact tab per character + Dashboard + Connectors + Accounts + Holicay Brand + Dictionary. GREEN cells = your feedback channel. |
 
 ### How the agent controls the Sheet + Drive — two Google credentials
 - **A service account** — `holicay-message-machine@holicay-402208.iam.gserviceaccount.com` (GCP project

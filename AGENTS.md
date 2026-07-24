@@ -59,7 +59,7 @@ Index: [`knowledge/README.md`](knowledge/README.md). The **spine is `CONTRACT.md
 |---|---|---|
 | **GitHub** (this repo) | code + text brains + skills | https://github.com/Davenkoh/Project-Ana-2 |
 | **Google Drive** — "Project Ana 2.0" | all media + finished posts + `_setup/` secrets | root in `creators@holicay.com` My Drive (find the folder link with `python3 engine/drive/drive_sync.py --list-shared`) |
-| **Google Sheet** — "Project Ana 2.0" | per-character fact tabs + Dashboard + Connectors + Holicay Brand + Dictionary (GREEN cells = human feedback) | https://docs.google.com/spreadsheets/d/1Wskn2YPWwu3cEBJVTwyYpgM7XXVjJwODLjZVqLgAqWo/edit |
+| **Google Sheet** — "Project Ana 2.0" | per-character fact tabs + Dashboard + Connectors + Accounts + Holicay Brand + Dictionary (GREEN cells = human feedback) | https://docs.google.com/spreadsheets/d/1Wskn2YPWwu3cEBJVTwyYpgM7XXVjJwODLjZVqLgAqWo/edit |
 
 `state.json` is the small local **registry** (each character = name + id_prefix + country + TikTok @handle)
 + the Sheet/Drive pointers. The rotation slot + next number are **derived from the Sheet**, never stored.

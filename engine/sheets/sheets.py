@@ -55,6 +55,7 @@ SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 # ── shared tab names ──────────────────────────────────────────────────────────
 BRAND_TAB = "Holicay Brand"
 CONN_TAB  = "Connectors"
+ACCT_TAB  = "Accounts"
 DASH_TAB  = "Dashboard"
 DICT_TAB  = "Dictionary"
 
@@ -214,11 +215,32 @@ def _connectors_spec():
     }
 
 
+def _accounts_spec():
+    # Per-character account / login register. Whole tab is human-owned (all green) — YOU keep it
+    # current; the AI only reads it (e.g. to know which profile / VPN region an account uses).
+    # Credentials are entered on the Sheet, never stored in this repo. Deliberately low-sensitivity
+    # accounts only (the human confirmed these are OK to keep here).
+    return {
+        "sections": {"human": "ACCOUNTS — YOU OWN THIS TAB (per-character logins / VPN; the AI reads it)"},
+        "columns": [
+            C("Character", "human", "Human", "Which character this account belongs to.", "<character name>"),
+            C("TikTok Profile", "human", "Human", "Public TikTok profile URL.", "https://www.tiktok.com/@handle"),
+            C("TikTok Login", "human", "Human", "TikTok username, or how to sign in.", "handle (via the Gmail below)"),
+            C("Gmail", "human", "Human", "The Gmail account the persona uses.", "persona@gmail.com"),
+            C("Gmail Password", "human", "Human", "Gmail password, or who holds it.", "•••• (or: with <teammate>)"),
+            C("Created By", "human", "Human", "Who set the account up.", "<teammate>"),
+            C("VPN Location", "human", "Human", "VPN region the account is operated from.", "City, Country"),
+            C("Notes", "human", "Human", "Anything else (who holds creds, status).", "TikTok login goes through the Gmail"),
+        ],
+    }
+
+
 # Build SPEC: one fact tab per character (roster order), then the shared tabs. The Dashboard is
 # NOT in SPEC — it is a derived analytics view written by `dashboard-init`.
 SPEC = {c["tab"]: _fact_spec() for c in _characters().values()}
 SPEC[BRAND_TAB] = _brand_spec()
 SPEC[CONN_TAB]  = _connectors_spec()
+SPEC[ACCT_TAB]  = _accounts_spec()
 
 # derived: HEADERS[tab] = ordered column names; HEADER_ROWS = 2 for all SPEC tabs
 HEADERS = {tab: [c["name"] for c in s["columns"]] for tab, s in SPEC.items()}
