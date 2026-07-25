@@ -1,0 +1,164 @@
+{
+  "option": "B",
+  "hook": {
+    "title": "OVERRATED vs UNDERRATED places in Vietnam",
+    "subtitle": ""
+  },
+  "hashtags": [
+    "#vietnamtravel",
+    "#vietnamtips",
+    "#travelvietnam",
+    "#vietnamtrip",
+    "#vietnam"
+  ],
+  "caption": {
+    "title_line": "🇻🇳 OVERRATED vs UNDERRATED places in Vietnam",
+    "body_draft": "Vietnam has a few spots that get hyped constantly online, and after going to a lot of them myself, some are genuinely worth it and some are not. Here are my honest overrated versus underrated takes, with a real reason behind each one.\n\nSa Pa used to be the dreamy rice-terrace town, but it is overbuilt now, a cluster of concrete hotels, tour touts and crowds. If you want the real northern mountains, do the Ha Giang Loop instead. It is a multi day motorbike route through remote limestone passes, and the view from Ma Pi Leng over the Nho Que river is one of the best in the whole country.\n\nBen Thanh Market gets sent to every tourist, but the prices are marked way up and the vendors hard sell you on everything. For the food, go to Ho Thi Ky instead. It is a narrow local alley packed with over a hundred stalls, and the grilled skewers start at around a dollar.\n\nNha Trang has turned into a wall of high-rise resorts, water parks and constant construction. Quy Nhon, a few hours up the coast, is the laid-back version with beautiful quiet beaches, fresh cheap seafood, and barely any of the crowds.\n\nPhu Quoc is marketed as paradise, but it is now a giant theme park and the world's longest sea cable car, and a lot of it feels fake. Con Dao is the pristine version, a quiet cluster of islands and a national park with empty beaches and clear water.\n\nThe Mekong Delta day tour from Saigon looks tempting, but you arrive too late for anything real, and it is mostly a staged coconut-candy and handicraft stop. Sleep in Can Tho instead and go to the Cai Rang floating market at sunrise. By nine in the morning the real trading is basically over.\n\nThese are just my honest opinions, so tell me if you disagree. Save this before your Vietnam trip."
+  },
+  "slides": [
+    {
+      "type": "cover",
+      "flag": "🇻🇳",
+      "title_lines": [
+        "OVERRATED vs",
+        "UNDERRATED",
+        "places in Vietnam"
+      ],
+      "subtitle_lines": [],
+      "char_photo": "ana_tt-21_cover",
+      "scenic_photo": "vn_hagiang_scenic"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Skip touristy Sa Pa"
+      ],
+      "x_why_lines": [
+        "it's overbuilt now, all",
+        "concrete hotels and touts"
+      ],
+      "check_title_lines": [
+        "✅ Do the Ha Giang Loop"
+      ],
+      "check_why_lines": [
+        "the real northern mountains,",
+        "way fewer tourists"
+      ],
+      "top_photo": "sapa_town",
+      "bottom_photo": "hagiang_loop"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't shop",
+        "Ben Thanh Market"
+      ],
+      "x_why_lines": [
+        "tourist prices and a hard",
+        "sell on everything"
+      ],
+      "check_title_lines": [
+        "✅ Eat at Ho Thi Ky"
+      ],
+      "check_why_lines": [
+        "a local food alley, skewers",
+        "from about a dollar"
+      ],
+      "top_photo": "benthanh_market",
+      "bottom_photo": "hothiky_food"
+    },
+    {
+      "type": "plug",
+      "paragraphs": [
+        [
+          "❌ i regret using google doc",
+          "and sheets to plan my trip"
+        ],
+        [
+          "alot of my research came from",
+          "tiktok, i saved videos on",
+          "tiktok, but never revisted it"
+        ],
+        [
+          "✅ HOLICAY.COM was",
+          "a game changer"
+        ],
+        [
+          "i can forward it my tiktok",
+          "links, travel documents, any",
+          "notes i have, and it saves",
+          "the locations and organizes my",
+          "notes for me all in one place"
+        ]
+      ],
+      "bg_photo": "vn_plug_scenic"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Skip Nha Trang"
+      ],
+      "x_why_lines": [
+        "a wall of high-rise resorts",
+        "and water parks now"
+      ],
+      "check_title_lines": [
+        "✅ Go to Quy Nhon"
+      ],
+      "check_why_lines": [
+        "quiet beaches and cheap",
+        "seafood, barely any crowds"
+      ],
+      "top_photo": "nhatrang_strip",
+      "bottom_photo": "quynhon_beach"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't bother with",
+        "Phu Quoc"
+      ],
+      "x_why_lines": [
+        "it's a giant theme park",
+        "and cable car now"
+      ],
+      "check_title_lines": [
+        "✅ Go to Con Dao"
+      ],
+      "check_why_lines": [
+        "pristine, quiet islands",
+        "and a national park"
+      ],
+      "top_photo": "phuquoc_resort",
+      "bottom_photo": "condao_beach"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Skip the Mekong",
+        "day tour from saigon"
+      ],
+      "x_why_lines": [
+        "you arrive too late, it's",
+        "a staged candy-shop stop"
+      ],
+      "check_title_lines": [
+        "✅ Sleep in Can Tho"
+      ],
+      "check_why_lines": [
+        "hit Cai Rang at sunrise,",
+        "it's over by 9am"
+      ],
+      "top_photo": "mekong_daytour",
+      "bottom_photo": "cantho_floating"
+    },
+    {
+      "type": "save",
+      "title": "am I right? 🤷🏻‍♀️",
+      "subtitle": "",
+      "char_photo": "ana_tt-21_ending",
+      "scenic_photo": "vn_condao_scenic",
+      "title_style": "outline"
+    }
+  ]
+}

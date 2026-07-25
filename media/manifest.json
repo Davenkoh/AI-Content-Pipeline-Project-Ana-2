@@ -1185,5 +1185,1320 @@
       "A"
     ],
     "note": "Shibuya Station escalator, commuters standing on the LEFT with the right lane open — the ✅ stand-left payoff (clean UGC, replaced an Alamy stock shot)"
+  },
+  {
+    "id": "halong_crowded",
+    "subject": "vietnam/halong",
+    "category": "visit",
+    "query": "Ha Long Bay crowded with tourist cruise boats",
+    "platform": "google_images",
+    "source_url": "https://www.remotelands.com/travelogues/bai-tu-long-the-halong-bay-less-traveled/",
+    "author": "Remote Lands",
+    "license": "ugc-unlicensed",
+    "w": 1180,
+    "h": 787,
+    "scraped_at": "2026-07-25",
+    "sha256": "3f3da377f6da6210358213dc6d0913be54e40693c6b9cb5a631c3e86198bece5",
+    "local_path": "media/graded/halong_crowded.jpg",
+    "used_in": [
+      "tt-20"
+    ]
+  },
+  {
+    "id": "lanha_quiet",
+    "subject": "vietnam/lanha",
+    "category": "visit",
+    "query": "Lan Ha Bay quiet kayak karst few boats",
+    "platform": "google_images",
+    "source_url": "https://lyracruises.com/kayaking-in-halong-bay/",
+    "author": "Lyra Cruise Collection",
+    "license": "ugc-unlicensed",
+    "w": 1200,
+    "h": 800,
+    "scraped_at": "2026-07-25",
+    "sha256": "1f6b38808f1434926adc01c4b9cfb1be808754b4b7987e171de38ade146ad5ce",
+    "local_path": "media/graded/lanha_quiet.jpg",
+    "used_in": [
+      "tt-20"
+    ]
+  },
+  {
+    "id": "vn_sleeper_bus",
+    "subject": "vietnam/sleeperbus",
+    "category": "visit",
+    "query": "xe giường nằm sleeper bus Vietnam interior",
+    "platform": "google_images",
+    "source_url": "https://www.vietnamcoracle.com/hanoi-to-ha-giang-sleeper-bus/",
+    "author": "Vietnam Coracle",
+    "license": "ugc-unlicensed",
+    "w": 2560,
+    "h": 1920,
+    "scraped_at": "2026-07-25",
+    "sha256": "ea808be605ce742942e2ca29a88621c05170b8093410c4c3fce8c3e523d125b4",
+    "local_path": "media/graded/vn_sleeper_bus.jpg",
+    "used_in": [
+      "tt-20"
+    ]
+  },
+  {
+    "id": "vn_tourist_restaurant",
+    "subject": "vietnam/hanoi",
+    "category": "visit",
+    "query": "Hanoi Old Quarter busy tourist restaurant street",
+    "platform": "google_images",
+    "source_url": "https://lostplate.com/hanoi-old-quarter-evening-food-tour/",
+    "author": "Lost Plate Food Tours",
+    "license": "ugc-unlicensed",
+    "w": 1200,
+    "h": 1500,
+    "scraped_at": "2026-07-25",
+    "sha256": "d226e7e7cfbf455c214785be432d47c362d9da63583060471e9c715b2af5dec2",
+    "local_path": "media/graded/vn_tourist_restaurant.jpg",
+    "used_in": [
+      "tt-20"
+    ]
+  },
+  {
+    "id": "vn_bun_cha_stools",
+    "subject": "vietnam/hanoi",
+    "category": "eat",
+    "query": "Bun Cha Huong Lien",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/111917957897096399585",
+    "author": "Tiger LEE",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 900,
+    "scraped_at": "2026-07-25",
+    "sha256": "e52f9836f6a47bfc254a99ee7b0851e62e1ad9beea6b8cccfd2343bda9acc4ec",
+    "local_path": "media/graded/vn_bun_cha_stools.jpg",
+    "used_in": [
+      "tt-20"
+    ]
+  },
+  {
+    "id": "vn_rent_motorbike",
+    "subject": "vietnam",
+    "category": "visit",
+    "query": "tourist renting motorbike scooter shop Vietnam",
+    "platform": "google_images",
+    "source_url": "https://nomadicated.com/renting-scooters-in-vietnam/",
+    "author": "Nomadicated",
+    "license": "ugc-unlicensed",
+    "w": 1024,
+    "h": 768,
+    "scraped_at": "2026-07-25",
+    "sha256": "2249ebb6af80d7fb3afc60ef5a2c497f9126bf6ce30555f0079b23937329ee45",
+    "local_path": "media/graded/vn_rent_motorbike.jpg",
+    "used_in": [
+      "tt-20"
+    ]
+  },
+  {
+    "id": "vn_easyrider_bike",
+    "subject": "vietnam",
+    "category": "visit",
+    "query": "xe om motorbike taxi driver Vietnam street",
+    "platform": "google_images",
+    "source_url": "https://restofworld.org/2023/vietnam-grab-taxi-drivers-turf-war/",
+    "author": "Rest of World",
+    "license": "ugc-unlicensed",
+    "w": 2560,
+    "h": 1707,
+    "scraped_at": "2026-07-25",
+    "sha256": "76352921ad45859ae024c2e2568895323413eda2bfe21967e64fc315c5456f30",
+    "local_path": "media/graded/vn_easyrider_bike.jpg",
+    "used_in": [
+      "tt-20"
+    ]
+  },
+  {
+    "id": "vn_airport_exchange",
+    "subject": "vietnam",
+    "category": "visit",
+    "query": "airport currency exchange counter money",
+    "platform": "google_images",
+    "source_url": "https://www.cntraveler.com/story/where-to-exchange-currencyand-how-to-be-smart-about-it",
+    "author": "Condé Nast Traveler",
+    "license": "ugc-unlicensed",
+    "w": 2186,
+    "h": 2186,
+    "scraped_at": "2026-07-25",
+    "sha256": "a43a4756f9efd4f97976f6b78855f29ae949abe8d113126c24391c3e958c8f40",
+    "local_path": "media/graded/vn_airport_exchange.jpg",
+    "used_in": [
+      "tt-20"
+    ]
+  },
+  {
+    "id": "vn_bank_atm",
+    "subject": "vietnam",
+    "category": "visit",
+    "query": "ATM machine bank Vietnam street",
+    "platform": "google_images",
+    "source_url": "https://localvietnam.com/vietnam-tips/atm-vietnam/",
+    "author": "Local Vietnam",
+    "license": "ugc-unlicensed",
+    "w": 1800,
+    "h": 1000,
+    "scraped_at": "2026-07-25",
+    "sha256": "25def6fc3081471ab55ed3412820490c1f3020c51563fd12bcbbc9712c04e3c9",
+    "local_path": "media/graded/vn_bank_atm.jpg",
+    "used_in": [
+      "tt-20"
+    ]
+  },
+  {
+    "id": "vn_domestic_flight",
+    "subject": "vietnam",
+    "category": "visit",
+    "query": "VietJet airplane on tarmac",
+    "platform": "google_images",
+    "source_url": "https://www.reuters.com/world/asia-pacific/vietnamese-airline-vietjet-resume-use-chinese-made-comac-planes-sources-say-2025-11-20/",
+    "author": "Reuters",
+    "license": "ugc-unlicensed",
+    "w": 6000,
+    "h": 4000,
+    "scraped_at": "2026-07-25",
+    "sha256": "18b8e2976d958f4da1128786c00c63c10c953592f56dd1b5bea3609e0fc5df29",
+    "local_path": "media/graded/vn_domestic_flight.jpg",
+    "used_in": [
+      "tt-20"
+    ]
+  },
+  {
+    "id": "vn_cover_scenic",
+    "subject": "vietnam/sapa",
+    "category": "visit",
+    "query": "Sapa rice terraces green valley Vietnam",
+    "platform": "google_images",
+    "source_url": "https://www.tnktravel.com/blogs/rice-terraces-in-sapa-vietnam/",
+    "author": "TNK Travel",
+    "license": "ugc-unlicensed",
+    "w": 1500,
+    "h": 1000,
+    "scraped_at": "2026-07-25",
+    "sha256": "8e5a64997ee696652edb4538762b2801eccaf7d49fa4ce38fb0a8194d4eed57c",
+    "local_path": "media/graded/vn_cover_scenic.jpg",
+    "used_in": [
+      "tt-20"
+    ]
+  },
+  {
+    "id": "vn_plug_scenic",
+    "subject": "vietnam/quynhon",
+    "category": "visit",
+    "query": "Ky Co beach Quy Nhon Vietnam turquoise water cliffs",
+    "platform": "google_images",
+    "source_url": "https://vinwonders.com/en/wonderpedia/news/ky-co-beach-quy-nhon/",
+    "author": "VinWonders",
+    "license": "ugc-unlicensed",
+    "w": 1920,
+    "h": 896,
+    "scraped_at": "2026-07-25",
+    "sha256": "1728f6a5515e4f93d103a2cd6b2ec4627cb004bdaa089fe6e38472eda05d1358",
+    "local_path": "media/graded/vn_plug_scenic.jpg",
+    "used_in": [
+      "tt-20",
+      "tt-21"
+    ]
+  },
+  {
+    "id": "vn_save_scenic",
+    "subject": "vietnam/hoian",
+    "category": "visit",
+    "query": "Hoi An lantern street evening Vietnam",
+    "platform": "google_images",
+    "source_url": "https://www.bucketlistly.blog/posts/hoi-an-things-to-do-itinerary-vietnam-lantern",
+    "author": "BucketListly Blog",
+    "license": "ugc-unlicensed",
+    "w": 2000,
+    "h": 1333,
+    "scraped_at": "2026-07-25",
+    "sha256": "6b0b526829657499b22418d151b29b8fa57fc93d178ac3733a34053945702827",
+    "local_path": "media/graded/vn_save_scenic.jpg",
+    "used_in": [
+      "tt-20"
+    ]
+  },
+  {
+    "id": "hanoi_traffic",
+    "subject": "vietnam/hanoi2",
+    "category": "visit",
+    "query": "hanoitraffic",
+    "platform": "instagram",
+    "source_url": "https://www.instagram.com/p/DZOOT9ZiQeL/",
+    "author": "@helena_a_photography",
+    "license": "ugc-unlicensed",
+    "w": 1080,
+    "h": 720,
+    "scraped_at": "2026-07-25",
+    "sha256": "575c01de2cd1ca8a588cadb74df7ff78524525281d323707f4c1f0e227cdad4c",
+    "local_path": "media/graded/hanoi_traffic.jpg",
+    "used_in": [
+      "tt-20"
+    ]
+  },
+  {
+    "id": "hanoi_crossing",
+    "subject": "vietnam/crossing",
+    "category": "visit",
+    "query": "sang đường hà nội xe máy phố cổ",
+    "platform": "google_images",
+    "source_url": "https://laodong.vn/ban-doc/dan-pho-co-ha-noi-san-sang-chuyen-doi-sang-xe-dien-nhung-con-ban-khoan-1542137.ldo",
+    "author": "Báo Lao Động",
+    "license": "ugc-unlicensed",
+    "w": 2500,
+    "h": 1667,
+    "scraped_at": "2026-07-25",
+    "sha256": "22dda6f78a7d80c319c9fbf8aa89788de9d6492e1aa2a20a70167169e9bc7ce6",
+    "local_path": "media/graded/hanoi_crossing.jpg",
+    "used_in": [
+      "tt-20"
+    ]
+  },
+  {
+    "id": "vn_street_taxi",
+    "subject": "vietnam/taxi2",
+    "category": "visit",
+    "query": "taxi mai linh hà nội đường phố",
+    "platform": "google_images",
+    "source_url": "https://www.tripadvisor.com/Attraction_Review-g293925-d11547229-Reviews-Mai_Linh-Ho_Chi_Minh_City.html",
+    "author": "Tripadvisor",
+    "license": "ugc-unlicensed",
+    "w": 1200,
+    "h": 900,
+    "scraped_at": "2026-07-25",
+    "sha256": "737675aefa15fd13cce39a300b2e61db008bedb37d7f8c2ff572b3eec20f5e95",
+    "local_path": "media/graded/vn_street_taxi.jpg",
+    "used_in": [
+      "tt-20"
+    ]
+  },
+  {
+    "id": "vn_grab_ride",
+    "subject": "vietnam/grab",
+    "category": "visit",
+    "query": "tài xế grab bike áo xanh việt nam đường phố",
+    "platform": "google_images",
+    "source_url": "https://thanhnien.vn/tai-xe-grabbike-ke-chuyen-chay-xe-mua-nha-ganh-ca-uoc-mo-cua-con-185251230214140426.htm",
+    "author": "Báo Thanh Niên",
+    "license": "ugc-unlicensed",
+    "w": 1140,
+    "h": 756,
+    "scraped_at": "2026-07-25",
+    "sha256": "682c822fc22fc45ac2d32cb8803e88e75b0211db503548ad732cb7a6dd5806a2",
+    "local_path": "media/graded/vn_grab_ride.jpg",
+    "used_in": [
+      "tt-20"
+    ]
+  },
+  {
+    "id": "chichen_crowds",
+    "subject": "mexico/chichen",
+    "category": "visit",
+    "query": "Chichen Itza",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/106081180579554937362",
+    "author": "James Rule",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-25",
+    "sha256": "2532ce18db7d84b891862ab8a8c5c5015bf728faf5b30da4020f469d04c75e30",
+    "local_path": "media/graded/chichen_crowds.jpg",
+    "used_in": [
+      "tth-05"
+    ]
+  },
+  {
+    "id": "ek_balam",
+    "subject": "mexico/ekbalam",
+    "category": "visit",
+    "query": "Ek Balam",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/113228024689476798824",
+    "author": "Saman Sadeghi",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-25",
+    "sha256": "eeb49857b395368ea69ffb2e2ab6714edf41afe539e4644c2cec9337a9635c48",
+    "local_path": "media/graded/ek_balam.jpg",
+    "used_in": [
+      "tth-05"
+    ]
+  },
+  {
+    "id": "mx_tap_sink",
+    "subject": "mexico/tap",
+    "category": "visit",
+    "query": "bathroom faucet running tap water sink closeup",
+    "platform": "google_images",
+    "source_url": "https://unsplash.com/photos/a-close-up-of-a-faucet-running-water-from-a-sink-_xzRl97riWk",
+    "author": "Unsplash",
+    "license": "ugc-unlicensed",
+    "w": 3000,
+    "h": 2250,
+    "scraped_at": "2026-07-25",
+    "sha256": "b9879e1d088594a84d05c01d71ae04374a09658a6fdce38afe4efbce299a3da4",
+    "local_path": "media/graded/mx_tap_sink.jpg",
+    "used_in": [
+      "tth-05"
+    ]
+  },
+  {
+    "id": "mx_bottled_agua",
+    "subject": "mexico/bottled",
+    "category": "visit",
+    "query": "botella de agua purificada mano mesa restaurante",
+    "platform": "google_images",
+    "source_url": "https://www.bebbiainstitucional.com/como-puedes-ahorrar-agua-en-tu-cafeteria-o-restaurante-5-consejos",
+    "author": "bebbia institucional",
+    "license": "ugc-unlicensed",
+    "w": 1357,
+    "h": 1206,
+    "scraped_at": "2026-07-25",
+    "sha256": "8d08d9bf3009b055006b50de37b72168bfd32ca1e656611354c3c0535f583e27",
+    "local_path": "media/graded/mx_bottled_agua.jpg",
+    "used_in": [
+      "tth-05"
+    ]
+  },
+  {
+    "id": "cancun_zona",
+    "subject": "mexico/cancunzona",
+    "category": "visit",
+    "query": "Cancun zona hotelera hoteles playa franja",
+    "platform": "google_images",
+    "source_url": "https://www.thehotelguru.com/es-es/best-hotels/mexico/cancun/beach-hotels",
+    "author": "The Hotel Guru",
+    "license": "ugc-unlicensed",
+    "w": 1654,
+    "h": 900,
+    "scraped_at": "2026-07-25",
+    "sha256": "ee886a9ca00b5698b7de6c26ba4ea17720f733dac5815721df54a7c230ae59b0",
+    "local_path": "media/graded/cancun_zona.jpg",
+    "used_in": [
+      "tth-05"
+    ]
+  },
+  {
+    "id": "mx_street_taxi",
+    "subject": "mexico/taxi",
+    "category": "visit",
+    "query": "taxi rosa y dorado ciudad de mexico calle",
+    "platform": "google_images",
+    "source_url": "https://todotaxi.org/historia-del-taxi-en-mexico/",
+    "author": "Todo Taxi",
+    "license": "ugc-unlicensed",
+    "w": 1280,
+    "h": 720,
+    "scraped_at": "2026-07-25",
+    "sha256": "0b8c92464c5970be461f8447b653651f05e9cc8f065331780b4fa8ff0e5ccb8c",
+    "local_path": "media/graded/mx_street_taxi.jpg",
+    "used_in": [
+      "tth-05"
+    ]
+  },
+  {
+    "id": "mx_uber_ride",
+    "subject": "mexico/uber",
+    "category": "visit",
+    "query": "conductor uber didi auto celular app mexico",
+    "platform": "google_images",
+    "source_url": "https://www.xataka.com.mx/automovil/didi-invitado-nueva-funcion-mexico-para-pedirle-didi-a-mama-a-cualquier-otra-persona-conductor-sabra-quien-pasajero",
+    "author": "Xataka México",
+    "license": "ugc-unlicensed",
+    "w": 1200,
+    "h": 900,
+    "scraped_at": "2026-07-25",
+    "sha256": "f97554ac8409b68eb42f7d16698d538fef691a761f6e6172fbcbf4f88d232177",
+    "local_path": "media/graded/mx_uber_ride.jpg",
+    "used_in": [
+      "tth-05"
+    ]
+  },
+  {
+    "id": "cdmx_city",
+    "subject": "mexico/cdmx",
+    "category": "visit",
+    "query": "Zocalo Ciudad de Mexico",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/109365026584164590380",
+    "author": "M MEDINA",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-25",
+    "sha256": "185ed98dcc411fdb6a05dec0579f2c67f2b6d55aacecd0caf4c5a8db4d6a755b",
+    "local_path": "media/graded/cdmx_city.jpg",
+    "used_in": [
+      "tth-05"
+    ]
+  },
+  {
+    "id": "cdmx_roma",
+    "subject": "mexico/roma",
+    "category": "visit",
+    "query": "Roma Norte calle arbolada cafe ciudad de mexico",
+    "platform": "google_images",
+    "source_url": "https://foodandpleasure.com/panaderias-roma-calle-coahuila/",
+    "author": "Food & Pleasure",
+    "license": "ugc-unlicensed",
+    "w": 1440,
+    "h": 1800,
+    "scraped_at": "2026-07-25",
+    "sha256": "8d49e967f68d746b0f0c800d91ecec2e0fa72412a5b2590c0c33916862f1fda7",
+    "local_path": "media/graded/cdmx_roma.jpg",
+    "used_in": [
+      "tth-05"
+    ]
+  },
+  {
+    "id": "mx_tacos_pastor",
+    "subject": "mexico/pastor",
+    "category": "visit",
+    "query": "tacos al pastor trompo taqueria",
+    "platform": "google_images",
+    "source_url": "https://www.reddit.com/r/SanJose/comments/1auatx3/any_taco_spots_in_sj_that_cooks_their_al_pastor/",
+    "author": "Reddit",
+    "license": "ugc-unlicensed",
+    "w": 1171,
+    "h": 1473,
+    "scraped_at": "2026-07-25",
+    "sha256": "5c67441fe7892a9fd3c4d02172aebb66a4c214cf37e1e7210e5c97f6a45e7ea1",
+    "local_path": "media/graded/mx_tacos_pastor.jpg",
+    "used_in": [
+      "tth-05"
+    ]
+  },
+  {
+    "id": "mx_pesos_atm",
+    "subject": "mexico/atm",
+    "category": "visit",
+    "query": "cajero automatico banco mexico calle",
+    "platform": "google_images",
+    "source_url": "https://www.playasyplazas.com/atm-in-mexico/",
+    "author": "Playas y Plazas",
+    "license": "ugc-unlicensed",
+    "w": 800,
+    "h": 1067,
+    "scraped_at": "2026-07-25",
+    "sha256": "967aeee675885840c8f5d9dc08931453b7508b5ea1d3887969bfd7b7dccf9980",
+    "local_path": "media/graded/mx_pesos_atm.jpg",
+    "used_in": [
+      "tth-05"
+    ]
+  },
+  {
+    "id": "mx_beach",
+    "subject": "mexico/beach2",
+    "category": "visit",
+    "query": "Cancun beach crowded sunny tourists people",
+    "platform": "google_images",
+    "source_url": "https://www.bostonglobe.com/2021/07/23/nation/covid-explodes-cancun-los-cabos-new-wave-hits-mexico/",
+    "author": "The Boston Globe",
+    "license": "ugc-unlicensed",
+    "w": 2200,
+    "h": 1467,
+    "scraped_at": "2026-07-25",
+    "sha256": "08432ce978c31f974b4a63631462972483a4be70bf06d10470e4e4ac09c6ff68",
+    "local_path": "media/graded/mx_beach.jpg",
+    "used_in": [
+      "tth-05"
+    ]
+  },
+  {
+    "id": "mx_resort_buffet",
+    "subject": "mexico/buffet2",
+    "category": "visit",
+    "query": "resort buffet food spread hotel restaurant plates",
+    "platform": "google_images",
+    "source_url": "https://foodshot.ai/blog/hotel-food-photography",
+    "author": "FoodShot AI",
+    "license": "ugc-unlicensed",
+    "w": 2528,
+    "h": 1696,
+    "scraped_at": "2026-07-25",
+    "sha256": "5900c2929b8f1335d3a3f47260885e0d6e2590e7d77170b49f45a5cde01c0a78",
+    "local_path": "media/graded/mx_resort_buffet.jpg",
+    "used_in": [
+      "tth-05"
+    ]
+  },
+  {
+    "id": "mx_usd_pay",
+    "subject": "mexico/usd2",
+    "category": "visit",
+    "query": "us dollars and mexican pesos cash money hand",
+    "platform": "google_images",
+    "source_url": "https://www.vecteezy.com/photo/12794378-playa-del-carmen-quintana-roo-mexico-2022-us-dollar-banknotes-in-hand-from-the-united-states",
+    "author": "Vecteezy",
+    "license": "ugc-unlicensed",
+    "w": 735,
+    "h": 980,
+    "scraped_at": "2026-07-25",
+    "sha256": "c94c8abc3d2acb8b486b4c432e6bf1ccecbf66d37346d7dd5e570c8433a8b41a",
+    "local_path": "media/graded/mx_usd_pay.jpg",
+    "used_in": [
+      "tth-05"
+    ]
+  },
+  {
+    "id": "valladolid_town",
+    "subject": "mexico/valladolid-street",
+    "category": "visit",
+    "query": "Calzada de los Frailes Valladolid",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/116738890430796802899",
+    "author": "giovanni chan",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-25",
+    "sha256": "c4f4d48790a969efbb210199c05e33029d791718c5f34afad43db9a17e9afba9",
+    "local_path": "media/graded/valladolid_town.jpg",
+    "used_in": [
+      "tth-05"
+    ]
+  },
+  {
+    "id": "mx_cenote",
+    "subject": "mexico/cenote",
+    "category": "visit",
+    "query": "cenote Yucatan turquoise water limestone wooden platform stairs",
+    "platform": "google_images",
+    "source_url": "https://www.muchbetteradventures.com/magazine/cenotes-in-mexico/",
+    "author": "Much Better Adventures",
+    "license": "ugc-unlicensed",
+    "w": 1591,
+    "h": 1061,
+    "scraped_at": "2026-07-24",
+    "sha256": "741dbe0fdc135ba499cb951baa6b1fbfc3d02741f604f5afcd1e73d9af1e8b76",
+    "local_path": "media/graded/mx_cenote.jpg",
+    "used_in": [
+      "tth-05"
+    ]
+  },
+  {
+    "id": "mx_cover_scenic",
+    "subject": "mexico/valladolid-street",
+    "category": "visit",
+    "query": "Centro Historico Valladolid Yucatan",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/107179530040743374688",
+    "author": "Ariberna OU",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-25",
+    "sha256": "8a2b6322b91d6a952c2ba17fe94850f1289cc80da5ff4858a6650d0c3375a118",
+    "local_path": "media/graded/mx_cover_scenic.jpg",
+    "used_in": [
+      "tth-05"
+    ]
+  },
+  {
+    "id": "mx_save_scenic",
+    "subject": "mexico/chichen",
+    "category": "visit",
+    "query": "Chichen Itza",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/106882472968385854940",
+    "author": "Marilyn Lluch",
+    "license": "places-tos",
+    "w": 1203,
+    "h": 764,
+    "scraped_at": "2026-07-25",
+    "sha256": "5f70fee6e4cfb1bdcc4a7b5b9680462fc5a2471d9cc7e59cef8db5352e5bc4cb",
+    "local_path": "media/graded/mx_save_scenic.jpg",
+    "used_in": [
+      "tth-05"
+    ]
+  },
+  {
+    "id": "tulum_beachclub",
+    "subject": "mexico/tulum",
+    "category": "visit",
+    "query": "Tulum beach club crowded sun loungers day",
+    "platform": "google_images",
+    "source_url": "https://mysunbed.com/en/mexico/tulum/beach-club-day-pass/",
+    "author": "MySunbed",
+    "license": "ugc-unlicensed",
+    "w": 1456,
+    "h": 1092,
+    "scraped_at": "2026-07-25",
+    "sha256": "b4a9086b830209994ef51f97273fd331985074cb539f67fcb717f83d1ef5f59a",
+    "local_path": "media/graded/tulum_beachclub.jpg",
+    "used_in": [
+      "tth-06"
+    ]
+  },
+  {
+    "id": "bacalar_lagoon",
+    "subject": "mexico/bacalar",
+    "category": "visit",
+    "query": "Cocalitos Bacalar",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/114552097269326269689",
+    "author": "Guillermo Domínguez Aguilar",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 900,
+    "scraped_at": "2026-07-25",
+    "sha256": "5b002b296e0b81e725161b1f319fd4ed0b7f70ea108d2ee6aed5b9a449879f73",
+    "local_path": "media/graded/bacalar_lagoon.jpg",
+    "used_in": [
+      "tth-06"
+    ]
+  },
+  {
+    "id": "mx_bacalar_scenic",
+    "subject": "mexico/bacalar",
+    "category": "visit",
+    "query": "Bacalar lagoon wooden dock pier turquoise water",
+    "platform": "google_images",
+    "source_url": "https://insidetheupgrade.com/post/things-to-do-in-bacalar",
+    "author": "Inside the Upgrade",
+    "license": "ugc-unlicensed",
+    "w": 1536,
+    "h": 2048,
+    "scraped_at": "2026-07-25",
+    "sha256": "63ad21c243b0ad7c9c5dde16b700b6ae82e6b02e7060197215888f48d132db8c",
+    "local_path": "media/graded/mx_bacalar_scenic.jpg",
+    "used_in": [
+      "tth-06"
+    ]
+  },
+  {
+    "id": "cabo_marina",
+    "subject": "mexico/cabo",
+    "category": "visit",
+    "query": "Cabo San Lucas marina nightlife crowd spring break",
+    "platform": "google_images",
+    "source_url": "https://www.studentcity.com/trips-and-destinations/spring-break/cabo-san-lucas-mexico-spring-break/",
+    "author": "Student City",
+    "license": "ugc-unlicensed",
+    "w": 2560,
+    "h": 1707,
+    "scraped_at": "2026-07-25",
+    "sha256": "96876434609560771039dd6f285cf68b01deb34cbf7afe319820cb8d9721272e",
+    "local_path": "media/graded/cabo_marina.jpg",
+    "used_in": [
+      "tth-06"
+    ]
+  },
+  {
+    "id": "lapaz_whaleshark",
+    "subject": "mexico/lapaz",
+    "category": "visit",
+    "query": "swimming with whale shark snorkeler La Paz Mexico",
+    "platform": "google_images",
+    "source_url": "https://www.seakayakadventures.com/adventure/lapaz-whale-shark-tours",
+    "author": "Sea Kayak Adventures",
+    "license": "ugc-unlicensed",
+    "w": 1280,
+    "h": 720,
+    "scraped_at": "2026-07-25",
+    "sha256": "d59e0a6c4d33962484a18e9e26e7c7bd486afb2cb73f31b84945982018b953e9",
+    "local_path": "media/graded/lapaz_whaleshark.jpg",
+    "used_in": [
+      "tth-06"
+    ]
+  },
+  {
+    "id": "playa_quinta",
+    "subject": "mexico/playa",
+    "category": "visit",
+    "query": "Playa del Carmen Quinta Avenida 5th avenue crowded shops",
+    "platform": "google_images",
+    "source_url": "https://nasplaya.com/new-hidden-spots-on-5th-avenue-whats-open-in-2025/",
+    "author": "NAS Playa",
+    "license": "ugc-unlicensed",
+    "w": 1572,
+    "h": 880,
+    "scraped_at": "2026-07-25",
+    "sha256": "4f13d8aa92babde114643daf7a80339b727729dfa86094c0812c9d35a5f31664",
+    "local_path": "media/graded/playa_quinta.jpg",
+    "used_in": [
+      "tth-06"
+    ]
+  },
+  {
+    "id": "puerto_morelos_reef",
+    "subject": "mexico/puerto-morelos",
+    "category": "visit",
+    "query": "National Reef Park of Puerto Morelos",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/112524474352300250132",
+    "author": "Amilette Betancourt",
+    "license": "places-tos",
+    "w": 1200,
+    "h": 1600,
+    "scraped_at": "2026-07-25",
+    "sha256": "738ebe44c8e62a6f21a8fedd99262d9412ca56b8eb8f0fae09866abf564e7d0c",
+    "local_path": "media/graded/puerto_morelos_reef.jpg",
+    "used_in": [
+      "tth-06"
+    ]
+  },
+  {
+    "id": "xcaret_park",
+    "subject": "mexico/xcaret",
+    "category": "visit",
+    "query": "Xcaret Park Mexico",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/115889612128810581581",
+    "author": "Alex Alma Ri",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 900,
+    "scraped_at": "2026-07-25",
+    "sha256": "53d0d8e6cd677311f2b24cf14d86319848055cddcdcbbf3461662d7cb3facc2c",
+    "local_path": "media/graded/xcaret_park.jpg",
+    "used_in": [
+      "tth-06"
+    ]
+  },
+  {
+    "id": "dos_ojos_cenote",
+    "subject": "mexico/dos-ojos",
+    "category": "visit",
+    "query": "Cenote Dos Ojos Tulum",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/105752456417575344810",
+    "author": "Mikhail Mukhin",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-25",
+    "sha256": "7056231d27fe6842fd18900aeff9bf1adc63ff56a4d0c71bcfdece48e13374e9",
+    "local_path": "media/graded/dos_ojos_cenote.jpg",
+    "used_in": [
+      "tth-06"
+    ]
+  },
+  {
+    "id": "isla_mujeres_cruise",
+    "subject": "mexico/isla-mujeres",
+    "category": "visit",
+    "query": "catamaran party cruise crowded deck people sailing ocean",
+    "platform": "google_images",
+    "source_url": "https://blog.clickandboat.com/en/boat-party/",
+    "author": "Blog Click&Boat",
+    "license": "ugc-unlicensed",
+    "w": 1773,
+    "h": 1182,
+    "scraped_at": "2026-07-25",
+    "sha256": "f6913ddeb9995a99d23b4d5a71420489826e7aa9ce3885e3cb101368ce1d7d4a",
+    "local_path": "media/graded/isla_mujeres_cruise.jpg",
+    "used_in": [
+      "tth-06"
+    ]
+  },
+  {
+    "id": "holbox_island",
+    "subject": "mexico/holbox",
+    "category": "visit",
+    "query": "Isla Holbox golf cart sandy street flamingos",
+    "platform": "google_images",
+    "source_url": "https://www.tuimusement.com/us/mexico/riviera-maya-playa-del-carmen/full-day-boat-and-golf-buggy-tour-of-holbox-island-from-chiquila-6/e_rkne2-d_6460-c_112/",
+    "author": "TUI Musement",
+    "license": "ugc-unlicensed",
+    "w": 2000,
+    "h": 1333,
+    "scraped_at": "2026-07-25",
+    "sha256": "d2f1716222ea8e6a49723620d6f0abb24458a8fd2467ec41155a0b5caa5bc102",
+    "local_path": "media/graded/holbox_island.jpg",
+    "used_in": [
+      "tth-06"
+    ]
+  },
+  {
+    "id": "mx_holbox_scenic",
+    "subject": "mexico/holbox",
+    "category": "visit",
+    "query": "Isla Holbox colorful sandy main street murals",
+    "platform": "google_images",
+    "source_url": "https://www.islaholbox-info.com/en/holbox-island/culture/",
+    "author": "Isla Holbox Info",
+    "license": "ugc-unlicensed",
+    "w": 1200,
+    "h": 800,
+    "scraped_at": "2026-07-25",
+    "sha256": "49b0fbe814900f4172c951b40c51c9ba73e136ed2092f21ae54ef2bfe2737219",
+    "local_path": "media/graded/mx_holbox_scenic.jpg",
+    "used_in": [
+      "tth-06"
+    ]
+  },
+  {
+    "id": "mx_plug_scenic",
+    "subject": "mexico/tulum-ruins",
+    "category": "visit",
+    "query": "Tulum ruins cliff Caribbean turquoise sea",
+    "platform": "google_images",
+    "source_url": "https://www.vecteezy.com/photo/18037009-stunning-cliff-side-views-of-tulum-ruins-by-the-caribbean-sea-in-mexico-on-sunny-day-magnificent-views-of-caribbean-sea-of-turquoise-and-blue-water",
+    "author": "Vecteezy",
+    "license": "ugc-unlicensed",
+    "w": 2940,
+    "h": 1960,
+    "scraped_at": "2026-07-25",
+    "sha256": "5a8ec47dd80fb98b2e458f17eb774e634acd5e7b569ea17de025ee1092da2720",
+    "local_path": "media/graded/mx_plug_scenic.jpg",
+    "used_in": [
+      "tth-06"
+    ]
+  },
+  {
+    "id": "sapa_town",
+    "subject": "vietnam/sapa",
+    "category": "visit",
+    "query": "Sa Pa town Vietnam street hotels tourists foggy",
+    "platform": "google_images",
+    "source_url": "https://lillagreen.com/is-sapa-worth-visiting-travel-guide-to-vietnams-city-in-the-fog/?srsltid=AfmBOordntfZfCkDA8vjlaMvoPC-pmCJtgkuWDG6bk19EIUmVboHmXYd",
+    "author": "LillaGreen",
+    "license": "ugc-unlicensed",
+    "w": 2048,
+    "h": 1536,
+    "scraped_at": "2026-07-25",
+    "sha256": "431bef610bca9d87524b348a98764be8bad16c17739e60e7d14f6e8ed5b43bc9",
+    "local_path": "media/graded/sapa_town.jpg",
+    "used_in": [
+      "tt-21"
+    ]
+  },
+  {
+    "id": "hagiang_loop",
+    "subject": "vietnam/hagiang",
+    "category": "visit",
+    "query": "Ma Pi Leng Pass viewpoint Ha Giang Nho Que river person standing",
+    "platform": "google_images",
+    "source_url": "https://localvietnam.com/ha-giang/ma-pi-leng-pass/",
+    "author": "Local Vietnam",
+    "license": "ugc-unlicensed",
+    "w": 1202,
+    "h": 799,
+    "scraped_at": "2026-07-25",
+    "sha256": "1ac2b52f9f0eb88abe5aeb6491c6738bc576b5b39fe467ad158a981a81850fd4",
+    "local_path": "media/graded/hagiang_loop.jpg",
+    "used_in": [
+      "tt-21"
+    ]
+  },
+  {
+    "id": "benthanh_market",
+    "subject": "vietnam/benthanh",
+    "category": "visit",
+    "query": "Ben Thanh Market interior crowded stalls Saigon",
+    "platform": "google_images",
+    "source_url": "https://www.expedia.com/Ben-Thanh-Market-District-1.d6229744.Vacation-Attraction",
+    "author": "Expedia",
+    "license": "ugc-unlicensed",
+    "w": 3840,
+    "h": 2160,
+    "scraped_at": "2026-07-25",
+    "sha256": "20a30e901d30c0a1182e935bdd4bb9eb803632db05722c0da9ceb487cdd98ab9",
+    "local_path": "media/graded/benthanh_market.jpg",
+    "used_in": [
+      "tt-21"
+    ]
+  },
+  {
+    "id": "hothiky_food",
+    "subject": "vietnam/hothiky",
+    "category": "visit",
+    "query": "Ho Thi Ky food street night Saigon crowd stalls",
+    "platform": "google_images",
+    "source_url": "https://kisstour.com/travel-guide/a-night-out-at-ho-thi-ky-street-food-market-a-locals-guide/",
+    "author": "KissTour",
+    "license": "ugc-unlicensed",
+    "w": 1200,
+    "h": 900,
+    "scraped_at": "2026-07-25",
+    "sha256": "d6e8ab1e66cfe47b9c90dd5b9f8c197b506d7d0b9db81be2fcaf741414de0a41",
+    "local_path": "media/graded/hothiky_food.jpg",
+    "used_in": [
+      "tt-21"
+    ]
+  },
+  {
+    "id": "nhatrang_strip",
+    "subject": "vietnam/nhatrang",
+    "category": "visit",
+    "query": "Nha Trang beach high rise hotels skyline Vietnam",
+    "platform": "google_images",
+    "source_url": "https://www.tisland.travel/en/blog/plyazh-chan-fu-nyachang?srsltid=AfmBOorqyIDD6LRuUxvR8j2oLDGoB5yXHjwovEALhISB6wcwHuAnJgV3",
+    "author": "www.tisland.travel",
+    "license": "ugc-unlicensed",
+    "w": 1919,
+    "h": 1079,
+    "scraped_at": "2026-07-25",
+    "sha256": "a82a6f0c312e4e56078e15cdf1f6aba4630fa9ed9993f7e0f2f838deaa418781",
+    "local_path": "media/graded/nhatrang_strip.jpg",
+    "used_in": [
+      "tt-21"
+    ]
+  },
+  {
+    "id": "quynhon_beach",
+    "subject": "vietnam/quynhon",
+    "category": "visit",
+    "query": "Ky Co Beach Quy Nhon",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/103111548889048883809",
+    "author": "Nguyen Duc Toan",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-25",
+    "sha256": "8772e83d436d9d750be19c550d16a650235e6f263f211b4e1dddcf1b1c2a910e",
+    "local_path": "media/graded/quynhon_beach.jpg",
+    "used_in": [
+      "tt-21"
+    ]
+  },
+  {
+    "id": "phuquoc_resort",
+    "subject": "vietnam/phuquoc",
+    "category": "visit",
+    "query": "Phu Quoc Grand World theme park Venice canal OR Hon Thom cable car",
+    "platform": "google_images",
+    "source_url": "https://www.tripadvisor.com/Attraction_Review-g12520037-d13563044-Reviews-Hon_Thom_Cable_Car-An_Thoi_Phu_Quoc_Island_Kien_Giang_Province.html",
+    "author": "Tripadvisor",
+    "license": "ugc-unlicensed",
+    "w": 1100,
+    "h": 1100,
+    "scraped_at": "2026-07-25",
+    "sha256": "4dbf06028b551e0f2baff3c3dadba1667c5fd834304e133dcab0c5e4f34c20ad",
+    "local_path": "media/graded/phuquoc_resort.jpg",
+    "used_in": [
+      "tt-21"
+    ]
+  },
+  {
+    "id": "condao_beach",
+    "subject": "vietnam/condao",
+    "category": "visit",
+    "query": "Con Dao island Vietnam beach turquoise sea empty sand",
+    "platform": "google_images",
+    "source_url": "https://whileyoustayhome.com/con-dao-beach-best-viewpoint/",
+    "author": "While You Stay Home",
+    "license": "ugc-unlicensed",
+    "w": 2560,
+    "h": 1436,
+    "scraped_at": "2026-07-25",
+    "sha256": "95180b249021e9c5e3e7d9fef228dba1281948d974686efcff2c68f0a9fa8635",
+    "local_path": "media/graded/condao_beach.jpg",
+    "used_in": [
+      "tt-21"
+    ]
+  },
+  {
+    "id": "mekong_daytour",
+    "subject": "vietnam/mekong",
+    "category": "visit",
+    "query": "Mekong Delta My Tho tour boats tourists coconut",
+    "platform": "google_images",
+    "source_url": "https://www.getyourguide.com/ho-chi-minh-city-l272/explore-non-touristy-mekong-delta-day-tour-from-ho-chi-minh-t162821/",
+    "author": "GetYourGuide",
+    "license": "ugc-unlicensed",
+    "w": 750,
+    "h": 750,
+    "scraped_at": "2026-07-25",
+    "sha256": "3572e0f78b30ac38f934b517e22cd5309ecce289c1bbf7978c420da3e5bdfdaa",
+    "local_path": "media/graded/mekong_daytour.jpg",
+    "used_in": [
+      "tt-21"
+    ]
+  },
+  {
+    "id": "cantho_floating",
+    "subject": "vietnam/cantho",
+    "category": "visit",
+    "query": "Cai Rang Floating Market Can Tho",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/104968318897530273366",
+    "author": "Chợ nổi Cái Răng",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 900,
+    "scraped_at": "2026-07-25",
+    "sha256": "dbfbafdacb548bfca9dfa9e01834202cdc4d99e9f9073a1e832c91d89c720c64",
+    "local_path": "media/graded/cantho_floating.jpg",
+    "used_in": [
+      "tt-21"
+    ]
+  },
+  {
+    "id": "vn_hagiang_scenic",
+    "subject": "vietnam/hagiang",
+    "category": "visit",
+    "query": "Ma Pi Leng Pass viewpoint Ha Giang Nho Que river person standing",
+    "platform": "google_images",
+    "source_url": "https://jasminehagiang.com/news/ma-pi-leng-pass-in-hagiangloop-sky-road-of-vietnam-n191.html",
+    "author": "Jasmine Tours",
+    "license": "ugc-unlicensed",
+    "w": 1926,
+    "h": 2568,
+    "scraped_at": "2026-07-25",
+    "sha256": "270d114acf60257630d711b5b6cd686c41803883785ded9d060c762ebdca19cd",
+    "local_path": "media/graded/vn_hagiang_scenic.jpg",
+    "used_in": [
+      "tt-21"
+    ]
+  },
+  {
+    "id": "vn_condao_scenic",
+    "subject": "vietnam/condao",
+    "category": "visit",
+    "query": "Con Dao island Vietnam beach turquoise sea empty sand",
+    "platform": "google_images",
+    "source_url": "https://ritotabi.com/en/destinations/con-dao-island/",
+    "author": "ritotabi.com",
+    "license": "ugc-unlicensed",
+    "w": 3840,
+    "h": 2160,
+    "scraped_at": "2026-07-25",
+    "sha256": "5b5323592191c17926f11d2ebf3bd97a8536d900c875b70ff44045f14b5fdc3a",
+    "local_path": "media/graded/vn_condao_scenic.jpg",
+    "used_in": [
+      "tt-21"
+    ]
+  },
+  {
+    "id": "tsukiji_crowd",
+    "subject": "japan/tsukiji",
+    "category": "visit",
+    "query": "Tsukiji outer market food stalls crowd tourists Tokyo",
+    "platform": "google_images",
+    "source_url": "https://soranews24.com/2025/12/18/tokyos-tsukiji-sushi-neighborhood-asks-tour-groups-to-stay-away-for-the-rest-of-the-month/",
+    "author": "SoraNews24 —Japan News—",
+    "license": "ugc-unlicensed",
+    "w": 1000,
+    "h": 750,
+    "scraped_at": "2026-07-25",
+    "sha256": "2910ac58ac137119bc979d89f18e77f5032a30a9f582b630c4775f976949e1b3",
+    "local_path": "media/graded/tsukiji_crowd.jpg",
+    "used_in": [
+      "ttc-12"
+    ]
+  },
+  {
+    "id": "toyosu_market",
+    "subject": "japan/toyosu",
+    "category": "visit",
+    "query": "Toyosu market tuna auction Tokyo fish wholesale",
+    "platform": "google_images",
+    "source_url": "https://www.tripadvisor.com/Attraction_Review-g14134359-d15216764-Reviews-Toyosu_Market-Toyosu_Koto_Tokyo_Tokyo_Prefecture_Kanto.html",
+    "author": "Tripadvisor",
+    "license": "ugc-unlicensed",
+    "w": 1200,
+    "h": 1200,
+    "scraped_at": "2026-07-25",
+    "sha256": "94337cb571b400b4c3f106c794159c5fbb808b4f5620793daa870623b006cb08",
+    "local_path": "media/graded/toyosu_market.jpg",
+    "used_in": [
+      "ttc-12"
+    ]
+  },
+  {
+    "id": "arashiyama_bamboo",
+    "subject": "japan/arashiyama",
+    "category": "visit",
+    "query": "Arashiyama bamboo grove crowded tourists path Kyoto",
+    "platform": "google_images",
+    "source_url": "https://www.sprayedout.com/bamboo-grove-in-arashiyama-kyoto/",
+    "author": "Sprayedout.com",
+    "license": "ugc-unlicensed",
+    "w": 868,
+    "h": 1300,
+    "scraped_at": "2026-07-25",
+    "sha256": "8abddc6acb4efa067ff619851e8c74ff2f2081905464828d51195ee2c9ce9c51",
+    "local_path": "media/graded/arashiyama_bamboo.jpg",
+    "used_in": [
+      "ttc-12"
+    ]
+  },
+  {
+    "id": "hokokuji_bamboo",
+    "subject": "japan/hokokuji",
+    "category": "visit",
+    "query": "Hokokuji temple bamboo grove Kamakura quiet path",
+    "platform": "google_images",
+    "source_url": "https://www.anthonyintraversato.com/blog/hokokuji-kamakuras-bamboo-forest-and-the-quiet-alternative-to-arashiyama",
+    "author": "ANTHONY INTRAVERSATO",
+    "license": "ugc-unlicensed",
+    "w": 1024,
+    "h": 1024,
+    "scraped_at": "2026-07-25",
+    "sha256": "9b66ffb17b1ef1f87422e522d57cfc9f649c16a0d394840e6520a89b6d4fd722",
+    "local_path": "media/graded/hokokuji_bamboo.jpg",
+    "used_in": [
+      "ttc-12"
+    ]
+  },
+  {
+    "id": "osaka_castle",
+    "subject": "japan/osaka",
+    "category": "visit",
+    "query": "Osaka Castle",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/100789360090070523325",
+    "author": "Wayman HO",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-25",
+    "sha256": "c5429e7d7ce2fbcd28445b8a4269ac9fd7bab5a50b674a2e14479a23018c6883",
+    "local_path": "media/graded/osaka_castle.jpg",
+    "used_in": [
+      "ttc-12"
+    ]
+  },
+  {
+    "id": "himeji_castle",
+    "subject": "japan/himeji",
+    "category": "visit",
+    "query": "Himeji Castle",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/108702940200365245910",
+    "author": "Allen Z.",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-25",
+    "sha256": "09151b04067c8990f05c1ce4af6749f7f83d1972ac52f4ceefc62199c29a2102",
+    "local_path": "media/graded/himeji_castle.jpg",
+    "used_in": [
+      "ttc-12"
+    ]
+  },
+  {
+    "id": "nara_deer",
+    "subject": "japan/nara2",
+    "category": "visit",
+    "query": "narapark",
+    "platform": "instagram",
+    "source_url": "https://www.instagram.com/p/DbNxpGSGoGa/",
+    "author": "@nao_ki_1221",
+    "license": "ugc-unlicensed",
+    "w": 1080,
+    "h": 1440,
+    "scraped_at": "2026-07-25",
+    "sha256": "4eedf1fbddeafbc5f4c3b277d299139b4279c2af0bb2419446961d7a5ce75b5f",
+    "local_path": "media/graded/nara_deer.jpg",
+    "used_in": [
+      "ttc-12"
+    ]
+  },
+  {
+    "id": "miyajima_torii",
+    "subject": "japan/miyajima",
+    "category": "visit",
+    "query": "Itsukushima Shrine Torii Gate Miyajima",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/107312992964178594388",
+    "author": "Foodies FATguy",
+    "license": "places-tos",
+    "w": 1200,
+    "h": 1600,
+    "scraped_at": "2026-07-25",
+    "sha256": "54d6880dedee5fd218ae659a3b1833da777ac6f9cca6963af7d68f76acb89a05",
+    "local_path": "media/graded/miyajima_torii.jpg",
+    "used_in": [
+      "ttc-12"
+    ]
+  },
+  {
+    "id": "gion_crowd",
+    "subject": "japan/gion",
+    "category": "visit",
+    "query": "Gion Kyoto crowded street tourists Hanamikoji",
+    "platform": "google_images",
+    "source_url": "https://www.travelcaffeine.com/kyoto-over-tourism-avoid-crowds-worst-dates-visit/",
+    "author": "Travel Caffeine",
+    "license": "ugc-unlicensed",
+    "w": 1200,
+    "h": 817,
+    "scraped_at": "2026-07-25",
+    "sha256": "dc0870aafcc150ee41983437c13b754fb5823d3eec7950c0d660f88e7021a544",
+    "local_path": "media/graded/gion_crowd.jpg",
+    "used_in": [
+      "ttc-12"
+    ]
+  },
+  {
+    "id": "kanazawa_chaya",
+    "subject": "japan/kanazawa",
+    "category": "visit",
+    "query": "Higashi Chaya District Kanazawa old wooden teahouse street",
+    "platform": "google_images",
+    "source_url": "https://visitkanazawa.jp/en/trip-ideas/detail_372.html",
+    "author": "Visit Kanazawa",
+    "license": "ugc-unlicensed",
+    "w": 1320,
+    "h": 880,
+    "scraped_at": "2026-07-25",
+    "sha256": "956b6ec4690f822ae12ce419e51e623e5bedb80df11d279817666553638822e5",
+    "local_path": "media/graded/kanazawa_chaya.jpg",
+    "used_in": [
+      "ttc-12"
+    ]
+  },
+  {
+    "id": "jp_cover_scenic",
+    "subject": "japan/miyajima",
+    "category": "visit",
+    "query": "Itsukushima Shrine Torii Gate Miyajima",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/102886724810986618250",
+    "author": "TOKIKINSAN MORI",
+    "license": "places-tos",
+    "w": 1068,
+    "h": 1600,
+    "scraped_at": "2026-07-25",
+    "sha256": "9affd7038859722001df1c6b400770f5fbcaa860eb2fdba9077104f11c743c69",
+    "local_path": "media/graded/jp_cover_scenic.jpg",
+    "used_in": [
+      "ttc-12"
+    ]
+  },
+  {
+    "id": "jp_plug_scenic",
+    "subject": "japan/himeji",
+    "category": "visit",
+    "query": "Himeji Castle",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/107199273709415872300",
+    "author": "邱聖育",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-25",
+    "sha256": "14bc5c310943cfa909febfa72f1e8cce589cfec5caaa288f3a78c0833640b87e",
+    "local_path": "media/graded/jp_plug_scenic.jpg",
+    "used_in": [
+      "ttc-12"
+    ]
+  },
+  {
+    "id": "jp_save_scenic",
+    "subject": "japan/kanazawa",
+    "category": "visit",
+    "query": "Higashi Chaya District Kanazawa old wooden teahouse street",
+    "platform": "google_images",
+    "source_url": "https://nagoya.travel/destinations/ishikawa/kanazawa/higashi-chaya-district/",
+    "author": "NAGOYA TRAVEL GUIDE",
+    "license": "ugc-unlicensed",
+    "w": 2000,
+    "h": 1336,
+    "scraped_at": "2026-07-25",
+    "sha256": "b69a8eb9aafb7690afad522ae6d7fd76dffe03044bd0cf396e7cbab6fece220e",
+    "local_path": "media/graded/jp_save_scenic.jpg",
+    "used_in": [
+      "ttc-12"
+    ]
   }
 ]

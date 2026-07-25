@@ -38,6 +38,42 @@ real, not decoration. Then still run the QC gate in `persona_gen_prompt_referenc
 
 ---
 
+> **1.0 proven-prompt library — never ported, pull from it (2026-07-25).** 1.0 accumulated **14+ real,
+> used cover prompts** in `/Project Ana/outputs/*/_work/cover/gpt_image_prompt.txt` that were never banked
+> here (this file had only entry 01 for two eras). The gold exemplar is `10 - Tokyo and Osaka Shopping
+> Guide/_work/cover/native_prompt_v4.txt` — a scene realism-correction whose whole-frame-under-exposure,
+> anti-pseudo-detail, and physical-integration language is now folded into
+> [`persona_gen_prompt_reference.md`](persona_gen_prompt_reference.md). The Vietnam scene prompts (`17 -
+> Overrated vs Underrated Vietnam`, `18 - First Timer Vietnam Guide`) are good Vietnam starting points —
+> but their "dewy glowy" makeup is SUPERSEDED by the matte / expose-under recipe; ignore that part.
+
+### 02 — Character-in-scene COVER (colonial street, daylight) · Hannah (Mexico) · 2026-07-25
+- **Character:** Hannah (Mexico subject; registry USA)
+- **Deliverable:** vertical 3:4 per-post cover, full-body on a colourful Valladolid street
+- **Refs used:** identity refs 1-4 (`prep_cover_refs.py`) · wardrobe ref (shared #20, burgundy halter + baggy jeans) · **REAL background** (a Valladolid green-wall street plate)
+- **Why it won:** the canonical **fuller-playbook DAYTIME scene** exemplar from the 2.0 Ana/Hannah run — matte peach under-exposed skin in real harsh-sun shade, a faithful populated background with real depth, distant detail staying soft (anti-pseudo-detail), no cut-out halo. Uses SKIN + EXPOSURE + the three ported blocks (phone-capture / real-detail-only / physical-integration). Paste-ready; swap identity/wardrobe/background/location, keep the SKIN/EXPOSURE/PHONE-CAPTURE blocks intact.
+- **Output:** `outputs/hannah/tth-05 - Things You Should Never Do In Mexico/` (cover); prompt file `chars/_gen/hannah_scene/cover_prompt.txt`.
+
+```text
+A candid vertical (portrait, 3:4) phone photo of a young woman on a colorful colonial street in Valladolid, Mexico, framed as a real social-media post photo taken by a friend a step away. It must look like a real photo from someone's camera roll, NOT a studio shoot, NOT a polished model render, NOT AI-looking.
+SKIN & FACE — #1 PRIORITY: warm natural PEACH / sun-kissed undertone (not porcelain-white); expose skin slightly UNDER (face not the brightest thing, no glow/bloom); visible pores, fully MATTE; NON-LINEAR tone (non-uniform colour on neck/collarbone/arms/hands, slightly darker finger joints, never one flat tone with a dewy sheen); one or two small blemishes, faint nose/cheek redness, under-eye shadow; feature asymmetry (one eye slightly larger, one brow higher, uneven almost-smile); kill the beauty-filter look.
+IDENTITY: exact same PERSON as reference images 1-4 (face/eyes/long straight dark hair); apply the real-skin notes, do NOT beautify/whiten/slim.
+WARDROBE: outfit from reference image 5 — fitted deep burgundy halter top + loose light-wash baggy jeans, simple jewelry; halter neckline shows neck/shoulders/collarbone; real worn fabric with natural folds.
+BACKGROUND — USE THE REAL REFERENCE, DO NOT INVENT: reference image 6 is a REAL photo of the exact place (vivid green painted wall + colourful folk figures beside a cobblestone street into daylight/blue sky). Reproduce it faithfully; place her INTO it standing on the cobbles set a little back, lit FROM that scene with matching shadows/perspective/natural phone depth-of-field. Never a cut-out pasted on a backdrop.
+COMPOSITION: three-quarter to full body, subject set back and lower-centre (3×3 col 2, rows 2-3), real street filling the frame with headroom; face readable; NOT a tight crop, NOT a dead-on stare.
+POSE: candid, turned slightly along the street, glancing off to the side, small asymmetric almost-smile, one hand loose or in a pocket.
+CAMERA EXPOSURE + WHOLE-FRAME PHONE CAPTURE: ONE coherent consumer-iPhone exposure across subject + background, entire frame ~0.5 stop under, warm, MUTED (not punchy/saturated); lit by real daylight, one side darker, no blown highlights, no blown-white sky behind her face; reduce local contrast/digital clarity/highlight recovery/edge crispness; NO HDR pop/cinematic/fake bokeh/heavy vignette; ordinary 1080p not 4K; subtle frame-wide luminance grain + faint chroma speckle in shadows + slight handheld micro-softness.
+REAL DETAIL ONLY: no scrambled letters, pseudo-logos, vague half-resolved faces/objects, or detail that nearly resolves but doesn't; real signage correct-spelled or naturally too soft; distant people/objects stay optically soft, never fake-sharpened.
+PHYSICAL INTEGRATION: she + scene share one focal softness, grain, colour temperature, perspective, sun direction and shadow density; hair/clothing edges have ordinary phone softness with NO halo/cut-out ring; grounded foot contact with a matching cast shadow; five correct fingers per hand.
+BACKGROUND NON-UNIFORM: walls/cobbles/doorways/distant people at different brightness/hue/saturation; litter the ground with real uncontrolled detail; a person or two further down the street. Not a clean postcard. No text/logos/watermarks anywhere.
+```
+
+### 03 — Character-in-scene ENDING (cenote, low light) · Hannah (Mexico) · 2026-07-25
+- **Character:** Hannah (Mexico subject)
+- **Deliverable:** vertical 3:4 per-post ending scene, full-body inside Cenote Suytun (dim cavern + single daylight shaft)
+- **Refs used:** identity 1-4 · wardrobe #20 · REAL background (a Cenote Suytun plate)
+- **Why it won:** best gen of the 2.0 run — the **low-light block** (subject lit only by the daylight shaft, cavern crushed to near-black, sensor noise/softness scaled to the dark) reads genuinely real; identity + wardrobe consistent with her cover. Same recipe as entry 02 with the low-light exposure variant. Prompt file: `chars/_gen/hannah_scene/ending_prompt.txt`.
+
 ### 01 — Square 1:1 profile picture (sakura park) · Chloe (Japan) · 2026-07-11
 - **Character:** Chloe — Japan (@chloe.belletravel)
 - **Deliverable:** SQUARE 1:1 social **profile picture**, waist-up, cherry-blossom park

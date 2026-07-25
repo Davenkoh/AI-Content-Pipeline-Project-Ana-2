@@ -36,6 +36,14 @@ CAMERA EXPOSURE & LIGHT: expose the WHOLE frame slightly UNDER — a touch darke
 BACKGROUND — REAL + IMPERFECT: reproduce the real reference background faithfully (do NOT invent); populate + "dirty" it (people/objects near her, uneven wear); LITTER THE GROUND/FLOOR with random uncontrolled detail — scattered petals/leaves, dirt patches, worn uneven grass, cracks, pebbles, small debris, stray shadow. Non-uniform brightness/hue/saturation element-to-element; sky broken with uneven cloud, never a linear gradient.
 ```
 
+## PHONE-CAPTURE + ANTI-PSEUDO-DETAIL + INTEGRATION block (ported from 1.0 `native_prompt_v4` — 2026-07-25)
+Proven in 1.0's `outputs/*/_work/cover/gpt_image_prompt.txt` (esp. `native_prompt_v4.txt`, the Chloe Cat-Street realism-correction) but never carried into this distilled recipe. Append these after the SKIN + EXPOSURE blocks — they measurably sharpen a scene gen (validated on the 2.0 Ana/Hannah run). This is the paste-ready form of `realism_book.md` §5.4 (degrade) + D2 (exposure) + the linear/pseudo-detail tells, for a CHARACTER-in-scene gen. Do NOT then post-degrade the output (§5.6) — the degradation lives in the prompt.
+```
+WHOLE-FRAME PHONE CAPTURE: render it as ONE coherent consumer-iPhone exposure across subject and background — the entire frame a touch darker (about half a stop under), warm, colours natural and MUTED (not punchy/saturated). Reduce local contrast, digital clarity, highlight recovery and edge crispness. NO HDR pop, no cinematic grade, no fake bokeh, no heavy vignette. Ordinary 1080p detail, NOT razor 4K. Add subtle frame-wide luminance grain + faint chroma speckle in the shadows + a slight handheld micro-softness.
+REAL DETAIL ONLY: do NOT invent scrambled letters, pseudo-logos, vague half-resolved faces/objects, or any detail that nearly resolves but does not. Real signage is either correctly spelled or naturally too soft to read; distant people/objects stay optically soft and small, never fake-sharpened into invented marks.
+PHYSICAL INTEGRATION: she and the scene share ONE focal softness, grain, colour temperature, perspective, light direction and shadow density; her hair + clothing edges have ordinary phone softness with NO halo / cut-out ring; grounded contact (foot/hand) with a matching cast/contact shadow; five correct fingers per hand, no distortion.
+```
+
 ## Also always include (unchanged from the proven prompt)
 - **Identity:** keep the same PERSON as refs 1/2/4 but apply the real-skin notes; if the ref looks too perfect/airbrushed, dial imperfection + peach tone back in (patch forward).
 - **Wardrobe (D5):** match ref 3; neckline shows neck/collarbone/shoulders (+ tasteful cleavage) where the outfit allows.
@@ -49,3 +57,5 @@ BACKGROUND — REAL + IMPERFECT: reproduce the real reference background faithfu
 3. Ground/floor: random uncontrolled detail present, not a clean even floor.
 4. Background: real, populated, non-uniform exposure/colour; she is lit BY it.
 5. D6 framing/pose/gaze; D5 wardrobe/neckline; hands; identity; no watermark.
+6. Whole-frame phone exposure: NOT punchy/HDR, edges not razor-crisp, subtle grain present — 1080p not 4K.
+7. No pseudo-text / near-resolving invented detail; edges have no cut-out halo; subject shares the scene's grain + colour temp + shadow direction (physically integrated, not pasted).

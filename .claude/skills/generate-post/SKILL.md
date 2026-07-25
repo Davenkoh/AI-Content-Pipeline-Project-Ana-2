@@ -39,10 +39,14 @@ GREEN is the human's. Quit Chrome after CDP work.
 - **§1** preflight (`preflight.sh`) — abort on FAIL.
 - **§2** `next-slot --character <key> [--country X] --reserve` → the slot JSON (id · framework · variant ·
   country · copy_iteration). Everything downstream keys off these.
-- **§3 HUMAN-VARIANT PREREQ:** if `variant == human` and `chars/<key>_cover.png` **or**
-  `chars/<key>_ending.png` is missing → **generate them first** (persona-gen chain per WORKFLOW §3 +
-  `new-character` final step). **Chloe has hers; Ana + Hannah are pending** — a `human` slot for them is
-  blocked until you gen the scene photos. A `nohuman` slot skips this stage.
+- **§3 HUMAN-VARIANT SCENES (fresh per post):** if `variant == human`, generate **NEW** cover + ending
+  scene photos for THIS post — a **different setting + different wardrobe** each time, identity locked to
+  her Base References — saved to `chars/<key>_<id>_cover.png` / `_ending.png` and referenced by the
+  copy.json `char_photo` fields. **Never reuse one static `chars/<key>_cover.png` across posts** (human
+  steer 2026-07-25); that "same photo every post" look is the flaw this step avoids. Run the gen chain
+  **FOREGROUND** (the Stop hook kills a backgrounded gen mid-render). A `nohuman` slot skips this stage.
+  Recipe: WORKFLOW §3 + `knowledge/realism/persona_gen_prompt_reference.md` + start from the closest banked
+  winner in `knowledge/realism/winning_prompts.md`.
 - **§4** copy — load the `DESIGN.md` schema + this framework's `CREATIVE.md` block + `tuning/06` + `02` +
   `voice/humanizer` + `knowledge/brand/holicay_brand.md` (honor the copy dial; check freshness by scanning
   recent `outputs/<char>/*/copy.json`) → write `outputs/<key>/<ID - Title>/copy.json` (**pre-broken lines**) +

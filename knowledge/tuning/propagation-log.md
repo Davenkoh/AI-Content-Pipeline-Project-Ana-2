@@ -173,3 +173,27 @@ production system** of this repo (Project Ana 2.0). This is an era divider, not 
 - **New 2.0 feedback entries continue BELOW**, in the same entry format, newest at the bottom. The
   governing docs a 2.0 lesson can propagate to now live under `knowledge/` (frameworks/, realism/,
   voice/, brand/, platform/, tuning/) + the repo-root `CREATIVE.md` / `DESIGN.md`.
+
+## per-post scene photos: fresh scene + wardrobe every post, never one reused image (2026-07-25)
+- Feedback: "shouldn't it be different every post, are we using the same every post? the wardrobe should also be different" → "fix … 'out of the box, it reuses the same image every post' … this flaw in the system." (given while generating Ana tt-20 + Hannah tth-05, both human-variant)
+- Theme: realism / identity — persona scene photos (Stage 3)
+- Propagated to: WORKFLOW.md §3 (rewritten: fresh per-post cover+ending keyed to id, different setting+wardrobe, identity locked to Base Refs; + run gen FOREGROUND); DESIGN.md standing two-variant rule (new per-post bullet); .claude/skills/generate-post/SKILL.md §3; memory per-post-scene-wardrobe.md.
+- Change: the vanilla pipeline generated ONE `chars/<key>_cover.png` + `_ending.png` and reused them on every post (same scene + outfit forever) — reads fake for a "real person" account. Now every human-variant post generates NEW scene photos at `chars/<key>_<id>_cover.png` / `_ending.png` with a different setting + different wardrobe, identity locked to the character's Base References, and copy.json `char_photo` points at the per-post names. First applied on Ana tt-20 (Hanoi Train St + Ha Long) + Hannah tth-05 (Valladolid st + Suytun cenote). `new-character`'s one-time scene-gen is now superseded by the per-post gen.
+
+## realism port: bank 1.0's proven prompts + the missing degradation/anti-pseudo/integration blocks (2026-07-25)
+- Feedback: "what are your knowledge on making the human looks realistic … it seems like you didn't port over everything from project ana 1.0" → "first read through all the prior knowledge on realism in depth. then cross check. then retry."
+- Theme: realism (persona / scene gen) — knowledge port + process
+- Propagated to: knowledge/realism/persona_gen_prompt_reference.md (new PHONE-CAPTURE + ANTI-PSEUDO-DETAIL + INTEGRATION block + QC items 6-7); knowledge/realism/winning_prompts.md (1.0 proven-prompt-library pointer + entries 02/03 = the 2.0 Hannah Valladolid cover + Suytun ending wins); this log.
+- Change: cross-check found the realism_book v5 was fully ported (2.0 == 1.0 bar one sourcing line), but the PROVEN PROMPT LIBRARY was not — 1.0 had 14+ used cover prompts in `/Project Ana/outputs/*/_work/cover/gpt_image_prompt.txt` (esp. `native_prompt_v4`) never banked (winning_prompts.md had only entry 01 for two eras). Ported the three missing reusable blocks (whole-frame ~0.5-stop-under phone exposure + kill HDR/clarity/edge-crispness + 1080p-not-4K + grain/chroma; anti-pseudo-text/near-resolving detail; physical integration = shared grain/colour-temp/shadow + no cut-out halo + correct fingers) into the paste-ready recipe, and banked the first 2.0 scene wins. Confirmed the older 1.0 "dewy glowy" makeup is superseded by the v5 matte/expose-under recipe. Applied on Hannah's regen (her first cover gen crashed — Stop hook killed a backgrounded gen; retried FOREGROUND with the fuller playbook and passed).
+
+## doc bug: WORKFLOW §10 documented a --caption flag post-upsert doesn't accept (2026-07-25)
+- Feedback: (found while delivering Ana tt-20) passing `--caption` to `sheets.py post-upsert` made argparse reject the whole command, silently leaving the row a `(building)` stub.
+- Theme: other — doc/engine mismatch (Stage 10)
+- Propagated to: WORKFLOW.md §10 (removed `--caption` from the post-upsert example + added a note that post-upsert takes no `--caption`; the caption ships in caption.txt, not the Sheet).
+- Change: `engine/sheets/sheets.py` `cmd_post_upsert` only writes ID/Country/Framework/Variant/Copy Iteration/Title/Output Folder/Notes — no Caption column or `--caption` arg. The doc's `--caption` example was stale; delivery now omits it.
+
+## Framework B deck length: 8 -> 10 slides (2026-07-25)
+- Feedback: "for the option B, let's have 10 slides, so i need 2 more slides. no need regen, just update the content strategy" (given after delivering the three B decks tth-06 / tt-21 / ttc-12)
+- Theme: other — content strategy (the content wheel's B slide map)
+- Propagated to: CREATIVE.md §Framework B "Slide map" (body rows `5–7` -> `5–9`, closer `8` -> `10`, + a new deck-length note on how to order 7 takes and when NOT to pad).
+- Change: Framework B is now a **10-slide deck = 7 hot takes** (cover · 2 takes · plug at 4 · 5 takes · `am I right? 🤷🏻‍♀️` at 10), up from 8 slides / 5 takes. The plug stays at slide 4 (front/middle rule unchanged). Ordering rule added: the most RECOGNIZABLE overrated spots ride 2–3 and 5–6 (the take only lands if the viewer knows the place), deeper cuts ride 7–9; every one of the 7 still needs a verified anchor + a real named ✅ alternative, and a country that only yields 5 honest takes ships 8 rather than padding with filler. No engine change needed — `qc_gate.mjs` derives the expected slide sequence from each post's own `copy.json`, so deck length is free. Applies to all FUTURE B posts; tth-06 / tt-21 / ttc-12 were NOT regenned (per the user) and stay at 8 slides.

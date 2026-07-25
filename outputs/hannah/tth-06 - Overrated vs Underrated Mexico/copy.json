@@ -1,0 +1,163 @@
+{
+  "option": "B",
+  "hook": {
+    "title": "OVERRATED vs UNDERRATED places in Mexico",
+    "subtitle": ""
+  },
+  "hashtags": [
+    "#mexicotravel",
+    "#mexicotips",
+    "#travelmexico",
+    "#mexicotrip",
+    "#mexico"
+  ],
+  "caption": {
+    "title_line": "🇲🇽 OVERRATED vs UNDERRATED places in Mexico",
+    "body_draft": "Mexico has a handful of spots that get hyped everywhere online, and after visiting a lot of them myself, some are genuinely worth it and some really are not. Here are my honest overrated versus underrated takes, with a real reason behind each one.\n\nTulum is the first one I would rethink. It has quietly become one of the most expensive places in the country, with beach clubs asking a fifty dollar or more minimum spend just to sit on a chair and a new reserve fee to reach parts of the sand. Bacalar, a few hours south, is the lagoon of seven colors, far calmer and far cheaper, and swimming in that water is the kind of thing you flew here for.\n\nCabo San Lucas is the next overrated one for me. It is the priciest resort town in Mexico, with average hotel rates around five hundred dollars a night and a spring break party energy that never fully switches off. La Paz, just up the coast, is calmer and cheaper, and in the winter season you can actually get in the water and swim alongside whale sharks.\n\nPlaya del Carmen and its Fifth Avenue always get recommended, but it is really a long strip of chain stores and timeshare sellers pulling at you the whole walk. Puerto Morelos, twenty minutes north, is a sleepy fishing town in front of a protected national reef, and you can snorkel it with the local cooperative for about twenty five dollars.\n\nThe big eco parks like Xcaret are the most overhyped of all. A single adult ticket runs well over a hundred and fifty dollars for what is basically a staged, crowded theme park. A real cenote like Dos Ojos near Tulum costs around twenty five dollars and feels genuinely wild and magical instead.\n\nFinally, skip the packed booze cruise everyone books from Cancun over to Isla Mujeres. Isla Holbox is the island worth your time, completely car free with only golf carts and bikes on sandy streets, flamingos wading in the shallows, and whale sharks offshore in the summer months.\n\nThese are just my honest opinions, so tell me if you disagree. Save this before you book your Mexico trip."
+  },
+  "slides": [
+    {
+      "type": "cover",
+      "flag": "🇲🇽",
+      "title_lines": [
+        "OVERRATED vs",
+        "UNDERRATED",
+        "places in Mexico"
+      ],
+      "subtitle_lines": [],
+      "char_photo": "hannah_tth-06_cover",
+      "scenic_photo": "mx_bacalar_scenic"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't blow your",
+        "budget in Tulum"
+      ],
+      "x_why_lines": [
+        "beach clubs want $50+",
+        "just for a chair now"
+      ],
+      "check_title_lines": [
+        "✅ Go to Bacalar instead"
+      ],
+      "check_why_lines": [
+        "the lagoon of 7 colors,",
+        "way calmer and cheaper"
+      ],
+      "top_photo": "tulum_beachclub",
+      "bottom_photo": "bacalar_lagoon"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Skip pricey Cabo"
+      ],
+      "x_why_lines": [
+        "mexico's most expensive",
+        "resort town, party all year"
+      ],
+      "check_title_lines": [
+        "✅ Go to La Paz instead"
+      ],
+      "check_why_lines": [
+        "calmer, cheaper, and you",
+        "can swim with whale sharks"
+      ],
+      "top_photo": "cabo_marina",
+      "bottom_photo": "lapaz_whaleshark"
+    },
+    {
+      "type": "plug",
+      "paragraphs": [
+        [
+          "❌ i regret using google doc",
+          "and sheets to plan my trip"
+        ],
+        [
+          "alot of my research came from",
+          "tiktok, i saved videos on",
+          "tiktok, but never revisted it"
+        ],
+        [
+          "✅ HOLICAY.COM was",
+          "a game changer"
+        ],
+        [
+          "i can forward it my tiktok",
+          "links, travel documents, any",
+          "notes i have, and it saves",
+          "the locations and organizes my",
+          "notes for me all in one place"
+        ]
+      ],
+      "bg_photo": "mx_plug_scenic"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Skip Playa's 5th Ave"
+      ],
+      "x_why_lines": [
+        "a chain-store strip full of",
+        "timeshare touts and crowds"
+      ],
+      "check_title_lines": [
+        "✅ Go to Puerto Morelos"
+      ],
+      "check_why_lines": [
+        "a protected national reef,",
+        "snorkel the co-op for $25"
+      ],
+      "top_photo": "playa_quinta",
+      "bottom_photo": "puerto_morelos_reef"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't pay for Xcaret"
+      ],
+      "x_why_lines": [
+        "$150+ a ticket for a",
+        "staged, crowded eco park"
+      ],
+      "check_title_lines": [
+        "✅ Swim Cenote Dos Ojos"
+      ],
+      "check_why_lines": [
+        "a real cenote near tulum",
+        "for about $25"
+      ],
+      "top_photo": "xcaret_park",
+      "bottom_photo": "dos_ojos_cenote"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Skip the Isla Mujeres",
+        "booze cruise"
+      ],
+      "x_why_lines": [
+        "a packed catamaran",
+        "party boat from cancun"
+      ],
+      "check_title_lines": [
+        "✅ Go to Isla Holbox"
+      ],
+      "check_why_lines": [
+        "car-free island, just golf",
+        "carts, flamingos, whale sharks"
+      ],
+      "top_photo": "isla_mujeres_cruise",
+      "bottom_photo": "holbox_island"
+    },
+    {
+      "type": "save",
+      "title": "am I right? 🤷🏻‍♀️",
+      "subtitle": "",
+      "char_photo": "hannah_tth-06_ending",
+      "scenic_photo": "mx_holbox_scenic",
+      "title_style": "outline"
+    }
+  ]
+}

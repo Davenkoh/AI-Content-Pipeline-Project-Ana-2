@@ -163,8 +163,17 @@ parks" known in Japan), with the matching emoji in the title.
 |---|---|
 | 2–3 | a popular place people know that is **very touristy** (e.g. Shibuya Sky or teamLab in Japan, 4P's in Vietnam) |
 | 4 | **Holicay plug** — solo-planning regret angle (verbatim copy below) |
-| 5–7 | more popular, very touristy places people know |
-| 8 | title: `am I right? 🤷🏻‍♀️` |
+| 5–9 | more popular, very touristy places people know |
+| 10 | title: `am I right? 🤷🏻‍♀️` |
+
+**Deck length = 10 slides · 7 hot takes** (human steer 2026-07-25). Order them by recognition, not by
+how clever the take is: the **most famous** overrated spots go on 2–3 and 5–6 (the viewer has to know
+the place for the take to land), and the **deeper cuts** ride 7–9, where a reader who has already
+swiped four times will follow you somewhere less obvious. Each of the 7 still has to clear the shared
+rule — a real anchor (a price, a queue, a closure, a rule change) behind the opinion, and a ✅ that is
+a **real named alternative**, not a vaguer version of the ❌. If a country only yields 5 honest takes,
+say so and ship 8 rather than padding with two weak ones; a filler take is the fastest way to lose the
+credibility the whole framework runs on.
 
 **Body-slide copy shape** — same tight ❌/✅ four-line cluster as A, but here ❌ = the **overrated** place and ✅ = the **underrated** one (each can be a real place in its own right). (Visual split-frame in DESIGN.md.)
 

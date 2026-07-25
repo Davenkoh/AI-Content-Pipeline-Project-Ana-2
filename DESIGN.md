@@ -21,6 +21,12 @@
   - For A/B/C the framework default is *human on first + last* → `nohuman` is the test variant.
   - For D the framework default is *faceless* → `human` is the test variant (the doc itself allows
     "swap that scenic hero for a character-in-scene cover instead").
+- **The `human` scene photo is generated FRESH per post, never reused (human steer 2026-07-25).** Each
+  post's cover + ending `char_photo` is a new per-post gen at `chars/<key>_<id>_cover.png` /
+  `chars/<key>_<id>_ending.png` — a **different setting + different wardrobe** every time, identity locked
+  to the character's Base References. Reusing a single `chars/<key>_cover.png` across every post reads as
+  fake (a real person doesn't repost one photo). `char_photo` resolving to any name under `chars/` already
+  supports this; see WORKFLOW §3 for the gen.
 - **The Holicay plug slide now has a real design (human steer 2026-07-23) — two treatments:**
   - **C plug (`mockup`) = the ✅ solution:** a framed phone screenshot of the **Holicay app**
     (rounded corners + white border + soft shadow), sized LARGE (~1162px tall, ~64% frame height)

@@ -1,0 +1,165 @@
+{
+  "option": "B",
+  "hook": {
+    "title": "OVERRATED vs UNDERRATED places in Japan",
+    "subtitle": ""
+  },
+  "hashtags": [
+    "#japantravel",
+    "#japantips",
+    "#traveljapan",
+    "#japantrip",
+    "#japan"
+  ],
+  "caption": {
+    "title_line": "🇯🇵 OVERRATED vs UNDERRATED places in Japan",
+    "body_draft": "Japan has a handful of spots that get hyped constantly online, and after going to a lot of them myself, some are genuinely worth it and some are not. Here are my honest overrated versus underrated takes, with a real reason behind each one.\n\nEveryone still sends you to Tsukiji for the tuna auction, but the wholesale market and the auction actually moved out to Toyosu back in 2018. Tsukiji today is really just the outer market, a fun but very touristy row of food stalls. If you want to see the real fish market and the famous tuna auction, Toyosu is the place now.\n\nThe Arashiyama bamboo grove looks magical in photos, but in person it is a short path packed shoulder to shoulder with tourists. For the same feeling without the crush, go to Hokoku-ji in Kamakura, a quiet Zen bamboo temple with a little tea house where you can drink matcha looking out at the bamboo.\n\nOsaka Castle is worth seeing from the outside, but the keep itself is a 1931 concrete reconstruction with an elevator and a museum inside. If you want a real castle, Himeji is the one, an original wooden keep from the early 1600s that survived the centuries and became one of Japan's first UNESCO World Heritage Sites.\n\nNara is famous for its deer, but the park is mobbed and the deer swarm and headbutt you the second they smell crackers. Miyajima near Hiroshima has free-roaming deer too, plus the famous vermilion floating torii gate of Itsukushima Shrine, so you get the deer and an icon in one trip.\n\nGion in Kyoto is the classic geisha-spotting spot, but it got so crowded that the city banned tourists from the private alleys, with fines for going in. For a real chaya district that is far calmer, go to Higashi Chaya in Kanazawa, full of preserved wooden teahouses and gold-leaf shops.\n\nThese are just my honest opinions, so tell me if you disagree. Save this before your Japan trip."
+  },
+  "slides": [
+    {
+      "type": "cover",
+      "flag": "🇯🇵",
+      "title_lines": [
+        "OVERRATED vs",
+        "UNDERRATED",
+        "places in Japan"
+      ],
+      "subtitle_lines": [],
+      "char_photo": "chloe_ttc-12_cover",
+      "scenic_photo": "jp_cover_scenic"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't go to Tsukiji",
+        "for the tuna auction"
+      ],
+      "x_why_lines": [
+        "it moved out in 2018,",
+        "it's food stalls now"
+      ],
+      "check_title_lines": [
+        "✅ Go to Toyosu instead"
+      ],
+      "check_why_lines": [
+        "the real fish market and",
+        "the tuna auction are here"
+      ],
+      "top_photo": "tsukiji_crowd",
+      "bottom_photo": "toyosu_market"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Skip Arashiyama",
+        "bamboo grove"
+      ],
+      "x_why_lines": [
+        "it's short and shoulder",
+        "to shoulder with tourists"
+      ],
+      "check_title_lines": [
+        "✅ Go to Hokoku-ji"
+      ],
+      "check_why_lines": [
+        "a calm bamboo temple in",
+        "kamakura with a tea house"
+      ],
+      "top_photo": "arashiyama_bamboo",
+      "bottom_photo": "hokokuji_bamboo"
+    },
+    {
+      "type": "plug",
+      "paragraphs": [
+        [
+          "❌ i regret using google doc",
+          "and sheets to plan my trip"
+        ],
+        [
+          "alot of my research came from",
+          "tiktok, i saved videos on",
+          "tiktok, but never revisted it"
+        ],
+        [
+          "✅ HOLICAY.COM was",
+          "a game changer"
+        ],
+        [
+          "i can forward it my tiktok",
+          "links, travel documents, any",
+          "notes i have, and it saves",
+          "the locations and organizes my",
+          "notes for me all in one place"
+        ]
+      ],
+      "bg_photo": "jp_plug_scenic"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Skip Osaka Castle"
+      ],
+      "x_why_lines": [
+        "it's a 1931 concrete rebuild",
+        "with an elevator inside"
+      ],
+      "check_title_lines": [
+        "✅ Go to Himeji Castle"
+      ],
+      "check_why_lines": [
+        "the real 400-year-old keep,",
+        "a UNESCO world heritage site"
+      ],
+      "top_photo": "osaka_castle",
+      "bottom_photo": "himeji_castle"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Skip the Nara",
+        "deer park"
+      ],
+      "x_why_lines": [
+        "the deer swarm you and",
+        "headbutt for crackers"
+      ],
+      "check_title_lines": [
+        "✅ Go to Miyajima"
+      ],
+      "check_why_lines": [
+        "free-roaming deer AND the",
+        "famous floating torii"
+      ],
+      "top_photo": "nara_deer",
+      "bottom_photo": "miyajima_torii"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't geisha-hunt",
+        "in Gion"
+      ],
+      "x_why_lines": [
+        "tourists are now banned",
+        "from the private alleys"
+      ],
+      "check_title_lines": [
+        "✅ Go to Kanazawa"
+      ],
+      "check_why_lines": [
+        "higashi chaya is a real",
+        "geisha district, way calmer"
+      ],
+      "top_photo": "gion_crowd",
+      "bottom_photo": "kanazawa_chaya"
+    },
+    {
+      "type": "save",
+      "title": "am I right? 🤷🏻‍♀️",
+      "subtitle": "",
+      "char_photo": "chloe_ttc-12_ending",
+      "scenic_photo": "jp_save_scenic",
+      "title_style": "outline"
+    }
+  ]
+}

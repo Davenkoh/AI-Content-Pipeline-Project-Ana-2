@@ -1,0 +1,200 @@
+{
+  "option": "A",
+  "hook": {
+    "title": "❌ Things you should NEVER do in Mexico",
+    "subtitle": "and what to do INSTEAD 🇲🇽"
+  },
+  "hashtags": [
+    "#mexicotravel",
+    "#mexicotips",
+    "#travelmexico",
+    "#mexicotrip",
+    "#mexico"
+  ],
+  "caption": {
+    "title_line": "❌ Things you should NEVER do in Mexico",
+    "body_draft": "If you're heading to Mexico for the first time, there are a handful of mistakes that quietly make the trip worse, and almost every tourist makes at least a few of them. None of them are hard to avoid once you know the better move.\n\nStart with Chichen Itza. If you show up around midday you get the worst of it, brutal heat and wave after wave of tour buses. Go right when it opens at 8am instead, or visit a quieter ruin like Ek Balam, which you can actually still climb.\n\nDo not drink the tap water. It is the fastest way to lose a few days of your trip to a bad stomach. Stick to bottled water, and while ice at proper restaurants and bars is usually made from purified water, it is fine to ask if you are not sure.\n\nTry not to spend your whole trip in the Cancun hotel zone. It is a purpose built resort strip that does not really show you Mexico. Basing yourself somewhere like Valladolid, Isla Mujeres, or a real downtown gives you a far more authentic version of the trip.\n\nSkip taxis you flag off the street. Unmarked cabs are known for overcharging tourists, especially from the airport. Uber and DiDi both work in Mexico City, the price is fixed in the app, and the ride is tracked the whole way.\n\nDo not skip Mexico City because you think it is dangerous. It sits at the same US travel advisory level as the beach destinations everyone already visits. Stay in a neighborhood like Roma or Condesa, which are leafy, walkable, and home to some of the best food in the country.\n\nDo not eat every meal at your resort buffet either. You came a long way for the food, so go find the taco stand with a line of locals and order al pastor carved straight off the trompo. It will cost a few dollars and beat the buffet every time.\n\nAvoid paying in US dollars. Whether it is cash or a card offering to charge you in dollars, you almost always get a worse exchange rate. Pay in pesos, and pull cash from a normal bank ATM rather than the airport exchange counter.\n\nFinally, do not spend the entire trip on the beach. The cenotes, those natural freshwater sinkholes, are the most magical part of the Yucatan. Suytun and Ik Kil near Valladolid are a good place to start.\n\nGet these right and your first Mexico trip will be cheaper, smoother, and a lot more memorable than a week on a resort wristband."
+  },
+  "slides": [
+    {
+      "type": "cover",
+      "flag": "🇲🇽",
+      "title_lines": [
+        "❌ Things you should",
+        "NEVER do in Mexico"
+      ],
+      "subtitle_lines": [
+        "(and what to do INSTEAD 🇲🇽)"
+      ],
+      "char_photo": "hannah_tth-05_cover",
+      "scenic_photo": "mx_cover_scenic",
+      "subtitle_style": "outline"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't do Chichen Itza",
+        "at midday"
+      ],
+      "x_why_lines": [
+        "brutal heat and packed",
+        "with tour buses by noon"
+      ],
+      "check_title_lines": [
+        "✅ Go right at opening"
+      ],
+      "check_why_lines": [
+        "8am beats the crowds,",
+        "or hit Ek Balam instead"
+      ],
+      "top_photo": "chichen_crowds",
+      "bottom_photo": "ek_balam"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't drink",
+        "the tap water"
+      ],
+      "x_why_lines": [
+        "it'll wreck your stomach",
+        "for days"
+      ],
+      "check_title_lines": [
+        "✅ Stick to bottled"
+      ],
+      "check_why_lines": [
+        "ice is fine at proper spots,",
+        "just ask if you're unsure"
+      ],
+      "top_photo": "mx_tap_sink",
+      "bottom_photo": "mx_bottled_agua"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't only do the",
+        "Cancun hotel zone"
+      ],
+      "x_why_lines": [
+        "it's a resort strip,",
+        "not really Mexico"
+      ],
+      "check_title_lines": [
+        "✅ Base in a real town"
+      ],
+      "check_why_lines": [
+        "valladolid, isla mujeres,",
+        "or downtown for the real thing"
+      ],
+      "top_photo": "cancun_zona",
+      "bottom_photo": "valladolid_town"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't flag a taxi",
+        "off the street"
+      ],
+      "x_why_lines": [
+        "unmarked cabs love to",
+        "overcharge tourists"
+      ],
+      "check_title_lines": [
+        "✅ Use Uber or DiDi"
+      ],
+      "check_why_lines": [
+        "fixed price in the app,",
+        "tracked the whole way"
+      ],
+      "top_photo": "mx_street_taxi",
+      "bottom_photo": "mx_uber_ride"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't skip Mexico City",
+        "thinking it's dangerous"
+      ],
+      "x_why_lines": [
+        "it's the same advisory level",
+        "as the beaches"
+      ],
+      "check_title_lines": [
+        "✅ Stay in Roma or Condesa"
+      ],
+      "check_why_lines": [
+        "leafy, walkable, and the",
+        "best food in the country"
+      ],
+      "top_photo": "cdmx_city",
+      "bottom_photo": "cdmx_roma"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't eat every meal",
+        "at the resort buffet"
+      ],
+      "x_why_lines": [
+        "you flew all this way",
+        "for the same bland food"
+      ],
+      "check_title_lines": [
+        "✅ Find the taco stand"
+      ],
+      "check_why_lines": [
+        "al pastor off the trompo",
+        "where the locals line up"
+      ],
+      "top_photo": "mx_resort_buffet",
+      "bottom_photo": "mx_tacos_pastor"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't pay in dollars"
+      ],
+      "x_why_lines": [
+        "you'll eat a bad exchange",
+        "rate every single time"
+      ],
+      "check_title_lines": [
+        "✅ Pay in pesos"
+      ],
+      "check_why_lines": [
+        "and pull cash from a bank atm,",
+        "not the airport counter"
+      ],
+      "top_photo": "mx_usd_pay",
+      "bottom_photo": "mx_pesos_atm"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't spend the whole",
+        "trip on the beach"
+      ],
+      "x_why_lines": [
+        "you'd miss the best part",
+        "of the Yucatan"
+      ],
+      "check_title_lines": [
+        "✅ Swim a cenote"
+      ],
+      "check_why_lines": [
+        "suytun or ik kil near",
+        "valladolid are unreal"
+      ],
+      "top_photo": "mx_beach",
+      "bottom_photo": "mx_cenote"
+    },
+    {
+      "type": "save",
+      "title": "SAVE THIS",
+      "subtitle": "just incase you need it ❤️",
+      "char_photo": "hannah_tth-05_ending",
+      "scenic_photo": "mx_save_scenic"
+    }
+  ]
+}

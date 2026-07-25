@@ -64,15 +64,18 @@ map onto §1–§11 here one-for-one.
   ```
 - **Tuning:** the rotation is the durable 2.0 spec (`CREATIVE.md`); do not add a local counter.
 
-## 3 · Human-variant prerequisite (scene photos)
+## 3 · Human-variant scene photos (FRESH per post)
 
-- **Inputs:** the `variant` from §2. **Only when `variant == human`.** A `nohuman` slot skips this stage.
-- **What is required:** the chosen character's clean scene photos at **`chars/<key>_cover.png`** and
-  **`chars/<key>_ending.png`** (no text — the renderer lays text over them). Status today:
-  - **Chloe** — present (`chars/chloe_cover.png`, `chars/chloe_ending.png`). Ready.
-  - **Ana · Hannah** — **pending.** Their `character/<Name>/Base References/` (the locked identity) exist,
-    but their `chars/` scene photos do not yet. A `human` slot for Ana or Hannah is **blocked** until you
-    generate them.
+- **Inputs:** the `variant` + `id` from §2. **Only when `variant == human`.** A `nohuman` slot skips this stage.
+- **What is required — a NEW per-post scene, never a reused static image (human steer 2026-07-25):**
+  generate the character's clean cover + ending scene photos NEW for THIS post, keyed to the post id at
+  **`chars/<key>_<id>_cover.png`** and **`chars/<key>_<id>_ending.png`** (no text — the renderer lays text
+  over them), and point the copy.json `char_photo` fields at those per-post names. Each post gets a
+  **different setting** (scene-appropriate for the country) and a **different wardrobe** — a real
+  influencer never reposts the same photo, so a single reused `chars/<key>_cover.png` across every post is
+  exactly the flaw this step exists to avoid. Identity stays locked to `character/<Name>/Base References/`
+  (they exist for every registry character); only scene + wardrobe change per post. (`new-character` may
+  seed an initial pair, but generate-post regenerates a fresh scene each post — the per-post gen governs.)
 - **Command (generate the missing scene photos — persona-gen chain, one bash call so the Stop hook does
   not quit Chrome mid-run):** follow the `new-character` skill's final step and
   `knowledge/realism/persona_gen_prompt_reference.md` (the locked recipe) + `winning_prompts.md` (reuse the
@@ -82,7 +85,9 @@ map onto §1–§11 here one-for-one.
   ```bash
   python3 engine/qc/sync_media.py
   ```
-- **Output:** `chars/<key>_cover.png` + `chars/<key>_ending.png` on disk and mirrored to Drive.
+- **Output:** `chars/<key>_<id>_cover.png` + `chars/<key>_<id>_ending.png` on disk and mirrored to Drive.
+- **Run the gen FOREGROUND** — the Stop hook quits Chrome at turn-end, so a backgrounded `gen_base_ref.js`
+  gets killed mid-render ("browser has been closed"). Block on it with a long timeout instead.
 - **Tuning:** `knowledge/realism/*` (realism_book D1–D6, the locked recipe, the winners bank).
 
 ## 4 · Copy + caption + fact-check
@@ -214,10 +219,13 @@ map onto §1–§11 here one-for-one.
   ```bash
   python3 engine/drive/drive_sync.py --post "outputs/<key>/<ID - Title>" --character <key> --platform Tiktok
   python3 engine/sheets/sheets.py post-upsert --character <key> --id <prefix-NN> \
-    --title "<Title>" --folder "<Drive link>" --caption "<caption.txt contents>" \
+    --title "<Title>" --folder "<Drive link>" \
     --country "<Country>" --framework <OPT> --variant <human|nohuman> --iteration <N> \
     [--notes "<context for the human>"]
   ```
+  **`post-upsert` does NOT take a `--caption` flag** (it only writes ID/Country/Framework/Variant/Copy
+  Iteration/Title/Output Folder/Notes) — passing `--caption` makes argparse reject the whole command and
+  the row silently stays a `(building)` stub. The caption ships in the uploaded `caption.txt`, not the Sheet.
   `drive_sync --post` uploads `final/*.png` + `caption.txt` + `copy.json` + `flags.md` + `sources.md` and
   **prints the Drive folder link** (paste it into `--folder`). The delivered post's own `copy.json` is the
   freshness record for the next iteration (there is no separate freshness file to maintain).
