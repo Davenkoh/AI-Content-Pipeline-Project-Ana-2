@@ -18,9 +18,9 @@
 - For **each option (A, B, C, D)**: render the **cover and the ending slide in TWO variants** —
   `human` (Chloe in scene) and `nohuman` (pure scenic, same text treatment). Body slides render
   once (no person on body slides anyway).
-  - For A/B/C the framework default is *human on first + last* → `nohuman` is the test variant.
-  - For D the framework default is *faceless* → `human` is the test variant (the doc itself allows
-    "swap that scenic hero for a character-in-scene cover instead").
+  - For **all four (A/B/C/D)** the framework default is *human on first + last* → `nohuman` is the
+    test variant. D used to default *faceless*; that was retired 2026-07-26 (`CREATIVE.md` §D design)
+    so every framework runs the same rotation off the same default.
 - **The `human` scene photo is generated FRESH per post, never reused (human steer 2026-07-25).** Each
   post's cover + ending `char_photo` is a new per-post gen at `chars/<key>_<id>_cover.png` /
   `chars/<key>_<id>_ending.png` — a **different setting + different wardrobe** every time, identity locked

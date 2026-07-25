@@ -54,7 +54,7 @@ Empty → nothing to do.
 
 **5 · Clear** the cell:
 ```bash
-python3 engine/sheets/sheets.py feedback-clear --tab <ana|chloe|hannah|brand|connectors> --id <id> --note "what I changed"
+python3 engine/sheets/sheets.py feedback-clear --tab <any registry character key|connectors> --id <id> --note "what I changed"
 ```
 
 ## Routing table (theme → the one doc that controls future posts)

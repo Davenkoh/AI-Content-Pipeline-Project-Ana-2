@@ -135,7 +135,10 @@ AI_NOTE    = "AI-only bookkeeping. You don't need to touch this."
 # ── framework rotation constants (the durable 2.0 spec) ───────────────────────
 FRAMEWORKS = ["A", "B", "C", "D"]
 VARIANTS   = ["human", "nohuman"]
-VARIANT_DEFAULT = {"A": "human", "B": "human", "C": "human", "D": "nohuman"}
+# All four frameworks default to `human` (character on cover + ending) and alternate
+# human -> nohuman from there. D defaulted `nohuman` until 2026-07-26 (it was specced
+# faceless); that default was retired so every framework runs the same A/B test.
+VARIANT_DEFAULT = {"A": "human", "B": "human", "C": "human", "D": "human"}
 
 # ── dropdown options ──────────────────────────────────────────────────────────
 # Framework + Variant dropdowns are attached to every character fact tab (built below).
@@ -707,7 +710,7 @@ def compute_next_slot(char_rows, all_rows, country):
     Returns {framework, variant, copy_iteration}. (id + country are decided by the caller.)
       framework      = FRAMEWORKS[len(my framework-bearing rows) % 4]
       variant        = default(framework) if that framework's prior count is even, else the other
-                       (defaults: A/B/C -> human, D -> nohuman)
+                       (default: all four frameworks -> human)
       copy_iteration = count of (framework, country) rows across ALL fact tabs + 1
     """
     mine = [r for r in char_rows if (r.get("Framework") or "").strip()]

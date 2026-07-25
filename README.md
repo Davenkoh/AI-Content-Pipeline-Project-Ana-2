@@ -249,8 +249,8 @@ flowchart TD
 fact tab on the Sheet and computes three things live:
 
 - **framework** cycles **A → B → C → D** by the count of that account's framework-bearing rows;
-- **variant** alternates **per (account, framework)** off the framework default (A/B/C default **human**,
-  D defaults **nohuman**) — even prior count → the default, odd → the other;
+- **variant** alternates **per (account, framework)** off the framework default (**all four default
+  `human`** — cover + ending carry the character) — even prior count → the default, odd → the other;
 - **copy_iteration** counts prior (framework, country) packs → drives the §4 freshness rule.
 
 `--reserve` drops an atomic `(building)` stub so a teammate claiming a slot a moment later rotates *past*

@@ -272,14 +272,14 @@ Hook — title: `{flag} How to plan & prep the perfect {country} trip for first 
 3.8M views / 267k saves — a proven winner.)
 
 A **numbered planning-checklist** guide: the tips run **1 → 7** across the deck, with a "favorite
-spots" payoff slide and (our insert) the Holicay plug interleaved — **10 slides**. The numbers
-`1.`–`7.` are content labels, not slide numbers; they skip over the cover, the plug, and the
-favorites slide. Every step below is country-agnostic; a Japan example is shown in (parentheses) so
-you can see what each slot holds.
+spots" payoff slide and (our insert) the Holicay plug interleaved, closing on the SAVE THIS ending —
+**11 slides**. The numbers `1.`–`7.` are content labels, not slide numbers; they skip over the cover,
+the plug, the favorites slide, and the ending. Every step below is country-agnostic; a Japan example
+is shown in (parentheses) so you can see what each slot holds.
 
 | # | Purpose (build this) | Country-variable content |
 |---|---|---|
-| 1 | **Cover** — scenic hero of the country's most iconic landscape; hook title in white boxes upper-middle + tiny white-box subtitle. No person. | the iconic hero shot (e.g. Mt Fuji at golden hour over a lake) |
+| 1 | **Cover** — the character in scene at the country's most iconic landscape; hook title in white boxes upper-middle + tiny white-box subtitle. (`nohuman` variant: the same shot without her — a pure scenic hero.) | the iconic hero setting (e.g. her at a lake with Mt Fuji behind at golden hour) |
 | 2 | **`1.` {when to go}** — 2×2 photo grid of the destination's distinct travel seasons; black-pill title top; one white-box line under it (e.g. "each season is SO different you need to plan accordingly"); each cell = a real season photo + white-box `{Season} ({months})` label + a 2–3 line white-box note | the seasons + bullets (e.g. Spring / cherry blossoms / peak / avoid Golden Week · Summer / festivals / humid · Autumn / nice weather / fewer crowds / leaves · Winter / ski / seafood). **Flex the cell count** to the country's real seasons (a tropical country → dry vs wet, etc.) |
 | 3 | **`2.` Route & days** — a real **digital-map screenshot** with pinned markers as the backdrop; black-pill title; white boxes = **the day split, named** ("tokyo 4 days · hakone 1 night · kyoto 3 · osaka 2") + the **route order that never backtracks** (+ which stops are day trips, not overnights). **No setup slide, no "do some research"** — the numbers ARE the value | the cities, their day counts, and the geographically sensible order for {country} |
 | 4 | **HOLICAY PLUG** (our mandatory insert) — lands right after "pin your bucket list onto a digital map," which it answers directly. Copy = the Framework B plug (below). **Design = the A / B / D plug treatment** (full-bleed scenic `bg_photo` + scrim + the ❌ / ✅ sticker cluster, per `DESIGN.md`). | keyword / country in the plug if used |
@@ -289,6 +289,7 @@ you can see what each slot holds.
 | 8 | **`5.` Language** — frosted phone-panel with **real translation-app icons**; black-pill title; white-box paragraphs (locals may not speak English, learn a few key words, keep a scan-and-translate app) | the local language + apps (e.g. DeepL + Google Translate) — real icons via `engine/source/app_icons.py` |
 | 9 | **`6.` Internal transport** — real train photo; black-pill title; white boxes (get the local tap-to-ride transit card, how to load it, why it's easiest) | the country's transit card + setup (e.g. Suica via Apple Wallet → add transit card → top up ¥1000) |
 | 10 | **`7.` Mobile data** — real neon-street / night photo; black-pill title; white boxes (get internet on the go; eSIM = convenient + affordable; pocket wifi = best for groups) | mostly universal; scope examples to {country} |
+| 11 | **Ending** — the character in a second scene; title: `SAVE THIS` · subtitle: `just incase you need it ❤️`. (`nohuman` variant: pure scenic, same text.) | a different setting + outfit from the cover |
 
 **Note on the insert:** slide 3 (Activities) naturally ends on a "my suggested activities on the next
 slide >" teaser. Since the plug now sits at slide 4, either drop that teaser or soften it ("coming
@@ -315,9 +316,13 @@ notes for me all in one place
   and B use. D is the one variant that does NOT use the TikTok Sans face the others use.
   (Type authority = `DESIGN.md` §Type system.)
 - **9:16, text kept in the vertical middle** — the shared canvas rule.
-- **Faceless — NO person on any slide** (A and B put the character on the first + last; D does not).
-  The cover is a pure scenic landscape of the country. If you'd rather feature the active character,
-  swap that scenic hero for a character-in-scene cover instead.
+- **Person = cover + SAVE THIS only — D is NOT faceless** (same as A / B / C). The character carries
+  the first and last slide; the numbered step slides in between carry no person. **The framework
+  default is `human`**, and the rotation alternates `human` → `nohuman` → `human` → `nohuman` per
+  account exactly as it does for A / B / C — the `nohuman` variant swaps the cover for a pure scenic
+  hero of the country and the ending for a scenic, same text treatment either way. (D was originally
+  specced faceless, after its faceless source post; that default was retired 2026-07-26 so all four
+  frameworks run the same human-vs-nohuman test.)
 - **Photo choices = real UGC, per step:** scenic hero (cover), 2×2 season collage, a real
   digital-map screenshot, scenic + text (favorites), POV train / street / attraction shots, a
   frosted app-icon panel. Build grids with the **`step`/`grid4` templates in `engine/render/build.js`**

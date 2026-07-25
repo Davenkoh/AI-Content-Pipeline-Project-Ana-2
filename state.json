@@ -1,13 +1,15 @@
 {
   "default_character": "ana",
   "characters": {
-    "ana":    { "name": "Ana",    "id_prefix": "tt",   "country": "Vietnam", "tiktok": "@solo.with.ana" },
-    "chloe":  { "name": "Chloe",  "id_prefix": "ttc",  "country": "Japan",   "tiktok": "@chloe.belletravel" },
-    "hannah": { "name": "Hannah", "id_prefix": "tth",  "country": "USA",     "tiktok": "" }
+    "ana":     { "name": "Ana",     "id_prefix": "tt",    "country": "Vietnam",     "tiktok": "@solo.with.ana" },
+    "chloe":   { "name": "Chloe",   "id_prefix": "ttc",   "country": "Japan",       "tiktok": "@chloe.belletravel" },
+    "hannah":  { "name": "Hannah",  "id_prefix": "tth",   "country": "USA",         "tiktok": "" },
+    "evelyn":  { "name": "Evelyn",  "id_prefix": "tte",   "country": "South Korea", "tiktok": "" },
+    "holicay": { "name": "Holicay", "id_prefix": "tthol", "country": "Global",      "tiktok": "" }
   },
   "sheet_id": "1Wskn2YPWwu3cEBJVTwyYpgM7XXVjJwODLjZVqLgAqWo",
   "drive_root_name": "Project Ana 2.0",
   "drive_setup_url": "https://drive.google.com/drive/folders/19pUGwusqcvf5cdJuyx6AQKysVleiNHv5",
-  "note": "Project Ana 2.0 registry + pointers. A character = this registry entry (name, id_prefix, default content country, TikTok @handle used by engine/scrape/tiktok_profile.js) + a Base References image set on Drive with her signature look baked in — there are NO per-character text files. 2.0 posts are framework posts (A/B/C/D per CONTRACT.md): the rotation (which framework + human/nohuman variant is next) is DERIVED from the character's fact tab on the shared Sheet via `engine/sheets/sheets.py next-slot --character <key> [--reserve]` — never stored here. Post IDs continue each account's 1.0 numbering (seeded as '(1.0 era marker)' rows by engine/setup/provision.py; the 1.0 Sheet/repo stay untouched as the archive). sheet_id + drive_setup_url are filled by provision.py. To add a character, run the new-character skill (.claude/skills/new-character/).",
-  "updated": "2026-07-23"
+  "note": "Project Ana 2.0 registry + pointers. A character = this registry entry (name, id_prefix, default content country, TikTok @handle used by engine/scrape/tiktok_profile.js) + a Base References image set on Drive with her signature look baked in — there are NO per-character text files. 2.0 posts are framework posts (A/B/C/D per CONTRACT.md): the rotation (which framework + human/nohuman variant is next) is DERIVED from the character's fact tab on the shared Sheet via `engine/sheets/sheets.py next-slot --character <key> [--reserve]` — never stored here. Post IDs continue each account's 1.0 numbering (seeded as '(1.0 era marker)' rows by engine/setup/provision.py; the 1.0 Sheet/repo stay untouched as the archive). sheet_id + drive_setup_url are filled by provision.py. To add a character, run the new-character skill (.claude/skills/new-character/). 'holicay' is the FACELESS brand account: no persona, no character/Holicay/Base References, no chars/holicay_*.png — there is no faceless flag in 2.0 (faceless is a VARIANT: `nohuman`, and as of 2026-07-26 all four frameworks default to `human`, D included), so every `human` slot next-slot proposes for it is BUILT AND LOGGED AS `nohuman`. Its country 'Global' is a placeholder, not a sourcing subject: pass `--country <Country>` on next-slot and a real `--subject <country/city>` to brightdata.py for every Holicay post.",
+  "updated": "2026-07-26"
 }

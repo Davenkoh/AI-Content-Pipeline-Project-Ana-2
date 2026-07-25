@@ -23,8 +23,12 @@ contact-sheet review in §8) with your own **vision**.
 - **State:** the slot comes from the **Sheet** — `sheets.py next-slot --character <key> --reserve` (no local counter).
 
 ## Input
-- **Which character** — `ana` (Vietnam `tt-`) · `chloe` (Japan `ttc-`) · `hannah` (USA `tth-`), or **`all`**
+- **Which character** — `ana` (Vietnam `tt-`) · `chloe` (Japan `ttc-`) · `hannah` (USA `tth-`) ·
+  `evelyn` (South Korea `tte-`) · `holicay` (**faceless brand account**, `tthol-`), or **`all`**
   to loop every registry character sequentially (each gets its own slot).
+  **`holicay` exception:** she has no persona and no `chars/holicay_*.png`, so **build and log every
+  `human` slot the rotation proposes as `nohuman`** (§3 is a no-op for her), and always pass an explicit
+  `--country` — her registry default `Global` is a placeholder, not a sourcing subject.
 - **`--country`** override (defaults to the character's registry country).
 - **Copy dial** — `same` (verbatim reuse of a pack) | `similar` (paraphrase — same places, reworded) |
   `fresh` (new angles/places). **Default `fresh`** for a new iteration; **paraphrase** when reusing a pack

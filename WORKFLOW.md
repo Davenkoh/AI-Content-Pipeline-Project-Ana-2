@@ -41,7 +41,10 @@ map onto §1–§11 here one-for-one.
 
 ## 2 · Claim the rotation slot
 
-- **Inputs:** the character key (`ana` · `chloe` · `hannah`) + optional `--country` override.
+- **Inputs:** the character key — any key in `state.json` → `characters` (`ana` · `chloe` · `hannah` ·
+  `evelyn` · `holicay`) + optional `--country` override. **`holicay` is the faceless brand account:**
+  build + log every proposed `human` slot as `nohuman`, and always pass `--country <Country>` (its
+  registry default `Global` is a placeholder, not a sourcing subject).
 - **Command:**
   ```bash
   python3 engine/sheets/sheets.py next-slot --character <key> [--country <Country>] --reserve
@@ -51,8 +54,8 @@ map onto §1–§11 here one-for-one.
   Everything downstream keys off these five fields.
 - **How the slot is derived (never stored — computed live from the Sheet):**
   - `framework` cycles **A → B → C → D** by the count of this character's framework-bearing rows.
-  - `variant` alternates **per (account, framework)** from the framework default (**A/B/C → human,
-    D → nohuman**): even prior count → the default, odd → the other. This is the **human-vs-nohuman A/B
+  - `variant` alternates **per (account, framework)** from the framework default (**A/B/C/D → human**):
+    even prior count → the default, odd → the other. This is the **human-vs-nohuman A/B
     test** — the same account posts both over time.
   - `copy_iteration` = the number of prior (framework, country) packs across all accounts + 1 (drives the
     freshness rule in §4 — scan prior packs' `copy.json`). Iteration 0 is the unposted fixtures; the first
@@ -269,7 +272,7 @@ GREEN cells are the human's review channel (each fact tab's **Human Feedback** c
 Notes column). Poll → classify → edit the ONE governing doc → log → clear:
 ```bash
 python3 engine/sheets/sheets.py feedback-poll
-python3 engine/sheets/sheets.py feedback-clear --tab <ana|chloe|hannah|brand|connectors> --id <id> --note "what I changed"
+python3 engine/sheets/sheets.py feedback-clear --tab <any registry character key|connectors> --id <id> --note "what I changed"
 ```
 Route each item to its single home and append the verbatim item + destination to
 `knowledge/tuning/propagation-log.md` (newest at the **bottom**). A one-off fix is a **regen** (re-run the
