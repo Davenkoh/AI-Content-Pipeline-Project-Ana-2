@@ -5,6 +5,11 @@
     "chloe":   { "name": "Chloe",   "id_prefix": "ttc",   "country": "Japan",       "tiktok": "@chloe.belletravel" },
     "hannah":  { "name": "Hannah",  "id_prefix": "tth",   "country": "USA",         "tiktok": "" },
     "evelyn":  { "name": "Evelyn",  "id_prefix": "tte",   "country": "South Korea", "tiktok": "" },
+    "charlotte": { "name": "Charlotte", "id_prefix": "ttch", "country": "Canada", "tiktok": "" },
+    "amelia":  { "name": "Amelia",  "id_prefix": "tta",   "country": "UK",          "tiktok": "" },
+    "nora":    { "name": "Nora",    "id_prefix": "ttn",   "country": "Italy",       "tiktok": "" },
+    "violet":  { "name": "Violet",  "id_prefix": "ttv",   "country": "France",      "tiktok": "" },
+    "ivy":     { "name": "Ivy",     "id_prefix": "tti",   "country": "Japan",       "tiktok": "" },
     "holicay": { "name": "Holicay", "id_prefix": "tthol", "country": "Global",      "tiktok": "" }
   },
   "sheet_id": "1Wskn2YPWwu3cEBJVTwyYpgM7XXVjJwODLjZVqLgAqWo",
