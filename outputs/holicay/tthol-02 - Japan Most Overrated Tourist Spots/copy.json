@@ -1,0 +1,205 @@
+{
+  "option": "B",
+  "hook": {
+    "title": "🇯🇵 Japan most OVERRATED tourist ❌ spots",
+    "subtitle": "go here instead >>>"
+  },
+  "hashtags": [
+    "#japantravel",
+    "#japantips",
+    "#traveljapan",
+    "#japantrip",
+    "#japan"
+  ],
+  "caption": {
+    "title_line": "🇯🇵 Japan most OVERRATED tourist ❌ spots",
+    "body_draft": "Japan is not overrated. A handful of the places everyone films there absolutely are. These are the seven I would not queue for again, and the ones I send people to instead. Every swap below is a real place with a real reason behind it, not just a quieter version of the same thing.\n\nStart with Dotonbori, because it is the first thing anyone shows you of Osaka. Go and see the Glico sign, take the photo, then eat somewhere else. That strip is priced for the view. Twenty minutes north in Tenma you get Tenjinbashisuji, the longest shopping street in Japan at about 2.6 kilometres and roughly 800 shops, and it is stocked for people who actually live there.\n\nKiyomizu-dera is the one I feel worst about putting on this list, because the temple itself is beautiful. The problem is the approach. Sannenzaka and Ninenzaka are the most congested lanes in Kyoto, and you pay 500 yen at the end of it to shuffle across the stage with a few thousand other people. Nanzen-ji costs nothing to walk into. The main grounds and the Meiji era brick aqueduct behind them are free, and on most mornings you will have long stretches of it to yourself.\n\nThe fourth slide is the thing I wish I had sorted before any of this. i regret using google doc and sheets to plan my trip. alot of my research came from tiktok, i saved videos on tiktok, but never revisted it. holicay.com was a game changer, i can forward it my tiktok links, travel documents, any notes i have, and it saves the locations and organizes my notes for me all in one place\n\nNakamise is the 250 metre souvenir approach to Sensoji, 89 shops long, and it moves at the speed of the slowest person in front of you. Walk it once for the temple and then leave it alone. Yanaka Ginza is about 170 metres of Showa era shops that survived the war, roughly 70 of them, most still family run, and the Yuyake Dandan steps at the top of it are where locals sit for the sunset.\n\nUniversal Studios is the most expensive mistake on this list. Entry alone runs somewhere between 8,900 and 10,900 yen depending on the date, the Express Pass is a separate ticket on top of that, and standby lines on the headline rides still hit three hours on a busy day. Ghibli Park near Nagoya is 3,300 yen for a standard weekday pass. The catch is that it is reservation only and tickets drop on the 10th of the month, two months ahead, at 2pm Japan time.\n\nNishiki Market got loved to death. It is a 390 metre covered lane and the shopping street association now openly asks visitors to stop eating while they walk because there is no room to move. Demachi Masugata is the arcade Kyoto residents actually use, and Demachi Futaba on the corner has been making mame mochi since 1899. There is usually a queue there too, but it is the local kind.\n\nGolden Gai is a lovely idea that gets expensive fast. Most of those tiny bars charge a seat fee of roughly 500 to 1,500 yen before you have ordered anything, and a few of them are regulars only. Ebisu Yokocho is a converted Showa market with about 20 stalls around shared tables, and a proper night out there lands closer to 2,000 yen.\n\nThe Lawson in Fujikawaguchiko is the strangest one. It is a convenience store car park that went viral, and the town has now put up a barrier and crowd measures because people kept stepping into traffic for the shot. Oishi Park on the north shore of Lake Kawaguchi gives you the same mountain across the water, with flower beds in front of it, for free, with no gate and no queue.\n\nThat is my list. Some of these will annoy people and that is fine, so tell me which one I got wrong. Save this before you book anything."
+  },
+  "slides": [
+    {
+      "type": "cover",
+      "flag": "🇯🇵",
+      "title_lines": [
+        "Japan most OVERRATED",
+        "tourist ❌ spots"
+      ],
+      "subtitle_lines": [
+        "(go here instead >>>)"
+      ],
+      "char_photo": "",
+      "scenic_photo": "jphol_cover_scenic",
+      "subtitle_style": "outline"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't eat your way",
+        "down Dotonbori"
+      ],
+      "x_why_lines": [
+        "the neon strip is priced for",
+        "the photo, not for the food"
+      ],
+      "check_title_lines": [
+        "✅ Go to Tenjinbashisuji"
+      ],
+      "check_why_lines": [
+        "2.6km and 800 shops in tenma,",
+        "japan's longest shopping street"
+      ],
+      "top_photo": "dotonbori_neon_night",
+      "bottom_photo": "tenjinbashisuji_arcade"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Skip Kiyomizu-dera",
+        "and Sannenzaka"
+      ],
+      "x_why_lines": [
+        "500 yen to shuffle through the",
+        "most crowded lane in kyoto"
+      ],
+      "check_title_lines": [
+        "✅ Go to Nanzen-ji instead"
+      ],
+      "check_why_lines": [
+        "the grounds and that big brick",
+        "aqueduct are free to walk"
+      ],
+      "top_photo": "kiyomizu_sannenzaka_crowd",
+      "bottom_photo": "nanzenji_aqueduct"
+    },
+    {
+      "type": "plug",
+      "paragraphs": [
+        [
+          "❌ i regret using google doc",
+          "and sheets to plan my trip"
+        ],
+        [
+          "alot of my research came from",
+          "tiktok, i saved videos on",
+          "tiktok, but never revisted it"
+        ],
+        [
+          "✅ HOLICAY.COM was",
+          "a game changer"
+        ],
+        [
+          "i can forward it my tiktok",
+          "links, travel documents, any",
+          "notes i have, and it saves",
+          "the locations and organizes my",
+          "notes for me all in one place"
+        ]
+      ],
+      "bg_photo": "jphol_plug_scenic"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't shop on",
+        "Nakamise street"
+      ],
+      "x_why_lines": [
+        "250m of souvenir stalls you",
+        "shuffle down to reach sensoji"
+      ],
+      "check_title_lines": [
+        "✅ Go to Yanaka Ginza"
+      ],
+      "check_why_lines": [
+        "170m of showa era shops, and",
+        "the sunset steps at the top"
+      ],
+      "top_photo": "nakamise_crowd",
+      "bottom_photo": "yanaka_ginza"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Skip Universal Studios"
+      ],
+      "x_why_lines": [
+        "8,900 yen to get in, then the",
+        "express pass on top of that"
+      ],
+      "check_title_lines": [
+        "✅ Go to Ghibli Park instead"
+      ],
+      "check_why_lines": [
+        "3,300 yen on a weekday, just book",
+        "on the 10th, two months ahead"
+      ],
+      "top_photo": "usj_entrance_queue",
+      "bottom_photo": "ghibli_park_warehouse"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Skip Nishiki Market"
+      ],
+      "x_why_lines": [
+        "390m so packed the shops ask you",
+        "not to eat while you walk"
+      ],
+      "check_title_lines": [
+        "✅ Go to Demachi Masugata"
+      ],
+      "check_why_lines": [
+        "a real kyoto arcade, and futaba",
+        "has done mame mochi since 1899"
+      ],
+      "top_photo": "nishiki_market_crowd",
+      "bottom_photo": "demachi_masugata"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't drink in Golden Gai"
+      ],
+      "x_why_lines": [
+        "most bars put a 500 to 1,500 yen",
+        "seat charge on before your drink"
+      ],
+      "check_title_lines": [
+        "✅ Go to Ebisu Yokocho"
+      ],
+      "check_why_lines": [
+        "20 stalls round communal tables,",
+        "about 2,000 yen for the night"
+      ],
+      "top_photo": "golden_gai_alley",
+      "bottom_photo": "ebisu_yokocho"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't queue at the",
+        "Fuji Lawson"
+      ],
+      "x_why_lines": [
+        "it's a konbini car park with a",
+        "barrier up to keep you off the road"
+      ],
+      "check_title_lines": [
+        "✅ Go to Oishi Park instead"
+      ],
+      "check_why_lines": [
+        "same fuji across lake kawaguchi,",
+        "free, and no gate to queue at"
+      ],
+      "top_photo": "fuji_lawson_spot",
+      "bottom_photo": "oishi_park_fuji"
+    },
+    {
+      "type": "save",
+      "title": "am I right? 🤷🏻‍♀️",
+      "subtitle": "",
+      "char_photo": "",
+      "scenic_photo": "jphol_save_scenic",
+      "title_style": "outline"
+    }
+  ]
+}

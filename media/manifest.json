@@ -10,7 +10,9 @@
     "h": 512,
     "local_path": "media/graded/app_deepl.png",
     "used_in": [
-      "D"
+      "D",
+      "ana/tt-23",
+      "chloe/ttc-14"
     ],
     "note": "official app icon"
   },
@@ -25,7 +27,9 @@
     "h": 512,
     "local_path": "media/graded/app_google-translate.png",
     "used_in": [
-      "D"
+      "D",
+      "ana/tt-23",
+      "chloe/ttc-14"
     ],
     "note": "official app icon"
   },
@@ -40,7 +44,8 @@
     "h": 1440,
     "local_path": "media/graded/autumn_leaves.jpg",
     "used_in": [
-      "D"
+      "D",
+      "chloe/ttc-14"
     ],
     "note": "ginkgo avenue, single walker"
   },
@@ -100,7 +105,8 @@
     "h": 720,
     "local_path": "media/graded/cramped_hotel_room.jpg",
     "used_in": [
-      "A"
+      "A",
+      "chloe/ttc-14"
     ],
     "note": "fisheye vlog selfie tiny-room"
   },
@@ -199,7 +205,8 @@
       "A",
       "C",
       "D",
-      "chloe/ttc-13"
+      "chloe/ttc-13",
+      "chloe/ttc-14"
     ],
     "note": "handheld night alley lanterns"
   },
@@ -718,7 +725,8 @@
     "h": 1707,
     "local_path": "media/graded/spring_cherry_blossom.jpg",
     "used_in": [
-      "D"
+      "D",
+      "chloe/ttc-14"
     ],
     "note": "street banners, pedestrians, bloom"
   },
@@ -778,7 +786,8 @@
     "h": 999,
     "local_path": "media/graded/summer_festival.jpg",
     "used_in": [
-      "D"
+      "D",
+      "chloe/ttc-14"
     ],
     "note": "ground-level crowd, lantern floats"
   },
@@ -873,7 +882,8 @@
     "h": 3375,
     "local_path": "media/graded/winter_snow.jpg",
     "used_in": [
-      "D"
+      "D",
+      "chloe/ttc-14"
     ],
     "note": "skiers group, rear-view mountain"
   },
@@ -1297,7 +1307,8 @@
     "local_path": "media/graded/vn_bun_cha_stools.jpg",
     "used_in": [
       "tt-20",
-      "ana/tt-22"
+      "ana/tt-22",
+      "ana/tt-23"
     ]
   },
   {
@@ -1517,7 +1528,8 @@
     "sha256": "682c822fc22fc45ac2d32cb8803e88e75b0211db503548ad732cb7a6dd5806a2",
     "local_path": "media/graded/vn_grab_ride.jpg",
     "used_in": [
-      "tt-20"
+      "tt-20",
+      "ana/tt-23"
     ]
   },
   {
@@ -2107,7 +2119,8 @@
     "sha256": "431bef610bca9d87524b348a98764be8bad16c17739e60e7d14f6e8ed5b43bc9",
     "local_path": "media/graded/sapa_town.jpg",
     "used_in": [
-      "tt-21"
+      "tt-21",
+      "ana/tt-23"
     ]
   },
   {
@@ -2252,7 +2265,8 @@
     "sha256": "3572e0f78b30ac38f934b517e22cd5309ecce289c1bbf7978c420da3e5bdfdaa",
     "local_path": "media/graded/mekong_daytour.jpg",
     "used_in": [
-      "tt-21"
+      "tt-21",
+      "ana/tt-23"
     ]
   },
   {
@@ -2360,7 +2374,8 @@
     "sha256": "8abddc6acb4efa067ff619851e8c74ff2f2081905464828d51195ee2c9ce9c51",
     "local_path": "media/graded/arashiyama_bamboo.jpg",
     "used_in": [
-      "ttc-12"
+      "ttc-12",
+      "chloe/ttc-14"
     ]
   },
   {
@@ -3173,7 +3188,8 @@
     "sha256": "2a3ef5f71c98f9c2e5e72ca480385e8ee2145ff9b05dec231415d9311c5c371f",
     "local_path": "media/graded/hanoi_oldquarter.jpg",
     "used_in": [
-      "ana/tt-22"
+      "ana/tt-22",
+      "ana/tt-23"
     ]
   },
   {
@@ -3299,7 +3315,8 @@
     "sha256": "3b8dccc369dfbd1e3710710c13b087860a8bf5a07a2a4802ae0ca551a6646c20",
     "local_path": "media/graded/hoian_lanterns.jpg",
     "used_in": [
-      "ana/tt-22"
+      "ana/tt-22",
+      "ana/tt-23"
     ]
   },
   {
@@ -3371,7 +3388,8 @@
     "sha256": "16f6a716d93b8d8def20402dbddb0252ea1d0b3a8431788f2bcd71e20cf57963",
     "local_path": "media/graded/danang_goldenbridge.jpg",
     "used_in": [
-      "ana/tt-22"
+      "ana/tt-22",
+      "ana/tt-23"
     ]
   },
   {
@@ -3479,7 +3497,8 @@
     "sha256": "552d641586c6485d32527b1fd3f7b517baa2f17747fb216a0a287c206c9a7f52",
     "local_path": "media/graded/saigon_buivien.jpg",
     "used_in": [
-      "ana/tt-22"
+      "ana/tt-22",
+      "ana/tt-23"
     ]
   },
   {
@@ -5053,70 +5072,6 @@
     "used_in": []
   },
   {
-    "id": "84a9e8b7",
-    "subject": "vietnam/halong",
-    "category": "visit",
-    "query": "Ha Long Bay",
-    "platform": "google_places_user_photo",
-    "source_url": "https://maps.google.com/maps/contrib/102328686585172001910",
-    "author": "Zoltán Gábor Drubina",
-    "license": "places-tos",
-    "sha256": "84a9e8b76982cfdd4e8a465279708899e86ba78aae0f3795e8befcbfe4da8b9b",
-    "w": 1600,
-    "h": 1200,
-    "local_path": "media/library/vietnam-halong/84a9e8b7.jpg",
-    "scraped_at": "2026-07-26",
-    "used_in": []
-  },
-  {
-    "id": "1254268a",
-    "subject": "vietnam/halong",
-    "category": "visit",
-    "query": "Ha Long Bay",
-    "platform": "google_places_user_photo",
-    "source_url": "https://maps.google.com/maps/contrib/105315916497503725080",
-    "author": "落山風",
-    "license": "places-tos",
-    "sha256": "1254268a39b5821729733f0b3445433b8966269fe07ebb070a54ae6e12087373",
-    "w": 1600,
-    "h": 1201,
-    "local_path": "media/library/vietnam-halong/1254268a.jpg",
-    "scraped_at": "2026-07-26",
-    "used_in": []
-  },
-  {
-    "id": "1b292852",
-    "subject": "vietnam/halong",
-    "category": "visit",
-    "query": "Ha Long Bay",
-    "platform": "google_places_user_photo",
-    "source_url": "https://maps.google.com/maps/contrib/104023140691805101595",
-    "author": "Dragutin HEGIC",
-    "license": "places-tos",
-    "sha256": "1b2928523f5de4b7520332702dd1e3bbe5e5c672a26451c30524deca683d4b2d",
-    "w": 1600,
-    "h": 1200,
-    "local_path": "media/library/vietnam-halong/1b292852.jpg",
-    "scraped_at": "2026-07-26",
-    "used_in": []
-  },
-  {
-    "id": "26e0eef3",
-    "subject": "vietnam/halong",
-    "category": "visit",
-    "query": "Ha Long Bay",
-    "platform": "google_places_user_photo",
-    "source_url": "https://maps.google.com/maps/contrib/107109323711085525326",
-    "author": "Maxim Esaulov",
-    "license": "places-tos",
-    "sha256": "26e0eef3958f287fb6a366c6c2b6c78eea00368c92c8a2a1e71fc9089d1cb07e",
-    "w": 1280,
-    "h": 960,
-    "local_path": "media/library/vietnam-halong/26e0eef3.jpg",
-    "scraped_at": "2026-07-26",
-    "used_in": []
-  },
-  {
     "id": "676d28ad",
     "subject": "vietnam/sapa",
     "category": "visit",
@@ -5245,131 +5200,503 @@
     "used_in": []
   },
   {
-    "id": "5367c033",
-    "subject": "vietnam/ninhbinh",
+    "id": "dotonbori_neon_night",
+    "subject": "japan/osaka",
     "category": "visit",
-    "query": "Trang An Scenic Landscape Complex",
+    "query": "Dotonbori",
     "platform": "google_places_user_photo",
-    "source_url": "https://maps.google.com/maps/contrib/108119593760742570983",
-    "author": "Thiên Tinh Cổ",
+    "source_url": "https://maps.google.com/maps/contrib/110521069195680098831",
+    "author": "John Snow",
     "license": "places-tos",
-    "sha256": "5367c03323914ace4b3f1a1f4186d0c53d550215e25a2096d5a11ccb3340db1c",
     "w": 1600,
     "h": 1200,
-    "local_path": "media/library/vietnam-ninhbinh/5367c033.jpg",
-    "scraped_at": "2026-07-26",
-    "used_in": []
+    "scraped_at": "2026-07-27",
+    "sha256": "a940fbfdee2914004f2558a35814ac4c209a18b77715bdb8388d730df80a3be4",
+    "local_path": "media/graded/dotonbori_neon_night.jpg",
+    "used_in": [
+      "tthol-02",
+      "chloe/ttc-14"
+    ]
   },
   {
-    "id": "cfb2762d",
-    "subject": "vietnam/ninhbinh",
-    "category": "visit",
-    "query": "Trang An Scenic Landscape Complex",
+    "id": "tenjinbashisuji_arcade",
+    "subject": "japan/osaka",
+    "category": "shop",
+    "query": "Tenjinbashisuji Shopping Street",
     "platform": "google_places_user_photo",
-    "source_url": "https://maps.google.com/maps/contrib/111301344389972786755",
-    "author": "Hoang797 Doan",
+    "source_url": "https://maps.google.com/maps/contrib/103158393281374859690",
+    "author": "新藤",
     "license": "places-tos",
-    "sha256": "cfb2762ded59ac855efa90247280d7ea286fe49ace50c7513a74d41b962620f5",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-27",
+    "sha256": "3140d6a96649ad6a0bb10c653096fb21e087ff1b451408b73a3709c8fbe7c576",
+    "local_path": "media/graded/tenjinbashisuji_arcade.jpg",
+    "used_in": [
+      "tthol-02"
+    ]
+  },
+  {
+    "id": "kiyomizu_sannenzaka_crowd",
+    "subject": "japan/kyoto",
+    "category": "visit",
+    "query": "Sannenzaka",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/104420129921202837557",
+    "author": "Marco Lucchi",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-27",
+    "sha256": "3c293b73b3ee920ffc31045d537a57c10c4c4ba061194888a77ff07c1d71ffcb",
+    "local_path": "media/graded/kiyomizu_sannenzaka_crowd.jpg",
+    "used_in": [
+      "tthol-02"
+    ]
+  },
+  {
+    "id": "nanzenji_aqueduct",
+    "subject": "japan/kyoto",
+    "category": "visit",
+    "query": "Nanzenji Suirokaku Aqueduct",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/110865784912643420830",
+    "author": "Stephan Dua Modest",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-27",
+    "sha256": "f5ebb015c46fc4b622d751472fe283fd54e19ea014cc2064923a994e3e4ef131",
+    "local_path": "media/graded/nanzenji_aqueduct.jpg",
+    "used_in": [
+      "tthol-02"
+    ]
+  },
+  {
+    "id": "nakamise_crowd",
+    "subject": "japan/tokyo",
+    "category": "shop",
+    "query": "Nakamise Shopping Street",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/115365209007991200015",
+    "author": "ぴぴねこ",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 900,
+    "scraped_at": "2026-07-27",
+    "sha256": "6fbb51ece85237e6dc50e2ef69a82fad4a731594ec9d2bbe41ee20ef77693f4f",
+    "local_path": "media/graded/nakamise_crowd.jpg",
+    "used_in": [
+      "tthol-02"
+    ]
+  },
+  {
+    "id": "yanaka_ginza",
+    "subject": "japan/tokyo",
+    "category": "shop",
+    "query": "Yanaka Ginza Shopping Street",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/117377762110860852590",
+    "author": "SPCA663 Little B",
+    "license": "places-tos",
     "w": 1080,
-    "h": 782,
-    "local_path": "media/library/vietnam-ninhbinh/cfb2762d.jpg",
-    "scraped_at": "2026-07-26",
-    "used_in": []
+    "h": 720,
+    "scraped_at": "2026-07-27",
+    "sha256": "be40f4e26080800ee18ca92c583d356fcf47f09e2079ca7bea57bb2367ccf33a",
+    "local_path": "media/graded/yanaka_ginza.jpg",
+    "used_in": [
+      "tthol-02"
+    ]
   },
   {
-    "id": "c1c584db",
-    "subject": "vietnam/ninhbinh",
+    "id": "usj_entrance_queue",
+    "subject": "japan/osaka",
     "category": "visit",
-    "query": "Trang An Scenic Landscape Complex",
+    "query": "Universal Studios Japan",
     "platform": "google_places_user_photo",
-    "source_url": "https://maps.google.com/maps/contrib/111104931131328041994",
-    "author": "Khanh Truong",
+    "source_url": "https://maps.google.com/maps/contrib/110918989484245196392",
+    "author": "Daniel L",
     "license": "places-tos",
-    "sha256": "c1c584dbfe065c4aad67963a3b18759d9d3208a0a29bd5805eab49ec906aafef",
     "w": 1600,
-    "h": 1200,
-    "local_path": "media/library/vietnam-ninhbinh/c1c584db.jpg",
-    "scraped_at": "2026-07-26",
-    "used_in": []
+    "h": 1201,
+    "scraped_at": "2026-07-27",
+    "sha256": "6b56431442873455d17c0667d1048bb70d8a0fd3cc74524e02b2c344cf3a9cce",
+    "local_path": "media/graded/usj_entrance_queue.jpg",
+    "used_in": [
+      "tthol-02"
+    ]
   },
   {
-    "id": "f96b57f0",
-    "subject": "vietnam/ninhbinh",
+    "id": "ghibli_park_warehouse",
+    "subject": "japan/nagoya",
     "category": "visit",
-    "query": "Trang An Scenic Landscape Complex",
+    "query": "Ghibli Park",
     "platform": "google_places_user_photo",
-    "source_url": "https://maps.google.com/maps/contrib/110741675174174547676",
-    "author": "Minh Le",
+    "source_url": "https://maps.google.com/maps/contrib/117612122357080274123",
+    "author": "TriazDM Dika",
     "license": "places-tos",
-    "sha256": "f96b57f03cb573cfcabc970b339bbd8e5951fd7e1ff574004a2c756d90231e31",
-    "w": 1600,
-    "h": 901,
-    "local_path": "media/library/vietnam-ninhbinh/f96b57f0.jpg",
-    "scraped_at": "2026-07-26",
-    "used_in": []
+    "w": 1290,
+    "h": 943,
+    "scraped_at": "2026-07-27",
+    "sha256": "2a67e5fb49d8e0e50704115cba7601a12d6018ad65cc728ce40ca118a4dd0c9c",
+    "local_path": "media/graded/ghibli_park_warehouse.jpg",
+    "used_in": [
+      "tthol-02"
+    ]
   },
   {
-    "id": "e6c7e3ba",
-    "subject": "vietnam/hanoi",
-    "category": "visit",
-    "query": "Ta Hien Street Hanoi Old Quarter",
+    "id": "nishiki_market_crowd",
+    "subject": "japan/nishiki",
+    "category": "eat",
+    "query": "Nishiki Market Kyoto",
     "platform": "google_places_user_photo",
-    "source_url": "https://maps.google.com/maps/contrib/110480130331428287082",
-    "author": "신영숙",
+    "source_url": "https://maps.google.com/maps/contrib/110520372129471984870",
+    "author": "YawEng Yong",
     "license": "places-tos",
-    "sha256": "e6c7e3ba10fec86c919d9be98dd7305981f9c9fa870b129d4211eb901ca06a7a",
-    "w": 1600,
-    "h": 1200,
-    "local_path": "media/library/vietnam-hanoi/e6c7e3ba.jpg",
-    "scraped_at": "2026-07-26",
-    "used_in": []
-  },
-  {
-    "id": "2769c432",
-    "subject": "vietnam/hanoi",
-    "category": "visit",
-    "query": "Ta Hien Street Hanoi Old Quarter",
-    "platform": "google_places_user_photo",
-    "source_url": "https://maps.google.com/maps/contrib/104492120985155926058",
-    "author": "Sèn旅行 Sèn",
-    "license": "places-tos",
-    "sha256": "2769c43250ed1bc22095f596815aa090ad7a1762b11cf9554b29d6ff0b710f9d",
-    "w": 1600,
-    "h": 1200,
-    "local_path": "media/library/vietnam-hanoi/2769c432.jpg",
-    "scraped_at": "2026-07-26",
-    "used_in": []
-  },
-  {
-    "id": "92c6a36f",
-    "subject": "vietnam/hanoi",
-    "category": "visit",
-    "query": "Ta Hien Street Hanoi Old Quarter",
-    "platform": "google_places_user_photo",
-    "source_url": "https://maps.google.com/maps/contrib/108989618680302252686",
-    "author": "Boom Hùng",
-    "license": "places-tos",
-    "sha256": "92c6a36f304c0335580926d1c42426660644f287def24970efc78a4b0e2727aa",
     "w": 1200,
     "h": 1600,
-    "local_path": "media/library/vietnam-hanoi/92c6a36f.jpg",
-    "scraped_at": "2026-07-26",
-    "used_in": []
+    "scraped_at": "2026-07-27",
+    "sha256": "fae8275cf139dad333b0dc3a6671885bf6a8b51e943d56c566aa186a68dc01f8",
+    "local_path": "media/graded/nishiki_market_crowd.jpg",
+    "used_in": [
+      "tthol-02"
+    ]
   },
   {
-    "id": "079ca6d2",
-    "subject": "vietnam/hanoi",
-    "category": "visit",
-    "query": "Ta Hien Street Hanoi Old Quarter",
+    "id": "demachi_masugata",
+    "subject": "japan/kyoto",
+    "category": "shop",
+    "query": "Demachi Masugata Shotengai",
     "platform": "google_places_user_photo",
-    "source_url": "https://maps.google.com/maps/contrib/110528001102022325686",
-    "author": "Elisa Winstanley",
+    "source_url": "https://maps.google.com/maps/contrib/105146791215784027339",
+    "author": "Dustin Escalante",
     "license": "places-tos",
-    "sha256": "079ca6d204fcc4c2e8ada723aa091fe2aba90f2e3e7788569b4d0f4057b0b2fe",
+    "w": 1205,
+    "h": 1600,
+    "scraped_at": "2026-07-27",
+    "sha256": "4c30a40aa361b4e2db489863622c7e648519045575752397561c4c375d69eecd",
+    "local_path": "media/graded/demachi_masugata.jpg",
+    "used_in": [
+      "tthol-02"
+    ]
+  },
+  {
+    "id": "golden_gai_alley",
+    "subject": "japan/tokyo",
+    "category": "visit",
+    "query": "Shinjuku Golden Gai",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/101177422264293521007",
+    "author": "Jazzy Rider",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-27",
+    "sha256": "d04782ac8ffca7de703796546fe3f0a862e6cb674a5729105b067245722310b7",
+    "local_path": "media/graded/golden_gai_alley.jpg",
+    "used_in": [
+      "tthol-02"
+    ]
+  },
+  {
+    "id": "ebisu_yokocho",
+    "subject": "japan/tokyo",
+    "category": "eat",
+    "query": "Ebisu Yokocho",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/114787896220318580955",
+    "author": "toutouya01",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1600,
+    "scraped_at": "2026-07-27",
+    "sha256": "be100feb6d7ed793fd074df3beb43a5c492fa84790f65803537ce84ae9a122d8",
+    "local_path": "media/graded/ebisu_yokocho.jpg",
+    "used_in": [
+      "tthol-02"
+    ]
+  },
+  {
+    "id": "fuji_lawson_spot",
+    "subject": "japan/fuji",
+    "category": "visit",
+    "query": "Lawson Kawaguchiko",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/116790614588531703760",
+    "author": "Brian Tse",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-27",
+    "sha256": "91e40effe5a748237e27353ed66f5f25e88bbc9feeffe31ea06db7fda19f8e06",
+    "local_path": "media/graded/fuji_lawson_spot.jpg",
+    "used_in": [
+      "tthol-02"
+    ]
+  },
+  {
+    "id": "oishi_park_fuji",
+    "subject": "japan/fuji",
+    "category": "visit",
+    "query": "Oishi Park",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/109521811029768267426",
+    "author": "LYNN HUNG",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-27",
+    "sha256": "e65e75b7d5f47f4a1ddea55255026d2afd33701ee55ce14025d60895815fa3b1",
+    "local_path": "media/graded/oishi_park_fuji.jpg",
+    "used_in": [
+      "tthol-02",
+      "chloe/ttc-14"
+    ]
+  },
+  {
+    "id": "jphol_cover_scenic",
+    "subject": "japan/scenic",
+    "category": "visit",
+    "query": "Arakurayama Sengen Park Chureito Pagoda",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/115688751189508420004",
+    "author": "Alfredo Pino",
+    "license": "places-tos",
     "w": 1200,
     "h": 1600,
-    "local_path": "media/library/vietnam-hanoi/079ca6d2.jpg",
-    "scraped_at": "2026-07-26",
-    "used_in": []
+    "scraped_at": "2026-07-27",
+    "sha256": "fe47654987dc1636f5e5e0faca48b2234cde02ceb0ae20f03bbc11e3d459440f",
+    "local_path": "media/graded/jphol_cover_scenic.jpg",
+    "used_in": [
+      "tthol-02"
+    ]
+  },
+  {
+    "id": "jphol_plug_scenic",
+    "subject": "japan/scenic",
+    "category": "visit",
+    "query": "shirakawa-go village snow night",
+    "platform": "google_images",
+    "source_url": "https://thegate12.com/article/31",
+    "author": "THE GATE｜Japan Travel Magazine",
+    "license": "ugc-unlicensed",
+    "w": 2000,
+    "h": 1333,
+    "scraped_at": "2026-07-27",
+    "sha256": "f991ae28e47d069e12c887f303feab2814d82f8972bd4158714f0cb516245bde",
+    "local_path": "media/graded/jphol_plug_scenic.jpg",
+    "used_in": [
+      "tthol-02"
+    ]
+  },
+  {
+    "id": "jphol_save_scenic",
+    "subject": "japan/scenic",
+    "category": "visit",
+    "query": "kyoto higashiyama street night lanterns wallpaper",
+    "platform": "google_images",
+    "source_url": "https://unsplash.com/photos/a-traditional-japanese-pagoda-at-night-in-kyoto-xleDXmMOxLw",
+    "author": "Unsplash",
+    "license": "ugc-unlicensed",
+    "w": 3000,
+    "h": 4500,
+    "scraped_at": "2026-07-27",
+    "sha256": "9a6ffe6659f4702ff5e949bb7fe088642a7f7028dfc1e80dbda88148e8486b56",
+    "local_path": "media/graded/jphol_save_scenic.jpg",
+    "used_in": [
+      "tthol-02"
+    ]
+  },
+  {
+    "id": "vn_tet_hangma",
+    "subject": "vietnam/tet",
+    "category": "shop",
+    "query": "Hang Ma Street Hanoi",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/101729007070537868291",
+    "author": "N.Đ.C",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 900,
+    "scraped_at": "2026-07-27",
+    "sha256": "2e0550aa5eda175fefab18b99f08873bcba92a9ffec91d1eca04b670b6501e57",
+    "local_path": "media/graded/vn_tet_hangma.jpg",
+    "used_in": [
+      "ana/tt-23"
+    ]
+  },
+  {
+    "id": "vn_trangan_scenic",
+    "subject": "vietnam/ninhbinh",
+    "category": "visit",
+    "query": "Trang An Landscape Complex Ninh Binh",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/115247436984601290117",
+    "author": "Gintaras Čekanavičius",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1205,
+    "scraped_at": "2026-07-27",
+    "sha256": "f1fb445fd01c64b498bf712b82b96b849b32e4d4de5b4e1d1b65eb0ba04f9a7a",
+    "local_path": "media/graded/vn_trangan_scenic.jpg",
+    "used_in": [
+      "ana/tt-23"
+    ]
+  },
+  {
+    "id": "vn_trangan_boats",
+    "subject": "vietnam/ninhbinh",
+    "category": "visit",
+    "query": "Trang An Landscape Complex Ninh Binh",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/113410386158268153548",
+    "author": "Hiệp Phạm Thế",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-27",
+    "sha256": "74b991f542e7cc5a0de298f1c970e1fd2b5c31b0b49df13d7db1b0d149f9043e",
+    "local_path": "media/graded/vn_trangan_boats.jpg",
+    "used_in": [
+      "ana/tt-23"
+    ]
+  },
+  {
+    "id": "vn_halong_cruise",
+    "subject": "vietnam/halong",
+    "category": "visit",
+    "query": "Ha Long Bay cruise deck",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/100481807999728427744",
+    "author": "Fatma Dahlawi",
+    "license": "places-tos",
+    "w": 1200,
+    "h": 1600,
+    "scraped_at": "2026-07-27",
+    "sha256": "56920a5c9cd30185d5174749e232fdb4626ef05ffc7971d6bb21059c46d68d52",
+    "local_path": "media/graded/vn_halong_cruise.jpg",
+    "used_in": [
+      "ana/tt-23"
+    ]
+  },
+  {
+    "id": "vn_hoankiem_tower",
+    "subject": "vietnam/hoankiem",
+    "category": "visit",
+    "query": "Hoan Kiem Lake Hanoi",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/110120631703688660994",
+    "author": "Didier Omnes",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1067,
+    "scraped_at": "2026-07-27",
+    "sha256": "c8d3e885dffdbc72c61b1c271625381d4d210929e62cabb1689ca5615a0a3824",
+    "local_path": "media/graded/vn_hoankiem_tower.jpg",
+    "used_in": [
+      "ana/tt-23"
+    ]
+  },
+  {
+    "id": "route_map_vn",
+    "platform": "google-maps-embed",
+    "author": "Google Maps",
+    "source_url": "https://www.google.com/maps/embed/v1/directions (Hanoi -> Ninh Binh -> Ha Long -> Hoi An -> Ho Chi Minh City)",
+    "license": "maps-embed-tos",
+    "sha256": "ae297e363e9721f10a1f611577d3c71a6da1c0aa484581512843a6f8ee9e8330",
+    "w": 1080,
+    "h": 1920,
+    "local_path": "media/graded/route_map_vn.png",
+    "used_in": [
+      "ana/tt-23"
+    ],
+    "note": "pinned route screenshot for the D Route & Days slide"
+  },
+  {
+    "id": "jp_fuji_torii",
+    "subject": "japan/fuji",
+    "category": "visit",
+    "query": "Chureito Pagoda Mount Fuji viewpoint Fujiyoshida walkway",
+    "platform": "google_images",
+    "source_url": "https://thirdeyetraveller.com/chureito-pagoda-best-view-mount-fuji/",
+    "author": "Third Eye Traveller",
+    "license": "ugc-unlicensed",
+    "w": 900,
+    "h": 1200,
+    "scraped_at": "2026-07-27",
+    "sha256": "333827fa09d9106a7688b649ecc30750b3ae9fc27887cd9773fec5f45ab0b070",
+    "local_path": "media/graded/jp_fuji_torii.jpg",
+    "used_in": [
+      "chloe/ttc-14"
+    ]
+  },
+  {
+    "id": "ghibli_museum_mitaka",
+    "subject": "japan/ghiblimuseum",
+    "category": "visit",
+    "query": "Ghibli Museum Mitaka",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/107345633974102014829",
+    "author": "Quang Huynh",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-27",
+    "sha256": "7cd7e394a2975c2c290bba7dde0244ef624f024f58fe397ce2ee453938f643fd",
+    "local_path": "media/graded/ghibli_museum_mitaka.jpg",
+    "used_in": [
+      "chloe/ttc-14"
+    ]
+  },
+  {
+    "id": "route_map_jp2",
+    "platform": "google-maps-embed",
+    "author": "Google Maps",
+    "source_url": "https://www.google.com/maps/embed/v1/directions (Osaka -> Kyoto -> Hakone -> Tokyo)",
+    "license": "maps-embed-tos",
+    "sha256": "dc5a9122fcb02473bae0836feb490d13cf9def6d169fd647b8460c0e271a7d13",
+    "w": 1080,
+    "h": 1920,
+    "local_path": "media/graded/route_map_jp2.png",
+    "used_in": [
+      "chloe/ttc-14"
+    ],
+    "note": "pinned open-jaw Kansai-in / Haneda-out route for the D Route & Days slide"
+  },
+  {
+    "id": "jp_ticket_machine",
+    "subject": "japan/shokkenki",
+    "category": "visit",
+    "query": "ramen shop ticket vending machine japanese buttons shokkenki photo",
+    "platform": "google_images",
+    "source_url": "https://cotoacademy.com/how-to-use-japan-ramen-vending-machines/",
+    "author": "Coto Academy",
+    "license": "ugc-unlicensed",
+    "w": 1001,
+    "h": 1024,
+    "scraped_at": "2026-07-27",
+    "sha256": "6e0868fa353e827da429764f63c6b05e496fa801faf1d1fbaedbccd6765c292c",
+    "local_path": "media/graded/jp_ticket_machine.jpg",
+    "used_in": [
+      "chloe/ttc-14"
+    ]
+  },
+  {
+    "id": "jp_station_shinkansen",
+    "subject": "japan/shinkansen",
+    "category": "visit",
+    "query": "shinkansen bullet train arriving platform tokyo station photo passengers",
+    "platform": "google_images",
+    "source_url": "https://www.japan-bullettrain.com/articles/blog/tokyo-shinkansen-boarding",
+    "author": "Japan Bullet Train",
+    "license": "ugc-unlicensed",
+    "w": 1920,
+    "h": 1280,
+    "scraped_at": "2026-07-27",
+    "sha256": "99f702a35f9f0a47e9ff3aaac6d7f3b5ea9a783b6e06875ccfc8e4c1f7159425",
+    "local_path": "media/graded/jp_station_shinkansen.jpg",
+    "used_in": [
+      "chloe/ttc-14"
+    ]
   }
 ]

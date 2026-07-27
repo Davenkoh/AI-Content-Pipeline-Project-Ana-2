@@ -1,0 +1,336 @@
+{
+  "option": "D",
+  "hook": {
+    "title": "How to plan & prep the perfect Japan trip for first timers",
+    "subtitle": "everything you need to know"
+  },
+  "hashtags": [
+    "#japantravel",
+    "#japantips",
+    "#traveljapan",
+    "#japantrip",
+    "#japan"
+  ],
+  "caption": {
+    "title_line": "🇯🇵 How to plan & prep the perfect Japan trip for first timers",
+    "body_draft": "Japan is the easiest country in Asia to travel and the hardest one to plan, because almost every good thing has to be booked before you arrive. Here is the order I would do it in.\n\nStart with the season, because everything else prices off it. Spring is sakura, but the bloom is only about two weeks and hotels go up months before it. Summer is festival season with the cheapest flights, and also 35 degrees and sticky. Autumn is the quietly correct answer: the best weather of the year and the leaves peak in late November. Winter is the cheapest, with powder snow up north and illuminations in every city.\n\nFor the route, book an open jaw. Fly into Kansai and out of Haneda so you are never doubling back. Two nights in Osaka, three in Kyoto, one night in a Hakone onsen, then four in Tokyo. Nara and Nagoya both work as day trips, so you do not need to move hotels for them.\n\nOn accommodation, book six months out if you are coming for sakura or the autumn leaves. Kyoto sells out first and the same room can double in the peak weeks. Also know that Japanese hotel rooms are genuinely small, so pay for the location rather than the floor space.\n\nBook the ticketed attractions before anything else. The Ghibli Museum in Mitaka is the strictest one: tickets are released at 10am Japan time on the 10th of the month, for the following month only, they cost 1,000 yen, and they are never sold at the door. Popular dates disappear in minutes, so set an alarm.\n\nLanguage is less of a problem than people fear, but it shows up in odd places. A lot of ordering happens at a Japanese-only ticket machine rather than with a waiter. Keep Google Translate and DeepL on your phone and camera-translate the machine before you join the queue.\n\nOn trains, do the maths before you buy a rail pass. The seven day Japan Rail Pass is 50,000 yen and rises to 53,000 yen on 1 October 2026, while Tokyo to Kyoto to Osaka and back costs roughly 29,470 yen in individual tickets. On the classic route the pass loses. It only starts to pay off if you are adding somewhere far, like Hiroshima or Kyushu, inside the same week.\n\nFor data, get an eSIM before you fly. Ten gigabytes runs about 14 to 17 US dollars and covers maps, translation and messaging for a two week trip. Public wifi does technically exist, but most of it wants a signup form every single time.\n\nDo these in order and Japan stops being overwhelming."
+  },
+  "slides": [
+    {
+      "type": "cover",
+      "flag": "🇯🇵",
+      "title_lines": [
+        "How to plan & prep",
+        "the perfect Japan trip",
+        "for first timers"
+      ],
+      "subtitle_lines": [
+        "everything you need to know"
+      ],
+      "char_photo": "chloe_ttc-14_cover",
+      "scenic_photo": "jp_fuji_torii"
+    },
+    {
+      "type": "step",
+      "pill": "1. When to Go",
+      "layout": "grid4",
+      "cells": [
+        "spring_cherry_blossom",
+        "summer_festival",
+        "autumn_leaves",
+        "winter_snow"
+      ],
+      "blocks": [
+        {
+          "lines": [
+            "pick the season first,",
+            "everything else prices off it"
+          ],
+          "size": "body"
+        }
+      ],
+      "cell_labels": [
+        {
+          "title_lines": [
+            "Spring",
+            "(Mar to May)"
+          ],
+          "note_lines": [
+            "Sakura is only 2 weeks",
+            "Book 6 months out",
+            "Golden Week = late Apr"
+          ]
+        },
+        {
+          "title_lines": [
+            "Summer",
+            "(Jun to Aug)"
+          ],
+          "note_lines": [
+            "Fireworks festivals",
+            "35C and sticky",
+            "Cheapest flights"
+          ]
+        },
+        {
+          "title_lines": [
+            "Autumn",
+            "(Sep to Nov)"
+          ],
+          "note_lines": [
+            "Best weather all year",
+            "Leaves peak late Nov",
+            "Typhoons in Sep"
+          ]
+        },
+        {
+          "title_lines": [
+            "Winter",
+            "(Dec to Feb)"
+          ],
+          "note_lines": [
+            "Powder snow up north",
+            "Cheapest hotels",
+            "Illuminations everywhere"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "step",
+      "pill": "2. Route & Days",
+      "layout": "map",
+      "photo": "route_map_jp2",
+      "blocks": [
+        {
+          "lines": [
+            "osaka 2 · kyoto 3",
+            "hakone 1 night · tokyo 4"
+          ],
+          "size": "headline"
+        },
+        {
+          "lines": [
+            "book an OPEN JAW, in to kansai and",
+            "out of haneda, so you never double",
+            "back: osaka → kyoto → hakone → tokyo",
+            "nara and nagoya are day trips"
+          ],
+          "size": "body"
+        }
+      ]
+    },
+    {
+      "type": "plug",
+      "paragraphs": [
+        [
+          "❌ i regret using google doc",
+          "and sheets to plan my trip"
+        ],
+        [
+          "alot of my research came from",
+          "tiktok, i saved videos on",
+          "tiktok, but never revisted it"
+        ],
+        [
+          "✅ HOLICAY.COM was",
+          "a game changer"
+        ],
+        [
+          "i can forward it my tiktok",
+          "links, travel documents, any",
+          "notes i have, and it saves",
+          "the locations and organizes my",
+          "notes for me all in one place"
+        ]
+      ],
+      "bg_photo": "oishi_park_fuji"
+    },
+    {
+      "type": "favorites",
+      "photo": "arashiyama_bamboo",
+      "title_lines": [
+        "A few of my favorite",
+        "spots in Japan for a",
+        "first time visit"
+      ],
+      "cities": [
+        {
+          "pill": "Osaka",
+          "lines": [
+            "Kuromon Market",
+            "Osaka Castle",
+            "Shinsekai",
+            "Dotonbori"
+          ]
+        },
+        {
+          "pill": "Kyoto",
+          "lines": [
+            "Kiyomizudera",
+            "Nishiki Market",
+            "Philosopher's Path",
+            "Gion"
+          ]
+        },
+        {
+          "pill": "Nara",
+          "lines": [
+            "Nara Park",
+            "Kasuga Taisha",
+            "Naramachi"
+          ]
+        },
+        {
+          "pill": "Hakone",
+          "lines": [
+            "Lake Ashi",
+            "Open Air Museum",
+            "An onsen ryokan"
+          ]
+        },
+        {
+          "pill": "Tokyo",
+          "lines": [
+            "Tsukiji Outer Market",
+            "Yanaka Ginza",
+            "Shimokitazawa",
+            "Golden Gai",
+            "Ueno Park"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "step",
+      "pill": "3. Accommodation",
+      "layout": "photo",
+      "photo": "cramped_hotel_room",
+      "blocks": [
+        {
+          "lines": [
+            "BOOK 6 MONTHS AHEAD FOR",
+            "SAKURA AND AUTUMN LEAVES"
+          ],
+          "size": "headline"
+        },
+        {
+          "lines": [
+            "kyoto sells out first, and rooms",
+            "here are tiny, so pay for location"
+          ],
+          "size": "body"
+        }
+      ]
+    },
+    {
+      "type": "step",
+      "pill": "4. Book Activities Early",
+      "layout": "photo",
+      "photo": "ghibli_museum_mitaka",
+      "blocks": [
+        {
+          "lines": [
+            "the ghibli museum only releases",
+            "tickets at 10am JST on the 10th,",
+            "for the month after, ¥1000"
+          ],
+          "size": "body"
+        },
+        {
+          "lines": [
+            "Tip: they are never sold at the",
+            "door, and good dates go in",
+            "minutes, so set an alarm"
+          ],
+          "size": "tip"
+        }
+      ]
+    },
+    {
+      "type": "step",
+      "pill": "5. Language",
+      "layout": "icons",
+      "photo": "jp_ticket_machine",
+      "icons": [
+        {
+          "slug": "app_google-translate",
+          "name": "Google Translate"
+        },
+        {
+          "slug": "app_deepl",
+          "name": "DeepL"
+        }
+      ],
+      "blocks": [
+        {
+          "lines": [
+            "half of ordering is a japanese",
+            "only ticket machine, not a waiter"
+          ],
+          "size": "body"
+        },
+        {
+          "lines": [
+            "Tip: camera-translate the machine",
+            "BEFORE you join the queue"
+          ],
+          "size": "tip"
+        }
+      ]
+    },
+    {
+      "type": "step",
+      "pill": "6. Internal Transport",
+      "layout": "photo",
+      "photo": "jp_station_shinkansen",
+      "blocks": [
+        {
+          "lines": [
+            "do the maths before you buy a",
+            "rail pass, tokyo → kyoto → osaka",
+            "→ tokyo is about ¥29,470 in",
+            "single tickets"
+          ],
+          "size": "body"
+        },
+        {
+          "lines": [
+            "Tip: the 7 day JR pass is ¥50,000",
+            "and goes to ¥53,000 on 1 oct"
+          ],
+          "size": "tip"
+        }
+      ]
+    },
+    {
+      "type": "step",
+      "pill": "7. Mobile Data",
+      "layout": "photo",
+      "photo": "dotonbori_neon_night",
+      "blocks": [
+        {
+          "lines": [
+            "get an esim before you fly,",
+            "10gb runs about $14 to $17"
+          ],
+          "size": "body"
+        },
+        {
+          "lines": [
+            "public wifi exists but most of it",
+            "wants a signup form every time"
+          ],
+          "size": "body"
+        }
+      ]
+    },
+    {
+      "type": "save",
+      "title": "SAVE THIS",
+      "subtitle": "just incase you need it ❤️",
+      "char_photo": "chloe_ttc-14_ending",
+      "scenic_photo": "golden_gai"
+    }
+  ]
+}
