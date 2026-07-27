@@ -113,6 +113,19 @@ outputs/<char-key>/<ID - Title>/   a built deck — rendered slides land under _
   like `1.` keep their dot); the brand is always written **HOLICAY.COM** on slides.
 - **Text sits in the vertical middle** of the frame (safe from TikTok chrome). Exception: covers —
   title boxes **upper-middle** (≈22–30% down), subtitle box just under (see `inspo/29/1.jpg`).
+- **TikTok safe band (human steer 2026-07-27):** TikTok eats the **top 270px and bottom 270px** of a
+  posted 1080×1920, so **all content lives in y 270 → 1650** — a 1380px band centred in the frame.
+  C's two text-dense templates enforce it in `build.js` off the `SAFE_T` / `SAFE_B` constants (the
+  only two numbers that set this composition):
+  * **`notes`** — the list is centred in the band and **auto-fits to it**: one `--s` multiplier
+    scales type *and* spacing together, binary-searched for the LARGEST scale that still clears the
+    band, so a 14-item place shrinks (≈42→38px) instead of running off the frame. Unlike the sticker
+    auto-fit, notes text **does** re-wrap as it scales — that is intended, the lines aren't pre-broken.
+  * **`plug` (C mockup)** — paragraph / phone / paragraph are ONE flex stack centred in the band;
+    only the phone flexes (1010px ideal, shrinks to ~955px) so both paragraphs stay inside whatever
+    they run to.
+  Cover, `divider` and `save` already compose inside the band and are unchanged. A / B / D are
+  untouched by this steer.
 - Body photos get a **subtle grade** in-template (slightly darker + desaturated, non-punchy): e.g.
   `filter: brightness(.92) saturate(.88) contrast(.98)` — tune by eye against inspo/29.
 
@@ -151,7 +164,9 @@ hoard unused downloads.
 
 ## QC gates (renderer + assembly must self-check against these before handing back)
 
-1. Canvas exactly 1080×1920; text cluster centered vertically (covers: upper-middle).
+1. Canvas exactly 1080×1920; text cluster centered vertically (covers: upper-middle). **No content
+   above y=270 or below y=1650** — that band is what TikTok crops. C `notes` + `plug` enforce it in
+   template; on every other slide it is a review check.
 2. Per-line hugging boxes — no full-width bars, no box wider than its line + padding.
 3. No awkward orphan-word boxes (line breaks are content, but flag any that render badly).
 4. C divider name legible on the seam (soft drop shadow; curation picks calm-center cells).

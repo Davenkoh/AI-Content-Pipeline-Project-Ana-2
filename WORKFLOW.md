@@ -178,7 +178,8 @@ map onto §1–§11 here one-for-one.
   `NN_cover_human.png` / `NN_cover_nohuman.png` (and the save slide likewise); `--contact` also writes
   `_work/render/_contact.png`, the labeled review montage.
 - **Tuning:** `DESIGN.md §Type system` + the framework's own design block. Templates + type scale are
-  **locked** — do not edit `build.js`.
+  **locked** — do not edit `build.js`. Slide composition obeys the **TikTok safe band** (content in
+  y 270 → 1650, `DESIGN.md §Type system`); C's `notes` + `plug` self-enforce it off `SAFE_T`/`SAFE_B`.
 
 ## 7 · Assemble the chosen variant
 
