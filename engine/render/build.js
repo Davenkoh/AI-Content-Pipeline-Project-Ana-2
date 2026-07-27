@@ -100,6 +100,16 @@ const STK_F = 12;         // concave step-fillet radius (px)
 const MAXW  = W - 120;    // 960px — auto-fit cap: no rendered line may be wider than this
 const VPAD  = 40;         // frame-edge safe margin used by the vertical auto-fit guard
 
+// ---- TIKTOK SAFE BAND (human steer 2026-07-27) ----
+// In the feed TikTok eats the top and bottom of a 1080x1920 frame, so C's two text-dense
+// templates were losing their first and last rows. Both now confine ALL content to a band
+// centred in the frame instead of spreading across the full 1920: the notes list scales
+// itself down to fit the band, and the plug's phone shrinks so its two paragraphs stay inside.
+// Tune the C composition here — these are the only two numbers that set it.
+const SAFE_T = 270;                     // px reserved at the TOP of the frame
+const SAFE_B = 270;                     // px reserved at the BOTTOM
+const SAFE_H = H - SAFE_T - SAFE_B;     // 1380px of usable, frame-centred height
+
 // items: [{t, size, weight}] = the lines of ONE paragraph (uniform size in practice, but
 // per-line sizing is supported). Returns the sticker: an empty <svg> the in-page script fills
 // with the measured outline, behind a crisp black-glyph text layer. `gap` is the inter-line
@@ -211,7 +221,28 @@ const STICKER_SCRIPT = `<script>
     svg.setAttribute('viewBox', '0 0 '+w+' '+h);
     svg.innerHTML='<path d="'+pathFor(m.lines)+'" fill="#ffffff"/>';
   }
+  // C notes: the whole list is sized off one --s multiplier, so a list too tall for the safe
+  // band scales down uniformly (type AND spacing) until it fits. Text re-wraps naturally as it
+  // shrinks — so take the height ratio first, then nudge until the re-wrapped block really fits.
+  function fitNotes(){
+    var inner=document.querySelector('.ninner'); if(!inner) return;
+    var avail=inner.parentNode.getBoundingClientRect().height;
+    function hAt(s){ inner.style.setProperty('--s', s); return inner.getBoundingClientRect().height; }
+    var nat=hAt(1);
+    if(nat<=avail) return;                            // fits at full size — leave the type alone
+    // avail/nat is only a first guess: smaller type re-wraps into FEWER lines, so it usually
+    // leaves slack. Take it as a floor, then binary-search up for the LARGEST scale that fits —
+    // otherwise a long place renders far smaller than the band actually allows.
+    var lo=avail/nat, hi=1;
+    for(var g=0; g<6 && hAt(lo)>avail; g++) lo*=0.9;  // guarantee the floor really does fit
+    for(var i=0;i<12;i++){
+      var mid=(lo+hi)/2;
+      if(hAt(mid)<=avail) lo=mid; else hi=mid;
+    }
+    hAt(lo);
+  }
   function run(){
+    fitNotes();                                    // pass 0: fit the C notes list to the safe band
     var stks=document.querySelectorAll('.stk');
     for(var i=0;i<stks.length;i++) fit(stks[i]);   // pass 1: scale down any overflowing sticker
     for(var i=0;i<stks.length;i++) draw(stks[i]);  // pass 2: measure (post-scale) + inject path
@@ -371,18 +402,24 @@ const TEMPLATES = {
       const bgLayer = slide.bg_photo
         ? `<div class="photo" style="background-image:url('${photo(slide.bg_photo)}')"></div><div class="plug-tint"></div>`
         : `<div class="plug-bg"></div>`;                 // coral fallback if no scenic given
+      // one centred stack inside the safe band (2026-07-27): paragraph / phone / paragraph never
+      // ride the frame edges. Only the phone flexes — it keeps its 1010px ideal and gives back
+      // just enough height for the two paragraphs, whatever they run to.
       const css = `
 .plug-bg{position:absolute;inset:0;background:linear-gradient(158deg,#F5836A 0%,#E8604E 52%,#CE4433 100%)}
 /* dark tint over the scenic so the white phone + text sit on top with clear hierarchy */
 .plug-tint{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.62),rgba(0,0,0,.44) 26%,rgba(0,0,0,.44) 74%,rgba(0,0,0,.64))}
-.plug-top{position:absolute;left:56px;right:56px;top:208px;display:flex;justify-content:center}
-.phone{position:absolute;left:50%;top:484px;transform:translateX(-50%);height:1010px;width:auto;
-  border-radius:44px;border:9px solid #fff;box-shadow:0 24px 66px rgba(0,0,0,.5)}
-.plug-bot{position:absolute;left:56px;right:56px;top:1538px;display:flex;justify-content:center}`;
+.plug-stack{position:absolute;left:56px;right:56px;top:${SAFE_T}px;height:${SAFE_H}px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:38px}
+.plug-stack>.stk{flex:0 0 auto}
+.phone{flex:0 1 auto;min-height:0;height:1010px;max-height:100%;width:auto;
+  border-radius:44px;border:9px solid #fff;box-shadow:0 24px 66px rgba(0,0,0,.5)}`;
       const body = `${bgLayer}
-<div class="plug-top">${top}</div>
-<img class="phone" src="${shot}">
-<div class="plug-bot">${bot}</div>`;
+<div class="plug-stack">
+  ${top}
+  <img class="phone" src="${shot}">
+  ${bot}
+</div>`;
       return doc({ font, css, body });
     }
 
@@ -452,20 +489,28 @@ const TEMPLATES = {
       }).join('');
       return `<div class="sec"><div class="sechd">${esc(sec.emoji)} ${header}</div>${items}</div>`;
     }).join('');
+    // The list lives in the safe band, vertically centred in it (2026-07-27). Every size below is
+    // `<px> * var(--s)` so the in-page fitNotes() can shrink type AND spacing together by one
+    // multiplier when a long place runs taller than the band; --s stays 1 when the list fits.
     const css = `
 .page{position:absolute;inset:0;background:#fbfbf9}
 .band{position:absolute;left:0;right:0;top:0;height:112px;background:#f2f2ee}
-.nwrap{position:absolute;left:84px;right:84px;top:50%;transform:translateY(-50%)}
-.sec{margin-bottom:46px}
+.nwrap{position:absolute;left:84px;right:84px;top:${SAFE_T}px;height:${SAFE_H}px;
+  display:flex;flex-direction:column;justify-content:center}
+.ninner{--s:1;width:100%}
+.sec{margin-bottom:calc(40px * var(--s))}
 .sec:last-child{margin-bottom:0}
-.sechd{font-size:54px;font-weight:800;color:#20201e;letter-spacing:.2px;margin-bottom:16px}
-.item{display:flex;align-items:flex-start;gap:20px;font-size:42px;line-height:1.30;
-  font-weight:600;color:#33322f;padding:7px 0}
-.bcircle{flex:0 0 auto;width:30px;height:30px;margin-top:11px;border:3px solid #c3c2bc;border-radius:50%}
-.bemoji{flex:0 0 auto;font-size:38px;line-height:1.2}
+.sechd{font-size:calc(54px * var(--s));font-weight:800;color:#20201e;letter-spacing:.2px;
+  margin-bottom:calc(15px * var(--s))}
+.item{display:flex;align-items:flex-start;gap:calc(20px * var(--s));font-size:calc(42px * var(--s));
+  line-height:1.30;font-weight:600;color:#33322f;padding:calc(6px * var(--s)) 0}
+.bcircle{flex:0 0 auto;width:calc(30px * var(--s));height:calc(30px * var(--s));
+  margin-top:calc(11px * var(--s));border:3px solid #c3c2bc;border-radius:50%}
+.bemoji{flex:0 0 auto;font-size:calc(38px * var(--s));line-height:1.2}
 .itx{flex:1}
 .gloss{color:#9a988f;font-weight:600}`;
-    const body = `<div class="page"></div><div class="band"></div><div class="nwrap">${secs}</div>`;
+    const body = `<div class="page"></div><div class="band"></div>
+<div class="nwrap"><div class="ninner">${secs}</div></div>`;
     return doc({ font, css, body });
   },
 
