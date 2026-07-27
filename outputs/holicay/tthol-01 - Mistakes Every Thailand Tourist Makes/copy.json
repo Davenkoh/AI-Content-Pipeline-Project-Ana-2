@@ -1,0 +1,211 @@
+{
+  "option": "A",
+  "hook": {
+    "title": "🇹🇭 Mistakes every Thailand tourist makes 😭",
+    "subtitle": "i made all of them on my 1st trip 😅"
+  },
+  "hashtags": [
+    "#thailandtravel",
+    "#thailandtips",
+    "#travelthailand",
+    "#thailandtrip",
+    "#thailand"
+  ],
+  "caption": {
+    "title_line": "🇹🇭 Mistakes every Thailand tourist makes 😭",
+    "body_draft": "Thailand is an easy country to travel and a very easy country to get gently ripped off in. Almost none of these mistakes are dramatic. They are the small ones that quietly cost you a morning, a few thousand baht, or the thing you flew out to see.\n\nStart with the Grand Palace, because it is the one place everybody goes and the one place people get turned away from. It is an active royal and religious site, so the dress code is enforced at the gate: shoulders covered, no sleeveless tops, and trousers or a skirt below the knee. If you turn up in shorts you will be sent to the rental stall to buy a cover up for around 100 to 200 baht before they let you through. Entry is 500 baht and it includes Wat Phra Kaew.\n\nRight outside it you will meet the oldest scam in Bangkok. Someone friendly, often in clean clothes, tells you the palace is closed today for a ceremony, or for cleaning, or for the monks, and offers you a cheap tuk tuk tour instead. That tour ends at a gem shop or a tailor. The Grand Palace is open every single day from 8.30am to 3.30pm. Walk past whoever tells you otherwise and go read the ticket window yourself.\n\nThe fourth slide is the one I wish I had known about before I started planning. i regret using google docs to plan our friend group trip. it's so messy, and i'm the only one updating it. everyone else is just sending tiktok links to the chat. holicay.com is my game changer. when i dump in my tiktok links, group chat messages, and random notes, it saves the locations and organizes my notes for me (you should try it with this tiktok 😉)\n\nThe elephant one matters more than any money tip here. Riding is still sold everywhere, and the training that makes an elephant carry a bench on its spine is the part the brochure leaves out. Book a genuine no riding sanctuary instead. Elephant Nature Park outside Chiang Mai is the best known one, and you spend the day feeding and watching them rather than sitting on them.\n\nOn where to stay, Khao San Road is a fun night out and a bad base. There is no BTS or MRT station in that whole neighbourhood, so every trip across the city starts with a 20 minute walk to Sanam Chai or a taxi into traffic. Book somewhere on the Sukhumvit line instead, or at least within a few minutes of any BTS or MRT stop, and Bangkok suddenly gets a lot smaller.\n\nMoney is the quietest leak. The bank counters in the arrivals hall at Suvarnabhumi give you some of the worst rates you will see all trip. Superrich is the one Thais actually use, and there is a branch downstairs on the B floor next to the Airport Rail Link, plus branches all over the city. On a few hundred dollars the difference is real money.\n\nMaya Bay is the one that catches people who booked around a film from 2000. Swimming in the bay has been banned since it reopened in 2022, so it is a wade in the shallows and a look, not a beach day. It also shuts completely every year from 1 August to 30 September so the reef can recover. Go outside that window, go early, and know you will arrive at Loh Samah on the back of the island and walk a short boardwalk in.\n\nThe last one is just sad. Do not eat every meal in an air conditioned mall food court. They are clean and cheap and they are not why you came. Go to Yaowarat, the Chinatown stretch, after dark when the street kitchens set up on the pavement, and eat where there is a queue of locals.\n\nGet these right and Thailand is one of the smoothest trips you will ever take. Save this for when you are actually standing outside that palace gate.\n"
+  },
+  "slides": [
+    {
+      "type": "cover",
+      "flag": "🇹🇭",
+      "title_lines": [
+        "Mistakes every Thailand",
+        "tourist makes 😭"
+      ],
+      "subtitle_lines": [
+        "(i made all of them on my 1st trip 😅)"
+      ],
+      "char_photo": "",
+      "scenic_photo": "th_cover_scenic",
+      "subtitle_style": "outline"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't turn up at the",
+        "Grand Palace in shorts"
+      ],
+      "x_why_lines": [
+        "they'll stop you at the gate and",
+        "sell you a cover up for 100 to 200 baht"
+      ],
+      "check_title_lines": [
+        "✅ Cover shoulders and knees"
+      ],
+      "check_why_lines": [
+        "it's a royal temple, and entry is",
+        "500 baht once you're dressed for it"
+      ],
+      "top_photo": "grand_palace_crowd",
+      "bottom_photo": "temple_dress_code"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't believe the guy who",
+        "says the palace is closed"
+      ],
+      "x_why_lines": [
+        "it's the oldest scam in bangkok and",
+        "the cheap tuk tuk tour ends at a gem shop"
+      ],
+      "check_title_lines": [
+        "✅ Check the ticket window"
+      ],
+      "check_why_lines": [
+        "it's open every day 8.30am to 3.30pm,",
+        "and a metered taxi beats a haggled tuk tuk"
+      ],
+      "top_photo": "bangkok_tuktuk",
+      "bottom_photo": "bangkok_taxi_meter"
+    },
+    {
+      "type": "plug",
+      "paragraphs": [
+        [
+          "i regret using google docs",
+          "to plan our friend group trip"
+        ],
+        [
+          "❌ it's so messy, and i'm",
+          "the only one updating it",
+          "everyone else is just sending",
+          "tiktok links to the chat"
+        ],
+        [
+          "✅ HOLICAY.COM is my",
+          "game changer"
+        ],
+        [
+          "when i dump in my tiktok",
+          "links, group chat messages,",
+          "and random notes, it saves",
+          "the locations and organizes",
+          "my notes for me"
+        ],
+        [
+          "(you should try it with",
+          "this tiktok 😉)"
+        ]
+      ],
+      "bg_photo": "th_plug_scenic"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't ride an elephant"
+      ],
+      "x_why_lines": [
+        "the training that gets a bench",
+        "onto its back is the ugly part"
+      ],
+      "check_title_lines": [
+        "✅ Book a no riding sanctuary"
+      ],
+      "check_why_lines": [
+        "elephant nature park near chiang mai,",
+        "you feed them and that's it"
+      ],
+      "top_photo": "elephant_riding",
+      "bottom_photo": "elephant_sanctuary"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't base yourself",
+        "on Khao San Road"
+      ],
+      "x_why_lines": [
+        "there's no BTS or MRT in that whole",
+        "area, so every day starts in traffic"
+      ],
+      "check_title_lines": [
+        "✅ Stay near a BTS stop"
+      ],
+      "check_why_lines": [
+        "anywhere on the sukhumvit line and",
+        "bangkok gets a lot smaller"
+      ],
+      "top_photo": "khaosan_road",
+      "bottom_photo": "bts_skytrain"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't change money in",
+        "the arrivals hall"
+      ],
+      "x_why_lines": [
+        "the bank counters up there give you",
+        "the worst rate of the whole trip"
+      ],
+      "check_title_lines": [
+        "✅ Use Superrich instead"
+      ],
+      "check_why_lines": [
+        "there's one on the B floor by the",
+        "airport rail link, and all over the city"
+      ],
+      "top_photo": "airport_exchange",
+      "bottom_photo": "superrich_branch"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't book Maya Bay",
+        "in august"
+      ],
+      "x_why_lines": [
+        "it shuts 1 aug to 30 sep every",
+        "year so the reef can recover"
+      ],
+      "check_title_lines": [
+        "✅ Go outside that, and early"
+      ],
+      "check_why_lines": [
+        "swimming's banned so it's a wade",
+        "and a look, not a beach day"
+      ],
+      "top_photo": "maya_bay_crowd",
+      "bottom_photo": "maya_bay_boardwalk"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't eat every meal",
+        "in a mall food court"
+      ],
+      "x_why_lines": [
+        "it's clean and cheap and it's",
+        "not why you flew here"
+      ],
+      "check_title_lines": [
+        "✅ Go to Yaowarat after dark"
+      ],
+      "check_why_lines": [
+        "the chinatown street kitchens set up",
+        "at night, eat where the queue is"
+      ],
+      "top_photo": "mall_food_court",
+      "bottom_photo": "yaowarat_street_food"
+    },
+    {
+      "type": "save",
+      "title": "SAVE THIS",
+      "subtitle": "just incase you need it ❤️",
+      "char_photo": "",
+      "scenic_photo": "th_save_scenic"
+    }
+  ]
+}

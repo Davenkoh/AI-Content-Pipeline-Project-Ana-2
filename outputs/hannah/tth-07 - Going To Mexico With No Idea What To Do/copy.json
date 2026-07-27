@@ -1,0 +1,471 @@
+{
+  "option": "C",
+  "hook": {
+    "title": "Going to Mexico & have no idea what to do?",
+    "subtitle": "here's the whole trip, save it"
+  },
+  "hashtags": [
+    "#mexicotravel",
+    "#mexicotips",
+    "#travelmexico",
+    "#mexicotrip",
+    "#mexico"
+  ],
+  "caption": {
+    "title_line": "🇲🇽 Going to Mexico & have no idea what to do?",
+    "body_draft": "comment \"MEXICO\" and i'll send you the full itinerary\n\nMexico is two trips stitched together: the middle of the country for food and history, then the Yucatan for ruins, cenotes and beach. Fly into Mexico City, work down to Oaxaca, then fly across to Cancun and do the peninsula. Here is the whole thing.\n\nMexico City is the one people are nervous about and then never want to leave. Teotihuacan is the day trip and you want to be there at opening, because there is no shade on that site at all. The Frida Kahlo Museum sells out, so book online days ahead rather than turning up. The Anthropology Museum in Chapultepec is the best museum in the country and you will not finish it. Otherwise just walk Roma and Condesa, that is genuinely the activity. Eat tacos al pastor from any trompo with a queue, get churros at El Moro late, and buy your souvenirs at La Ciudadela where the prices are fair and nobody hassles you.\n\nOaxaca is the food capital and it is a short flight or a long bus. Monte Alban is a Zapotec city on a flattened mountain top. Hierve el Agua is the petrified waterfall, easiest by colectivo. Santo Domingo has a gold interior that is genuinely absurd in person. Eat mole negro because this is where it comes from, tlayudas at night, and chapulines with lime if you are willing. Oaxaca is also mezcal, and the good version is a tasting room like Mezcaloteca where they actually teach you, not a bar crawl.\n\nValladolid is the base for the Yucatan and much better value than staying in Cancun. Chichen Itza is about 697 pesos all in, split across a federal ticket and a state ticket at the gate, and you want to be at the entrance when it opens. Ek Balam is the one you can still climb. Cenote Suytun is the light beam photo everyone has, so go early, and Zaci is right in town if you want a cheap swim with no tour buses. Eat cochinita pibil for breakfast like the locals do, and get a marquesita from a street cart at night.\n\nTulum is next and it is two separate things. The ruins sit on a cliff over the sea and are best at opening. The cenotes nearby are the real draw, Gran Cenote for turtles and Dos Ojos for the cave dive. The beach road is beach clubs with minimum spends, so if you just want sand, Playa Paraiso is public. Eat at Taqueria Honorio in the morning for cochinita and El Camello Jr for ceviche.\n\nIsla Holbox is the last stop and there are no cars, only golf carts and sand streets. Whale shark season runs June to September and peaks in July and August, so if you are there then, book it. Otherwise it is Punta Mosquito for the sandbar and flamingos at low tide, Punta Cocos for sunset, and bioluminescence on a dark night if the moon cooperates. Eat the lobster pizza at Edelyn once, because that is the island's whole thing.\n\nSave this so the whole route is in one place, and follow for more Mexico."
+  },
+  "slides": [
+    {
+      "type": "cover",
+      "flag": "🇲🇽",
+      "title_lines": [
+        "Going to Mexico &",
+        "have no idea",
+        "what to do?"
+      ],
+      "subtitle_lines": [
+        "here's the whole trip, save it"
+      ],
+      "char_photo": "hannah_tth-07_cover",
+      "scenic_photo": "mx_cover_scenic"
+    },
+    {
+      "type": "divider",
+      "label": "mexico city",
+      "cells": [
+        "cdmx_bellas_artes",
+        "cdmx_roma",
+        "mx_tacos_pastor",
+        "cdmx_city"
+      ]
+    },
+    {
+      "type": "notes",
+      "place": "mexico city",
+      "sections": [
+        {
+          "emoji": "📍",
+          "header": "places to visit",
+          "items": [
+            {
+              "text": "Teotihuacan",
+              "gloss": "be there at opening, there's no shade"
+            },
+            {
+              "text": "Frida Kahlo Museum",
+              "gloss": "book online days ahead, it sells out"
+            },
+            {
+              "text": "Museo de Antropologia",
+              "gloss": "the best museum in the country"
+            },
+            {
+              "text": "Roma and Condesa",
+              "gloss": "just walk them, that's the activity"
+            }
+          ]
+        },
+        {
+          "emoji": "🌮",
+          "header": "where to eat",
+          "items": [
+            {
+              "text": "tacos al pastor",
+              "gloss": "any trompo with a queue in front"
+            },
+            {
+              "text": "El Moro churros",
+              "gloss": "open late, order the cajeta"
+            },
+            {
+              "text": "Mercado de Coyoacan",
+              "gloss": "tostadas, point at what looks good"
+            },
+            {
+              "text": "a corner quesadilla",
+              "gloss": "say con queso or you won't get cheese"
+            }
+          ]
+        },
+        {
+          "emoji": "🛍️",
+          "header": "where to shop",
+          "items": [
+            {
+              "text": "La Ciudadela",
+              "gloss": "artesania, fair prices, zero hassle"
+            },
+            {
+              "text": "Mercado de San Juan",
+              "gloss": "the food market chefs use"
+            },
+            {
+              "text": "Roma Norte boutiques",
+              "gloss": "local designers, not souvenirs"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "plug",
+      "paragraphs": [
+        [
+          "if you're a lazy planner like",
+          "me, you can copy people's",
+          "itinerary on HOLICAY.COM!"
+        ],
+        [
+          "comment \"MEXICO\" and I will",
+          "send you my itinerary"
+        ]
+      ],
+      "mockup": "holicay_app_itinerary",
+      "bg_photo": "mx_plug_scenic"
+    },
+    {
+      "type": "divider",
+      "label": "oaxaca",
+      "cells": [
+        "oaxaca_santodomingo",
+        "oaxaca_mercado",
+        "oaxaca_mole",
+        "oaxaca_hierveelagua"
+      ]
+    },
+    {
+      "type": "notes",
+      "place": "oaxaca",
+      "sections": [
+        {
+          "emoji": "📍",
+          "header": "places to visit",
+          "items": [
+            {
+              "text": "Monte Alban",
+              "gloss": "a zapotec city on a flattened mountain"
+            },
+            {
+              "text": "Hierve el Agua",
+              "gloss": "the petrified waterfall, go by colectivo"
+            },
+            {
+              "text": "Santo Domingo",
+              "gloss": "the gold interior is genuinely absurd"
+            },
+            {
+              "text": "Mercado 20 de Noviembre",
+              "gloss": "the smoke hall, pick your meat"
+            },
+            {
+              "text": "Teotitlan del Valle",
+              "gloss": "the rug weaving village"
+            }
+          ]
+        },
+        {
+          "emoji": "🌮",
+          "header": "where to eat",
+          "items": [
+            {
+              "text": "mole negro",
+              "gloss": "this is where it comes from"
+            },
+            {
+              "text": "tlayudas",
+              "gloss": "the giant crispy one, a night food"
+            },
+            {
+              "text": "chapulines",
+              "gloss": "grasshoppers, lime and chilli, try them"
+            },
+            {
+              "text": "tejate",
+              "gloss": "cold cacao drink, in the markets"
+            },
+            {
+              "text": "quesillo",
+              "gloss": "oaxaca string cheese, it's in everything"
+            }
+          ]
+        },
+        {
+          "emoji": "🍶",
+          "header": "where to mezcal",
+          "items": [
+            {
+              "text": "Mezcaloteca",
+              "gloss": "reserve, they actually teach you"
+            },
+            {
+              "text": "In Situ",
+              "gloss": "the collector's bar, ask for a flight"
+            },
+            {
+              "text": "the palenques",
+              "gloss": "day trip out to where it's distilled"
+            },
+            {
+              "text": "Garcia Vigil",
+              "gloss": "the street with the mezcalerias"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "divider",
+      "label": "valladolid",
+      "cells": [
+        "valladolid_town",
+        "chichen_crowds",
+        "mx_cenote",
+        "ek_balam"
+      ]
+    },
+    {
+      "type": "notes",
+      "place": "valladolid",
+      "sections": [
+        {
+          "emoji": "📍",
+          "header": "places to visit",
+          "items": [
+            {
+              "text": "Chichen Itza",
+              "gloss": "about 697 pesos all in, 2 tickets at the gate"
+            },
+            {
+              "text": "Ek Balam",
+              "gloss": "the one you can still climb"
+            },
+            {
+              "text": "Cenote Suytun",
+              "gloss": "the light beam photo, go at opening"
+            },
+            {
+              "text": "Cenote Zaci",
+              "gloss": "in town, cheap, no tour buses"
+            },
+            {
+              "text": "San Bernardino convent",
+              "gloss": "free light show at night"
+            }
+          ]
+        },
+        {
+          "emoji": "🌮",
+          "header": "where to eat",
+          "items": [
+            {
+              "text": "cochinita pibil",
+              "gloss": "the yucatan pork, eaten at breakfast"
+            },
+            {
+              "text": "Mercado Municipal",
+              "gloss": "lunch for a couple of dollars"
+            },
+            {
+              "text": "sopa de lima",
+              "gloss": "lime soup, better than it sounds"
+            },
+            {
+              "text": "marquesitas",
+              "gloss": "crispy crepe with edam, from a cart"
+            }
+          ]
+        },
+        {
+          "emoji": "🕳️",
+          "header": "cenotes",
+          "items": [
+            {
+              "text": "Suytun",
+              "gloss": "famous, crowded, still worth 30 min"
+            },
+            {
+              "text": "Oxman",
+              "gloss": "rope swing, and there's a pool"
+            },
+            {
+              "text": "Xkeken and Samula",
+              "gloss": "two on one ticket, much quieter"
+            },
+            {
+              "text": "Ik Kil",
+              "gloss": "next to chichen itza, so it's packed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "divider",
+      "label": "tulum",
+      "cells": [
+        "tulum_ruins",
+        "dos_ojos_cenote",
+        "tulum_beachclub",
+        "mx_beach"
+      ]
+    },
+    {
+      "type": "notes",
+      "place": "tulum",
+      "sections": [
+        {
+          "emoji": "📍",
+          "header": "places to visit",
+          "items": [
+            {
+              "text": "the Tulum ruins",
+              "gloss": "on a cliff over the sea, go at opening"
+            },
+            {
+              "text": "Gran Cenote",
+              "gloss": "turtles, bring a snorkel"
+            },
+            {
+              "text": "Dos Ojos",
+              "gloss": "the cave one, take the guided line"
+            },
+            {
+              "text": "Sian Ka'an",
+              "gloss": "biosphere reserve, float the canal"
+            },
+            {
+              "text": "the beach road",
+              "gloss": "beach clubs, expect a minimum spend"
+            }
+          ]
+        },
+        {
+          "emoji": "🌮",
+          "header": "where to eat",
+          "items": [
+            {
+              "text": "Taqueria Honorio",
+              "gloss": "cochinita, mornings only, cash"
+            },
+            {
+              "text": "El Camello Jr",
+              "gloss": "ceviche, the locals queue for it"
+            },
+            {
+              "text": "Antojitos La Chiapaneca",
+              "gloss": "cheap tacos, late"
+            },
+            {
+              "text": "Burrito Amor",
+              "gloss": "the one that isn't a taco"
+            }
+          ]
+        },
+        {
+          "emoji": "🏖️",
+          "header": "beach",
+          "items": [
+            {
+              "text": "Playa Paraiso",
+              "gloss": "public, right by the ruins"
+            },
+            {
+              "text": "Casa Cenote",
+              "gloss": "mangrove, brackish, weird and great"
+            },
+            {
+              "text": "reef safe sunscreen",
+              "gloss": "cenotes make you rinse off first"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "divider",
+      "label": "holbox",
+      "cells": [
+        "holbox_island",
+        "holbox_sandbar",
+        "holbox_whaleshark",
+        "holbox_hut"
+      ]
+    },
+    {
+      "type": "notes",
+      "place": "holbox",
+      "sections": [
+        {
+          "emoji": "📍",
+          "header": "places to visit",
+          "items": [
+            {
+              "text": "whale sharks",
+              "gloss": "june to september, july and august peak"
+            },
+            {
+              "text": "Punta Mosquito",
+              "gloss": "the sandbar, flamingos at low tide"
+            },
+            {
+              "text": "Punta Cocos",
+              "gloss": "the sunset side of the island"
+            },
+            {
+              "text": "the golf cart",
+              "gloss": "no cars here, that's the whole point"
+            }
+          ]
+        },
+        {
+          "emoji": "🌮",
+          "header": "where to eat",
+          "items": [
+            {
+              "text": "lobster pizza at Edelyn",
+              "gloss": "the island's one famous dish"
+            },
+            {
+              "text": "Painapol",
+              "gloss": "the pineapple bowl everyone posts"
+            },
+            {
+              "text": "Los Peleones",
+              "gloss": "tacos, open late"
+            },
+            {
+              "text": "Luuma",
+              "gloss": "garden setting, book ahead"
+            }
+          ]
+        },
+        {
+          "emoji": "🏞️",
+          "header": "nature",
+          "items": [
+            {
+              "text": "bioluminescence",
+              "gloss": "dark moon, no lights, walk to punta cocos"
+            },
+            {
+              "text": "Yalahau cenote",
+              "gloss": "freshwater, a boat ride off the island"
+            },
+            {
+              "text": "Isla Pajaros",
+              "gloss": "flamingos and pelicans, from a boat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "save",
+      "title": "SAVE THIS",
+      "subtitle": "just incase you need it ❤️",
+      "char_photo": "hannah_tth-07_ending",
+      "scenic_photo": "mx_save_scenic"
+    }
+  ]
+}

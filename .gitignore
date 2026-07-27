@@ -55,6 +55,10 @@ node_modules
 # applicable; everything under _work/ does not. (final/ PNGs are still images -> Drive.)
 outputs/**/_work/
 
+# persona/scene/pfp gen scratch: the PROMPTS under chars/_gen/ are banked (they are the
+# reproducible artifact), but the per-run CDP logs are transcript noise, same call as _work/ above.
+chars/_gen/**/*.log
+
 # inbox drop zone: README.txt is tracked; consumed drops get archived here by engine/qc/clear_inbox.py
 inbox/_used/
 
