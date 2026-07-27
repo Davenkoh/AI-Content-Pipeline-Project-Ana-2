@@ -1,0 +1,459 @@
+{
+  "option": "C",
+  "hook": {
+    "title": "Going to Vietnam & have no idea what to do?",
+    "subtitle": "here's the whole trip, save it"
+  },
+  "hashtags": [
+    "#vietnamtravel",
+    "#vietnamtips",
+    "#travelvietnam",
+    "#vietnamtrip",
+    "#vietnam"
+  ],
+  "caption": {
+    "title_line": "🇻🇳 Going to Vietnam & have no idea what to do?",
+    "body_draft": "comment \"VIETNAM\" and i'll send you the full itinerary\n\nVietnam is long and thin, so the whole trip is really one line down the map. Start in Hanoi in the north, work your way south, and fly home out of Saigon. Here is the whole thing laid out so you can save it and stop opening twelve tabs.\n\nHanoi is where it starts and it is loud in the best way. Walk Hoan Kiem Lake early while the whole city is out doing tai chi, then get properly lost in the Old Quarter, because that is the point of it. Train Street is cafes now, they seat you and then clear the gate when the train is due. For food, Bun Cha Huong Lien is the Obama one and the fried crab spring rolls are what you actually order, Pho Gia Truyen on Bat Dan makes you queue and pay before you sit, and Cafe Giang up the alley is where egg coffee came from. If you want to shop, Dong Xuan is the big wholesale market and Hang Gai is the silk and tailoring street, where you should price three shops before you commit.\n\nNinh Binh is two hours south and it is the one people underestimate. The Trang An boat tour is 250,000 dong for about three hours and route one is the cave route. Hang Mua is 100,000 dong and roughly 500 steps, which is worth doing at sunrise before the heat arrives. Ninh Binh is goat country, so order the mountain goat with com chay, the crispy burnt rice that sounds strange and is not. If you want the karsts without the boat traffic, Van Long is the quiet version.\n\nHoi An is the prettiest stop and the one you will overshoot on time. The Ancient Town ticket covers the old houses and the Japanese Covered Bridge, the lanterns come on at dusk, and the full moon night is the big lantern release. Banh Mi Phuong is the famous one and cao lau only really exists here because of the local well water. Hoi An is also where you get clothes made. Yaly and A Dong Silk are the reliable tailors, you want two fittings, so go on your first day and collect on your last.\n\nDa Nang is thirty minutes up the road and it is the beach and big sights half of that pair. Ba Na Hills and the Golden Bridge run 1,000,000 dong for adults and from 2026 that ticket is valid across three consecutive days, so go at opening before the cable car queue builds. Marble Mountains is easiest if you take the lift up and walk down. Eat mi quang, the turmeric noodle dish that belongs to this region, and get banh xeo down the alley at Ba Duong. My Khe is the long city beach and it is calmest first thing.\n\nSaigon is the last stop and it is a different country to Hanoi. The War Remnants Museum is 40,000 dong and open 7.30 to 6, and you should go early and go slowly, because it is heavy. Banh mi Huynh Hoa is the loaded one everyone queues for, com tam is the broken rice breakfast, and Bui Vien is loud and cheap and one night of it is plenty. For shopping, Ben Thanh and Saigon Square both expect you to haggle to roughly half.\n\nSave this so the whole route is in one place, and follow for more Vietnam."
+  },
+  "slides": [
+    {
+      "type": "cover",
+      "flag": "🇻🇳",
+      "title_lines": [
+        "Going to Vietnam &",
+        "have no idea",
+        "what to do?"
+      ],
+      "subtitle_lines": [
+        "here's the whole trip, save it"
+      ],
+      "char_photo": "ana_tt-22_cover",
+      "scenic_photo": "vn_cover_scenic"
+    },
+    {
+      "type": "divider",
+      "label": "hanoi",
+      "cells": [
+        "hanoi_oldquarter",
+        "hanoi_trainstreet",
+        "hanoi_eggcoffee",
+        "vn_bun_cha_stools"
+      ]
+    },
+    {
+      "type": "notes",
+      "place": "hanoi",
+      "sections": [
+        {
+          "emoji": "📍",
+          "header": "places to visit",
+          "items": [
+            {
+              "text": "Hoan Kiem Lake",
+              "gloss": "walk it at 6am, the whole city is out"
+            },
+            {
+              "text": "the Old Quarter",
+              "gloss": "get lost in the 36 streets on purpose"
+            },
+            {
+              "text": "Train Street",
+              "gloss": "cafes only, they clear the gate for the train"
+            },
+            {
+              "text": "Temple of Literature",
+              "gloss": "the calm hour after the lake"
+            }
+          ]
+        },
+        {
+          "emoji": "🍜",
+          "header": "where to eat",
+          "items": [
+            {
+              "text": "Bun Cha Huong Lien",
+              "gloss": "the obama one, get the crab spring rolls"
+            },
+            {
+              "text": "Pho Gia Truyen, Bat Dan",
+              "gloss": "queue, pay first, then sit"
+            },
+            {
+              "text": "Cafe Giang",
+              "gloss": "egg coffee, the original, up the alley"
+            },
+            {
+              "text": "Banh Mi 25",
+              "gloss": "eat it on the plastic stool outside"
+            }
+          ]
+        },
+        {
+          "emoji": "🛍️",
+          "header": "where to shop",
+          "items": [
+            {
+              "text": "Dong Xuan market",
+              "gloss": "the big wholesale one, haggle hard"
+            },
+            {
+              "text": "Hang Gai silk street",
+              "gloss": "silk and tailoring, price 3 shops first"
+            },
+            {
+              "text": "the weekend night market",
+              "gloss": "fri to sun nights, Hang Dao"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "plug",
+      "paragraphs": [
+        [
+          "if you're a lazy planner like",
+          "me, you can copy people's",
+          "itinerary on HOLICAY.COM!"
+        ],
+        [
+          "comment \"VIETNAM\" and I will",
+          "send you my itinerary"
+        ]
+      ],
+      "mockup": "holicay_app_itinerary",
+      "bg_photo": "vn_plug_scenic"
+    },
+    {
+      "type": "divider",
+      "label": "ninh binh",
+      "cells": [
+        "ninhbinh_trangan",
+        "ninhbinh_hangmua",
+        "ninhbinh_tamcoc",
+        "ninhbinh_goat"
+      ]
+    },
+    {
+      "type": "notes",
+      "place": "ninh binh",
+      "sections": [
+        {
+          "emoji": "📍",
+          "header": "places to visit",
+          "items": [
+            {
+              "text": "Trang An boat tour",
+              "gloss": "250k dong, 3 hours, route 1 is the caves"
+            },
+            {
+              "text": "Hang Mua viewpoint",
+              "gloss": "100k dong, 500 steps, do it at sunrise"
+            },
+            {
+              "text": "Tam Coc",
+              "gloss": "the rice fields, greenest in may and june"
+            },
+            {
+              "text": "Bai Dinh pagoda",
+              "gloss": "huge, take the buggy"
+            }
+          ]
+        },
+        {
+          "emoji": "🍜",
+          "header": "where to eat",
+          "items": [
+            {
+              "text": "de nui (mountain goat)",
+              "gloss": "the ninh binh thing, order it grilled"
+            },
+            {
+              "text": "com chay",
+              "gloss": "crispy burnt rice, sounds odd, it isn't"
+            },
+            {
+              "text": "goat hotpot",
+              "gloss": "worth it if there's 3 of you"
+            }
+          ]
+        },
+        {
+          "emoji": "🏞️",
+          "header": "nature",
+          "items": [
+            {
+              "text": "Van Long reserve",
+              "gloss": "same karsts, none of the boat traffic"
+            },
+            {
+              "text": "Cuc Phuong park",
+              "gloss": "the primate rescue centre is the reason"
+            },
+            {
+              "text": "Thung Nham bird park",
+              "gloss": "go for the late afternoon flocks"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "divider",
+      "label": "hoi an",
+      "cells": [
+        "hoian_lanterns",
+        "hoian_bridge",
+        "hoian_tailor",
+        "hoian_banhmi"
+      ]
+    },
+    {
+      "type": "notes",
+      "place": "hoi an",
+      "sections": [
+        {
+          "emoji": "📍",
+          "header": "places to visit",
+          "items": [
+            {
+              "text": "the Ancient Town",
+              "gloss": "the old town ticket covers the heritage houses"
+            },
+            {
+              "text": "Japanese Covered Bridge",
+              "gloss": "the one on the 20k note"
+            },
+            {
+              "text": "the lantern boats",
+              "gloss": "full moon night is the big release"
+            },
+            {
+              "text": "An Bang beach",
+              "gloss": "15 min out, where locals actually swim"
+            }
+          ]
+        },
+        {
+          "emoji": "🍜",
+          "header": "where to eat",
+          "items": [
+            {
+              "text": "Banh Mi Phuong",
+              "gloss": "the bourdain one, get the special"
+            },
+            {
+              "text": "cao lau",
+              "gloss": "only real here, it's the well water"
+            },
+            {
+              "text": "Com Ga Ba Buoi",
+              "gloss": "chicken rice, hoi an style"
+            },
+            {
+              "text": "white rose dumplings",
+              "gloss": "one family still makes them all"
+            }
+          ]
+        },
+        {
+          "emoji": "🧵",
+          "header": "where to tailor",
+          "items": [
+            {
+              "text": "Yaly Couture",
+              "gloss": "the reliable one, book 2 fittings"
+            },
+            {
+              "text": "A Dong Silk",
+              "gloss": "bring a photo of what you want"
+            },
+            {
+              "text": "the shoe shops on Tran Phu",
+              "gloss": "leather, made in a day"
+            },
+            {
+              "text": "go day 1, collect day 3",
+              "gloss": "the mistake is leaving it late"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "divider",
+      "label": "da nang",
+      "cells": [
+        "danang_goldenbridge",
+        "danang_mykhe",
+        "danang_marble",
+        "danang_dragonbridge"
+      ]
+    },
+    {
+      "type": "notes",
+      "place": "da nang",
+      "sections": [
+        {
+          "emoji": "📍",
+          "header": "places to visit",
+          "items": [
+            {
+              "text": "Golden Bridge, Ba Na Hills",
+              "gloss": "1m dong, go at opening or you queue"
+            },
+            {
+              "text": "Marble Mountains",
+              "gloss": "lift up, walk down"
+            },
+            {
+              "text": "Dragon Bridge",
+              "gloss": "it breathes fire on weekend nights"
+            },
+            {
+              "text": "Lady Buddha, Son Tra",
+              "gloss": "rent a bike for the coast road"
+            }
+          ]
+        },
+        {
+          "emoji": "🍜",
+          "header": "where to eat",
+          "items": [
+            {
+              "text": "mi quang",
+              "gloss": "the turmeric noodle that belongs here"
+            },
+            {
+              "text": "Banh Xeo Ba Duong",
+              "gloss": "down the alley, worth finding"
+            },
+            {
+              "text": "seafood on My Khe",
+              "gloss": "pick it out of the tank"
+            },
+            {
+              "text": "banh trang cuon thit heo",
+              "gloss": "pork rolls you wrap yourself"
+            }
+          ]
+        },
+        {
+          "emoji": "🏖️",
+          "header": "beaches",
+          "items": [
+            {
+              "text": "My Khe",
+              "gloss": "the long city one, calmest at 6am"
+            },
+            {
+              "text": "Non Nuoc",
+              "gloss": "quieter, under the marble mountains"
+            },
+            {
+              "text": "An Bang",
+              "gloss": "30 min south, the hoi an side"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "divider",
+      "label": "saigon",
+      "cells": [
+        "saigon_postoffice",
+        "benthanh_market",
+        "saigon_banhmi",
+        "saigon_buivien"
+      ]
+    },
+    {
+      "type": "notes",
+      "place": "saigon",
+      "sections": [
+        {
+          "emoji": "📍",
+          "header": "places to visit",
+          "items": [
+            {
+              "text": "War Remnants Museum",
+              "gloss": "40k dong, 7.30 to 6, go early and go slow"
+            },
+            {
+              "text": "Independence Palace",
+              "gloss": "frozen in 1975, worth the hour"
+            },
+            {
+              "text": "Central Post Office",
+              "gloss": "still a working post office"
+            },
+            {
+              "text": "Bui Vien",
+              "gloss": "loud and cheap, one night is enough"
+            },
+            {
+              "text": "Cu Chi tunnels",
+              "gloss": "half day out, book the early slot"
+            }
+          ]
+        },
+        {
+          "emoji": "🍜",
+          "header": "where to eat",
+          "items": [
+            {
+              "text": "Banh Mi Huynh Hoa",
+              "gloss": "the loaded one, expect a queue"
+            },
+            {
+              "text": "com tam",
+              "gloss": "broken rice and grilled pork, breakfast"
+            },
+            {
+              "text": "Pho Le",
+              "gloss": "southern pho, sweeter broth"
+            },
+            {
+              "text": "Banh Xeo 46A",
+              "gloss": "wrap it in the herbs, don't skip them"
+            },
+            {
+              "text": "ca phe sua da",
+              "gloss": "anywhere on a plastic stool"
+            }
+          ]
+        },
+        {
+          "emoji": "🛍️",
+          "header": "where to shop",
+          "items": [
+            {
+              "text": "Ben Thanh market",
+              "gloss": "haggle to about half, then walk"
+            },
+            {
+              "text": "Saigon Square",
+              "gloss": "cheap clothes, same rule"
+            },
+            {
+              "text": "An Dong market",
+              "gloss": "where locals buy fabric"
+            },
+            {
+              "text": "Nguyen Hue book street",
+              "gloss": "coffee and a break from the heat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "save",
+      "title": "SAVE THIS",
+      "subtitle": "just incase you need it ❤️",
+      "char_photo": "ana_tt-22_ending",
+      "scenic_photo": "vn_save_scenic"
+    }
+  ]
+}

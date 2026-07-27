@@ -1,0 +1,212 @@
+{
+  "option": "A",
+  "hook": {
+    "title": "🇰🇷 Mistakes every Korea tourist makes 😭",
+    "subtitle": "i made all of them on my 1st trip 😅"
+  },
+  "hashtags": [
+    "#koreatravel",
+    "#koreatips",
+    "#travelkorea",
+    "#koreatrip",
+    "#korea"
+  ],
+  "caption": {
+    "title_line": "🇰🇷 Mistakes every Korea tourist makes 😭",
+    "body_draft": "Korea is one of the easiest countries in Asia to travel around, which is exactly why first timers get caught out. Almost none of these mistakes are about doing something rude. They are about small rules and habits nobody tells you before you land, and every one of them is easy to fix once you know it.\n\nStart with Gyeongbokgung. It is the palace everybody builds a day around, and it is closed every Tuesday, so a whole plan can fall apart before it starts. Go on any other day, and go in a hanbok if you can. Adult entry is 3,000 won, but anyone wearing hanbok gets in free, and the rental shops sit right outside the gate. You end up paying for the outfit you wanted the photos in anyway.\n\nThe next one starts the moment you land. A regular taxi from Incheon into central Seoul runs roughly 55,000 to 100,000 won and can take 60 to 90 minutes once the expressway backs up. The AREX Express Train does the same trip nonstop to Seoul Station in 43 minutes from Terminal 1, and it costs a small fraction of the taxi. The counter is one level down from arrivals and it is signposted in English the whole way.\n\nI also spent my first trip trying to plan everything in a google doc, which is where the fourth slide comes from. i regret using google docs to plan our friend group trip. it's so messy, and i'm the only one updating it. everyone else is just sending tiktok links to the chat. holicay.com is my game changer. when i dump in my tiktok links, group chat messages, and random notes, it saves the locations and organizes my notes for me (you should try it with this tiktok 😉)\n\nNow the one that catches almost everybody. Google Maps barely works in Korea. Korean law restricts exporting high precision mapping data to servers outside the country, so Google cannot run proper walking and driving directions there. Download Naver Map before you fly. It has an English mode, it routes you door to door, and it tells you which subway car to board so you come out at the right exit.\n\nOn the subway, stop buying a single journey ticket every time. Each one adds a 500 won deposit that you have to walk over to a refund machine to claim back, and the fare itself is higher than the card fare. A T-money card costs a few thousand won at any convenience store, taps on the subway, buses and taxis, and you can pay for snacks with it too.\n\nSkincare is the next money trap. The shops along the Myeongdong street fronts run permanent SALE 70 and SALE 80 signs and staff who will walk you inside, and the prices are set for tourists. Olive Young carries the same brands at normal Korean prices, and at the big branches you show your passport at the till and the tax comes straight off your total instead of queuing at an airport refund counter.\n\nBukchon Hanok Village has changed too, and a lot of guides have not caught up. Real families live in those houses, and after years of overtourism the busiest lanes are now red zones where tourists are only allowed between 10am and 5pm, with a fine of up to 100,000 won for turning up outside those hours. Go in the daytime, then head to Ikseondong in the evening for hanok alleys full of cafes and no curfew at all.\n\nThe last one is the biggest. Do not spend the whole trip in Seoul. Busan is about two and a half hours away on the KTX for around 60,000 won in standard class, and it feels like a completely different country, with Gamcheon Culture Village stacked up the hillside and Haeundae Beach at the end of the subway line.\n\nGet these right and Korea becomes a very easy trip. Save this so you have it when you are actually standing in the arrivals hall.\n"
+  },
+  "slides": [
+    {
+      "type": "cover",
+      "flag": "🇰🇷",
+      "title_lines": [
+        "Mistakes every Korea",
+        "tourist makes 😭"
+      ],
+      "subtitle_lines": [
+        "(i made all of them on my 1st trip 😅)"
+      ],
+      "char_photo": "evelyn_tte-01_cover",
+      "scenic_photo": "kr_cover_scenic",
+      "subtitle_style": "outline"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't do Gyeongbokgung",
+        "on a tuesday"
+      ],
+      "x_why_lines": [
+        "it's closed every tuesday and",
+        "it's the palace you plan a day around"
+      ],
+      "check_title_lines": [
+        "✅ Go in a hanbok instead"
+      ],
+      "check_why_lines": [
+        "entry is 3,000 won, but it's free",
+        "if you're wearing one"
+      ],
+      "top_photo": "gyeongbokgung_hall",
+      "bottom_photo": "gyeongbokgung_hanbok"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't take a taxi",
+        "from Incheon"
+      ],
+      "x_why_lines": [
+        "it's 55,000 to 100,000 won and",
+        "up to 90 min once traffic hits"
+      ],
+      "check_title_lines": [
+        "✅ Take the AREX express"
+      ],
+      "check_why_lines": [
+        "43 min nonstop to seoul station",
+        "and a fraction of the fare"
+      ],
+      "top_photo": "incheon_taxi",
+      "bottom_photo": "arex_express"
+    },
+    {
+      "type": "plug",
+      "paragraphs": [
+        [
+          "i regret using google docs",
+          "to plan our friend group trip"
+        ],
+        [
+          "❌ it's so messy, and i'm",
+          "the only one updating it",
+          "everyone else is just sending",
+          "tiktok links to the chat"
+        ],
+        [
+          "✅ HOLICAY.COM is my",
+          "game changer"
+        ],
+        [
+          "when i dump in my tiktok",
+          "links, group chat messages,",
+          "and random notes, it saves",
+          "the locations and organizes",
+          "my notes for me"
+        ],
+        [
+          "(you should try it with",
+          "this tiktok 😉)"
+        ]
+      ],
+      "bg_photo": "kr_plug_scenic"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't rely on Google",
+        "Maps in Korea"
+      ],
+      "x_why_lines": [
+        "korea restricts its map data,",
+        "so walking directions barely work"
+      ],
+      "check_title_lines": [
+        "✅ Download Naver Map"
+      ],
+      "check_why_lines": [
+        "it's got an english mode and it",
+        "actually routes you door to door"
+      ],
+      "top_photo": "seoul_street_phone",
+      "bottom_photo": "naver_map_phone"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't buy a single",
+        "journey ticket every ride"
+      ],
+      "x_why_lines": [
+        "there's a 500 won deposit on each",
+        "one you have to go claim back"
+      ],
+      "check_title_lines": [
+        "✅ Get a T-money card"
+      ],
+      "check_why_lines": [
+        "cheaper per ride and it taps on",
+        "buses, taxis and convenience stores"
+      ],
+      "top_photo": "subway_ticket_machine",
+      "bottom_photo": "tmoney_tap"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't buy skincare on",
+        "the Myeongdong street front"
+      ],
+      "x_why_lines": [
+        "the SALE 80 signs are permanent",
+        "and it's tourist pricing"
+      ],
+      "check_title_lines": [
+        "✅ Go to Olive Young"
+      ],
+      "check_why_lines": [
+        "same brands, real prices, and the tax",
+        "comes off at the till with your passport"
+      ],
+      "top_photo": "myeongdong_cosmetics",
+      "bottom_photo": "olive_young_store"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't wander Bukchon",
+        "after 5pm"
+      ],
+      "x_why_lines": [
+        "families live there and the red zones",
+        "now carry a 100,000 won fine"
+      ],
+      "check_title_lines": [
+        "✅ Go between 10am and 5pm"
+      ],
+      "check_why_lines": [
+        "then do ikseondong at night for",
+        "hanok alleys with no curfew"
+      ],
+      "top_photo": "bukchon_alley",
+      "bottom_photo": "ikseondong_alley"
+    },
+    {
+      "type": "split",
+      "x_title_lines": [
+        "❌ Don't spend the whole",
+        "trip in Seoul"
+      ],
+      "x_why_lines": [
+        "you'll see one city and think",
+        "you've seen korea"
+      ],
+      "check_title_lines": [
+        "✅ Put Busan on the list"
+      ],
+      "check_why_lines": [
+        "the ktx gets you there in about 2h30",
+        "for around 60,000 won"
+      ],
+      "top_photo": "seoul_namsan_view",
+      "bottom_photo": "busan_haeundae"
+    },
+    {
+      "type": "save",
+      "title": "SAVE THIS",
+      "subtitle": "just incase you need it ❤️",
+      "char_photo": "evelyn_tte-01_ending",
+      "scenic_photo": "kr_save_scenic"
+    }
+  ]
+}
