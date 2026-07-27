@@ -1,8 +1,9 @@
 # character/ — the creator personas (visual identity only)
 
 Each subfolder here is **one creator persona** the pipeline can post as. **Ana** (Vietnam),
-**Chloe** (Japan), **Hannah** (USA) and **Evelyn** (South Korea) are the persona roster — parallel
-TikTok pipelines, each with its own account. **Holicay** (the brand account) is in the registry too but
+**Chloe** (Japan), **Hannah** (USA), **Evelyn** (South Korea), **Charlotte** (Canada), **Amelia** (UK),
+**Nora** (Italy), **Violet** (France) and **Ivy** (Japan) are the persona roster — parallel TikTok
+pipelines, each with its own account. **Holicay** (the brand account) is in the registry too but
 has **no subfolder here** — it is faceless (see below). This is an **active, multi-persona** area.
 
 A character is deliberately lightweight — there are **no personality or makeup text files**. A

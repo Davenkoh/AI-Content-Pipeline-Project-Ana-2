@@ -146,7 +146,8 @@
     "local_path": "media/graded/food_queue.jpg",
     "used_in": [
       "A",
-      "C"
+      "C",
+      "chloe/ttc-13"
     ],
     "note": "Kura Sushi table POV (2026-07-23: re-checked vs banked Kura Sushi Places photos, incumbent's candid tablet/gacha-machine POV still wins)"
   },
@@ -197,7 +198,8 @@
     "used_in": [
       "A",
       "C",
-      "D"
+      "D",
+      "chloe/ttc-13"
     ],
     "note": "handheld night alley lanterns"
   },
@@ -212,7 +214,8 @@
     "h": 1440,
     "local_path": "media/graded/hakone.jpg",
     "used_in": [
-      "C"
+      "C",
+      "chloe/ttc-13"
     ],
     "note": "couple wading, torii gate close"
   },
@@ -227,7 +230,8 @@
     "h": 1200,
     "local_path": "media/graded/hakone_glass_museum.jpg",
     "used_in": [
-      "C"
+      "C",
+      "chloe/ttc-13"
     ],
     "note": "rowboat visitors, pond, tower"
   },
@@ -242,7 +246,8 @@
     "h": 1600,
     "local_path": "media/graded/hakone_lake_ashi.jpg",
     "used_in": [
-      "C"
+      "C",
+      "chloe/ttc-13"
     ],
     "note": "dusk pirate-ship, railing, passengers"
   },
@@ -257,7 +262,8 @@
     "h": 3456,
     "local_path": "media/graded/hakone_owakudani.jpg",
     "used_in": [
-      "C"
+      "C",
+      "chloe/ttc-13"
     ],
     "note": "ropeway gondola window, valley (2026-07-23: incumbent shows readable \"HAKONE ROPEWAY\" cabin branding + live steam vents, beats all 4 banked Places alternatives, kept)"
   },
@@ -287,7 +293,10 @@
     "h": 1280,
     "local_path": "media/graded/holicay_app_itinerary.jpg",
     "used_in": [
-      "C"
+      "C",
+      "ana/tt-22",
+      "hannah/tth-07",
+      "chloe/ttc-13"
     ],
     "note": "first-party app screenshot; C plug mockup"
   },
@@ -332,7 +341,8 @@
     "h": 1600,
     "local_path": "media/graded/kyoto_arashiyama.jpg",
     "used_in": [
-      "C"
+      "C",
+      "chloe/ttc-13"
     ],
     "note": "real crowd, bamboo path"
   },
@@ -347,7 +357,8 @@
     "h": 3107,
     "local_path": "media/graded/kyoto_botanical_gardens.jpg",
     "used_in": [
-      "C"
+      "C",
+      "chloe/ttc-13"
     ],
     "note": "schoolchildren crossing bridge candid"
   },
@@ -362,7 +373,8 @@
     "h": 1205,
     "local_path": "media/graded/kyoto_fushimi_inari.jpg",
     "used_in": [
-      "C"
+      "C",
+      "chloe/ttc-13"
     ],
     "note": "oblique angle, real visitor glimpse"
   },
@@ -377,7 +389,8 @@
     "h": 1440,
     "local_path": "media/graded/kyoto_street.jpg",
     "used_in": [
-      "C"
+      "C",
+      "chloe/ttc-13"
     ],
     "note": "muted filter, quiet backstreet"
   },
@@ -407,7 +420,8 @@
     "h": 1040,
     "local_path": "media/graded/nara_deer_park.jpg",
     "used_in": [
-      "C"
+      "C",
+      "chloe/ttc-13"
     ],
     "note": "woman feeding deer crosswalk (2026-07-23: best banked Places alternative was a lone deer with no crowd-interaction moment, kept)"
   },
@@ -422,7 +436,8 @@
     "h": 1200,
     "local_path": "media/graded/nara_street.jpg",
     "used_in": [
-      "C"
+      "C",
+      "chloe/ttc-13"
     ],
     "note": "overcast old-town shopfront"
   },
@@ -437,7 +452,8 @@
     "h": 1067,
     "local_path": "media/graded/nara_todaiji.jpg",
     "used_in": [
-      "C"
+      "C",
+      "chloe/ttc-13"
     ],
     "note": "wider altar view, barrier rope"
   },
@@ -452,7 +468,8 @@
     "h": 800,
     "local_path": "media/graded/nara_wakakusayama.jpg",
     "used_in": [
-      "C"
+      "C",
+      "chloe/ttc-13"
     ],
     "note": "deer, hazy natural hilltop (2026-07-23: best banked Places alt was a dramatic god-ray golden-hour shot that read as more processed/staged than this one, kept)"
   },
@@ -527,7 +544,8 @@
     "h": 1600,
     "local_path": "media/graded/osaka_amerikamura.jpg",
     "used_in": [
-      "C"
+      "C",
+      "chloe/ttc-13"
     ],
     "note": "portrait-blur mural, cyclists passing"
   },
@@ -542,7 +560,8 @@
     "h": 768,
     "local_path": "media/graded/osaka_dotonbori.jpg",
     "used_in": [
-      "C"
+      "C",
+      "chloe/ttc-13"
     ],
     "note": "night canal, candid crowd (2026-07-23: 4 banked Places photos were all elevated/wrong-landmark shots, kept)"
   },
@@ -557,7 +576,8 @@
     "h": 720,
     "local_path": "media/graded/osaka_street_food.jpg",
     "used_in": [
-      "C"
+      "C",
+      "chloe/ttc-13"
     ],
     "note": "takoyaki stall, kimono customer"
   },
@@ -572,7 +592,8 @@
     "h": 1200,
     "local_path": "media/graded/osaka_universal_studios.jpg",
     "used_in": [
-      "C"
+      "C",
+      "chloe/ttc-13"
     ],
     "note": "archway distance, crowd barriers visible"
   },
@@ -636,7 +657,8 @@
     "local_path": "media/graded/shibuya_crossing.jpg",
     "used_in": [
       "B",
-      "C"
+      "C",
+      "chloe/ttc-13"
     ],
     "note": "accessible walkway angle, no blur"
   },
@@ -786,7 +808,8 @@
     "h": 1024,
     "local_path": "media/graded/temples.jpg",
     "used_in": [
-      "C"
+      "C",
+      "chloe/ttc-13"
     ],
     "note": "Meiji torii approach, real tourists (2026-07-23: checked vs 4 banked Sensoji Places photos — the strongest was a dead-empty, perfectly symmetric Kaminarimon gate, an even worse gate-9 fit despite real attribution; incumbent's real pedestrian crowd kept)"
   },
@@ -1273,7 +1296,8 @@
     "sha256": "e52f9836f6a47bfc254a99ee7b0851e62e1ad9beea6b8cccfd2343bda9acc4ec",
     "local_path": "media/graded/vn_bun_cha_stools.jpg",
     "used_in": [
-      "tt-20"
+      "tt-20",
+      "ana/tt-22"
     ]
   },
   {
@@ -1381,7 +1405,8 @@
     "sha256": "8e5a64997ee696652edb4538762b2801eccaf7d49fa4ce38fb0a8194d4eed57c",
     "local_path": "media/graded/vn_cover_scenic.jpg",
     "used_in": [
-      "tt-20"
+      "tt-20",
+      "ana/tt-22"
     ]
   },
   {
@@ -1400,7 +1425,8 @@
     "local_path": "media/graded/vn_plug_scenic.jpg",
     "used_in": [
       "tt-20",
-      "tt-21"
+      "tt-21",
+      "ana/tt-22"
     ]
   },
   {
@@ -1418,7 +1444,8 @@
     "sha256": "6b0b526829657499b22418d151b29b8fa57fc93d178ac3733a34053945702827",
     "local_path": "media/graded/vn_save_scenic.jpg",
     "used_in": [
-      "tt-20"
+      "tt-20",
+      "ana/tt-22"
     ]
   },
   {
@@ -1508,7 +1535,8 @@
     "sha256": "2532ce18db7d84b891862ab8a8c5c5015bf728faf5b30da4020f469d04c75e30",
     "local_path": "media/graded/chichen_crowds.jpg",
     "used_in": [
-      "tth-05"
+      "tth-05",
+      "hannah/tth-07"
     ]
   },
   {
@@ -1526,7 +1554,8 @@
     "sha256": "eeb49857b395368ea69ffb2e2ab6714edf41afe539e4644c2cec9337a9635c48",
     "local_path": "media/graded/ek_balam.jpg",
     "used_in": [
-      "tth-05"
+      "tth-05",
+      "hannah/tth-07"
     ]
   },
   {
@@ -1634,7 +1663,8 @@
     "sha256": "185ed98dcc411fdb6a05dec0579f2c67f2b6d55aacecd0caf4c5a8db4d6a755b",
     "local_path": "media/graded/cdmx_city.jpg",
     "used_in": [
-      "tth-05"
+      "tth-05",
+      "hannah/tth-07"
     ]
   },
   {
@@ -1652,7 +1682,8 @@
     "sha256": "8d49e967f68d746b0f0c800d91ecec2e0fa72412a5b2590c0c33916862f1fda7",
     "local_path": "media/graded/cdmx_roma.jpg",
     "used_in": [
-      "tth-05"
+      "tth-05",
+      "hannah/tth-07"
     ]
   },
   {
@@ -1670,7 +1701,8 @@
     "sha256": "5c67441fe7892a9fd3c4d02172aebb66a4c214cf37e1e7210e5c97f6a45e7ea1",
     "local_path": "media/graded/mx_tacos_pastor.jpg",
     "used_in": [
-      "tth-05"
+      "tth-05",
+      "hannah/tth-07"
     ]
   },
   {
@@ -1706,7 +1738,8 @@
     "sha256": "08432ce978c31f974b4a63631462972483a4be70bf06d10470e4e4ac09c6ff68",
     "local_path": "media/graded/mx_beach.jpg",
     "used_in": [
-      "tth-05"
+      "tth-05",
+      "hannah/tth-07"
     ]
   },
   {
@@ -1760,7 +1793,8 @@
     "sha256": "c4f4d48790a969efbb210199c05e33029d791718c5f34afad43db9a17e9afba9",
     "local_path": "media/graded/valladolid_town.jpg",
     "used_in": [
-      "tth-05"
+      "tth-05",
+      "hannah/tth-07"
     ]
   },
   {
@@ -1778,7 +1812,8 @@
     "sha256": "741dbe0fdc135ba499cb951baa6b1fbfc3d02741f604f5afcd1e73d9af1e8b76",
     "local_path": "media/graded/mx_cenote.jpg",
     "used_in": [
-      "tth-05"
+      "tth-05",
+      "hannah/tth-07"
     ]
   },
   {
@@ -1796,7 +1831,8 @@
     "sha256": "8a2b6322b91d6a952c2ba17fe94850f1289cc80da5ff4858a6650d0c3375a118",
     "local_path": "media/graded/mx_cover_scenic.jpg",
     "used_in": [
-      "tth-05"
+      "tth-05",
+      "hannah/tth-07"
     ]
   },
   {
@@ -1814,7 +1850,8 @@
     "sha256": "5f70fee6e4cfb1bdcc4a7b5b9680462fc5a2471d9cc7e59cef8db5352e5bc4cb",
     "local_path": "media/graded/mx_save_scenic.jpg",
     "used_in": [
-      "tth-05"
+      "tth-05",
+      "hannah/tth-07"
     ]
   },
   {
@@ -1832,7 +1869,8 @@
     "sha256": "b4a9086b830209994ef51f97273fd331985074cb539f67fcb717f83d1ef5f59a",
     "local_path": "media/graded/tulum_beachclub.jpg",
     "used_in": [
-      "tth-06"
+      "tth-06",
+      "hannah/tth-07"
     ]
   },
   {
@@ -1976,7 +2014,8 @@
     "sha256": "7056231d27fe6842fd18900aeff9bf1adc63ff56a4d0c71bcfdece48e13374e9",
     "local_path": "media/graded/dos_ojos_cenote.jpg",
     "used_in": [
-      "tth-06"
+      "tth-06",
+      "hannah/tth-07"
     ]
   },
   {
@@ -2012,7 +2051,8 @@
     "sha256": "d2f1716222ea8e6a49723620d6f0abb24458a8fd2467ec41155a0b5caa5bc102",
     "local_path": "media/graded/holbox_island.jpg",
     "used_in": [
-      "tth-06"
+      "tth-06",
+      "hannah/tth-07"
     ]
   },
   {
@@ -2048,7 +2088,8 @@
     "sha256": "5a8ec47dd80fb98b2e458f17eb774e634acd5e7b569ea17de025ee1092da2720",
     "local_path": "media/graded/mx_plug_scenic.jpg",
     "used_in": [
-      "tth-06"
+      "tth-06",
+      "hannah/tth-07"
     ]
   },
   {
@@ -2102,7 +2143,8 @@
     "sha256": "20a30e901d30c0a1182e935bdd4bb9eb803632db05722c0da9ceb487cdd98ab9",
     "local_path": "media/graded/benthanh_market.jpg",
     "used_in": [
-      "tt-21"
+      "tt-21",
+      "ana/tt-22"
     ]
   },
   {
@@ -2462,7 +2504,8 @@
     "sha256": "9affd7038859722001df1c6b400770f5fbcaa860eb2fdba9077104f11c743c69",
     "local_path": "media/graded/jp_cover_scenic.jpg",
     "used_in": [
-      "ttc-12"
+      "ttc-12",
+      "chloe/ttc-13"
     ]
   },
   {
@@ -2480,7 +2523,8 @@
     "sha256": "14bc5c310943cfa909febfa72f1e8cce589cfec5caaa288f3a78c0833640b87e",
     "local_path": "media/graded/jp_plug_scenic.jpg",
     "used_in": [
-      "ttc-12"
+      "ttc-12",
+      "chloe/ttc-13"
     ]
   },
   {
@@ -2498,7 +2542,2834 @@
     "sha256": "b69a8eb9aafb7690afad522ae6d7fd76dffe03044bd0cf396e7cbab6fece220e",
     "local_path": "media/graded/jp_save_scenic.jpg",
     "used_in": [
-      "ttc-12"
+      "ttc-12",
+      "chloe/ttc-13"
     ]
+  },
+  {
+    "id": "kr_cover_scenic",
+    "subject": "korea/seoul",
+    "category": "visit",
+    "query": "Bukchon Hanok Village",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/116263516879755620840",
+    "author": "Nguyễn Thành Hội",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-26",
+    "sha256": "00dfa9108e6a069a7acdbf2a82157f40b632f13df27c124bd0d9bafbeb225a00",
+    "local_path": "media/graded/kr_cover_scenic.jpg",
+    "used_in": [
+      "tte-01"
+    ]
+  },
+  {
+    "id": "kr_save_scenic",
+    "subject": "korea/busan",
+    "category": "visit",
+    "query": "Gamcheon Culture Village Busan",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/102897007952046548602",
+    "author": "NGreyTravels",
+    "license": "places-tos",
+    "w": 1080,
+    "h": 1080,
+    "scraped_at": "2026-07-26",
+    "sha256": "0ae1866468afcee96940e15572e0b4ab13b2fd9d708cbe89b93a9fde21190a0f",
+    "local_path": "media/graded/kr_save_scenic.jpg",
+    "used_in": [
+      "tte-01"
+    ]
+  },
+  {
+    "id": "kr_plug_scenic",
+    "subject": "korea/seoul",
+    "category": "visit",
+    "query": "Yeouido Hangang Park",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/115027288387975928704",
+    "author": "Alan Chen",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1069,
+    "scraped_at": "2026-07-26",
+    "sha256": "3a74b7562b13d33a038265d87df55c97fd965dddadc3b0a5888385e8d35af22c",
+    "local_path": "media/graded/kr_plug_scenic.jpg",
+    "used_in": [
+      "tte-01"
+    ]
+  },
+  {
+    "id": "gyeongbokgung_hall",
+    "subject": "korea/seoul",
+    "category": "visit",
+    "query": "Gyeongbokgung Palace",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/116794297431678234068",
+    "author": "아삭",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-26",
+    "sha256": "b265466fbfc19097d98d17aa5405f360d6a993c73b55da06dc7621167849a450",
+    "local_path": "media/graded/gyeongbokgung_hall.jpg",
+    "used_in": [
+      "tte-01"
+    ]
+  },
+  {
+    "id": "gyeongbokgung_hanbok",
+    "subject": "korea/seoul",
+    "category": "visit",
+    "query": "tourists wearing hanbok at Gyeongbokgung palace courtyard",
+    "platform": "google_images",
+    "source_url": "https://laseoulite.substack.com/p/hanbok-rental-and-visiting-gyeongbokgung",
+    "author": "Everything about Korea - Substack",
+    "license": "ugc-unlicensed",
+    "w": 778,
+    "h": 870,
+    "scraped_at": "2026-07-26",
+    "sha256": "33f1b17d7a379030072bdbcc70fc078f860bddc40c44d34c11dbfbc4dfdd1cd3",
+    "local_path": "media/graded/gyeongbokgung_hanbok.jpg",
+    "used_in": [
+      "tte-01"
+    ]
+  },
+  {
+    "id": "incheon_taxi",
+    "subject": "korea/seoul",
+    "category": "visit",
+    "query": "orange Seoul taxi on street korea",
+    "platform": "google_images",
+    "source_url": "https://www.theseoulguide.com/seoul-taxi/",
+    "author": "The Seoul Guide",
+    "license": "ugc-unlicensed",
+    "w": 1200,
+    "h": 750,
+    "scraped_at": "2026-07-26",
+    "sha256": "2df37004cdffad95587150301c83014e9b8f95989d20609671c6bc974bc655ca",
+    "local_path": "media/graded/incheon_taxi.jpg",
+    "used_in": [
+      "tte-01"
+    ]
+  },
+  {
+    "id": "arex_express",
+    "subject": "korea/incheon",
+    "category": "transit",
+    "query": "Incheon International Airport Railroad Station AREX",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/110192953860290877064",
+    "author": "carl hong",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-26",
+    "sha256": "7f246ff4e78ff2ccd68460364d944e2b6f7be1e937e06c21048b709546e62728",
+    "local_path": "media/graded/arex_express.jpg",
+    "used_in": [
+      "tte-01"
+    ]
+  },
+  {
+    "id": "seoul_street_phone",
+    "subject": "korea/seoul",
+    "category": "visit",
+    "query": "tourist holding phone on Seoul street",
+    "platform": "google_images",
+    "source_url": "https://mashable.com/article/south-korea-phone-warning-signs",
+    "author": "Mashable",
+    "license": "ugc-unlicensed",
+    "w": 1200,
+    "h": 900,
+    "scraped_at": "2026-07-26",
+    "sha256": "b846f4939768afe7333b4e71505f9c535f2a586206ccf6a56d2608a0bfbd1262",
+    "local_path": "media/graded/seoul_street_phone.jpg",
+    "used_in": [
+      "tte-01"
+    ]
+  },
+  {
+    "id": "naver_map_phone",
+    "subject": "korea/seoul",
+    "category": "visit",
+    "query": "Naver Map app on phone Seoul",
+    "platform": "google_images",
+    "source_url": "https://www.blakeerik.com/blog/2019/8/30/kakaomap-vs-naver-map-which-app-is-best-to-use-for-south-korea",
+    "author": "Blake Erik.",
+    "license": "ugc-unlicensed",
+    "w": 2500,
+    "h": 3750,
+    "scraped_at": "2026-07-26",
+    "sha256": "d2bdf99df3e40016b873ef7979fb7332c1f6b8d8916cada155455b0ae50afde7",
+    "local_path": "media/graded/naver_map_phone.jpg",
+    "used_in": [
+      "tte-01"
+    ]
+  },
+  {
+    "id": "subway_ticket_machine",
+    "subject": "korea/seoul",
+    "category": "visit",
+    "query": "Seoul subway single journey ticket vending machine",
+    "platform": "google_images",
+    "source_url": "https://www.theseoulguide.com/t-money-card/",
+    "author": "The Seoul Guide",
+    "license": "ugc-unlicensed",
+    "w": 1200,
+    "h": 750,
+    "scraped_at": "2026-07-26",
+    "sha256": "d34b12de18715118435e6f8ade7daf38e7e652b80986f35d839e84f30ae8a7d3",
+    "local_path": "media/graded/subway_ticket_machine.jpg",
+    "used_in": [
+      "tte-01"
+    ]
+  },
+  {
+    "id": "tmoney_tap",
+    "subject": "korea/seoul",
+    "category": "visit",
+    "query": "Seoul subway gate tapping card commuter",
+    "platform": "google_images",
+    "source_url": "https://www.koreaherald.com/article/10516549",
+    "author": "The Korea Herald",
+    "license": "ugc-unlicensed",
+    "w": 1280,
+    "h": 866,
+    "scraped_at": "2026-07-26",
+    "sha256": "ad9abcd85df6cb76c6d7399f898c38824347ee7d6e3a23dd4af955821be065bd",
+    "local_path": "media/graded/tmoney_tap.jpg",
+    "used_in": [
+      "tte-01"
+    ]
+  },
+  {
+    "id": "myeongdong_cosmetics",
+    "subject": "korea/seoul",
+    "category": "shop",
+    "query": "Nature Republic Myeongdong World Seoul",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/117740199815419028338",
+    "author": "hi conan",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-26",
+    "sha256": "90799375f6d78b1f892ef72cd2721f5faf3f31dedd59349fa41123577536e59a",
+    "local_path": "media/graded/myeongdong_cosmetics.jpg",
+    "used_in": [
+      "tte-01"
+    ]
+  },
+  {
+    "id": "olive_young_store",
+    "subject": "korea/seoul",
+    "category": "shop",
+    "query": "Olive Young Myeongdong Town",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/106560908875963533492",
+    "author": "Arifin I",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-26",
+    "sha256": "9be9ea290b5159757ed8d8aa955c1c0018e6a19af323212d66f78ffa233a3d1a",
+    "local_path": "media/graded/olive_young_store.jpg",
+    "used_in": [
+      "tte-01"
+    ]
+  },
+  {
+    "id": "bukchon_alley",
+    "subject": "korea/seoul",
+    "category": "visit",
+    "query": "Bukchon Hanok Village Seoul",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/100010704401614575734",
+    "author": "Anna Gluchshenko",
+    "license": "places-tos",
+    "w": 1200,
+    "h": 1600,
+    "scraped_at": "2026-07-26",
+    "sha256": "a48dde5c032e7f5428e28d1e1c53df262ae7c5385b888413f76c7ceecf335ae1",
+    "local_path": "media/graded/bukchon_alley.jpg",
+    "used_in": [
+      "tte-01"
+    ]
+  },
+  {
+    "id": "ikseondong_alley",
+    "subject": "korea/seoul",
+    "category": "visit",
+    "query": "Ikseondong Hanok Village Seoul",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/108094778160860505696",
+    "author": "Syazwan JD",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1600,
+    "scraped_at": "2026-07-26",
+    "sha256": "ea3957bb6a20f34765e1314313c95a2a3f54fd21b6b695f4c8a30894330a82bb",
+    "local_path": "media/graded/ikseondong_alley.jpg",
+    "used_in": [
+      "tte-01"
+    ]
+  },
+  {
+    "id": "seoul_namsan_view",
+    "subject": "korea/seoul",
+    "category": "visit",
+    "query": "N Seoul Tower",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/100397985550703187183",
+    "author": "THONG VICTOR",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 900,
+    "scraped_at": "2026-07-26",
+    "sha256": "2ae79017197de48c81e598ba5a9e12274c2bcdfd5ee09f5fad10ac094b2f6426",
+    "local_path": "media/graded/seoul_namsan_view.jpg",
+    "used_in": [
+      "tte-01"
+    ]
+  },
+  {
+    "id": "busan_haeundae",
+    "subject": "korea/busan",
+    "category": "visit",
+    "query": "Haeundae Beach Busan",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/116074186564435538894",
+    "author": "melvina chung",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-26",
+    "sha256": "05c1df245f28b9d7b03e48075e1ff8116955ec472eceef4b554123895fce03d1",
+    "local_path": "media/graded/busan_haeundae.jpg",
+    "used_in": [
+      "tte-01"
+    ]
+  },
+  {
+    "id": "th_cover_scenic",
+    "subject": "thailand/bangkok",
+    "category": "visit",
+    "query": "Wat Arun Bangkok",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/112653554147218489961",
+    "author": "Manit Monsur",
+    "license": "places-tos",
+    "w": 1089,
+    "h": 1089,
+    "scraped_at": "2026-07-26",
+    "sha256": "c961249fb03ff86fd89f51af60e4271d126eedc1d04df603dc1323eded3750b7",
+    "local_path": "media/graded/th_cover_scenic.jpg",
+    "used_in": [
+      "tthol-01"
+    ]
+  },
+  {
+    "id": "th_save_scenic",
+    "subject": "thailand/krabi",
+    "category": "visit",
+    "query": "Railay Beach Krabi",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/107953490380583994951",
+    "author": "Csaba Barna Boros",
+    "license": "places-tos",
+    "w": 1200,
+    "h": 1600,
+    "scraped_at": "2026-07-26",
+    "sha256": "8d7c4b9df8d878f52af3cf9a70926290fe4f7a8252bb5d4fd53666a53625ad26",
+    "local_path": "media/graded/th_save_scenic.jpg",
+    "used_in": [
+      "tthol-01"
+    ]
+  },
+  {
+    "id": "th_plug_scenic",
+    "subject": "thailand/krabi",
+    "category": "visit",
+    "query": "Maya Bay Phi Phi Leh",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/101728460000940243344",
+    "author": "Thế Hà Lê Công",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 900,
+    "scraped_at": "2026-07-26",
+    "sha256": "c056097fdccb9117d2a6e3abec7121ac19bedde17f066ac57c7c779220c4b093",
+    "local_path": "media/graded/th_plug_scenic.jpg",
+    "used_in": [
+      "tthol-01"
+    ]
+  },
+  {
+    "id": "grand_palace_crowd",
+    "subject": "thailand/bangkok",
+    "category": "visit",
+    "query": "Grand Palace Bangkok",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/111444250773136827044",
+    "author": "Bharatundiscovered",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-26",
+    "sha256": "25b9a3161146352bf17f6580e68d5166c047dcd3e8354125ecaba8cd11602c17",
+    "local_path": "media/graded/grand_palace_crowd.jpg",
+    "used_in": [
+      "tthol-01"
+    ]
+  },
+  {
+    "id": "temple_dress_code",
+    "subject": "thailand/bangkok",
+    "category": "visit",
+    "query": "tourists modest dress long pants temple Bangkok Wat Pho visitors",
+    "platform": "google_images",
+    "source_url": "https://yourthaiguide.com/sacred-sites-savvy-traveler-your-essential-guide-to-thai-temple-etiquette-audio-17m/",
+    "author": "Tour Guide in Bangkok",
+    "license": "ugc-unlicensed",
+    "w": 1024,
+    "h": 1024,
+    "scraped_at": "2026-07-26",
+    "sha256": "4ce801cddf8c288838c7e3d4a8db1a5857e5e77bf1ab6b25266fbf2095260a7d",
+    "local_path": "media/graded/temple_dress_code.jpg",
+    "used_in": [
+      "tthol-01"
+    ]
+  },
+  {
+    "id": "bangkok_tuktuk",
+    "subject": "thailand/bangkok",
+    "category": "visit",
+    "query": "tuk tuk driver bangkok street tourists",
+    "platform": "google_images",
+    "source_url": "https://thailandmagazine.com/bangkok/transportation/tuk-tuk/",
+    "author": "Thailand Magazine",
+    "license": "ugc-unlicensed",
+    "w": 1536,
+    "h": 864,
+    "scraped_at": "2026-07-26",
+    "sha256": "b508d91b430844d3deb7e11b5d15665895fd3114a3cafe74aa00d927ee40b126",
+    "local_path": "media/graded/bangkok_tuktuk.jpg",
+    "used_in": [
+      "tthol-01"
+    ]
+  },
+  {
+    "id": "bangkok_taxi_meter",
+    "subject": "thailand/bangkok",
+    "category": "visit",
+    "query": "bangkok metered taxi pink green car street traffic",
+    "platform": "google_images",
+    "source_url": "https://asianews.network/thailands-taxi-colour-code-uncovered/",
+    "author": "Asia News Network",
+    "license": "ugc-unlicensed",
+    "w": 1300,
+    "h": 731,
+    "scraped_at": "2026-07-26",
+    "sha256": "7e64a4a7e29f54df800a783f18095fafa994dbf4c85fc5cfedccc3080e4e15f2",
+    "local_path": "media/graded/bangkok_taxi_meter.jpg",
+    "used_in": [
+      "tthol-01"
+    ]
+  },
+  {
+    "id": "elephant_riding",
+    "subject": "thailand/bangkok",
+    "category": "visit",
+    "query": "elephant riding tourists thailand trek",
+    "platform": "google_images",
+    "source_url": "https://www.tripadvisor.com/Attraction_Review-g1210687-d1733674-Reviews-KokChang_Safari_Elephant_Trekking-Kata_Beach_Karon_Phuket.html",
+    "author": "Tripadvisor",
+    "license": "ugc-unlicensed",
+    "w": 1200,
+    "h": 900,
+    "scraped_at": "2026-07-26",
+    "sha256": "07481e61a54f63a5fa9fb65249478bb7e201021544ac4d2f776403acb732213a",
+    "local_path": "media/graded/elephant_riding.jpg",
+    "used_in": [
+      "tthol-01"
+    ]
+  },
+  {
+    "id": "elephant_sanctuary",
+    "subject": "thailand/chiangmai",
+    "category": "visit",
+    "query": "Elephant Nature Park Chiang Mai",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/108148330925934764261",
+    "author": "marina muñoz",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-26",
+    "sha256": "4aafe902054704fc1fc020d05ae7df5c340584f7df9c815a70d01c5b71a0d638",
+    "local_path": "media/graded/elephant_sanctuary.jpg",
+    "used_in": [
+      "tthol-01"
+    ]
+  },
+  {
+    "id": "khaosan_road",
+    "subject": "thailand/bangkok",
+    "category": "visit",
+    "query": "Khao San Road Bangkok",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/116703097277670758559",
+    "author": "Suresh Jayasooriya",
+    "license": "places-tos",
+    "w": 1500,
+    "h": 1125,
+    "scraped_at": "2026-07-26",
+    "sha256": "45381a857ee8a7b5ff3092cfd937f08ee19d93a2cbbf7a0f5d924ce785b1d973",
+    "local_path": "media/graded/khaosan_road.jpg",
+    "used_in": [
+      "tthol-01"
+    ]
+  },
+  {
+    "id": "bts_skytrain",
+    "subject": "thailand/bangkok",
+    "category": "transit",
+    "query": "BTS Siam Station Bangkok skytrain",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/108976998526193771849",
+    "author": "sing sing",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 900,
+    "scraped_at": "2026-07-26",
+    "sha256": "3d1e28a655c51a1cee5a46902f5539ca8531ea71701dd4219b42e52d2d229d3a",
+    "local_path": "media/graded/bts_skytrain.jpg",
+    "used_in": [
+      "tthol-01"
+    ]
+  },
+  {
+    "id": "airport_exchange",
+    "subject": "thailand/bangkok",
+    "category": "visit",
+    "query": "money exchange booth airport thailand baht counter",
+    "platform": "google_images",
+    "source_url": "https://fanclubthailand.co.uk/where-is-the-best-place-to-change-money-into-thai-baht/",
+    "author": "Fan Club Thailand",
+    "license": "ugc-unlicensed",
+    "w": 1600,
+    "h": 800,
+    "scraped_at": "2026-07-26",
+    "sha256": "9c855a0e8d13165b5a5451f13c99dacdf91ea7a856aceaf521af40aeb3553bd6",
+    "local_path": "media/graded/airport_exchange.jpg",
+    "used_in": [
+      "tthol-01"
+    ]
+  },
+  {
+    "id": "superrich_branch",
+    "subject": "thailand/bangkok",
+    "category": "shop",
+    "query": "Superrich Thailand currency exchange Bangkok",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/115028013423421394626",
+    "author": "HC_KH%",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-26",
+    "sha256": "8c1d529ad1b0397b67310c5eb536d4022aee566e5c2dc2468cf8fede4ccf6d74",
+    "local_path": "media/graded/superrich_branch.jpg",
+    "used_in": [
+      "tthol-01"
+    ]
+  },
+  {
+    "id": "maya_bay_crowd",
+    "subject": "thailand/krabi",
+    "category": "visit",
+    "query": "Maya Bay Phi Phi Leh",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/104129364640916087572",
+    "author": "Adeel Shams",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1070,
+    "scraped_at": "2026-07-26",
+    "sha256": "a6da4fa46dace81aace893aa6cce4833e182e07bed8d4bf5f67553b7f7f94f09",
+    "local_path": "media/graded/maya_bay_crowd.jpg",
+    "used_in": [
+      "tthol-01"
+    ]
+  },
+  {
+    "id": "maya_bay_boardwalk",
+    "subject": "thailand/krabi",
+    "category": "visit",
+    "query": "Maya Bay Phi Phi Leh",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/107627910593281031832",
+    "author": "Prachi J",
+    "license": "places-tos",
+    "w": 1200,
+    "h": 1600,
+    "scraped_at": "2026-07-26",
+    "sha256": "9ee9840451d2a59f5871411585b0b8ff60eb2e43e1edc702f56761be1da2c1b1",
+    "local_path": "media/graded/maya_bay_boardwalk.jpg",
+    "used_in": [
+      "tthol-01"
+    ]
+  },
+  {
+    "id": "mall_food_court",
+    "subject": "thailand/bangkok",
+    "category": "eat",
+    "query": "Terminal 21 Asok Pier 21 food court Bangkok",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/112812395697171551012",
+    "author": "melody",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-26",
+    "sha256": "d6ac1a1dea09dec12c46019d7903d4b7b2bf271e6fabc2770b4726c25c39a2af",
+    "local_path": "media/graded/mall_food_court.jpg",
+    "used_in": [
+      "tthol-01"
+    ]
+  },
+  {
+    "id": "yaowarat_street_food",
+    "subject": "thailand/bangkok",
+    "category": "visit",
+    "query": "Khao San Road Bangkok",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/103741781414111595015",
+    "author": "Pierre Januschewski",
+    "license": "places-tos",
+    "w": 1170,
+    "h": 896,
+    "scraped_at": "2026-07-26",
+    "sha256": "b056e19dadef6d76aec7452f47ac043c6a9095e7c25e11dc2a7cdc9408396f23",
+    "local_path": "media/graded/yaowarat_street_food.jpg",
+    "used_in": [
+      "tthol-01"
+    ]
+  },
+  {
+    "id": "hanoi_oldquarter",
+    "subject": "vietnam/hanoi",
+    "category": "visit",
+    "query": "Hanoi Old Quarter",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/114533195548532842088",
+    "author": "Quý Nguyễn",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-26",
+    "sha256": "2a3ef5f71c98f9c2e5e72ca480385e8ee2145ff9b05dec231415d9311c5c371f",
+    "local_path": "media/graded/hanoi_oldquarter.jpg",
+    "used_in": [
+      "ana/tt-22"
+    ]
+  },
+  {
+    "id": "hanoi_trainstreet",
+    "subject": "vietnam/hanoi",
+    "category": "visit",
+    "query": "hanoi train street cafe train passing",
+    "platform": "google_images",
+    "source_url": "https://trailwalkertravels.com/train-street-hanoi-essential-guide/",
+    "author": "Trailwalker Travels",
+    "license": "ugc-unlicensed",
+    "w": 2459,
+    "h": 2180,
+    "scraped_at": "2026-07-26",
+    "sha256": "59f2ff8a749cb7b39267d485f631fb82abd6429bb0bd439a2a683d488e9a8463",
+    "local_path": "media/graded/hanoi_trainstreet.jpg",
+    "used_in": [
+      "ana/tt-22"
+    ]
+  },
+  {
+    "id": "hanoi_eggcoffee",
+    "subject": "vietnam/hanoi",
+    "category": "eat",
+    "query": "Cafe Giang Hanoi egg coffee",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/111095344412376735811",
+    "author": "Pat Williams",
+    "license": "places-tos",
+    "w": 1445,
+    "h": 1600,
+    "scraped_at": "2026-07-26",
+    "sha256": "9f7ac8e18320dba02ecd7f26f4e47f006189448681db1cf391f730496a87fba2",
+    "local_path": "media/graded/hanoi_eggcoffee.jpg",
+    "used_in": [
+      "ana/tt-22"
+    ]
+  },
+  {
+    "id": "ninhbinh_trangan",
+    "subject": "vietnam/ninhbinh",
+    "category": "visit",
+    "query": "Trang An Scenic Landscape Complex",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/108119593760742570983",
+    "author": "Thiên Tinh Cổ",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-26",
+    "sha256": "6d1596dd2a814414b1c6efd05b66672c341afacc9db2eec88084250e58203dac",
+    "local_path": "media/graded/ninhbinh_trangan.jpg",
+    "used_in": [
+      "ana/tt-22"
+    ]
+  },
+  {
+    "id": "ninhbinh_hangmua",
+    "subject": "vietnam/ninhbinh",
+    "category": "visit",
+    "query": "Mua Cave Viewpoint Ninh Binh",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/109176833677357095370",
+    "author": "Zhang Qingye",
+    "license": "places-tos",
+    "w": 1200,
+    "h": 1600,
+    "scraped_at": "2026-07-26",
+    "sha256": "412a92fdbd5a6412007c6300301d7bc1eed4ca4148158500dcac643ccd4b93c2",
+    "local_path": "media/graded/ninhbinh_hangmua.jpg",
+    "used_in": [
+      "ana/tt-22"
+    ]
+  },
+  {
+    "id": "ninhbinh_tamcoc",
+    "subject": "vietnam/ninhbinh",
+    "category": "visit",
+    "query": "Tam Coc Ninh Binh",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/107960397594118850247",
+    "author": "Haru Cav",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-26",
+    "sha256": "aafe05f36e3bc4b5b832197d3806dbd1320dd9579fc9d770c8e7ba23405c3525",
+    "local_path": "media/graded/ninhbinh_tamcoc.jpg",
+    "used_in": [
+      "ana/tt-22"
+    ]
+  },
+  {
+    "id": "ninhbinh_goat",
+    "subject": "vietnam/ninhbinh",
+    "category": "visit",
+    "query": "de nui ninh binh grilled goat meat dish restaurant",
+    "platform": "google_images",
+    "source_url": "https://vietadvisor.travel/ninh-binh/ninh-binh-food-guide",
+    "author": "Vietadvisor",
+    "license": "ugc-unlicensed",
+    "w": 1442,
+    "h": 2560,
+    "scraped_at": "2026-07-26",
+    "sha256": "12ad97e629ab15ccce40ac87ae82de2802d4826eb464e79a4b542b64c1851096",
+    "local_path": "media/graded/ninhbinh_goat.jpg",
+    "used_in": [
+      "ana/tt-22"
+    ]
+  },
+  {
+    "id": "hoian_lanterns",
+    "subject": "vietnam/hoian",
+    "category": "visit",
+    "query": "Hoi An Ancient Town",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/106900348685778550008",
+    "author": "Ngoc Diep",
+    "license": "places-tos",
+    "w": 1200,
+    "h": 1600,
+    "scraped_at": "2026-07-26",
+    "sha256": "3b8dccc369dfbd1e3710710c13b087860a8bf5a07a2a4802ae0ca551a6646c20",
+    "local_path": "media/graded/hoian_lanterns.jpg",
+    "used_in": [
+      "ana/tt-22"
+    ]
+  },
+  {
+    "id": "hoian_bridge",
+    "subject": "vietnam/hoian",
+    "category": "visit",
+    "query": "Japanese Covered Bridge Hoi An",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/116874515438115560737",
+    "author": "Spyros Koutelas",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-26",
+    "sha256": "7185f8551756f4bd362e8dc1c742cbd6a01efd3aa560396ef78ac8afb6081ae9",
+    "local_path": "media/graded/hoian_bridge.jpg",
+    "used_in": [
+      "ana/tt-22"
+    ]
+  },
+  {
+    "id": "hoian_tailor",
+    "subject": "vietnam/hoian",
+    "category": "visit",
+    "query": "hoi an tailor shop fabric rolls interior",
+    "platform": "google_images",
+    "source_url": "https://findingalexx.com/hoi-an-tailors-guide/",
+    "author": "Finding Alexx",
+    "license": "ugc-unlicensed",
+    "w": 768,
+    "h": 1024,
+    "scraped_at": "2026-07-26",
+    "sha256": "a56681817077eb60db623b665d84b6f3e1100fead1f5a0e429b759dccccbad1a",
+    "local_path": "media/graded/hoian_tailor.jpg",
+    "used_in": [
+      "ana/tt-22"
+    ]
+  },
+  {
+    "id": "hoian_banhmi",
+    "subject": "vietnam/hoian",
+    "category": "eat",
+    "query": "Banh Mi Phuong Hoi An",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/117677100934929509370",
+    "author": "ayu tt",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-26",
+    "sha256": "f2995919bcb3eab18fd6e0cf3d378e6327b98ea34ddf9baaf6af7ad2ed30e40d",
+    "local_path": "media/graded/hoian_banhmi.jpg",
+    "used_in": [
+      "ana/tt-22"
+    ]
+  },
+  {
+    "id": "danang_goldenbridge",
+    "subject": "vietnam/danang",
+    "category": "visit",
+    "query": "Golden Bridge Ba Na Hills Da Nang",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/112660515389503253308",
+    "author": "H.C Wei",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-26",
+    "sha256": "16f6a716d93b8d8def20402dbddb0252ea1d0b3a8431788f2bcd71e20cf57963",
+    "local_path": "media/graded/danang_goldenbridge.jpg",
+    "used_in": [
+      "ana/tt-22"
+    ]
+  },
+  {
+    "id": "danang_mykhe",
+    "subject": "vietnam/danang",
+    "category": "visit",
+    "query": "My Khe Beach Da Nang",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/110758061204830701621",
+    "author": "Tida",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-26",
+    "sha256": "db7689b93d092ddac509c031fe0a06e6342a8e9a622bb5d824192fdae106d757",
+    "local_path": "media/graded/danang_mykhe.jpg",
+    "used_in": [
+      "ana/tt-22"
+    ]
+  },
+  {
+    "id": "danang_marble",
+    "subject": "vietnam/danang",
+    "category": "visit",
+    "query": "Marble Mountains Da Nang",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/114593802587728722179",
+    "author": "Julien",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-26",
+    "sha256": "7cf34647d7f2c6e351129b746530bcaf7dd6880bdb26ea0b9181db2a8cebea4d",
+    "local_path": "media/graded/danang_marble.jpg",
+    "used_in": [
+      "ana/tt-22"
+    ]
+  },
+  {
+    "id": "danang_dragonbridge",
+    "subject": "vietnam/danang",
+    "category": "visit",
+    "query": "Dragon Bridge Da Nang",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/104381958750496432162",
+    "author": "Thần Thoại",
+    "license": "places-tos",
+    "w": 1179,
+    "h": 786,
+    "scraped_at": "2026-07-26",
+    "sha256": "ba2a6a89523e2dd35fb6c1c8b73b040250ffa8f68a1147af349280f6951d522d",
+    "local_path": "media/graded/danang_dragonbridge.jpg",
+    "used_in": [
+      "ana/tt-22"
+    ]
+  },
+  {
+    "id": "saigon_postoffice",
+    "subject": "vietnam/saigon",
+    "category": "visit",
+    "query": "Saigon Central Post Office",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/108940346627873163525",
+    "author": "Eddie Chen",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1201,
+    "scraped_at": "2026-07-26",
+    "sha256": "cee1718e6be05683c47454b196839a66f6d01ebaeb148d17f9624087bdd651ec",
+    "local_path": "media/graded/saigon_postoffice.jpg",
+    "used_in": [
+      "ana/tt-22"
+    ]
+  },
+  {
+    "id": "saigon_banhmi",
+    "subject": "vietnam/saigon",
+    "category": "eat",
+    "query": "Banh Mi Huynh Hoa",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/108328784417821594797",
+    "author": "Kevin Trần",
+    "license": "places-tos",
+    "w": 1281,
+    "h": 1095,
+    "scraped_at": "2026-07-26",
+    "sha256": "636fce797b3d28b246520e58d423acda796fd139a00b4fb7bf8f7aa0cb1264b4",
+    "local_path": "media/graded/saigon_banhmi.jpg",
+    "used_in": [
+      "ana/tt-22"
+    ]
+  },
+  {
+    "id": "saigon_buivien",
+    "subject": "vietnam/saigon",
+    "category": "visit",
+    "query": "Bui Vien Walking Street",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/114220226898873699275",
+    "author": "Peter Holroyd",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-26",
+    "sha256": "552d641586c6485d32527b1fd3f7b517baa2f17747fb216a0a287c206c9a7f52",
+    "local_path": "media/graded/saigon_buivien.jpg",
+    "used_in": [
+      "ana/tt-22"
+    ]
+  },
+  {
+    "id": "cdmx_bellas_artes",
+    "subject": "mexico/cdmx",
+    "category": "visit",
+    "query": "Palacio de Bellas Artes Mexico City",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/113806950531541341518",
+    "author": "Gina Becerra",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-26",
+    "sha256": "b2674f00281a1acfa8564562f5bf9c6cac1f52749e9293b2664c006e923f1085",
+    "local_path": "media/graded/cdmx_bellas_artes.jpg",
+    "used_in": [
+      "hannah/tth-07"
+    ]
+  },
+  {
+    "id": "oaxaca_santodomingo",
+    "subject": "mexico/oaxaca",
+    "category": "visit",
+    "query": "Templo de Santo Domingo de Guzman Oaxaca",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/105676565421337969776",
+    "author": "Pablo Cadena",
+    "license": "places-tos",
+    "w": 1200,
+    "h": 1600,
+    "scraped_at": "2026-07-26",
+    "sha256": "1a708b00a1cda4602f2cb223eaaafb0d83aa46cc38ff7f274ae18fa34f52d4a7",
+    "local_path": "media/graded/oaxaca_santodomingo.jpg",
+    "used_in": [
+      "hannah/tth-07"
+    ]
+  },
+  {
+    "id": "oaxaca_mercado",
+    "subject": "mexico/oaxaca",
+    "category": "eat",
+    "query": "Mercado 20 de Noviembre Oaxaca",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/107681762526719029334",
+    "author": "Quánax Espectáculos",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-26",
+    "sha256": "2fc2a4eb79e0809f750c905c359ff95a761fc0cf7edd8daa83c36b459f64711e",
+    "local_path": "media/graded/oaxaca_mercado.jpg",
+    "used_in": [
+      "hannah/tth-07"
+    ]
+  },
+  {
+    "id": "oaxaca_mole",
+    "subject": "mexico/oaxaca",
+    "category": "visit",
+    "query": "mole negro oaxaca plate restaurant table",
+    "platform": "google_images",
+    "source_url": "https://eatingtheworld.net/tag/mole/",
+    "author": "Eating The World",
+    "license": "ugc-unlicensed",
+    "w": 1000,
+    "h": 782,
+    "scraped_at": "2026-07-26",
+    "sha256": "2a6362074ccd95f497b70c4384fa751ac0ccff39bf58ce422efead8e1f3e13d3",
+    "local_path": "media/graded/oaxaca_mole.jpg",
+    "used_in": [
+      "hannah/tth-07"
+    ]
+  },
+  {
+    "id": "tulum_ruins",
+    "subject": "mexico/tulum",
+    "category": "visit",
+    "query": "Tulum Archaeological Zone",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/113283312285596892397",
+    "author": "Geraldinho",
+    "license": "places-tos",
+    "w": 1440,
+    "h": 1440,
+    "scraped_at": "2026-07-26",
+    "sha256": "ecaf782d1a8210c45d07d24e47c9137d7391d5e74fdb12374a31d42e792aec79",
+    "local_path": "media/graded/tulum_ruins.jpg",
+    "used_in": [
+      "hannah/tth-07"
+    ]
+  },
+  {
+    "id": "holbox_sandbar",
+    "subject": "mexico/holbox",
+    "category": "visit",
+    "query": "Punta Mosquito Holbox",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/112768522873399864874",
+    "author": "Diana Fileva",
+    "license": "places-tos",
+    "w": 1200,
+    "h": 1600,
+    "scraped_at": "2026-07-26",
+    "sha256": "dd92c3fe2c6987ec93373a1807e9b9cde428a0a5f33b827212f2143e910d856b",
+    "local_path": "media/graded/holbox_sandbar.jpg",
+    "used_in": [
+      "hannah/tth-07"
+    ]
+  },
+  {
+    "id": "holbox_whaleshark",
+    "subject": "mexico/holbox",
+    "category": "visit",
+    "query": "whale shark snorkeling holbox from boat",
+    "platform": "google_images",
+    "source_url": "https://www.globeguide.ca/swim-with-whale-sharks-mexico/",
+    "author": "Globe Guide",
+    "license": "ugc-unlicensed",
+    "w": 1170,
+    "h": 870,
+    "scraped_at": "2026-07-26",
+    "sha256": "c2279e3774e2da4e8f7d1fff4786fcf0a38831de7196594e082e0aaf5e046ec0",
+    "local_path": "media/graded/holbox_whaleshark.jpg",
+    "used_in": [
+      "hannah/tth-07"
+    ]
+  },
+  {
+    "id": "holbox_hut",
+    "subject": "mexico/holbox",
+    "category": "visit",
+    "query": "Isla Holbox main street",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/118056135325141275613",
+    "author": "Mauricio Correa",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-26",
+    "sha256": "568c4b80690ef3192d2f61e9d0ea98640db73f82675ef6d57f57e339df5075ce",
+    "local_path": "media/graded/holbox_hut.jpg",
+    "used_in": [
+      "hannah/tth-07"
+    ]
+  },
+  {
+    "id": "oaxaca_hierveelagua",
+    "subject": "mexico/oaxaca",
+    "category": "visit",
+    "query": "Hierve el Agua Oaxaca",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/111143131108312588464",
+    "author": "Andres Diaz",
+    "license": "places-tos",
+    "w": 1600,
+    "h": 1200,
+    "scraped_at": "2026-07-26",
+    "sha256": "aff23244be4190bcd52bf2c0f1f317a40093033bb936811533ec5da0f1d9324e",
+    "local_path": "media/graded/oaxaca_hierveelagua.jpg",
+    "used_in": [
+      "hannah/tth-07"
+    ]
+  },
+  {
+    "id": "79820ab6",
+    "subject": "uk/london",
+    "category": "pfpbg",
+    "query": "Notting Hill Portobello Road colourful houses",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/106750076223799779479",
+    "author": "Livia sb",
+    "license": "places-tos",
+    "sha256": "79820ab66f0312e727106fcc78e14dbe0fad40d88c8c18e4db75fdad002dcb2b",
+    "w": 1200,
+    "h": 1600,
+    "local_path": "media/library/uk-london/79820ab6.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "5ef98bb8",
+    "subject": "uk/london",
+    "category": "pfpbg",
+    "query": "Notting Hill Portobello Road colourful houses",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/101973407426210715170",
+    "author": "Lolita",
+    "license": "places-tos",
+    "sha256": "5ef98bb892839f0adc7a8c8d17f2d2274f63fc00a0deeea317e15984266229a1",
+    "w": 1187,
+    "h": 1600,
+    "local_path": "media/library/uk-london/5ef98bb8.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "1e55fc16",
+    "subject": "uk/london",
+    "category": "pfpbg",
+    "query": "Notting Hill Portobello Road colourful houses",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/102820841227255759222",
+    "author": "SYLVIE DELAVAULT",
+    "license": "places-tos",
+    "sha256": "1e55fc16dcf4568ee0ed2ef41734fb1b0ae568c4ae87479319e72bf1a508fcd0",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/uk-london/1e55fc16.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "1e6067db",
+    "subject": "uk/london",
+    "category": "pfpbg",
+    "query": "Notting Hill Portobello Road colourful houses",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/104968509242956875984",
+    "author": "Marcello D.",
+    "license": "places-tos",
+    "sha256": "1e6067db137d1c89668d9728e62ed02fdbe0f1e645c1020e9714cd11e288518c",
+    "w": 1600,
+    "h": 900,
+    "local_path": "media/library/uk-london/1e6067db.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "2217a73c",
+    "subject": "canada/montreal-old",
+    "category": "pfpbg",
+    "query": "Old Montreal cobblestone street",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/108534485960985986916",
+    "author": "Oqi",
+    "license": "places-tos",
+    "sha256": "2217a73c707d104fcb9596dfa1f650bc41ca424acb7755e16beac9f6b07261d5",
+    "w": 1080,
+    "h": 1440,
+    "local_path": "media/library/canada-montreal-old/2217a73c.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "563745e5",
+    "subject": "canada/toronto-highpark",
+    "category": "pfpbg",
+    "query": "High Park Toronto autumn maple path",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/101452229467326120407",
+    "author": "Grecia Rodriguez Alvarez",
+    "license": "places-tos",
+    "sha256": "563745e58f46c42438fbfad4b1bcddc9ea7cea6518f6da400c51410720e38dbc",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/canada-toronto-highpark/563745e5.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "1b88a760",
+    "subject": "canada/toronto-distillery",
+    "category": "pfpbg",
+    "query": "Distillery District Toronto brick lane",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/117960500510674018760",
+    "author": "James L",
+    "license": "places-tos",
+    "sha256": "1b88a760113544a0d9478ee23e8b36dfc578049a954ee4a0c02b952df0706328",
+    "w": 1046,
+    "h": 1600,
+    "local_path": "media/library/canada-toronto-distillery/1b88a760.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "ff6ec7c0",
+    "subject": "canada/banff-lakelouise",
+    "category": "pfpbg",
+    "query": "Lake Louise Banff lakeshore",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/110120860325193271654",
+    "author": "Shanil Fernando",
+    "license": "places-tos",
+    "sha256": "ff6ec7c09a9d318dbb34df940e88fa3be0557a8c0a69738411c8a9cf6e7308f3",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/canada-banff-lakelouise/ff6ec7c0.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "8bfc6001",
+    "subject": "canada/vancouver-seawall",
+    "category": "pfpbg",
+    "query": "Stanley Park Vancouver seawall",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/110318098330659709738",
+    "author": "Aaditya Sondhi",
+    "license": "places-tos",
+    "sha256": "8bfc60012c578ba2821456da87befa3cd3a7517deea163ab85cb223466a4a142",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/canada-vancouver-seawall/8bfc6001.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "8a99e857",
+    "subject": "canada/toronto-highpark",
+    "category": "pfpbg",
+    "query": "High Park Toronto autumn maple path",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/101468114882821605063",
+    "author": "Sahil Saini",
+    "license": "places-tos",
+    "sha256": "8a99e857c0d3e7ec201787b1a3ff9caae2ffe561d18c1da4775630bf0b47ce95",
+    "w": 1600,
+    "h": 1066,
+    "local_path": "media/library/canada-toronto-highpark/8a99e857.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "3c55f705",
+    "subject": "canada/montreal-old",
+    "category": "pfpbg",
+    "query": "Old Montreal cobblestone street",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/104472960607075243953",
+    "author": "HOAI NAM VO",
+    "license": "places-tos",
+    "sha256": "3c55f7051937488ed34dde9f553bfcc15bdf7b121a0905ea1b8521d65cd35bd9",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/canada-montreal-old/3c55f705.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "b5cddb87",
+    "subject": "canada/vancouver-seawall",
+    "category": "pfpbg",
+    "query": "Stanley Park Vancouver seawall",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/105908836308628129664",
+    "author": "Simon Blizzard",
+    "license": "places-tos",
+    "sha256": "b5cddb87138a895e0cda39d81b93a2204272a94512a8209fae4cf47990854ce4",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/canada-vancouver-seawall/b5cddb87.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "fccbf1fd",
+    "subject": "canada/toronto-distillery",
+    "category": "pfpbg",
+    "query": "Distillery District Toronto brick lane",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/109487885291641382006",
+    "author": "Iliya Boorboor",
+    "license": "places-tos",
+    "sha256": "fccbf1fdc0cb7dcbdcc8eaf76959ce608fdc707ac5063edb1c79375c292d0e90",
+    "w": 1200,
+    "h": 1600,
+    "local_path": "media/library/canada-toronto-distillery/fccbf1fd.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "ed657865",
+    "subject": "canada/banff-lakelouise",
+    "category": "pfpbg",
+    "query": "Lake Louise Banff lakeshore",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/101828470690162936627",
+    "author": "Rajinder Singh (Raj)",
+    "license": "places-tos",
+    "sha256": "ed65786577e6acc2b1499c8b46a9f14fac68fb3bace5bcea1e2d0761608ca381",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/canada-banff-lakelouise/ed657865.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "c9ceb034",
+    "subject": "canada/vancouver-seawall",
+    "category": "pfpbg",
+    "query": "Stanley Park Vancouver seawall",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/100485907523252757286",
+    "author": "amir n",
+    "license": "places-tos",
+    "sha256": "c9ceb0343920ac82b4a6efbc8fc497f8a51b65cc0acd8d0a21bdd942fae76f68",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/canada-vancouver-seawall/c9ceb034.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "13e03f95",
+    "subject": "canada/montreal-old",
+    "category": "pfpbg",
+    "query": "Old Montreal cobblestone street",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/112103267071949751453",
+    "author": "Mike Kehl",
+    "license": "places-tos",
+    "sha256": "13e03f95a482f3f9edf17847b5c105235309c9628a7400d38efbf37dd56585a7",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/canada-montreal-old/13e03f95.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "082d49fb",
+    "subject": "canada/toronto-highpark",
+    "category": "pfpbg",
+    "query": "High Park Toronto autumn maple path",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/113105348360721339137",
+    "author": "J Anderson",
+    "license": "places-tos",
+    "sha256": "082d49fb0f4d1dc421d6a29091f7559859bd2a925414f66bd79f93684f7450ea",
+    "w": 1600,
+    "h": 1600,
+    "local_path": "media/library/canada-toronto-highpark/082d49fb.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "2b063187",
+    "subject": "canada/banff-lakelouise",
+    "category": "pfpbg",
+    "query": "Lake Louise Banff lakeshore",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/103049161338024760214",
+    "author": "Gerard Pietrykiewicz",
+    "license": "places-tos",
+    "sha256": "2b063187ada0e9d7294c25f41c789238786a7fab24a4890898ea3bc511467771",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/canada-banff-lakelouise/2b063187.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "3717162f",
+    "subject": "canada/whistler-village",
+    "category": "pfpbg",
+    "query": "Whistler Village stroll",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/115772252324006812661",
+    "author": "Jae Young Kim",
+    "license": "places-tos",
+    "sha256": "3717162f4fcf8482ea6c719867e16fbae304b7fbe07c9bd2418e26babe0e3915",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/canada-whistler-village/3717162f.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "874657bb",
+    "subject": "uk/london-towerbridge",
+    "category": "pfpbg",
+    "query": "Tower Bridge Thames riverside walk",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/103191935192236162611",
+    "author": "Jason Bedford",
+    "license": "places-tos",
+    "sha256": "874657bb2bf4d91f7e65c62544f2df91ff88f34b0ccbccb41b2d80ab20e24482",
+    "w": 1205,
+    "h": 1600,
+    "local_path": "media/library/uk-london-towerbridge/874657bb.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "9d05ed1d",
+    "subject": "uk/bath-crescent",
+    "category": "pfpbg",
+    "query": "Royal Crescent Bath",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/101944815916775312934",
+    "author": "Rachel",
+    "license": "places-tos",
+    "sha256": "9d05ed1d4185af42fe53b7b65757ba19247c5d776e725fecdda453fdb251fc89",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/uk-bath-crescent/9d05ed1d.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "60c638a8",
+    "subject": "canada/whistler-village",
+    "category": "pfpbg",
+    "query": "Whistler Village stroll",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/107530964060668109681",
+    "author": "Nacho Monzón",
+    "license": "places-tos",
+    "sha256": "60c638a891586c7a853ad6ab2a536d4a47518e44b2ef052d7484b042d5f13372",
+    "w": 1600,
+    "h": 900,
+    "local_path": "media/library/canada-whistler-village/60c638a8.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "c4640a6b",
+    "subject": "uk/london-towerbridge",
+    "category": "pfpbg",
+    "query": "Tower Bridge Thames riverside walk",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/103345462444673683558",
+    "author": "Danielo D2",
+    "license": "places-tos",
+    "sha256": "c4640a6b71a1d96506045b8b351333968f763f09772a0c4307b73bca7b663420",
+    "w": 1048,
+    "h": 1600,
+    "local_path": "media/library/uk-london-towerbridge/c4640a6b.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "944b55c9",
+    "subject": "uk/bath-crescent",
+    "category": "pfpbg",
+    "query": "Royal Crescent Bath",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/110482135984258031221",
+    "author": "Pedro Landin",
+    "license": "places-tos",
+    "sha256": "944b55c94a603e7ae15b15fca14d8633d3fa84689e800863e97964e71198e469",
+    "w": 1200,
+    "h": 1600,
+    "local_path": "media/library/uk-bath-crescent/944b55c9.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "a3e6bcee",
+    "subject": "canada/whistler-village",
+    "category": "pfpbg",
+    "query": "Whistler Village stroll",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/114756326220497722605",
+    "author": "Fluers Flors",
+    "license": "places-tos",
+    "sha256": "a3e6bcee6b5f9dee40072e6bd4e7356dbd6678011965fb84f3dbf33571e344bf",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/canada-whistler-village/a3e6bcee.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "5210828c",
+    "subject": "uk/london-towerbridge",
+    "category": "pfpbg",
+    "query": "Tower Bridge Thames riverside walk",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/113394348216949604625",
+    "author": "Johannes Dommnich",
+    "license": "places-tos",
+    "sha256": "5210828c17c077d1c750fab175a7cc93563ac288e762e94a16ca055a641d4e8a",
+    "w": 1200,
+    "h": 1600,
+    "local_path": "media/library/uk-london-towerbridge/5210828c.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "34dda7fc",
+    "subject": "uk/bath-crescent",
+    "category": "pfpbg",
+    "query": "Royal Crescent Bath",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/101944815916775312934",
+    "author": "Rachel",
+    "license": "places-tos",
+    "sha256": "34dda7fc14d5aa64add66b51271055a8545cac32ab64d0cc6a76bec8872d8548",
+    "w": 1600,
+    "h": 1067,
+    "local_path": "media/library/uk-bath-crescent/34dda7fc.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "5451b7f2",
+    "subject": "uk/cotswolds-bibury",
+    "category": "pfpbg",
+    "query": "Bibury Arlington Row Cotswolds",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/103965495908985125079",
+    "author": "Anna Sorrentino",
+    "license": "places-tos",
+    "sha256": "5451b7f20520615502505eff6911cec5df9e9d8614a5f730c4d152feb857f608",
+    "w": 1600,
+    "h": 1600,
+    "local_path": "media/library/uk-cotswolds-bibury/5451b7f2.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "cd41c5d7",
+    "subject": "uk/london-nottinghill",
+    "category": "pfpbg",
+    "query": "Notting Hill Portobello Road colourful houses",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/110764756705510270169",
+    "author": "Lucas Calado Lima",
+    "license": "places-tos",
+    "sha256": "cd41c5d72bd2ddece61d23c0cc7dcc6f0886afaab696e6806ff62ca942dd8434",
+    "w": 1200,
+    "h": 1600,
+    "local_path": "media/library/uk-london-nottinghill/cd41c5d7.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "054453f5",
+    "subject": "uk/cotswolds-bibury",
+    "category": "pfpbg",
+    "query": "Bibury Arlington Row Cotswolds",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/117835931474966557598",
+    "author": "Dale Lodge",
+    "license": "places-tos",
+    "sha256": "054453f5060d475715e20d0afb769a9b19a59528262aecff7d0025fe8072f4a0",
+    "w": 1600,
+    "h": 900,
+    "local_path": "media/library/uk-cotswolds-bibury/054453f5.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "848621a3",
+    "subject": "uk/london-nottinghill",
+    "category": "pfpbg",
+    "query": "Notting Hill Portobello Road colourful houses",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/108831346272406252858",
+    "author": "Ping",
+    "license": "places-tos",
+    "sha256": "848621a3616e7ee0583f7554d81a7518116a4815c6395ef087f0a0852a1e80e2",
+    "w": 720,
+    "h": 960,
+    "local_path": "media/library/uk-london-nottinghill/848621a3.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "383831fd",
+    "subject": "uk/london-nottinghill",
+    "category": "pfpbg",
+    "query": "Notting Hill Portobello Road colourful houses",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/110032050515382811259",
+    "author": "Yana Indzhova",
+    "license": "places-tos",
+    "sha256": "383831fd97e7ebfb661c9b52c1fa7ced300b75aff60e9c5369012f742b273df4",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/uk-london-nottinghill/383831fd.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "4c0256d6",
+    "subject": "italy/florence-duomo",
+    "category": "pfpbg",
+    "query": "Piazza del Duomo Florence",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/106973132254528689647",
+    "author": "Alberto Maganzini",
+    "license": "places-tos",
+    "sha256": "4c0256d6a90b9b86fc9c27723315160e2406e2ab2282edfa641ef4966e9ddd89",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/italy-florence-duomo/4c0256d6.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "d035b84e",
+    "subject": "uk/london-hydepark",
+    "category": "pfpbg",
+    "query": "Hyde Park London autumn path",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/112148805180719703833",
+    "author": "Jennifer Phillips",
+    "license": "places-tos",
+    "sha256": "d035b84ef2f3bc11650d542ae4b7d3c02cf29e4f75ebd5ab09af1ac783a1d394",
+    "w": 1600,
+    "h": 1501,
+    "local_path": "media/library/uk-london-hydepark/d035b84e.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "342aaba3",
+    "subject": "italy/positano",
+    "category": "pfpbg",
+    "query": "Positano Amalfi Coast steps",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/113294038637741527056",
+    "author": "Allan Kaitila",
+    "license": "places-tos",
+    "sha256": "342aaba3165ca545ed5cd493718a16a96623b33e84238797fac8e0c70fa30c83",
+    "w": 1024,
+    "h": 875,
+    "local_path": "media/library/italy-positano/342aaba3.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "9b40cb96",
+    "subject": "italy/florence-duomo",
+    "category": "pfpbg",
+    "query": "Piazza del Duomo Florence",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/101001192307490634798",
+    "author": "Katori Hirotaka",
+    "license": "places-tos",
+    "sha256": "9b40cb966fab1cb32568537963f9a6bc0a8b4c827ee7670e711bc0893c36e270",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/italy-florence-duomo/9b40cb96.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "fe9284f2",
+    "subject": "uk/london-hydepark",
+    "category": "pfpbg",
+    "query": "Hyde Park London autumn path",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/113742605968910537845",
+    "author": "Juan Cristóbal Castro Alonso",
+    "license": "places-tos",
+    "sha256": "fe9284f2fb378d9340559d49b02ec905c353fe67e84e662e28d61efb4fae9fe5",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/uk-london-hydepark/fe9284f2.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "937b6552",
+    "subject": "uk/brighton-pier",
+    "category": "pfpbg",
+    "query": "Brighton Palace Pier seafront",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/114231852407926451644",
+    "author": "Ian Heard",
+    "license": "places-tos",
+    "sha256": "937b6552ae838243621c9783778ee89f9c25857b3b658b827d885aca751ece03",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/uk-brighton-pier/937b6552.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "e7e5669b",
+    "subject": "italy/positano",
+    "category": "pfpbg",
+    "query": "Positano Amalfi Coast steps",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/109495043778298027136",
+    "author": "Peter Dickinson",
+    "license": "places-tos",
+    "sha256": "e7e5669b2378b8cfc75635d17a400eba82e31cd58983799418ac2d535e1c8469",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/italy-positano/e7e5669b.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "091c0d1f",
+    "subject": "italy/positano",
+    "category": "pfpbg",
+    "query": "Positano Amalfi Coast steps",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/106929548240639458733",
+    "author": "Andres Hernandez",
+    "license": "places-tos",
+    "sha256": "091c0d1fff413293f494a94a554b3d22379d5746839a88d77bab3838b8522b69",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/italy-positano/091c0d1f.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "99a1640d",
+    "subject": "france/paris-montmartre",
+    "category": "pfpbg",
+    "query": "Montmartre Rue Foyatier steps Paris",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/111095723627235606521",
+    "author": "Didier Agossa",
+    "license": "places-tos",
+    "sha256": "99a1640da32abcc5aae556d87b52869aa44a03dd08df4aa4f6bade780a80249b",
+    "w": 898,
+    "h": 1600,
+    "local_path": "media/library/france-paris-montmartre/99a1640d.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "9d819696",
+    "subject": "italy/venice-canal",
+    "category": "pfpbg",
+    "query": "Venice canal bridge Cannaregio",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/102435082605841033783",
+    "author": "Yoann Beneton",
+    "license": "places-tos",
+    "sha256": "9d8196963a3d84050ffd5ddbe911e3f93aa809e4b4754c807948ab892f2ab601",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/italy-venice-canal/9d819696.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "58b87bb5",
+    "subject": "italy/tuscany-valdorcia",
+    "category": "pfpbg",
+    "query": "Val d Orcia Tuscany countryside",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/117369736412131813717",
+    "author": "Fabio Silvestri",
+    "license": "places-tos",
+    "sha256": "58b87bb52fd8686326aa108f7f749ec0a204b061c7f4fd8a7f6df5d683388189",
+    "w": 1600,
+    "h": 900,
+    "local_path": "media/library/italy-tuscany-valdorcia/58b87bb5.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "1f5786bc",
+    "subject": "italy/como-varenna",
+    "category": "pfpbg",
+    "query": "Varenna Lake Como waterfront",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/112625258779640651652",
+    "author": "Jimmy Campbell",
+    "license": "places-tos",
+    "sha256": "1f5786bc1654982f4c6f3c0a42e1b471511fbb48dafb43b3032e64aeedeadde0",
+    "w": 1200,
+    "h": 1600,
+    "local_path": "media/library/italy-como-varenna/1f5786bc.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "e08d6177",
+    "subject": "france/paris-marais",
+    "category": "pfpbg",
+    "query": "Paris cafe terrace Le Marais",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/108522325857939510179",
+    "author": "Sasa Stefanovic",
+    "license": "places-tos",
+    "sha256": "e08d6177b760f335724db446b9625f82fbe2c405700b70d5b92c1d52f18c83d0",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/france-paris-marais/e08d6177.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "47ff8385",
+    "subject": "france/paris-montmartre",
+    "category": "pfpbg",
+    "query": "Montmartre Rue Foyatier steps Paris",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/116260797109397432274",
+    "author": "Marco Polo",
+    "license": "places-tos",
+    "sha256": "47ff8385b5308375b34f9efdf0171cb258e505f7401dfda7a52d4613828227b6",
+    "w": 757,
+    "h": 1600,
+    "local_path": "media/library/france-paris-montmartre/47ff8385.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "ad3b6a89",
+    "subject": "italy/venice-canal",
+    "category": "pfpbg",
+    "query": "Venice canal bridge Cannaregio",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/118069140010571319949",
+    "author": "Franco Ghion",
+    "license": "places-tos",
+    "sha256": "ad3b6a899f3a1ae748640513bc73371f44a3dae68360b87f58c62841cdefc304",
+    "w": 1600,
+    "h": 881,
+    "local_path": "media/library/italy-venice-canal/ad3b6a89.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "11be5458",
+    "subject": "italy/tuscany-valdorcia",
+    "category": "pfpbg",
+    "query": "Val d Orcia Tuscany countryside",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/114258063300601985012",
+    "author": "Matthew Driver",
+    "license": "places-tos",
+    "sha256": "11be5458eb2d5d2f70c8d8824ad8a86e79dbed9d58280be4043b4fe7e5512319",
+    "w": 1600,
+    "h": 1205,
+    "local_path": "media/library/italy-tuscany-valdorcia/11be5458.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "5b9c67e1",
+    "subject": "france/paris-marais",
+    "category": "pfpbg",
+    "query": "Paris cafe terrace Le Marais",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/105589015426260605959",
+    "author": "Raniero Kay",
+    "license": "places-tos",
+    "sha256": "5b9c67e1855df010f8f87c6823953666e1a50d09b1ad3d048f9ad942a0844900",
+    "w": 1200,
+    "h": 1600,
+    "local_path": "media/library/france-paris-marais/5b9c67e1.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "3c7ef8ff",
+    "subject": "italy/como-varenna",
+    "category": "pfpbg",
+    "query": "Varenna Lake Como waterfront",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/104981311629067639427",
+    "author": "Lauana",
+    "license": "places-tos",
+    "sha256": "3c7ef8ff5da3f4679a0f71720bda8366e4304e2d420828035a47bcaf3f46a1f4",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/italy-como-varenna/3c7ef8ff.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "38770a87",
+    "subject": "france/paris-montmartre",
+    "category": "pfpbg",
+    "query": "Montmartre Rue Foyatier steps Paris",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/103044213328441754888",
+    "author": "Krzysiek Jakubowski",
+    "license": "places-tos",
+    "sha256": "38770a87077505ef18c7059592d7af6178e3677f95d873dba037f4ce9819f2d8",
+    "w": 1600,
+    "h": 902,
+    "local_path": "media/library/france-paris-montmartre/38770a87.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "e165eaec",
+    "subject": "italy/tuscany-valdorcia",
+    "category": "pfpbg",
+    "query": "Val d Orcia Tuscany countryside",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/111288944013774104158",
+    "author": "Jordi Bieto",
+    "license": "places-tos",
+    "sha256": "e165eaec46a9be5953c4ba529710d7bb577be28c7e37f57bed8b32a9f1b5d7f2",
+    "w": 1600,
+    "h": 716,
+    "local_path": "media/library/italy-tuscany-valdorcia/e165eaec.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "a5acf095",
+    "subject": "italy/venice-canal",
+    "category": "pfpbg",
+    "query": "Venice canal bridge Cannaregio",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/103373438641960153100",
+    "author": "Marius Daniel Roman",
+    "license": "places-tos",
+    "sha256": "a5acf09570617e229b243865e1b976f2181de3a2c4e01ca342ecb471b6e8aa61",
+    "w": 1200,
+    "h": 1600,
+    "local_path": "media/library/italy-venice-canal/a5acf095.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "bff3c7c8",
+    "subject": "france/paris-marais",
+    "category": "pfpbg",
+    "query": "Paris cafe terrace Le Marais",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/109261795929242872936",
+    "author": "Morane",
+    "license": "places-tos",
+    "sha256": "bff3c7c8e00d38caf332eef333d99f2f332aa995be7914c5e090252f846a5a3b",
+    "w": 1280,
+    "h": 1600,
+    "local_path": "media/library/france-paris-marais/bff3c7c8.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "29efeab9",
+    "subject": "italy/como-varenna",
+    "category": "pfpbg",
+    "query": "Varenna Lake Como waterfront",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/101629739358987219963",
+    "author": "Ionut",
+    "license": "places-tos",
+    "sha256": "29efeab966f2dd5c6fce7f1434e53228d8430aa5306dc868cff1d8027a1c83d1",
+    "w": 1600,
+    "h": 1000,
+    "local_path": "media/library/italy-como-varenna/29efeab9.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "4ae721eb",
+    "subject": "france/nice-promenade",
+    "category": "pfpbg",
+    "query": "Promenade des Anglais Nice",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/116522566196014882453",
+    "author": "Rade Spasovski",
+    "license": "places-tos",
+    "sha256": "4ae721eb2a0d09728078c97a00ce286ed5767eba633060a6ab6be51183ee4374",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/france-nice-promenade/4ae721eb.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "72a64758",
+    "subject": "france/paris-seine",
+    "category": "pfpbg",
+    "query": "Pont Alexandre III Seine Paris",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/118439758628935874381",
+    "author": "Игорь Квочка",
+    "license": "places-tos",
+    "sha256": "72a64758fcf7021043327dde5c420217daf733d7d7a9b036c387baad326aa72c",
+    "w": 1292,
+    "h": 1600,
+    "local_path": "media/library/france-paris-seine/72a64758.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "3c767715",
+    "subject": "japan/kyoto-arashiyama",
+    "category": "pfpbg",
+    "query": "Arashiyama bamboo grove Kyoto",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/111855457621476804308",
+    "author": "Miquel Lapuente Marquès",
+    "license": "places-tos",
+    "sha256": "3c7677155fbb6ab98ae2afb8f3d3c8754dd86386b1a553a1c4e8238e955cc1db",
+    "w": 1200,
+    "h": 1600,
+    "local_path": "media/library/japan-kyoto-arashiyama/3c767715.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "a2a00337",
+    "subject": "france/provence-valensole",
+    "category": "pfpbg",
+    "query": "Valensole lavender field Provence",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/112741028167614225488",
+    "author": "Nihan Ozgen",
+    "license": "places-tos",
+    "sha256": "a2a00337f3c4c4bd3b3faf1f3c4cbe75698831b25487c55d55a7e12a68d37342",
+    "w": 1200,
+    "h": 1600,
+    "local_path": "media/library/france-provence-valensole/a2a00337.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "7d0a63b3",
+    "subject": "france/paris-seine",
+    "category": "pfpbg",
+    "query": "Pont Alexandre III Seine Paris",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/115862715498768573398",
+    "author": "Nick Duncan-Price",
+    "license": "places-tos",
+    "sha256": "7d0a63b3e1f667e73fa3167447a7417edfc7d961a29b198cff0c494ca8ba207c",
+    "w": 1205,
+    "h": 1600,
+    "local_path": "media/library/france-paris-seine/7d0a63b3.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "c1dec1df",
+    "subject": "france/colmar-petitevenise",
+    "category": "pfpbg",
+    "query": "Petite Venise Colmar old town",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/105200797223952426445",
+    "author": "Ghadir Chegini",
+    "license": "places-tos",
+    "sha256": "c1dec1df24b66a295a7ddbc39bbe5bb856fd8a2b6c7230dadc1b802b76cf85cd",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/france-colmar-petitevenise/c1dec1df.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "bc79272c",
+    "subject": "france/provence-valensole",
+    "category": "pfpbg",
+    "query": "Valensole lavender field Provence",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/110254537964960424203",
+    "author": "Amber Wang",
+    "license": "places-tos",
+    "sha256": "bc79272c3f1ddabe40bcd400f0e9c0a2e99878d86a34fe3c11c82e05d9f9c85f",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/france-provence-valensole/bc79272c.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "3040a13e",
+    "subject": "france/paris-seine",
+    "category": "pfpbg",
+    "query": "Pont Alexandre III Seine Paris",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/111855612950054696768",
+    "author": "Thanachai W.",
+    "license": "places-tos",
+    "sha256": "3040a13ef68962b0ea446f3c06137b0d360aeb0df54af5e385dd2f67c3e7ab9d",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/france-paris-seine/3040a13e.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "d5d894a3",
+    "subject": "france/nice-promenade",
+    "category": "pfpbg",
+    "query": "Promenade des Anglais Nice",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/109061873798617562562",
+    "author": "劉德泰（Ted）",
+    "license": "places-tos",
+    "sha256": "d5d894a38011c6ff12e53c2fe0f2814e6ac96b96346ad39a059085b618f5b395",
+    "w": 1600,
+    "h": 900,
+    "local_path": "media/library/france-nice-promenade/d5d894a3.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "d54545c7",
+    "subject": "france/colmar-petitevenise",
+    "category": "pfpbg",
+    "query": "Petite Venise Colmar old town",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/111393039195246646358",
+    "author": "Clara Koenig",
+    "license": "places-tos",
+    "sha256": "d54545c77ca3c725bfd9425bdf7312cf2f63d3aac287acdd6d9df88673f3b5a2",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/france-colmar-petitevenise/d54545c7.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "14fc86aa",
+    "subject": "japan/kyoto-arashiyama",
+    "category": "pfpbg",
+    "query": "Arashiyama bamboo grove Kyoto",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/112639438356000872247",
+    "author": "Seiichiro Ando",
+    "license": "places-tos",
+    "sha256": "14fc86aac36f928530d6d33cac169f1ebde530418f98e4dde77d550496b099b3",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/japan-kyoto-arashiyama/14fc86aa.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "62c3e94d",
+    "subject": "france/provence-valensole",
+    "category": "pfpbg",
+    "query": "Valensole lavender field Provence",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/114991888831300164735",
+    "author": "Meinolf R.",
+    "license": "places-tos",
+    "sha256": "62c3e94d1b96403b389f7290a28ebc37459aa21bd636ba3012d6de2650f042c3",
+    "w": 1134,
+    "h": 1134,
+    "local_path": "media/library/france-provence-valensole/62c3e94d.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "e57f3ae0",
+    "subject": "japan/hakone-ashi",
+    "category": "pfpbg",
+    "query": "Hakone Shrine torii Lake Ashi",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/116711223853249344106",
+    "author": "Natchakorn M.",
+    "license": "places-tos",
+    "sha256": "e57f3ae09dee472c18f247addeeaf46283650506d9f8ef1a3a87b387dc2120d2",
+    "w": 1080,
+    "h": 1440,
+    "local_path": "media/library/japan-hakone-ashi/e57f3ae0.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "b18fa221",
+    "subject": "japan/nara-park",
+    "category": "pfpbg",
+    "query": "Nara Park deer",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/117705360251364539285",
+    "author": "Ionut Bucur",
+    "license": "places-tos",
+    "sha256": "b18fa2216797c343a892cd7d2f997ffb1623bf858c692dbdf0c610d96e5fdd25",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/japan-nara-park/b18fa221.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "cbd8a8d1",
+    "subject": "japan/osaka-dotonbori",
+    "category": "pfpbg",
+    "query": "Dotonbori canal Osaka neon",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/101565370497150393842",
+    "author": "Chawin OMFS",
+    "license": "places-tos",
+    "sha256": "cbd8a8d1d01646fb5496577604391f6b847fd6667208f88431dec1459de13d35",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/japan-osaka-dotonbori/cbd8a8d1.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "69024090",
+    "subject": "japan/kyoto-gion",
+    "category": "pfpbg",
+    "query": "Hanamikoji Gion Kyoto alley",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/113873386577039548460",
+    "author": "酷哥",
+    "license": "places-tos",
+    "sha256": "6902409038cdb8e5e5da35a33ac7fac64b66540f0ccf7c124f65acb9f4165760",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/japan-kyoto-gion/69024090.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "5da5dd97",
+    "subject": "japan/yokohama-minatomirai",
+    "category": "pfpbg",
+    "query": "Minato Mirai Yokohama waterfront",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/109991392380183765546",
+    "author": "サーモン伊藤",
+    "license": "places-tos",
+    "sha256": "5da5dd97d72cffb74dfb3689801fca02a173d8743d45b2e51aac33b584acc95a",
+    "w": 1600,
+    "h": 900,
+    "local_path": "media/library/japan-yokohama-minatomirai/5da5dd97.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "0dd5fa6d",
+    "subject": "japan/hakone-ashi",
+    "category": "pfpbg",
+    "query": "Hakone Shrine torii Lake Ashi",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/118233011782327728507",
+    "author": "Koichi",
+    "license": "places-tos",
+    "sha256": "0dd5fa6d6a00c257bc18cd5eb046745737410f7d4483d8c2932389957c81d312",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/japan-hakone-ashi/0dd5fa6d.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "8c85e5ef",
+    "subject": "japan/nara-park",
+    "category": "pfpbg",
+    "query": "Nara Park deer",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/108279794256488505864",
+    "author": "Alex NG",
+    "license": "places-tos",
+    "sha256": "8c85e5ef329204898b2f15b4947693d5296890981893fa6e740c7764592c8d99",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/japan-nara-park/8c85e5ef.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "da8596a2",
+    "subject": "japan/kyoto-gion",
+    "category": "pfpbg",
+    "query": "Hanamikoji Gion Kyoto alley",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/117782416153262018423",
+    "author": "Outback Polaks",
+    "license": "places-tos",
+    "sha256": "da8596a2aa903f8696b79ba01e6769f869f4bcd53f4f53d291e14fedd2ea8c64",
+    "w": 1200,
+    "h": 1600,
+    "local_path": "media/library/japan-kyoto-gion/da8596a2.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "26d0ce38",
+    "subject": "japan/yokohama-minatomirai",
+    "category": "pfpbg",
+    "query": "Minato Mirai Yokohama waterfront",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/114268504378925376064",
+    "author": "高橋正純",
+    "license": "places-tos",
+    "sha256": "26d0ce388d2a973a2663c06a89dd7eaf1f2de287360abbe49e410a93c25e6bdc",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/japan-yokohama-minatomirai/26d0ce38.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "12588da4",
+    "subject": "japan/osaka-dotonbori",
+    "category": "pfpbg",
+    "query": "Dotonbori canal Osaka neon",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/110454576363221229668",
+    "author": "シザケン",
+    "license": "places-tos",
+    "sha256": "12588da4a2f142c5ef20757d7ccbeff705bb6be0bf89f98d903e06460d1d0036",
+    "w": 1200,
+    "h": 1600,
+    "local_path": "media/library/japan-osaka-dotonbori/12588da4.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "7a56f063",
+    "subject": "japan/nara-park",
+    "category": "pfpbg",
+    "query": "Nara Park deer",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/114079165221860988081",
+    "author": "青木恵子",
+    "license": "places-tos",
+    "sha256": "7a56f063e94de709d664889bf60975b91bcdacfebf568979228a41c7e24d80ed",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/japan-nara-park/7a56f063.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "1f8f087b",
+    "subject": "japan/hakone-ashi",
+    "category": "pfpbg",
+    "query": "Hakone Shrine torii Lake Ashi",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/115372248756050652267",
+    "author": "백가영",
+    "license": "places-tos",
+    "sha256": "1f8f087b4b6726ef3c8c8f271d92bb7799085926e40756e0e610bf09c67d4879",
+    "w": 1600,
+    "h": 1384,
+    "local_path": "media/library/japan-hakone-ashi/1f8f087b.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "7a7f0c42",
+    "subject": "japan/kyoto-gion",
+    "category": "pfpbg",
+    "query": "Hanamikoji Gion Kyoto alley",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/107763520250702709560",
+    "author": "Sean Yam",
+    "license": "places-tos",
+    "sha256": "7a7f0c42024f3f02bd9143a0a735c4d5be1c7be3fbde52b3c8a62dbbb2b311f3",
+    "w": 1600,
+    "h": 900,
+    "local_path": "media/library/japan-kyoto-gion/7a7f0c42.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "f7832b29",
+    "subject": "japan/yokohama-minatomirai",
+    "category": "pfpbg",
+    "query": "Minato Mirai Yokohama waterfront",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/110871185440894123054",
+    "author": "Hiro",
+    "license": "places-tos",
+    "sha256": "f7832b29c6d0c963fee3c958b6975372d6bc92ad5949b0b215aab6d2a61a4c44",
+    "w": 1600,
+    "h": 1067,
+    "local_path": "media/library/japan-yokohama-minatomirai/f7832b29.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "0141aa8f",
+    "subject": "italy/rome-trastevere",
+    "category": "pfpbg",
+    "query": "Piazza Santa Maria in Trastevere Rome",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/116626827109653627528",
+    "author": "Guido Marino",
+    "license": "places-tos",
+    "sha256": "0141aa8f3b566db017049e74787395ee49881039ba03b2e179e5b57331601220",
+    "w": 1600,
+    "h": 900,
+    "local_path": "media/library/italy-rome-trastevere/0141aa8f.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "f92d0ebb",
+    "subject": "italy/rome-trastevere",
+    "category": "pfpbg",
+    "query": "Piazza Santa Maria in Trastevere Rome",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/111260058389030599801",
+    "author": "Mi Sa",
+    "license": "places-tos",
+    "sha256": "f92d0ebbff8c34daee5e4d4991997a5053ef026aa758c5fa167b45a2e1bf94e1",
+    "w": 1080,
+    "h": 1440,
+    "local_path": "media/library/italy-rome-trastevere/f92d0ebb.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "4bf01fb9",
+    "subject": "italy/rome-trastevere",
+    "category": "pfpbg",
+    "query": "Piazza Santa Maria in Trastevere Rome",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/116626827109653627528",
+    "author": "Guido Marino",
+    "license": "places-tos",
+    "sha256": "4bf01fb928b5dba9a3d8577a36b74a7bc9103bcb82ad1f18f483bf5166e8d982",
+    "w": 1600,
+    "h": 900,
+    "local_path": "media/library/italy-rome-trastevere/4bf01fb9.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "8d71e265",
+    "subject": "vietnam/hoian",
+    "category": "visit",
+    "query": "Hoi An Ancient Town",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/106900348685778550008",
+    "author": "Ngoc Diep",
+    "license": "places-tos",
+    "sha256": "8d71e2656fe82eb76af8a37da2c49a45680a13864317d362074d97cb1bc28240",
+    "w": 1200,
+    "h": 1600,
+    "local_path": "media/library/vietnam-hoian/8d71e265.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "4c859a61",
+    "subject": "vietnam/hoian",
+    "category": "visit",
+    "query": "Hoi An Ancient Town",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/114032114587091643624",
+    "author": "Nam Vu Duc",
+    "license": "places-tos",
+    "sha256": "4c859a61fb5a06ba6b1553ca1a4f4490c8e221cdcdd4dd9296770e4f6b26929f",
+    "w": 1600,
+    "h": 1164,
+    "local_path": "media/library/vietnam-hoian/4c859a61.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "1fe2363e",
+    "subject": "vietnam/hoian",
+    "category": "visit",
+    "query": "Hoi An Ancient Town",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/104717361800111161223",
+    "author": "Nam Phạm xuân",
+    "license": "places-tos",
+    "sha256": "1fe2363e7aaf63c040cfc3234805d4f9f5aaca5016542d3d0669dfdf61a4c22d",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/vietnam-hoian/1fe2363e.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "45a546dc",
+    "subject": "vietnam/hoian",
+    "category": "visit",
+    "query": "Hoi An Ancient Town",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/108885293716152947014",
+    "author": "Ngọc Nguyễn",
+    "license": "places-tos",
+    "sha256": "45a546dcf907a8aa394a5ee6b321bfa26cb09bf7315eb352c90d4c4e64bd0a8f",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/vietnam-hoian/45a546dc.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "84a9e8b7",
+    "subject": "vietnam/halong",
+    "category": "visit",
+    "query": "Ha Long Bay",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/102328686585172001910",
+    "author": "Zoltán Gábor Drubina",
+    "license": "places-tos",
+    "sha256": "84a9e8b76982cfdd4e8a465279708899e86ba78aae0f3795e8befcbfe4da8b9b",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/vietnam-halong/84a9e8b7.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "1254268a",
+    "subject": "vietnam/halong",
+    "category": "visit",
+    "query": "Ha Long Bay",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/105315916497503725080",
+    "author": "落山風",
+    "license": "places-tos",
+    "sha256": "1254268a39b5821729733f0b3445433b8966269fe07ebb070a54ae6e12087373",
+    "w": 1600,
+    "h": 1201,
+    "local_path": "media/library/vietnam-halong/1254268a.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "1b292852",
+    "subject": "vietnam/halong",
+    "category": "visit",
+    "query": "Ha Long Bay",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/104023140691805101595",
+    "author": "Dragutin HEGIC",
+    "license": "places-tos",
+    "sha256": "1b2928523f5de4b7520332702dd1e3bbe5e5c672a26451c30524deca683d4b2d",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/vietnam-halong/1b292852.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "26e0eef3",
+    "subject": "vietnam/halong",
+    "category": "visit",
+    "query": "Ha Long Bay",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/107109323711085525326",
+    "author": "Maxim Esaulov",
+    "license": "places-tos",
+    "sha256": "26e0eef3958f287fb6a366c6c2b6c78eea00368c92c8a2a1e71fc9089d1cb07e",
+    "w": 1280,
+    "h": 960,
+    "local_path": "media/library/vietnam-halong/26e0eef3.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "676d28ad",
+    "subject": "vietnam/sapa",
+    "category": "visit",
+    "query": "Sapa Rice Terraces Muong Hoa Valley",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/107679142823868590353",
+    "author": "Xuân Thịnh Phạm",
+    "license": "places-tos",
+    "sha256": "676d28ad30461ea78871e718275d0cd3272cb674d6e48a8d139b9bd17b658da0",
+    "w": 960,
+    "h": 720,
+    "local_path": "media/library/vietnam-sapa/676d28ad.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "db403539",
+    "subject": "vietnam/sapa",
+    "category": "visit",
+    "query": "Sapa Rice Terraces Muong Hoa Valley",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/104576306081434630285",
+    "author": "Tran Thanh Tuan",
+    "license": "places-tos",
+    "sha256": "db403539f9aca7b167a1776d0831e056f714ebf9a9e1a2fbd71323acc18a7110",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/vietnam-sapa/db403539.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "f8750a6d",
+    "subject": "vietnam/sapa",
+    "category": "visit",
+    "query": "Sapa Rice Terraces Muong Hoa Valley",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/102504399953927114786",
+    "author": "Nadir Shaari",
+    "license": "places-tos",
+    "sha256": "f8750a6d9436ae1851a17d233a94b09385681c545e9e9fe21b23b068179b9912",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/vietnam-sapa/f8750a6d.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "8da85b03",
+    "subject": "vietnam/sapa",
+    "category": "visit",
+    "query": "Sapa Rice Terraces Muong Hoa Valley",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/107340803465657837261",
+    "author": "鄭金柱",
+    "license": "places-tos",
+    "sha256": "8da85b03fe6d8a96a9b4519b947e5b21bfe7cca85f85cccf2b0c99fca4b53a0e",
+    "w": 739,
+    "h": 1600,
+    "local_path": "media/library/vietnam-sapa/8da85b03.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "cda6cb1e",
+    "subject": "vietnam/anbang",
+    "category": "visit",
+    "query": "An Bang Beach Hoi An",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/107765814949264086281",
+    "author": "Ha Dinh",
+    "license": "places-tos",
+    "sha256": "cda6cb1ec11a0b5cf01a8e0f26d373fab92448b88d1a409d96dea744b01e0fc1",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/vietnam-anbang/cda6cb1e.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "899279a0",
+    "subject": "vietnam/anbang",
+    "category": "visit",
+    "query": "An Bang Beach Hoi An",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/113210597566031687381",
+    "author": "Carlos Alberto do Amaral",
+    "license": "places-tos",
+    "sha256": "899279a0cd5d20fb9ea5ba51ee8ad1b8443a9a016cefd6332fb394ea026f94cf",
+    "w": 1600,
+    "h": 1066,
+    "local_path": "media/library/vietnam-anbang/899279a0.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "3a4076d2",
+    "subject": "vietnam/anbang",
+    "category": "visit",
+    "query": "An Bang Beach Hoi An",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/102304448588212630577",
+    "author": "Travel Maker",
+    "license": "places-tos",
+    "sha256": "3a4076d2d69ef7a5c28981af58ce4e7b7a05bb05ae74305e428c85fec7ed3f7a",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/vietnam-anbang/3a4076d2.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "cf79d474",
+    "subject": "vietnam/anbang",
+    "category": "visit",
+    "query": "An Bang Beach Hoi An",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/104920498277488927045",
+    "author": "Linh Bui",
+    "license": "places-tos",
+    "sha256": "cf79d474ace23b127cba852a8c90783b453ba74914c487c01aebf10d2734eaf2",
+    "w": 1350,
+    "h": 1013,
+    "local_path": "media/library/vietnam-anbang/cf79d474.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "5367c033",
+    "subject": "vietnam/ninhbinh",
+    "category": "visit",
+    "query": "Trang An Scenic Landscape Complex",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/108119593760742570983",
+    "author": "Thiên Tinh Cổ",
+    "license": "places-tos",
+    "sha256": "5367c03323914ace4b3f1a1f4186d0c53d550215e25a2096d5a11ccb3340db1c",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/vietnam-ninhbinh/5367c033.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "cfb2762d",
+    "subject": "vietnam/ninhbinh",
+    "category": "visit",
+    "query": "Trang An Scenic Landscape Complex",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/111301344389972786755",
+    "author": "Hoang797 Doan",
+    "license": "places-tos",
+    "sha256": "cfb2762ded59ac855efa90247280d7ea286fe49ace50c7513a74d41b962620f5",
+    "w": 1080,
+    "h": 782,
+    "local_path": "media/library/vietnam-ninhbinh/cfb2762d.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "c1c584db",
+    "subject": "vietnam/ninhbinh",
+    "category": "visit",
+    "query": "Trang An Scenic Landscape Complex",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/111104931131328041994",
+    "author": "Khanh Truong",
+    "license": "places-tos",
+    "sha256": "c1c584dbfe065c4aad67963a3b18759d9d3208a0a29bd5805eab49ec906aafef",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/vietnam-ninhbinh/c1c584db.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "f96b57f0",
+    "subject": "vietnam/ninhbinh",
+    "category": "visit",
+    "query": "Trang An Scenic Landscape Complex",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/110741675174174547676",
+    "author": "Minh Le",
+    "license": "places-tos",
+    "sha256": "f96b57f03cb573cfcabc970b339bbd8e5951fd7e1ff574004a2c756d90231e31",
+    "w": 1600,
+    "h": 901,
+    "local_path": "media/library/vietnam-ninhbinh/f96b57f0.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "e6c7e3ba",
+    "subject": "vietnam/hanoi",
+    "category": "visit",
+    "query": "Ta Hien Street Hanoi Old Quarter",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/110480130331428287082",
+    "author": "신영숙",
+    "license": "places-tos",
+    "sha256": "e6c7e3ba10fec86c919d9be98dd7305981f9c9fa870b129d4211eb901ca06a7a",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/vietnam-hanoi/e6c7e3ba.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "2769c432",
+    "subject": "vietnam/hanoi",
+    "category": "visit",
+    "query": "Ta Hien Street Hanoi Old Quarter",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/104492120985155926058",
+    "author": "Sèn旅行 Sèn",
+    "license": "places-tos",
+    "sha256": "2769c43250ed1bc22095f596815aa090ad7a1762b11cf9554b29d6ff0b710f9d",
+    "w": 1600,
+    "h": 1200,
+    "local_path": "media/library/vietnam-hanoi/2769c432.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "92c6a36f",
+    "subject": "vietnam/hanoi",
+    "category": "visit",
+    "query": "Ta Hien Street Hanoi Old Quarter",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/108989618680302252686",
+    "author": "Boom Hùng",
+    "license": "places-tos",
+    "sha256": "92c6a36f304c0335580926d1c42426660644f287def24970efc78a4b0e2727aa",
+    "w": 1200,
+    "h": 1600,
+    "local_path": "media/library/vietnam-hanoi/92c6a36f.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
+  },
+  {
+    "id": "079ca6d2",
+    "subject": "vietnam/hanoi",
+    "category": "visit",
+    "query": "Ta Hien Street Hanoi Old Quarter",
+    "platform": "google_places_user_photo",
+    "source_url": "https://maps.google.com/maps/contrib/110528001102022325686",
+    "author": "Elisa Winstanley",
+    "license": "places-tos",
+    "sha256": "079ca6d204fcc4c2e8ada723aa091fe2aba90f2e3e7788569b4d0f4057b0b2fe",
+    "w": 1200,
+    "h": 1600,
+    "local_path": "media/library/vietnam-hanoi/079ca6d2.jpg",
+    "scraped_at": "2026-07-26",
+    "used_in": []
   }
 ]
