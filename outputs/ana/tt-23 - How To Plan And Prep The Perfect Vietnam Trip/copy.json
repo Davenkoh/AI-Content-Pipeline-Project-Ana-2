@@ -1,0 +1,339 @@
+{
+  "option": "D",
+  "hook": {
+    "title": "How to plan & prep the perfect Vietnam trip for first timers",
+    "subtitle": "everything you need to know"
+  },
+  "hashtags": [
+    "#vietnamtravel",
+    "#vietnamtips",
+    "#travelvietnam",
+    "#vietnamtrip",
+    "#vietnam"
+  ],
+  "caption": {
+    "title_line": "🇻🇳 How to plan & prep the perfect Vietnam trip for first timers",
+    "body_draft": "Planning a first trip to Vietnam is harder than it looks, because it is not one destination. The country is over 1,600km long and the north, centre and south are in completely different weather at the same time. Here is everything I wish I had known before I booked.\n\nStart with when to go. Northern Vietnam, so Hanoi, Sapa and Ha Giang, is best from October to April when it is cool and dry, though December to February can genuinely get cold. Central Vietnam, so Hoi An, Da Nang and Hue, is best from February to May, and you want to avoid the typhoon window from August to November. The south, so Saigon and the Mekong, is best from December to April because the wet season runs May to November. The one date to plan around is Tet, which falls on 6 February 2027. The whole country effectively shuts for about a week, domestic transport books out, and prices jump.\n\nFor the route, work north to south so you never backtrack. Three nights in Hanoi, one night on a Ha Long or Lan Ha Bay boat, one night in Ninh Binh, then fly to Da Nang for three nights in Hoi An, then fly again down to Saigon for two. Ninh Binh really deserves a night rather than being squeezed into a day trip from Hanoi.\n\nOn accommodation, book inside the walkable centre. That means the Old Quarter in Hanoi, District 1 in Saigon, and the Ancient Town in Hoi An. Crossing a Vietnamese city in traffic can eat an hour each way, so sleeping where you actually want to walk saves you more time than any other booking decision.\n\nBook the things that sell out first. The smaller Lan Ha Bay boats and the Phong Nha cave tours go months in advance. Son Doong, the famous one, is booked out through 2027 and Oxalis is already taking 2028 reservations, so if caves are your thing then Hang En is the realistic version at around 333 US dollars for a two day trip capped at 16 people.\n\nLanguage matters more here than people expect. Step off the tourist streets and almost nobody speaks English. Keep Google Translate and DeepL on your phone, both handle Vietnamese now, and the camera mode on a menu is the single most useful travel trick in the country.\n\nFor getting around inside cities, download Grab. It covers cars, motorbikes and food delivery, and because the fare is fixed in the app there is nothing to haggle over. Between cities, fly. Hanoi to Da Nang is about 80 minutes in the air and roughly 40 to 60 US dollars if you book ahead, while the same journey on the train is over 16 hours.\n\nFor data, get a Viettel eSIM before you land. Ten to twenty gigabytes costs somewhere around 10 to 15 US dollars, and the kiosks in the arrivals hall charge about 20 to 30 percent more for the same thing.\n\nGet these eight decisions right and the rest of the trip mostly plans itself."
+  },
+  "slides": [
+    {
+      "type": "cover",
+      "flag": "🇻🇳",
+      "title_lines": [
+        "How to plan & prep",
+        "the perfect Vietnam trip",
+        "for first timers"
+      ],
+      "subtitle_lines": [
+        "everything you need to know"
+      ],
+      "char_photo": "ana_tt-23_cover",
+      "scenic_photo": "danang_goldenbridge"
+    },
+    {
+      "type": "step",
+      "pill": "1. When to Go",
+      "layout": "grid4",
+      "cells": [
+        "sapa_town",
+        "hoian_lanterns",
+        "mekong_daytour",
+        "vn_tet_hangma"
+      ],
+      "blocks": [
+        {
+          "lines": [
+            "vietnam has 3 climates,",
+            "don't plan it as one country"
+          ],
+          "size": "body"
+        }
+      ],
+      "cell_labels": [
+        {
+          "title_lines": [
+            "North",
+            "(Oct to Apr)"
+          ],
+          "note_lines": [
+            "Hanoi, Sapa, Ha Giang",
+            "Cool and dry",
+            "Dec to Feb gets cold"
+          ]
+        },
+        {
+          "title_lines": [
+            "Central",
+            "(Feb to May)"
+          ],
+          "note_lines": [
+            "Hoi An, Da Nang, Hue",
+            "Typhoons Aug to Nov"
+          ]
+        },
+        {
+          "title_lines": [
+            "South",
+            "(Dec to Apr)"
+          ],
+          "note_lines": [
+            "Saigon, Mekong",
+            "Wet season May to Nov"
+          ]
+        },
+        {
+          "title_lines": [
+            "Avoid Tet",
+            "(6 Feb 2027)"
+          ],
+          "note_lines": [
+            "The country shuts for a week",
+            "Transport books out"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "step",
+      "pill": "2. Route & Days",
+      "layout": "map",
+      "photo": "route_map_vn",
+      "blocks": [
+        {
+          "lines": [
+            "hanoi 3 · ha long 1 night",
+            "ninh binh 1 · hoi an 3 · saigon 2"
+          ],
+          "size": "headline"
+        },
+        {
+          "lines": [
+            "work north to south, never backtrack:",
+            "hanoi → ha long → ninh binh",
+            "→ fly to hoi an → fly to saigon",
+            "ninh binh earns a night, not a day trip"
+          ],
+          "size": "body"
+        }
+      ]
+    },
+    {
+      "type": "plug",
+      "paragraphs": [
+        [
+          "❌ i regret using google doc",
+          "and sheets to plan my trip"
+        ],
+        [
+          "alot of my research came from",
+          "tiktok, i saved videos on",
+          "tiktok, but never revisted it"
+        ],
+        [
+          "✅ HOLICAY.COM was",
+          "a game changer"
+        ],
+        [
+          "i can forward it my tiktok",
+          "links, travel documents, any",
+          "notes i have, and it saves",
+          "the locations and organizes my",
+          "notes for me all in one place"
+        ]
+      ],
+      "bg_photo": "vn_trangan_scenic"
+    },
+    {
+      "type": "favorites",
+      "photo": "vn_trangan_boats",
+      "title_lines": [
+        "A few of my favorite",
+        "spots in Vietnam for a",
+        "first time visit"
+      ],
+      "cities": [
+        {
+          "pill": "Hanoi",
+          "lines": [
+            "Old Quarter",
+            "Train Street",
+            "Hoan Kiem lake",
+            "Temple of Literature",
+            "Egg coffee"
+          ]
+        },
+        {
+          "pill": "Ha Long",
+          "lines": [
+            "Lan Ha Bay",
+            "Cat Ba island",
+            "Kayaking"
+          ]
+        },
+        {
+          "pill": "Ninh Binh",
+          "lines": [
+            "Trang An",
+            "Hang Mua",
+            "Bich Dong"
+          ]
+        },
+        {
+          "pill": "Hoi An",
+          "lines": [
+            "Ancient Town",
+            "An Bang beach",
+            "Lantern boats"
+          ]
+        },
+        {
+          "pill": "Da Nang",
+          "lines": [
+            "Golden Bridge",
+            "My Khe beach",
+            "Marble Mountains"
+          ]
+        },
+        {
+          "pill": "Saigon",
+          "lines": [
+            "War Remnants",
+            "Ben Thanh",
+            "Cu Chi tunnels"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "step",
+      "pill": "3. Accommodation",
+      "layout": "photo",
+      "photo": "hanoi_oldquarter",
+      "blocks": [
+        {
+          "lines": [
+            "STAY IN THE OLD QUARTER,",
+            "DISTRICT 1 OR ANCIENT TOWN"
+          ],
+          "size": "headline"
+        },
+        {
+          "lines": [
+            "crossing a vietnamese city eats",
+            "an hour, so sleep where you walk"
+          ],
+          "size": "body"
+        }
+      ]
+    },
+    {
+      "type": "step",
+      "pill": "4. Book Activities Early",
+      "layout": "photo",
+      "photo": "vn_halong_cruise",
+      "blocks": [
+        {
+          "lines": [
+            "the small lan ha bay boats and",
+            "the phong nha caves sell out",
+            "months ahead, book them first"
+          ],
+          "size": "body"
+        },
+        {
+          "lines": [
+            "Tip: son doong is booked out",
+            "to 2028, do hang en instead,",
+            "16 people a trip for $333"
+          ],
+          "size": "tip"
+        }
+      ]
+    },
+    {
+      "type": "step",
+      "pill": "5. Language",
+      "layout": "icons",
+      "photo": "vn_bun_cha_stools",
+      "icons": [
+        {
+          "slug": "app_google-translate",
+          "name": "Google Translate"
+        },
+        {
+          "slug": "app_deepl",
+          "name": "DeepL"
+        }
+      ],
+      "blocks": [
+        {
+          "lines": [
+            "step off the tourist streets and",
+            "almost no one speaks english"
+          ],
+          "size": "body"
+        },
+        {
+          "lines": [
+            "Tip: point the camera at the",
+            "menu, both do vietnamese now"
+          ],
+          "size": "tip"
+        }
+      ]
+    },
+    {
+      "type": "step",
+      "pill": "6. Internal Transport",
+      "layout": "photo",
+      "photo": "vn_grab_ride",
+      "blocks": [
+        {
+          "lines": [
+            "get Grab for every city ride,",
+            "the fare is fixed in the app",
+            "so there is nothing to haggle"
+          ],
+          "size": "body"
+        },
+        {
+          "lines": [
+            "Tip: between cities fly, hanoi",
+            "to da nang is 80 mins for $40",
+            "to $60, the train is 16 hours"
+          ],
+          "size": "tip"
+        }
+      ]
+    },
+    {
+      "type": "step",
+      "pill": "7. Mobile Data",
+      "layout": "photo",
+      "photo": "saigon_buivien",
+      "blocks": [
+        {
+          "lines": [
+            "get a viettel esim before you land,",
+            "10 to 20gb runs about $10 to $15"
+          ],
+          "size": "body"
+        },
+        {
+          "lines": [
+            "the arrivals kiosks charge 20 to",
+            "30% more for the same sim"
+          ],
+          "size": "body"
+        }
+      ]
+    },
+    {
+      "type": "save",
+      "title": "SAVE THIS",
+      "subtitle": "just incase you need it ❤️",
+      "char_photo": "ana_tt-23_ending",
+      "scenic_photo": "vn_hoankiem_tower"
+    }
+  ]
+}
