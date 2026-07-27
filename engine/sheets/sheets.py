@@ -205,18 +205,22 @@ def _accounts_spec():
     # Per-character account / login register. Whole tab is human-owned (all green) — YOU keep it
     # current; the AI only reads it (e.g. to know which profile / VPN region an account uses).
     # Credentials are entered on the Sheet, never stored in this repo. Deliberately low-sensitivity
-    # accounts only (the human confirmed these are OK to keep here).
+    # accounts only (the human confirmed these are OK to keep here). One row per registry character
+    # in state.json order (Holicay, the faceless brand account, included) — login/password pairs
+    # share ONE cell each so a half-filled account can never shift the row off its headers.
     return {
         "sections": {"human": "ACCOUNTS — YOU OWN THIS TAB (per-character logins / VPN; the AI reads it)"},
         "columns": [
-            C("Character", "human", "Human", "Which character this account belongs to.", "<character name>"),
+            C("No.", "human", "Human", "Row number, in registry (state.json) order.", "1"),
+            C("Character", "human", "Human", "Which character this account belongs to.", "Ana"),
+            C("Character Pack Link", "human", "Human", "Drive folder holding her Base References + Profile Pictures.", "https://drive.google.com/drive/folders/..."),
+            C("Country Focus", "human", "Human", "The content country this character posts about.", "Vietnam"),
             C("TikTok Profile", "human", "Human", "Public TikTok profile URL.", "https://www.tiktok.com/@handle"),
-            C("TikTok Login", "human", "Human", "TikTok username, or how to sign in.", "handle (via the Gmail below)"),
-            C("Gmail", "human", "Human", "The Gmail account the persona uses.", "persona@gmail.com"),
-            C("Gmail Password", "human", "Human", "Gmail password, or who holds it.", "•••• (or: with <teammate>)"),
-            C("Created By", "human", "Human", "Who set the account up.", "<teammate>"),
-            C("VPN Location", "human", "Human", "VPN region the account is operated from.", "City, Country"),
-            C("Notes", "human", "Human", "Anything else (who holds creds, status).", "TikTok login goes through the Gmail"),
+            C("TikTok Login", "human", "Human", "TikTok username AND password in this one cell — or how to sign in / who holds it.", "handle / •••• (or: sign in via the Gmail)"),
+            C("Gmail Login", "human", "Human", "The persona's Gmail address AND password in this one cell — or who holds it.", "persona@gmail.com / ••••"),
+            C("Created By", "human", "Human", "Who set up WHAT, per account.", "Ashwin created the Gmail, Daven created the TikTok"),
+            C("VPN Location", "human", "Human", "VPN region the account is operated from.", "Seattle, USA"),
+            C("Notes", "human", "Human", "Anything else (status, who holds creds).", "TikTok login goes through the Gmail"),
         ],
     }
 
@@ -460,13 +464,17 @@ def _format_tab(sh, ws, tab, cols, runs):
 def _width(c):
     long_text = {"Human Feedback", "Notes", "What it is", "Purpose",
                  "Account / identity", "Plan & cost", "Status",
-                 "Auth (env var / credential file)"}
+                 "Auth (env var / credential file)",
+                 "TikTok Login", "Gmail Login", "Created By"}
     ids = {"ID", "Framework", "Variant", "Copy Iteration"}
+    if c["name"] == "No.":
+        return 55
     if c["name"] in ids:
         return 90
     if c["name"] in long_text:
         return 300
-    if c["name"] in ("Output Folder", "Post Link", "Media Asset Link", "Console URL", "Connector"):
+    if c["name"] in ("Output Folder", "Post Link", "Media Asset Link", "Console URL", "Connector",
+                     "Character Pack Link", "TikTok Profile"):
         return 200
     return 130
 
